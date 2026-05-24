@@ -1,0 +1,26 @@
+# Netlify configuration for Stage 2 Dashboard
+# Static site — no build step. Dashboard is index.html, data is the .xlsx file.
+
+[build]
+  publish = "."
+  command = ""
+
+# Don't cache the weekly Excel — followers should always see the latest
+[[headers]]
+  for = "/Stage2_Top50_Global_LATEST.xlsx"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+# Don't cache the HTML either — easy iteration on the dashboard
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"
+
+# Modest security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
