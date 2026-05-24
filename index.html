@@ -356,7 +356,7 @@ tr.selected td{background:rgba(245,166,35,0.08);}
       </div>
       <div class="meta-item">
         <div class="meta-label">Status</div>
-        <div class="meta-val"><span class="live-dot"></span><span id="runStatus">SAT 9AM IST</span></div>
+        <div class="meta-val"><span class="live-dot"></span><span id="runStatus">SAT 9AM IST</span><span id="asOfBadge" style="display:none;margin-left:10px;padding:2px 8px;background:rgba(245,166,35,0.10);color:var(--gold);border:1px solid rgba(245,166,35,0.30);border-radius:10px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;"></span></div>
       </div>
       <label class="dropzone" id="dz">
         <input type="file" id="fileInput" accept=".xlsx,.xls">
@@ -793,6 +793,12 @@ function render(){
   // KPIs
   const s = STATE.summary;
   document.getElementById('asOfDate').textContent = s.asOf || '—';
+  // Prominent as-of badge in header
+  const aob = document.getElementById('asOfBadge');
+  if(aob && s.asOf){
+    aob.textContent = 'Data as of ' + s.asOf;
+    aob.style.display = 'inline-block';
+  }
   document.getElementById('kpi-universe').textContent = s.universe || '—';
   document.getElementById('kpi-qualified').textContent = s.qualified || '—';
   document.getElementById('kpi-fresh').textContent = s.fresh || '—';
@@ -989,7 +995,7 @@ function themesFor(s){
   }));
   // Sector fallback for names with no narrative-matched theme
   if(!hits.length && s.sector){
-    const fb = {'Healthcare':'Healthcare','Financial Services':'Fintech & Trading','Basic Materials':'Commodity Materials','Consumer Cyclical':'Travel & Consumer'}[s.sector];
+    const fb = {'Healthcare':'Healthcare','Financial Services':'Fintech & Trading','Basic Materials':'Commodity Materials','Consumer Cyclical':'Travel & Consumer','Technology':'AI Compute Silicon','Energy':'Offshore Energy Services','Industrials':'Industrial Distribution / EMS','Communication Services':'AI Cloud / SaaS','Real Estate':'Data Center Infrastructure','Utilities':'Grid & Cables','Consumer Defensive':'Travel & Consumer'}[s.sector];
     if(fb){ const r = THEME_RULES.find(x=>x.theme===fb); if(r) hits.push(r); }
   }
   return hits.slice(0,3);  // cap at 3 to keep the row tidy
@@ -1665,6 +1671,13 @@ function buildThemeMap(){
       else if(s.sector==='Financial Services') themes.push('Fintech & Trading');
       else if(s.sector==='Basic Materials') themes.push('Commodity Materials');
       else if(s.sector==='Consumer Cyclical') themes.push('Travel & Consumer');
+      else if(s.sector==='Technology') themes.push('AI Compute Silicon');
+      else if(s.sector==='Energy') themes.push('Offshore Energy Services');
+      else if(s.sector==='Industrials') themes.push('Industrial Distribution / EMS');
+      else if(s.sector==='Communication Services') themes.push('AI Cloud / SaaS');
+      else if(s.sector==='Real Estate') themes.push('Data Center Infrastructure');
+      else if(s.sector==='Utilities') themes.push('Grid & Cables');
+      else if(s.sector==='Consumer Defensive') themes.push('Travel & Consumer');
     }
     themes.forEach(t=>{
       if(!map[t]) return;
@@ -1747,6 +1760,7 @@ function renderThemes(){
               <div style="font-size:18px;">${t.emoji}</div>
               <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">${t.theme}</div>
               <div style="font-size:11px;color:var(--text3);">${t.count} names · Avg score ${t.avgScore>=0?'+':''}${t.avgScore.toFixed(2)} ${t.avgQuality!=null?'· Avg Q '+t.avgQuality.toFixed(0):''} ${t.fresh?'· '+t.fresh+' fresh':''}</div>
+              ${(()=>{ const newTks=new Set((STATE.wow||[]).filter(w=>w.status==='NEW').map(w=>w.ticker)); const newN=t.names.filter(n=>newTks.has(n.ticker)).length; return newN>0?`<span style="background:rgba(0,230,122,0.15);color:var(--green);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">+${newN} new this wk</span>`:''; })()}
               ${evCount?`<span style="background:rgba(245,166,35,0.15);color:var(--gold);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">📡 ${evCount} this wk</span>`:''}
             </div>
             <div style="width:140px;height:8px;background:var(--bg3);border-radius:2px;overflow:hidden;">
