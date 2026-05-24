@@ -1,0 +1,42 @@
+name: Refresh macro overlay (daily)
+
+# Runs after US market close every weekday + a manual trigger button.
+# - 22:00 UTC = 6 PM ET (winter) / 5 PM EDT (after-hours window for the close print)
+# - Cron syntax: minute hour day-of-month month day-of-week
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"
+  workflow_dispatch:   # lets you trigger manually from GitHub UI
+
+permissions:
+  contents: write       # needed so the action can git push the updated macro.json
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install yfinance
+        run: pip install --quiet yfinance==0.2.* pandas
+
+      - name: Fetch macro data
+        run: python update_macro.py
+
+      - name: Commit + push if macro.json changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add macro.json
+          if git diff --cached --quiet; then
+            echo "No changes to macro.json — skipping commit"
+          else
+            git commit -m "chore(macro): daily refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
