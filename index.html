@@ -408,6 +408,11 @@ const sectorColors = {
     const buf = await r.arrayBuffer();
     const wb = XLSX.read(new Uint8Array(buf), {type:'array'});
     parseWorkbook(wb);
+    // Also try to pull the full narratives JSON for business intros + theme tagging on ALL 50 names
+    try {
+      const nr = await fetch('./narratives.json', {cache: 'no-cache'});
+      if(nr.ok) { STATE.allNarr = await nr.json(); console.log('[live mode] loaded narratives.json'); }
+    } catch(e) { console.log('No narratives.json found — falling back to Fresh Breakouts only'); }
     render();
     // Repurpose the dropzone label to a refresh hint
     const dzEl = document.getElementById('dz');
@@ -865,8 +870,13 @@ function filteredSorted(){
 function themesFor(s){
   // Tag this row using same logic as the Themes tab
   if(!s) return [];
-  const nar = (STATE.fresh||[]).find(x=>x.ticker===s.ticker) || {narrative:{}};
-  const text = [s.name, s.sector, nar.narrative.business, nar.narrative.happening, nar.narrative.why].filter(Boolean).join(' ').toLowerCase();
+  const fresh = (STATE.fresh||[]).find(x=>x.ticker===s.ticker) || {narrative:{}};
+  const full = (STATE.allNarr||{})[s.ticker] || {};
+  const text = [s.name, s.sector,
+                fresh.narrative.business || full.business,
+                fresh.narrative.happening || full.happening,
+                fresh.narrative.why || full.why
+               ].filter(Boolean).join(' ').toLowerCase();
   const hits = THEME_RULES.filter(r => r.keywords.some(k => text.includes(k.toLowerCase())));
   // Sector fallback for names with no narrative-matched theme
   if(!hits.length && s.sector){
@@ -933,7 +943,17 @@ function bindRows(){
 function showDetail(tk, targetId){
   const r = STATE.top.find(x=>x.ticker===tk); if(!r) return;
   const f = STATE.fund[tk]||{};
-  const nar = STATE.fresh.find(x=>x.ticker===tk);
+  let nar = STATE.fresh.find(x=>x.ticker===tk);
+  if(!nar && STATE.allNarr && STATE.allNarr[tk]){
+    nar = {ticker:tk, narrative: STATE.allNarr[tk]};
+    // map curated 'thesis' object into the flat shape the renderer expects
+    const th = STATE.allNarr[tk].thesis;
+    if(th){
+      nar.narrative.bull      = (th.bull      || []).join(' \u2022 ');
+      nar.narrative.bear      = (th.bear      || []).join(' \u2022 ');
+      nar.narrative.catalysts = (th.catalysts || []).join(' \u2022 ');
+    }
+  }
   const wow = STATE.wow.find(x=>x.ticker===tk);
   STATE.selected = tk;
   const prices = STATE.prices[tk]||[];
@@ -1470,8 +1490,12 @@ function buildThemeMap(){
   const themeNames = THEME_RULES.map(r=>r.theme);
   const map = {}; themeNames.forEach(t=>map[t]={names:[], totalScore:0, totalQuality:0, freshCount:0});
   STATE.top.forEach(s=>{
-    const nar = STATE.fresh.find(x=>x.ticker===s.ticker) || {narrative:{}};
-    const text = [s.name, s.sector, nar.narrative.business, nar.narrative.happening, nar.narrative.why].filter(Boolean).join(' ');
+    const fresh = STATE.fresh.find(x=>x.ticker===s.ticker) || {narrative:{}};
+    const full = (STATE.allNarr||{})[s.ticker] || {};
+    const text = [s.name, s.sector,
+                  fresh.narrative.business || full.business,
+                  fresh.narrative.happening || full.happening,
+                  fresh.narrative.why || full.why].filter(Boolean).join(' ');
     const themes = tagThemes(text);
     // Sector-based fallback
     if(!themes.length && s.sector){

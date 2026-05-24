@@ -1,0 +1,1252 @@
+{
+  "STMPA.PA": {
+    "happening": "STMicroelectronics is breaking out as European auto-semi pricing inflects and the company's silicon-carbide (SiC) MOSFET wafer ramp at Catania crosses commercial scale. After two cyclical years of weak auto and industrial demand, lead times have shortened and channel inventory is cleared.",
+    "why": "Three tailwinds align: (1) Chinese EV OEMs are locking multi-year SiC supply deals with non-Wolfspeed sources, putting STM in front of every major Tier-1; (2) Apple silicon and microcontroller wins are starting to flow through into 2026 revenue guidance; (3) the firm's net cash position lets it run buybacks while peers (Infineon, NXP) are deleveraging. STM trades at a P/E discount to US semis despite SiC leadership.",
+    "risk": "Watch: SiC pricing competition from Chinese substrate suppliers (TankeBlue, SICC) is real and could compress margins if it shows up in 1H26 guidance. Also, any pause in EV OEM SiC adoption — Tesla is still wavering between SiC and IGBT in lower-trim trucks. Suggested stop ≈ 2× ATR below; reduce size if hyperscaler capex commentary turns cautious into next earnings.",
+    "business": "Franco-Italian semiconductor maker. Makes microcontrollers, analog/power chips, and silicon-carbide (SiC) power transistors. Big in automotive (EV/ADAS), industrial automation, and IoT — supplies almost every European car maker and is Apple's secure-element vendor.",
+    "thesis": {
+      "bull": [
+        "SiC MOSFET wafer ramp at Catania crosses commercial scale in 2026",
+        "Chinese EV OEM design wins create multi-year revenue visibility",
+        "Net cash position funds aggressive buybacks vs leveraged peers",
+        "Apple secure-element + microcontroller wins flow through to FY guidance"
+      ],
+      "bear": [
+        "SiC pricing pressure from TankeBlue/SICC compresses gross margins",
+        "Tesla SiC adoption slowdown in lower-trim trucks hits demand",
+        "European auto build rates remain weak through 1H26",
+        "Industrial automation segment lags expectations"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Jan 2026) — Catania ramp commentary",
+        "Investor Day March 2026 — 2026 revenue guidance update",
+        "Apple supplier disclosure cycle (May 2026)"
+      ]
+    }
+  },
+  "SNDK": {
+    "happening": "Sandisk's post-spinoff identity as a pure-play NAND/SSD operator is paying off as enterprise SSD pricing rises sharply and HDD-to-SSD substitution accelerates in data centers. Pricing power has returned faster than the sell-side modeled — both contract and spot prices on enterprise QLC are at multi-quarter highs.",
+    "why": "AI-training workloads need cheap, fast, high-density storage for checkpoint data and inference caching — exactly Sandisk's BiCS8 sweet spot. Three of the four US hyperscalers have publicly increased NAND allocations for 2026. Industry NAND capex remains restrained (Samsung and Hynix are prioritizing HBM), keeping supply tight through 2026.",
+    "risk": "Watch: NAND is the most cyclical memory segment. A single hyperscaler pause (which is rare but has happened before) can rapidly push contract pricing back down. Also, Sandisk's balance sheet is thinner than peers — any working-capital squeeze in a downturn is more painful. Earnings volatility is structural.",
+    "business": "Pure-play NAND flash memory + SSD manufacturer, spun out of Western Digital in 2025. Makes the storage chips that go inside enterprise data-center SSDs, consumer SSDs, and memory cards.",
+    "thesis": {
+      "bull": [
+        "Hyperscaler NAND allocations rising as AI capex expands",
+        "Industry capex restrained — Samsung/Hynix prioritizing HBM",
+        "BiCS8 process node hits enterprise QLC sweet spot",
+        "Pricing power has returned faster than sell-side modeled"
+      ],
+      "bear": [
+        "NAND is most cyclical memory segment — single hyperscaler pause hits hard",
+        "Balance sheet thinner than Micron/Hynix",
+        "HDD-to-SSD substitution rate could plateau in nearline",
+        "Geopolitical risk on Chinese demand"
+      ],
+      "catalysts": [
+        "Q1 2026 earnings — pricing trajectory commentary",
+        "Samsung HBM3E qualification timing at NVIDIA",
+        "Hyperscaler capex guidance updates Q4-Q1"
+      ]
+    }
+  },
+  "DOCN": {
+    "happening": "DigitalOcean is breaking out as small/mid-market AI adoption finally inflects — its GPU droplet product is fully booked and margin profile is recovering after 18 months of compressed gross margins from AI capex. Net new ARR growth turned positive and cash flow conversion has improved.",
+    "why": "DOCN's pricing model (transparent flat-rate vs hyperscaler complexity) is finally a meaningful differentiator now that AI workloads have become mainstream for indie devs and SMB SaaS. Recent product launches (managed inference, vector DB) close the gap with AWS for sub-100-employee customers. Insider buying in the last quarter was notable.",
+    "risk": "Watch: DOCN is a $4B market-cap business competing against trillion-dollar hyperscalers. Any meaningful AWS/GCP price drop on small-instance compute hurts the moat. Also, GPU droplet revenue concentration in a handful of generative-AI startups creates customer-concentration risk that doesn't show in headline numbers.",
+    "business": "Cloud computing platform aimed at developers and small/medium businesses. Think of it as the affordable, simple alternative to AWS — flat-rate virtual servers ('droplets'), managed databases, and GPU compute, popular with indie developers and startups.",
+    "thesis": {
+      "bull": [
+        "GPU droplet fully booked — pricing power demonstrated",
+        "Operating margin expansion from AI capex absorption ending",
+        "SMB AI adoption inflecting — TAM expanding faster than guided",
+        "Capital allocation has dramatically improved — buybacks accretive"
+      ],
+      "bear": [
+        "Competing vs trillion-dollar hyperscalers on price",
+        "GPU customer concentration in handful of gen-AI startups",
+        "Net new ARR growth still single-digit overall",
+        "AWS/GCP small-instance price cut would compress moat"
+      ],
+      "catalysts": [
+        "Q1 2026 earnings — net new ARR commentary",
+        "Vector DB + managed inference adoption metrics",
+        "NVIDIA H200 supply normalization timing"
+      ]
+    }
+  },
+  "NOD.OL": {
+    "happening": "Nordic Semiconductor is breaking out on a clear inflection in Bluetooth Low Energy + Wi-Fi 6 chip demand for wearables, hearables, and smart-home, plus first revenue from cellular IoT (nRF91 series). After a two-year inventory correction, the channel is finally rebuilding.",
+    "why": "Three converging catalysts: (1) Apple Vision Pro 2 and Meta Ray-Ban supply wins are starting to ship in volume; (2) the cellular IoT category (asset tracking, smart meters) is moving from pilot to deployment; (3) Nordic remains the only Western vendor with credible scale in low-power Bluetooth — geopolitical preference is real here. Operating leverage is significant given the fixed-cost base.",
+    "risk": "Watch: Wearables demand is consumer-cyclical and tied to Apple/Meta product cycles — a weak holiday quarter can quickly reverse. Also, Chinese competition in low-end BLE (Telink, Bouffalo) compresses ASPs at the entry tier. Position sizing should reflect single-customer concentration risk.",
+    "business": "Norwegian semiconductor company specializing in low-power wireless chips. Makes the Bluetooth Low Energy chips inside most wearables, hearables (AirPods, Galaxy Buds), smart-home devices, and increasingly cellular-IoT devices like asset trackers and smart meters.",
+    "thesis": {
+      "bull": [
+        "Apple Vision Pro 2 + Meta Ray-Ban supply wins shipping volume",
+        "Cellular IoT (nRF91) moves from pilot to deployment",
+        "Geopolitical preference for non-Chinese BLE — sticky moat",
+        "Operating leverage step-function on fixed cost base"
+      ],
+      "bear": [
+        "Wearables consumer-cyclical — weak holiday hits fast",
+        "Chinese BLE competition (Telink, Bouffalo) at entry tier",
+        "Single Apple/Meta product cycle = concentration risk",
+        "Channel rebuild could stall if macros weaken"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings — wearables ASP trajectory",
+        "Apple WWDC June 2026 — VR/AR product cycle confirmation",
+        "Cellular IoT design-win disclosures"
+      ]
+    }
+  },
+  "MU": {
+    "happening": "Micron is breaking back to highs as HBM3E and HBM4 ramp ahead of plan, and DRAM contract prices for 2026 have already been locked higher than sell-side models assumed. The firm is now a credible #2 in HBM alongside SK Hynix — Samsung's HBM3E qualification at NVIDIA remains delayed.",
+    "why": "AI training capex continues to expand HBM TAM faster than supply: NVIDIA's Blackwell ramp and AMD's MI400 commit HBM allocation through 2026. Micron's gross margin trajectory implies operating leverage that consensus is still under-modeling. Conservative supply discipline industry-wide (versus past memory cycles) is structural this time.",
+    "risk": "Watch: memory cycles are deeply cyclical; any hyperscaler digestion pause shows up in 2H pricing fast. Also, Samsung qualification at NVIDIA — when it happens — meaningfully changes HBM supply/demand. Earnings sensitivity to per-Gb pricing is extreme.",
+    "business": "Major US memory chip maker. Produces DRAM (the working memory inside every computer) and NAND (storage). One of three global HBM suppliers (high-bandwidth memory needed for AI training GPUs) alongside SK Hynix and Samsung.",
+    "thesis": {
+      "bull": [
+        "HBM3E ramp ahead of plan; HBM4 design wins locked",
+        "DRAM contract prices for 2026 above sell-side models",
+        "Industry supply discipline structural this cycle",
+        "Now credible #2 HBM supplier — Samsung qualification still delayed"
+      ],
+      "bear": [
+        "Memory cycles deeply cyclical — hyperscaler pause hits 2H",
+        "Samsung NVIDIA qualification (when it comes) shifts supply/demand",
+        "Earnings sensitivity to per-Gb pricing is extreme",
+        "China DRAM (CXMT) capacity ramp longer-term risk"
+      ],
+      "catalysts": [
+        "Q2 FY26 earnings (March 2026) — pricing + HBM mix",
+        "NVIDIA Blackwell Ultra launch timing",
+        "Samsung HBM3E qualification announcement"
+      ]
+    }
+  },
+  "AMD": {
+    "happening": "AMD is breaking out as the MI350/MI400 GPU roadmap regains credibility — large hyperscaler wins (Oracle, Meta) are now flowing into the order book, and the gap to NVIDIA's CUDA ecosystem is narrowing as ROCm matures. Server CPU share gains continue at Intel's expense.",
+    "why": "Three tailwinds: (1) data-center GPU revenue inflecting from supply-constrained MI300 to higher-volume MI350; (2) EPYC server CPU share now above 30% in cloud — sticky and high-margin; (3) Xilinx integration is finally paying off in embedded/automotive. Free cash flow generation is reaching a step-change.",
+    "risk": "Watch: NVIDIA's pace of innovation (Rubin/Blackwell Ultra) sets a brutal moving target. Any quarter where AMD's HBM allocation lags peers can stall the GPU narrative. Also, embedded segment remains a multi-quarter inventory headwind that obscures core data-center numbers.",
+    "business": "US semiconductor company designing CPUs, GPUs, and FPGAs. Competes with Intel in server/PC processors (EPYC, Ryzen) and with NVIDIA in AI accelerators (MI300/MI400). Owns Xilinx (FPGAs) for embedded/automotive.",
+    "thesis": {
+      "bull": [
+        "MI350/MI400 GPU roadmap regaining credibility — Oracle, Meta wins",
+        "EPYC server CPU share above 30% in cloud — sticky high margin",
+        "Xilinx integration finally paying off in embedded/auto",
+        "Free cash flow generation reaching step-change"
+      ],
+      "bear": [
+        "NVIDIA Rubin/Blackwell Ultra raises bar relentlessly",
+        "Embedded segment multi-quarter inventory drag",
+        "HBM allocation gap vs NVIDIA stalls AI GPU narrative",
+        "Custom hyperscaler silicon (Trainium, TPU) caps AMD share"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (early Feb 2026) — MI350 ramp + data-center segment",
+        "Computex / GTC keynote calendar",
+        "Hyperscaler capex guidance for 2026"
+      ]
+    }
+  },
+  "DELL": {
+    "happening": "Dell is breaking out as AI server backlog reaches record levels and ISG (Infrastructure Solutions) margin expansion finally arrives. The XE9680 (H100/H200/GB200) is supply-constrained, and customer concentration is broadening beyond xAI.",
+    "why": "Dell sits at the intersection of two flywheels: hyperscaler AI infra capex (where Supermicro shares are being captured back) and enterprise on-prem AI deployment (where Dell's services/integration moat is significant). The PC business — long the drag — is finally showing AI-PC refresh tailwinds. Buyback yield + dividend yield combined is north of 4%.",
+    "risk": "Watch: AI server gross margins are structurally lower than legacy ISG; the mix shift is dilutive even as revenue grows. Also, hyperscaler customer concentration (Microsoft, Meta, xAI together >40% of AI server revenue) creates ugly comps if any one pauses. Working capital can swing $5B per quarter.",
+    "business": "Global PC + server + storage maker. Two big segments: PCs/laptops (consumer + commercial) and Infrastructure Solutions Group (servers, storage, networking). Currently a major beneficiary of AI server build-out (XE9680 is the flagship NVIDIA H100/B100 box).",
+    "thesis": {
+      "bull": [
+        "AI server backlog at record levels, broadening beyond xAI",
+        "ISG margin expansion finally arriving",
+        "Capital return >4% yield (dividend + buyback)",
+        "AI-PC refresh cycle tailwind for legacy PC business"
+      ],
+      "bear": [
+        "AI server gross margins structurally lower than legacy ISG",
+        "Hyperscaler concentration (MSFT/Meta/xAI ~40%) ugly comps risk",
+        "Working capital can swing $5B per quarter",
+        "Supermicro share recapture has limits"
+      ],
+      "catalysts": [
+        "Q4 FY26 earnings (Feb 2026) — backlog + margin commentary",
+        "NVIDIA GB200/B300 GA timing",
+        "CES 2026 AI-PC product launches"
+      ]
+    }
+  },
+  "BESI.AS": {
+    "happening": "BE Semiconductor (BESI) is breaking out as hybrid-bonding tool orders accelerate — this is the assembly tech that enables HBM4 stacking and advanced 3D packaging. TSMC's ramp at Phoenix and the broader CoWoS expansion are unlocking the order book the market had partly written off.",
+    "why": "BESI's hybrid-bonding monopoly is the closest thing to ASML's EUV lock-in within back-end semis. Every advanced AI accelerator (NVIDIA Blackwell+, AMD MI400, AWS Trainium) needs hybrid bonding at scale. Lead times are extending, and 2026 backlog visibility is the cleanest in three years.",
+    "risk": "Watch: BESI is small (mkt cap ~€20B) and a single TSMC capex push-out moves the stock 15%+. Also, Chinese hybrid-bonding competitors (Naura, Shanghai Micro) are real long-term threats even if not 2026-relevant. Valuation already prices in upside; entry timing matters.",
+    "business": "Dutch semiconductor equipment company. Makes back-end packaging machinery — specifically hybrid bonding tools that stack chips on top of each other (required for HBM memory and advanced AI accelerators). Near-monopoly position alongside Applied Materials in this niche.",
+    "thesis": {
+      "bull": [
+        "Hybrid-bonding monopoly — closest thing to ASML EUV lock-in",
+        "HBM4 stacking + advanced 3D packaging drives tool intensity",
+        "TSMC Phoenix + CoWoS expansion unlocks order book",
+        "2026 backlog visibility cleanest in three years"
+      ],
+      "bear": [
+        "TSMC capex push-out moves stock 15%+ per single decision",
+        "Chinese hybrid-bonding (Naura) is real long-term threat",
+        "Valuation already prices in cycle peak",
+        "Apple/customer concentration extreme"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — 2026 capex guide",
+        "TSMC capex announcements",
+        "Samsung packaging tech strategy updates"
+      ]
+    }
+  },
+  "STX": {
+    "happening": "Seagate is breaking out as nearline HDD pricing rises for the fifth consecutive quarter — exabytes shipped to hyperscalers are growing and HAMR (heat-assisted magnetic recording) drives are now in volume production with 30+ TB density, restoring the cost/TB advantage over SSDs for cold storage.",
+    "why": "AI workloads create more cold/warm data than they consume hot — every training run produces enormous archived datasets that economically belong on HDD. Hyperscaler capex for storage is bifurcating: NAND for fast tiers, HDD for everything else. STX's HAMR ramp is ahead of Western Digital's competing MAMR roadmap.",
+    "risk": "Watch: any major QLC NAND pricing collapse could re-open the HDD-substitution conversation, especially in mid-tier nearline. Also, STX's customer concentration is among the highest in semis (top 3 = >50% of revenue) — single-customer renegotiation risk is real.",
+    "business": "Hard disk drive (HDD) manufacturer. Makes the spinning-disk storage used in data centers for 'nearline' (warm/cold) storage of huge datasets — exactly what AI training generates as archived data.",
+    "thesis": {
+      "bull": [
+        "Nearline HDD pricing up five quarters running",
+        "HAMR drives at 30+ TB density restore cost/TB vs SSD for cold storage",
+        "AI training data exhaust = HDD demand secular",
+        "HAMR ramp ahead of WDC MAMR roadmap"
+      ],
+      "bear": [
+        "QLC NAND pricing collapse re-opens HDD substitution",
+        "Customer concentration top 3 >50% revenue",
+        "HAMR yield ramp execution risk",
+        "Cyclical exposure to hyperscaler capex"
+      ],
+      "catalysts": [
+        "Q3 FY26 earnings (Jan 2026) — HAMR exabyte mix",
+        "Hyperscaler 2026 capex commentary",
+        "WDC HAMR catch-up timing"
+      ]
+    }
+  },
+  "PRY.MI": {
+    "happening": "Prysmian is breaking out as the global HV cable backlog reaches record levels — grid build-out, offshore wind interconnects, and US transmission upgrades are all hitting simultaneously. The Encore Wire (US) acquisition is integrating better than guidance suggested.",
+    "why": "Three multi-year tailwinds: (1) EU has €580B grid-investment commitment through 2030; (2) US Inflation Reduction Act grid spending is finally translating to cable orders; (3) data-center backbone fiber + medium-voltage substation orders are exploding from AI hyperscaler builds. Prysmian and Nexans control >50% of high-end HV market — pricing discipline is structural.",
+    "risk": "Watch: copper price volatility passes through with a lag and can compress margins in fast-up moves. Also, large turnkey project execution risk (Viking Link-style cost overruns) is the historical scar. Capital intensity is rising as new factories come online.",
+    "business": "Italian global leader in high-voltage power cables and fiber-optic cables. Makes the cables that connect offshore wind farms to land, that link national power grids, that run inside data centers, and that string between cell towers.",
+    "thesis": {
+      "bull": [
+        "EU €580B grid investment commitment through 2030",
+        "US IRA grid spending translating to cable orders",
+        "Data-center fiber + medium-voltage substation explosion",
+        "Prysmian + Nexans control >50% HV market = pricing discipline"
+      ],
+      "bear": [
+        "Copper price spikes compress margins with lag",
+        "Large turnkey project execution risk (Viking Link-style)",
+        "Capital intensity rising as new factories online",
+        "Offshore wind project delays"
+      ],
+      "catalysts": [
+        "FY 2025 earnings (March 2026) — backlog + EBITDA guide",
+        "Encore Wire synergy update",
+        "Major HVDC tender awards H1 2026"
+      ]
+    }
+  },
+  "FLEX": {
+    "happening": "Flex (EMS) is breaking out as Nextracker spin/sell value crystallizes and the core EMS business pivots into higher-margin AI/data-center power and liquid-cooling sub-systems. Order book visibility has rarely been this clean.",
+    "why": "Flex has quietly become a #1 supplier of liquid-cooling distribution units (CDUs) and busbars to two of the four US hyperscalers — these are step-change higher-margin than legacy contract manufacturing. The Nextracker stake monetization has cleaned the cap structure. Buyback authorization is large.",
+    "risk": "Watch: EMS is structurally low-margin and customer-power dynamics with hyperscalers can compress unit economics quickly. Also, the cleaner narrative requires Nextracker to keep performing — any solar/tracker market wobble hits sentiment.",
+    "business": "Global electronics contract manufacturer (EMS). Assembles electronics for hundreds of clients across cars, medical devices, data centers, and consumer goods. Recently expanded into liquid-cooling and power distribution for AI data centers (high-margin growth).",
+    "thesis": {
+      "bull": [
+        "Nextracker monetization cleaned cap structure",
+        "Liquid-cooling CDU + busbar wins at 2 of 4 hyperscalers",
+        "Order book visibility rarely this clean",
+        "Buyback authorization large vs market cap"
+      ],
+      "bear": [
+        "EMS structurally low-margin",
+        "Hyperscaler power dynamics compress unit economics quickly",
+        "Solar/tracker market wobble hurts Nextracker stake",
+        "Customer concentration in handful of hyperscalers"
+      ],
+      "catalysts": [
+        "Q3 FY26 earnings (Jan 2026) — power/cooling mix",
+        "Hyperscaler liquid cooling rollout disclosures",
+        "Nextracker IPO performance"
+      ]
+    }
+  },
+  "COHR": {
+    "happening": "Coherent is breaking out as datacom transceiver demand (800G, 1.6T) accelerates with hyperscaler GPU cluster builds and the company's vertical integration (in-house InP fabs) becomes a moat as competitors run short on supply. Networking segment is now the largest profit pool.",
+    "why": "Every AI training cluster requires massive optical interconnect — and 800G/1.6T transceivers are supply-constrained through 2026. Coherent's acquisition of II-VI gave it the InP wafer capacity competitors lack. Industrial laser segment, long a drag, is stabilizing. Margin trajectory is the cleanest in five years.",
+    "risk": "Watch: optical transceiver pricing competition from Chinese players (Innolight, Eoptolink) at high-volume tiers is real. Also, any hyperscaler pause in GPU cluster build-out flows directly to Coherent. Customer concentration (NVIDIA + 3 hyperscalers) is significant.",
+    "business": "Optical components and laser systems maker (formed from Coherent + II-VI merger). Two main segments: high-speed datacom transceivers (the optical modules connecting AI GPU clusters at 800G/1.6T speeds) and industrial lasers.",
+    "thesis": {
+      "bull": [
+        "800G/1.6T transceivers supply-constrained through 2026",
+        "II-VI InP wafer capacity = competitive moat",
+        "Industrial laser segment stabilizing",
+        "Margin trajectory cleanest in five years"
+      ],
+      "bear": [
+        "Chinese transceiver pricing pressure (Innolight, Eoptolink)",
+        "Hyperscaler GPU cluster pause flows directly through",
+        "NVIDIA + 3 hyperscaler concentration",
+        "Integration costs from II-VI ongoing"
+      ],
+      "catalysts": [
+        "Q2 FY26 earnings (Feb 2026) — networking segment commentary",
+        "NVIDIA Spectrum-X adoption updates",
+        "800G/1.6T adoption rate at hyperscalers"
+      ]
+    }
+  },
+  "WDC": {
+    "happening": "Western Digital is breaking out post-NAND separation (which became Sandisk) — pure-play HDD operator with HAMR drives ramping and pricing rising. Mirrors the Seagate setup but with a cleaner valuation and a smaller float.",
+    "why": "Same AI-data-tail tailwind as STX: archived training data must live on HDD economically. WDC's HAMR roadmap is competitive (close to Seagate), and the post-separation balance sheet is cleaner than expected. Multi-year hyperscaler contract structures provide unusually high revenue visibility for a hardware company.",
+    "risk": "Watch: WDC trails STX slightly on HAMR rollout — execution risk on the next 12 months of density steps is real. Also, post-separation, the firm lacks NAND optionality during HDD-cycle troughs. Single-product risk.",
+    "business": "Pure-play HDD manufacturer post-NAND-spinoff (NAND went to Sandisk in 2025). Same business model as Seagate — sells nearline drives to hyperscalers for cold/warm data storage.",
+    "thesis": {
+      "bull": [
+        "Pure-play HDD post-NAND-spinoff — cleaner story",
+        "Same AI cold-storage tailwind as STX",
+        "Post-separation balance sheet cleaner than expected",
+        "Multi-year hyperscaler contracts provide visibility"
+      ],
+      "bear": [
+        "Trails STX on HAMR rollout — execution risk",
+        "No NAND optionality during HDD cycle troughs",
+        "Single-product risk",
+        "HAMR yield + cost curve uncertainty"
+      ],
+      "catalysts": [
+        "Q2 FY26 earnings (Jan 2026) — HAMR ramp progress",
+        "Hyperscaler 2026 storage capex guidance",
+        "HAMR competitive positioning vs STX"
+      ]
+    }
+  },
+  "TTMI": {
+    "happening": "TTM Technologies is breaking out as defense PCB demand surges (multi-year backlog from F-35, Patriot, Aegis upgrade programs) plus commercial AI server PCB orders accelerating. The China divestiture last year has cleaned up the margin and geopolitical profile.",
+    "why": "TTM is a pure US/North-America PCB play in a world where supply-chain reshoring is real defense and aerospace policy. Defense backlog is currently >$1B and growing — multi-year visibility unusual for the segment. AI server PCB content has roughly doubled per server in three years.",
+    "risk": "Watch: PCB is a low-margin commodity-adjacent business outside of defense — any slowdown in commercial AI server volume disproportionately hits margin mix. Also, defense program timing (annual budget cycles, congressional appropriation) creates lumpy quarters.",
+    "business": "US printed circuit board (PCB) manufacturer focused on defense, aerospace, and high-end commercial markets. Makes the boards inside F-35 fighters, Aegis radar systems, and AI server motherboards.",
+    "thesis": {
+      "bull": [
+        "Defense PCB backlog >$1B (F-35, Patriot, Aegis programs)",
+        "Multi-year revenue visibility unusual for segment",
+        "China divestiture cleaned margin + geopolitical profile",
+        "AI server PCB content roughly doubled per server"
+      ],
+      "bear": [
+        "Commercial AI server volume slowdown hits margin mix",
+        "Defense program timing creates lumpy quarters",
+        "PCB commodity exposure outside defense",
+        "Congressional appropriation risk"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — defense backlog + mix",
+        "FY27 defense budget signals",
+        "Major AI server platform PCB design wins"
+      ]
+    }
+  },
+  "CIEN": {
+    "happening": "Ciena is breaking out as cloud DCI (data-center interconnect) orders accelerate with hyperscaler east-west bandwidth needs and the company's WaveLogic 6 optical engine wins the next-gen 800ZR+ socket at multiple webscale customers.",
+    "why": "AI training requires high-bandwidth interconnect between GPU clusters across data-center campuses — exactly the DCI market Ciena dominates. WaveLogic 6 (1.6T per wavelength) is ahead of Cisco/Infinera. Service-provider business stabilizing while webscale grows is a healthy mix shift.",
+    "risk": "Watch: Cisco's acquisition of Acacia + Nokia's optical business create real competitive pressure on price. Also, service-provider capex remains anemic — any negative read across Verizon/Lumen/BT capex hurts the larger half of revenue.",
+    "business": "Optical networking equipment maker. Builds the gear that telecoms (Verizon, BT) and hyperscalers (Google, Meta) use to send massive amounts of data between data centers over fiber — including the new 800ZR/1.6T systems for AI traffic.",
+    "thesis": {
+      "bull": [
+        "WaveLogic 6 wins next-gen 800ZR+ socket at webscale customers",
+        "Cloud DCI orders accelerating with AI east-west bandwidth",
+        "Service-provider business stabilizing",
+        "WaveLogic 6 ahead of Cisco/Infinera optical"
+      ],
+      "bear": [
+        "Cisco + Acacia + Nokia create real price pressure",
+        "Service-provider capex remains anemic",
+        "Verizon/Lumen/BT capex weakness hurts SP half",
+        "Webscale revenue lumpy"
+      ],
+      "catalysts": [
+        "Q1 FY26 earnings (March 2026) — DCI bookings",
+        "Cisco Acacia roadmap updates",
+        "Major hyperscaler optical refresh wins"
+      ]
+    }
+  },
+  "SUBC.OL": {
+    "happening": "Subsea 7 is breaking out as offshore oilfield services pricing finally turns and the company's record backlog (≈$10B+) translates into visible margin expansion through 2027. The OneSubsea JV with Schlumberger is winning a disproportionate share of new field developments.",
+    "why": "Deep-water economics work at $65 oil — and majors (Petrobras, Equinor, ExxonMobil Guyana) are committing to large multi-year subsea programs. Subsea 7's fleet utilization is near 100%, and labor cost inflation is now finally passing through to clients. Free cash flow conversion is improving sharply.",
+    "risk": "Watch: oil-price sensitivity is real — a sustained dip below $60 freezes FID approvals fast. Also, single-project execution risk (any large turnkey program overrun) can wipe a year of margin in one quarter. Renewables exposure (offshore wind cable lay) is a multi-year drag.",
+    "business": "Norwegian offshore oilfield services company. Lays subsea pipelines and installs subsea production equipment for deep-water oil and gas projects. Works mainly for majors like Petrobras, Equinor, and ExxonMobil in Brazil/Guyana/West Africa.",
+    "thesis": {
+      "bull": [
+        "Record backlog ~$10B+ translates to margin expansion through 2027",
+        "OneSubsea JV winning disproportionate new field developments",
+        "Fleet utilization near 100% — pricing pass-through structural",
+        "Free cash flow conversion improving sharply"
+      ],
+      "bear": [
+        "Brent below $60 sustained freezes FID approvals",
+        "Single-project execution risk = year of margin",
+        "Renewables segment multi-year drag",
+        "Cost inflation passing through with lag"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — backlog quality + margin guide",
+        "Major Brazilian/Guyanese FID announcements",
+        "Petrobras 2026 capex plan"
+      ]
+    }
+  },
+  "ON": {
+    "happening": "ON Semiconductor is breaking out as the auto SiC inventory correction ends and the company's intelligent power and sensing portfolio sees strong design-win momentum from Chinese EV OEMs and European Tier-1s. Tower acquisition synergies are flowing through.",
+    "why": "ON's SiC and image sensor exposure to EVs, ADAS, and industrial automation provides multi-driver growth — not a single-cycle bet. Pricing for differentiated automotive content is sticky. The company has actively shed lower-margin commodity power business, structurally improving mix.",
+    "risk": "Watch: auto OEM build-rate volatility (Tesla, BYD, VW) hits ON faster than peers because of design-win concentration. Also, any pause in EV adoption rate would directly compress the SiC growth narrative.",
+    "business": "US semiconductor company focused on automotive and industrial power chips. Strong in silicon-carbide (SiC) MOSFETs for EVs (competing with STMicro), CMOS image sensors for cars and security cameras, and motor-control chips for industrial robots.",
+    "thesis": {
+      "bull": [
+        "Auto SiC inventory correction ending — design-win momentum strong",
+        "Chinese EV + European Tier-1 wins flowing through",
+        "Tower acquisition synergies in P&L",
+        "Mix improvement structural as commodity power shed"
+      ],
+      "bear": [
+        "Auto OEM build-rate volatility hits ON faster than peers",
+        "EV adoption pause directly compresses SiC narrative",
+        "Design-win concentration risk",
+        "Industrial automation softness"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — SiC backlog + auto inventory",
+        "Tier-1 customer SiC announcements",
+        "Tower fab consolidation milestones"
+      ]
+    }
+  },
+  "STRL": {
+    "happening": "Sterling Infrastructure is breaking out as data-center site preparation backlog reaches record levels and the company's e-infrastructure segment becomes the dominant profit pool. Hyperscaler campus builds are creating multi-year visibility unusual for civil construction.",
+    "why": "Every new hyperscaler data center needs site grading, foundation, water/power utilities — and Sterling has become a preferred contractor for two of the four US hyperscalers. Margin profile is structurally better than legacy heavy-civil. Texas/Arizona/Virginia campus pipeline is years deep.",
+    "risk": "Watch: civil contracting is fixed-price; cost inflation (steel, labor) can erode locked-in margins. Also, any hyperscaler data-center capex slowdown hits Sterling immediately. Customer concentration is high.",
+    "business": "US infrastructure construction company. Does heavy-civil work (highways, airports), e-infrastructure (data center site prep — grading, foundations, utilities), and water/utility infrastructure. Major hyperscaler campus contractor.",
+    "thesis": {
+      "bull": [
+        "Data-center site preparation backlog at record levels",
+        "Hyperscaler campus pipeline years deep (TX/AZ/VA)",
+        "E-infrastructure segment dominant profit pool",
+        "Margin profile better than legacy heavy-civil"
+      ],
+      "bear": [
+        "Fixed-price contracting — cost inflation erodes locked margins",
+        "Hyperscaler capex pause hits immediately",
+        "Customer concentration high",
+        "Labor cost inflation pressure"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (March 2026) — backlog disclosure",
+        "Major hyperscaler campus groundbreaking announcements",
+        "Texas data-center grid interconnect milestones"
+      ]
+    }
+  },
+  "TGS.OL": {
+    "happening": "TGS is breaking out as seismic data licensing demand returns — E&P operators are finally re-investing in exploration after a multi-year underinvestment cycle. The PGS merger has improved both data-library scale and pricing power.",
+    "why": "Oil reserves replacement ratios across IOCs are well below 100% — exploration spending is structurally necessary at current oil prices. TGS's multi-client data library has higher gross margins than peer contract seismic. Late-sale pricing on Gulf of Mexico and Brazil libraries has been rising.",
+    "risk": "Watch: seismic demand is extremely oil-price and operator-confidence sensitive. Also, ESG-driven reduction in E&P investment by majors remains a structural headwind. Project timing creates lumpy quarters.",
+    "business": "Norwegian seismic data company. Owns the largest non-exclusive seismic data library — basically, when an oil company wants to explore a region, they license TGS's existing data instead of paying for a fresh survey. High-margin, asset-light.",
+    "thesis": {
+      "bull": [
+        "Seismic licensing demand returning — multi-year underinvestment ending",
+        "PGS merger improved data-library scale + pricing power",
+        "Late-sale pricing on Gulf + Brazil rising",
+        "Multi-client library has higher gross margins"
+      ],
+      "bear": [
+        "Seismic demand extremely oil-price + operator-confidence sensitive",
+        "ESG-driven E&P investment reduction structural",
+        "Project timing creates lumpy quarters",
+        "Marine seismic capacity adds risk"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — late-sale + multi-client revenue",
+        "OPEC+ supply decision Dec 2025",
+        "Major IOC exploration capex guidance"
+      ]
+    }
+  },
+  "LITE": {
+    "happening": "Lumentum is breaking out as datacom transceiver demand and the new EML laser business ramp at hyperscaler customers. The Cloud Light acquisition is integrating better than guided, and 800G/1.6T product mix is improving sharply.",
+    "why": "Similar setup to Coherent — AI cluster optical interconnect demand is in shortage, and Lumentum has differentiated EML/InP supply. The 3D-sensing iPhone business stabilizes as cyclical headwind from low handset volumes ends. Industrial laser remains weak but is shrinking as a mix percentage.",
+    "risk": "Watch: more single-customer concentration risk than COHR (heavy NVIDIA reliance). Also, transceiver pricing pressure from Chinese players accelerates as supply normalizes.",
+    "business": "Optical components maker (like COHR). Designs/manufactures laser chips, optical modules for datacom (now growing fast with AI), and the 3D-sensing modules inside iPhones for Face ID. Acquired Cloud Light in 2024 to double down on datacom.",
+    "thesis": {
+      "bull": [
+        "EML laser ramp at hyperscaler customers",
+        "Cloud Light integration better than guided",
+        "3D-sensing iPhone business stabilizing",
+        "Differentiated InP supply"
+      ],
+      "bear": [
+        "Heavy NVIDIA concentration",
+        "Chinese transceiver pricing pressure accelerates",
+        "Industrial laser remains weak",
+        "iPhone unit cyclicality"
+      ],
+      "catalysts": [
+        "Q2 FY26 earnings (Feb 2026) — Cloud Light + Apple commentary",
+        "NVIDIA networking attach rate updates",
+        "Apple iPhone 18 supply ramp"
+      ]
+    }
+  },
+  "AJB.L": {
+    "happening": "AJ Bell is breaking out as UK retail investment platform flows accelerate post-budget and the company's lower-cost positioning vs Hargreaves Lansdown wins net new clients. Margin trajectory is improving as scale benefits flow through.",
+    "why": "UK pension freedoms + simplified tax regime is driving multi-year platform consolidation toward lower-cost providers. AJ Bell has structurally lower customer acquisition costs and better customer NPS than HL. Interest-on-cash spread provides high-quality earnings stream.",
+    "risk": "Watch: UK rate cuts directly compress the cash spread that contributes ~30% of operating profit. Also, regulatory scrutiny on cash interest treatment is a multi-year overhang for the entire UK platform sector.",
+    "business": "UK retail investment platform. Hosts ISAs, pensions, and trading accounts for ~600k UK individual investors — competes mainly with Hargreaves Lansdown by charging lower fees.",
+    "thesis": {
+      "bull": [
+        "UK retail platform flows accelerate post-budget",
+        "Lower-cost positioning vs Hargreaves Lansdown wins net new",
+        "Interest-on-cash spread high-quality earnings",
+        "Scale benefits flowing through margin"
+      ],
+      "bear": [
+        "UK rate cuts compress cash spread ~30% of OP",
+        "Regulatory scrutiny on cash interest treatment ongoing",
+        "UK retail consolidation could compress",
+        "HL competitive response could intensify"
+      ],
+      "catalysts": [
+        "H1 2026 trading update (April 2026) — net flows",
+        "BoE rate decision path",
+        "FCA cash spread regulatory updates"
+      ]
+    }
+  },
+  "NBIX": {
+    "happening": "Neurocrine Biosciences is breaking out as Crinecerfont (CAH program) and Ingrezza both meaningfully beat consensus on script volumes, and the pipeline credit (M1 muscarinic, schizophrenia program) is being re-rated after positive Phase 2 data.",
+    "why": "Ingrezza remains an underappreciated franchise — TD market is much larger than initially modeled, and physician adoption continues to expand. Crinecerfont launch is meeting payor coverage assumptions early. Cash position supports BD without dilution.",
+    "risk": "Watch: Ingrezza patent cliff (mid-2030s) is far but real — pipeline must keep delivering. Also, payor pricing pressure on neurology specialty drugs is a structural headwind.",
+    "business": "US biotech focused on neurological disorders. Two main drugs: Ingrezza (tardive dyskinesia and Huntington's), and Crinecerfont (congenital adrenal hyperplasia, launched 2024). Pipeline includes schizophrenia and muscarinic programs.",
+    "thesis": {
+      "bull": [
+        "Crinecerfont + Ingrezza beat consensus on script volumes",
+        "Pipeline credit being re-rated after positive Phase 2",
+        "Ingrezza TD market much larger than initially modeled",
+        "Cash position supports BD without dilution"
+      ],
+      "bear": [
+        "Ingrezza patent cliff mid-2030s — pipeline must deliver",
+        "Payor pricing pressure on neurology specialty drugs",
+        "Schizophrenia/muscarinic pipeline binary catalysts",
+        "CAH market size disappointment risk"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — Crinecerfont launch metrics",
+        "Phase 3 muscarinic program data H1 2026",
+        "CMS pricing decision cycle"
+      ]
+    }
+  },
+  "MTSI": {
+    "happening": "MACOM is breaking out as defense radar and high-speed datacom orders both accelerate. The recent Wolfspeed RF business acquisition is meaningfully accretive and gives MACOM a credible GaN footprint at scale.",
+    "why": "MACOM sits at the convergence of two structural tailwinds: defense modernization (Patriot, AEGIS, F-35 upgrades) and AI datacom (high-speed connectivity for switches, retimers, optical drivers). GaN-on-SiC capability from Wolfspeed RF asset is hard to replicate. Margin profile is structurally improving.",
+    "risk": "Watch: Wolfspeed acquisition execution and integration cost remain in early innings. Also, defense spending timing creates lumpy quarters; commercial datacom faces same hyperscaler pause risk as peers.",
+    "business": "Niche semiconductor company specializing in high-speed analog and RF chips. Big in defense radar, satellite communications, and high-speed networking (the optical and copper components inside AI data centers).",
+    "thesis": {
+      "bull": [
+        "Defense radar + high-speed datacom orders accelerating",
+        "Wolfspeed RF acquisition meaningfully accretive",
+        "Convergence of defense modernization + AI datacom",
+        "GaN-on-SiC capability hard to replicate"
+      ],
+      "bear": [
+        "Wolfspeed RF integration cost early innings",
+        "Defense spending timing lumpy",
+        "Commercial datacom = hyperscaler pause risk",
+        "Customer concentration"
+      ],
+      "catalysts": [
+        "Q1 FY26 earnings (Feb 2026) — Wolfspeed integration update",
+        "FY27 defense budget",
+        "Major hyperscaler optical RFP awards"
+      ]
+    }
+  },
+  "IGG.L": {
+    "happening": "IG Group is breaking out as UK/Australia spread-betting and CFD volumes recover with retail trading activity, and the FX/Crypto leverage products see renewed engagement post-rate-cut volatility return. Operating leverage is significant.",
+    "why": "Retail trading volumes are cyclical; the firm's diversified product mix (CFDs, OTC options, share dealing) compounds market-cap-weighted growth. New leveraged crypto product launches in selected jurisdictions provide product-mix lift. Capital return policy (buyback + dividend) yields >7%.",
+    "risk": "Watch: regulatory tightening on CFD products (EU, UK, Australia) is a perpetual overhang. Also, retail trading is procyclical — a low-volatility regime compresses volumes quickly. Customer concentration toward UK/Europe is high.",
+    "business": "UK online trading platform for retail traders. Offers CFDs (contracts for difference), spread bets, and FX/crypto leveraged products — basically retail derivatives trading. Operates globally including in Australia and Singapore.",
+    "thesis": {
+      "bull": [
+        "UK/Australia CFD volumes recovering with rate volatility",
+        "Diversified product mix compounds growth",
+        "New leveraged crypto products lift mix",
+        ">7% capital return yield"
+      ],
+      "bear": [
+        "Regulatory tightening on CFD products perpetual",
+        "Low-volatility regime compresses volumes fast",
+        "Customer concentration UK/Europe",
+        "Retail trading procyclical"
+      ],
+      "catalysts": [
+        "H1 2026 results (Jan 2026) — volume + active client growth",
+        "FCA/ASIC regulatory updates",
+        "Crypto product launch timing in new jurisdictions"
+      ]
+    }
+  },
+  "GLW": {
+    "happening": "Corning is breaking out as optical fiber demand for AI data-center buildouts reaches record levels (the new high-density single-mode fiber for hyperscaler campus interconnect), and display glass margins improve with capacity discipline.",
+    "why": "Every AI data-center cluster requires miles of high-count optical fiber — Corning has 60%+ share in premium SMF. Display glass capacity discipline by all three major suppliers (Corning, AGC, NEG) is finally holding, supporting price. Specialty/auto glass segment is also accelerating.",
+    "risk": "Watch: Display glass remains cyclical and consumer-electronics tied; any weak TV cycle hits hard. Also, optical fiber pricing competition from Chinese suppliers (YOFC, Hengtong) at lower tiers is real.",
+    "business": "American glass and ceramics company. Makes Gorilla Glass (the screen on most smartphones), optical fiber (the backbone of telecom + data centers), specialty glass for displays, and pharmaceutical packaging glass.",
+    "thesis": {
+      "bull": [
+        "High-density single-mode fiber demand for AI campus interconnect",
+        "Display glass capacity discipline finally holding",
+        "60%+ share in premium SMF",
+        "Specialty/auto glass also accelerating"
+      ],
+      "bear": [
+        "Display glass remains cyclical — weak TV hits hard",
+        "Chinese fiber pricing (YOFC, Hengtong) at lower tiers",
+        "Apple Gorilla Glass cycle dependence",
+        "Capex intensity rising"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Jan 2026) — fiber order commentary",
+        "Hyperscaler campus build announcements",
+        "Apple iPhone Pro Max glass mix"
+      ]
+    }
+  },
+  "VICR": {
+    "happening": "Vicor is breaking out as its second-generation factorized power architecture wins design slots in next-generation AI accelerator boards — power density per rack-unit is the binding constraint for NVIDIA Blackwell-era servers, and Vicor's 48V-to-PoL conversion technology is differentiated.",
+    "why": "Two compounding tailwinds: (1) AI servers consume 5-10× the power of legacy servers and need integrated DC-DC conversion at the board level — Vicor's IP is unique here; (2) the Andover automotive wafer fab is now producing at higher yields, supporting OEM design wins. Operating leverage on incremental revenue is significant given fixed-cost base.",
+    "risk": "Watch: Vicor has been a 'next year' story for half a decade — execution risk on revenue ramp is real, and customer concentration is high. Also, large competitors (Texas Instruments, Analog Devices) are not standing still on power-conversion architectures.",
+    "business": "Tiny US power-electronics company. Designs ultra-high-density DC-DC power converters used in AI servers — taking 48V down to the 0.8V needed by GPUs. Niche but the AI server power-density race plays to their strengths.",
+    "thesis": {
+      "bull": [
+        "48V-to-PoL conversion essential for NVIDIA Blackwell+ servers",
+        "Andover automotive fab yields improving",
+        "Operating leverage significant on fixed-cost base",
+        "Niche AI power-density race plays to strengths"
+      ],
+      "bear": [
+        "'Next year' story for half a decade — execution risk",
+        "Customer concentration high",
+        "TI/Analog Devices not standing still",
+        "Small-cap volatility extreme"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — revenue ramp signal",
+        "NVIDIA Blackwell power architecture disclosures",
+        "Major automotive design-win announcements"
+      ]
+    }
+  },
+  "CAR": {
+    "happening": "Avis Budget is breaking out as US travel demand stays resilient, fleet residual values are recovering after 2024 EV depreciation hits, and the company's per-day pricing has been raised three quarters in a row. Free cash flow conversion is improving sharply as fleet capex normalizes.",
+    "why": "Three tailwinds: (1) post-pandemic 'experiences over goods' spend is still holding; (2) Avis's EV-heavy fleet has lapped its worst depreciation (Tesla mark-downs); (3) buyback authorization is enormous relative to float — pure financial engineering tailwind. Travel-day demand from cruise/airline partners remains strong.",
+    "risk": "Watch: rental-car is highly cyclical and any consumer-travel slowdown hits immediately. Also, fleet residual values are interest-rate sensitive (financing cost on a $20B fleet). Hertz comparison sets a low bar — competitive pricing pressure could return.",
+    "business": "US rental car operator. Runs the Avis, Budget, and Zipcar brands. ~$10B revenue, ~600k vehicle fleet split between US (75%) and international (25%). Earnings driven by per-day rental rates and fleet residual values.",
+    "thesis": {
+      "bull": [
+        "US travel demand resilient",
+        "Fleet residual values recovering post-EV depreciation",
+        "Per-day pricing raised 3 quarters running",
+        "Buyback authorization enormous vs float"
+      ],
+      "bear": [
+        "Rental-car highly cyclical — consumer slowdown hits immediately",
+        "Fleet residual values interest-rate sensitive",
+        "Hertz comparison sets low bar",
+        "Competitive pricing pressure could return"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — per-day rate + residual commentary",
+        "Summer travel season demand signal Mar 2026",
+        "Fed rate path"
+      ]
+    }
+  },
+  "GEV": {
+    "happening": "GE Vernova is breaking out as the grid and offshore-wind backlog reaches record levels — the company is now revenue-recognising large gas turbine orders booked in 2023-2024, and grid solutions backlog is supporting multi-year visibility. Margin expansion is finally arriving after years of restructuring.",
+    "why": "GEV sits at the center of the largest electrification capex cycle in 50 years: AI-driven data-center power demand, US grid hardening, EU energy independence, and replacement of coal/gas plants. Order book is ~$120B with rising mix toward higher-margin grid + services revenue. Spin-off has cleaned the balance sheet.",
+    "risk": "Watch: offshore wind is a multi-year operational drag — any project execution miss (e.g., Dogger Bank) hits cash flow. Also, gas turbine demand is sensitive to natural gas prices, and Siemens Energy is a credible competitor with overlapping order book.",
+    "business": "GE Vernova — the energy spin-off from GE (2024). Three segments: gas/steam turbines (for power plants), grid solutions (transformers, switchgear, transmission equipment), and renewables (wind turbines + offshore wind installation).",
+    "thesis": {
+      "bull": [
+        "~$120B order backlog with rising grid/services mix",
+        "AI-driven data-center power demand inflection",
+        "US grid hardening multi-decade tailwind",
+        "Margin expansion arriving after restructuring"
+      ],
+      "bear": [
+        "Offshore wind multi-year operational drag",
+        "Dogger Bank-type execution miss hits cash flow",
+        "Gas turbine demand sensitive to nat gas prices",
+        "Siemens Energy credible competitor"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Jan 2026) — guidance update",
+        "Major gas turbine framework agreement announcements",
+        "Offshore wind project milestones"
+      ]
+    }
+  },
+  "ASM.AS": {
+    "happening": "ASM International is breaking out as ALD (atomic layer deposition) wins at TSMC's 2nm node ramp materially expand the customer's tool intensity per wafer. ASM's gate-all-around transistor process is now the industry standard for sub-3nm nodes.",
+    "why": "ASM has near-monopoly position in high-k metal gate ALD — every advanced logic node requires more layers, increasing tool intensity per wafer. TSMC, Samsung, Intel 18A all need ASM's tools. Lead times are extending, and 2026 backlog visibility is unusually clean for back-end semis equipment.",
+    "risk": "Watch: any TSMC capex push-out is direct downside. Also, Chinese ALD competitors (Naura) are slowly emerging in mature nodes — not 2026-relevant but real long-term threat. Valuation prices in the cycle peak; entry timing matters.",
+    "business": "Dutch semiconductor equipment company. Specializes in atomic-layer deposition (ALD) tools — depositing single-atom-thick layers required for modern chips. Near-monopoly in high-k metal gate ALD used at TSMC's 2nm and 3nm nodes.",
+    "thesis": {
+      "bull": [
+        "Near-monopoly in high-k metal gate ALD",
+        "TSMC 2nm + Samsung + Intel 18A all need ASM tools",
+        "Lead times extending — clean 2026 backlog visibility",
+        "Gate-all-around transistor industry standard"
+      ],
+      "bear": [
+        "TSMC capex push-out direct downside",
+        "Chinese ALD competitors (Naura) emerging long-term",
+        "Valuation prices in cycle peak",
+        "Equipment industry cyclicality"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — 2026 sales guide",
+        "TSMC 2nm ramp updates",
+        "Samsung GAA roadmap"
+      ]
+    }
+  },
+  "SPM.MI": {
+    "happening": "Saipem is breaking out as the offshore EPC backlog reaches multi-decade highs and the company executes on legacy turnaround. Brazilian and Middle East subsea projects from Petrobras and Aramco are flowing into 2026 revenue.",
+    "why": "Deep-water economics work at $65 oil — and oil majors are committing to large multi-year programs after a decade of underinvestment. Saipem's drilling fleet utilization is near 100%, and pricing power has finally returned. Free cash flow inflection is significant given operational leverage.",
+    "risk": "Watch: Saipem has a long history of project execution disasters (legacy Mozambique, Nigeria losses) — any single program overrun can wipe multiple quarters. Oil price sensitivity is acute. Also, balance sheet leverage is still elevated relative to peers.",
+    "business": "Italian offshore EPC contractor for oil & gas. Builds and installs offshore platforms, lays subsea pipelines, and operates drilling rigs. Bigger and more diversified than Subsea 7 but had a turbulent decade with several disastrous projects.",
+    "thesis": {
+      "bull": [
+        "Offshore EPC backlog at multi-decade highs",
+        "Brazilian + ME projects flowing into 2026 revenue",
+        "Drilling fleet utilization near 100%",
+        "FCF inflection from operational leverage"
+      ],
+      "bear": [
+        "History of project execution disasters",
+        "Oil price sensitivity acute",
+        "Balance sheet leverage still elevated",
+        "Legacy Mozambique/Nigeria losses overhang"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (March 2026) — backlog + FCF guidance",
+        "Petrobras 2026 capex",
+        "Major Aramco/Aramco offshore FIDs"
+      ]
+    }
+  },
+  "AMKR": {
+    "happening": "Amkor is breaking out as advanced packaging demand for AI accelerators ramps and the company's Vietnam facility comes online. Apple-related packaging wins are stabilizing the consumer segment after a weak 2024.",
+    "why": "Amkor is a top-3 OSAT (outsourced semi assembly/test) globally, and advanced packaging — fan-out wafer-level, 2.5D/3D — is the fastest-growing segment in semis. AI accelerators require advanced packaging, and TSMC's CoWoS bottleneck is pushing more business to OSATs like Amkor.",
+    "risk": "Watch: customer concentration (Apple ~25%, plus a few hyperscalers) is high. Also, OSAT is structurally lower-margin than wafer fabs — operating leverage cuts both ways, and a downcycle compresses margins fast.",
+    "business": "Outsourced semiconductor assembly + test (OSAT) company. After a chip is fabricated at TSMC, it goes to companies like Amkor to be packaged into the final form factor and tested. Top-3 global OSAT, big in advanced packaging for AI accelerators.",
+    "thesis": {
+      "bull": [
+        "Advanced packaging fastest-growing semis segment",
+        "TSMC CoWoS bottleneck pushes business to OSATs",
+        "Vietnam facility online",
+        "Apple iPhone packaging stable"
+      ],
+      "bear": [
+        "Customer concentration (Apple ~25%, hyperscalers)",
+        "OSAT structurally lower-margin than fabs",
+        "Downcycle compresses fast",
+        "Operating leverage cuts both ways"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — advanced packaging revenue mix",
+        "TSMC CoWoS expansion announcements",
+        "Apple iPhone 17 production ramp"
+      ]
+    }
+  },
+  "TWLO": {
+    "happening": "Twilio is breaking out as the AI-powered customer engagement platform thesis finally translates to revenue. Segment (CDP) is back on a growth track after years of restructuring, and the company is using AI-augmented voice/messaging features to defend pricing.",
+    "why": "Three drivers: (1) operating margin expansion from headcount reductions is dropping to FCF; (2) AI-powered communications use cases (voice agents, intelligent routing) are driving wallet expansion at existing customers; (3) capital allocation has improved dramatically — buybacks at depressed multiples are accretive.",
+    "risk": "Watch: Twilio's core CPaaS business faces real pricing pressure from low-cost competitors (Bandwidth, Sinch). Also, A2P SMS regulation in major markets creates revenue volatility. The AI thesis still needs to show in net new ARR, not just margin.",
+    "business": "Cloud communications platform — APIs that let apps send/receive SMS, voice calls, and emails programmatically. Powers things like Uber's driver texts, hospital appointment reminders, and 2FA codes for millions of apps. Also owns Segment (a customer data platform).",
+    "thesis": {
+      "bull": [
+        "AI-powered comms use cases driving wallet expansion",
+        "Operating margin expansion dropping to FCF",
+        "Capital allocation dramatically improved",
+        "Segment CDP back on growth track"
+      ],
+      "bear": [
+        "CPaaS faces real pricing pressure (Bandwidth, Sinch)",
+        "A2P SMS regulation creates volatility",
+        "AI thesis needs to show in net new ARR",
+        "Customer concentration in tech sector"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — net new ARR + margin commentary",
+        "Voice AI product launch updates",
+        "A2P pricing regulatory shifts"
+      ]
+    }
+  },
+  "VAR.OL": {
+    "happening": "Vår Energi is breaking out as Johan Castberg field reaches full production and Balder Future starts up. Norwegian Continental Shelf production is at multi-year highs, and the company's dividend yield + FCF generation profile is among the strongest in European E&P.",
+    "why": "Vår Energi is in the sweet spot of low full-cycle break-even (~$35/bbl) Norwegian production with multi-year visibility into 2030 from sanctioned projects. Capital discipline + variable dividend structure returns substantial cash to shareholders. Eni majority ownership provides operational backing.",
+    "risk": "Watch: oil price beta is high — dividend coverage compresses meaningfully below $70 Brent. Also, Norwegian special tax regime takes ~78% of marginal upside, capping the appeal at the very top of the cycle. ESG-driven Norwegian-fund divestment is a structural overhang.",
+    "business": "Norwegian oil & gas E&P operator (~70% owned by Eni). Produces oil and gas exclusively from the Norwegian Continental Shelf — high-quality, low-cost reserves with multi-decade visibility. Among the highest dividend yields in European E&P.",
+    "thesis": {
+      "bull": [
+        "Johan Castberg + Balder Future at full production",
+        "Norwegian Continental Shelf production multi-year highs",
+        "Variable dividend structure returns substantial cash",
+        "Eni majority ownership = operational backing"
+      ],
+      "bear": [
+        "Oil price beta high — dividend compresses below $70 Brent",
+        "Norwegian 78% special tax caps top-of-cycle upside",
+        "ESG-driven Norwegian fund divestment overhang",
+        "Decommissioning cost rising"
+      ],
+      "catalysts": [
+        "Q4 2025 results (Feb 2026) — dividend declaration",
+        "Castberg/Balder production updates",
+        "Brent path"
+      ]
+    }
+  },
+  "MNTN.L": {
+    "happening": "Schiehallion Fund (the Baillie Gifford private-tech vehicle) is breaking out as portfolio mark-ups on private holdings catch up to public market re-rating. NAV discount has narrowed materially as investor confidence in late-stage venture returns.",
+    "why": "Schiehallion holds stakes in SpaceX, Stripe, Bytedance and other crown-jewel privates — most are still pre-IPO with rising secondary valuations. The Baillie Gifford team's high-conviction concentration is paying off after a brutal 2022-2024. Buyback support narrows the discount further.",
+    "risk": "Watch: NAV is opaque — pricing private holdings is subjective, and the trust trades at a meaningful discount partly because the market doubts marks. Liquidity in the underlying portfolio is poor; any forced selling would hurt. Concentration risk is severe (top 5 holdings = ~50% of NAV).",
+    "business": "The Schiehallion Fund — a UK-listed investment trust managed by Baillie Gifford that invests in late-stage private companies. Top holdings include SpaceX, Stripe, Bytedance, Tempus AI. Way for public-market investors to access pre-IPO tech.",
+    "thesis": {
+      "bull": [
+        "Portfolio mark-ups catching public market re-rating",
+        "NAV discount narrowing as confidence returns",
+        "Baillie Gifford concentration paying off",
+        "Buyback support narrows discount further"
+      ],
+      "bear": [
+        "NAV opaque — private mark subjectivity",
+        "Underlying liquidity poor",
+        "Severe concentration (top 5 = ~50% NAV)",
+        "Discount widening risk in risk-off"
+      ],
+      "catalysts": [
+        "Interim NAV updates monthly",
+        "SpaceX/Stripe/Bytedance secondary pricing",
+        "Major private holding IPO timing"
+      ]
+    }
+  },
+  "AKRBP.OL": {
+    "happening": "Aker BP is breaking out as the Yggdrasil mega-project moves into the value-creation phase (first oil 2027), Johan Sverdrup Phase 3 expands, and the company's per-barrel production cost remains the lowest in the Norwegian sector at ~$7/boe.",
+    "why": "Aker BP has the cleanest growth + dividend yield combination in the European integrated/E&P space. Production grows ~5% CAGR through 2028 from sanctioned projects, dividend covered down to $50 Brent, and FCF compounding is significant. Aker majority ownership provides skin-in-the-game alignment.",
+    "risk": "Watch: same Norwegian special tax exposure (78% marginal) as Vår. Also, Yggdrasil execution risk is real — large multi-phase project with cost overrun history in the sector. Brent below $60 sustained would compress capital return materially.",
+    "business": "Norwegian E&P company (~46% owned by Aker Group). Pure-play oil + gas producer on the Norwegian Continental Shelf, focused on the giant Johan Sverdrup field and the upcoming Yggdrasil mega-project. Among the lowest-cost producers in the world (~$7/boe).",
+    "thesis": {
+      "bull": [
+        "Yggdrasil mega-project moves to value-creation phase",
+        "Lowest per-barrel production cost ~$7/boe",
+        "Multi-year production growth from sanctioned projects",
+        "Aker majority alignment"
+      ],
+      "bear": [
+        "Same Norwegian 78% tax exposure as Vår",
+        "Yggdrasil execution risk multi-phase",
+        "Brent below $60 sustained compresses capital return",
+        "Decommissioning liability"
+      ],
+      "catalysts": [
+        "Q4 2025 results (Feb 2026) — Yggdrasil update",
+        "Johan Sverdrup Phase 3 progress",
+        "Brent path"
+      ]
+    }
+  },
+  "HPE": {
+    "happening": "Hewlett Packard Enterprise is breaking out as Cray-AI supercomputer orders accelerate from sovereign/hyperscale customers and the Juniper Networks acquisition closes (regulatory hurdle removed). AI server backlog is at record levels with multi-quarter visibility.",
+    "why": "HPE is one of three credible suppliers (with Dell and Supermicro) for large-scale AI training clusters. Cray IP is differentiated for top-end supercomputing (sovereign AI, weather, defense). Juniper acquisition expands the networking attach rate — every AI server cluster needs ethernet switching.",
+    "risk": "Watch: same hyperscaler-concentration risk as Dell. Also, HPE's legacy server + storage business is in secular decline — AI growth has to offset, and gross margin mix is dilutive. Juniper integration execution risk is significant.",
+    "business": "Hewlett Packard Enterprise — server, storage, and networking gear for enterprises and hyperscalers. Owns Cray (supercomputers), and is closing the Juniper Networks acquisition to add networking switches to the portfolio.",
+    "thesis": {
+      "bull": [
+        "Cray-AI supercomputer orders accelerating (sovereign + hyperscale)",
+        "Juniper acquisition closes — networking attach expansion",
+        "AI server backlog at record levels",
+        "Multi-quarter visibility"
+      ],
+      "bear": [
+        "Same hyperscaler-concentration risk as Dell",
+        "Legacy server/storage in secular decline",
+        "AI gross margin mix dilutive",
+        "Juniper integration execution"
+      ],
+      "catalysts": [
+        "Q1 FY26 earnings (March 2026) — backlog + Juniper integration",
+        "NVIDIA platform launches",
+        "Major sovereign AI awards"
+      ]
+    }
+  },
+  "LSCC": {
+    "happening": "Lattice Semiconductor is breaking out as the small-FPGA inventory correction finally ends and design-win momentum in industrial automation, communications, and AI peripheral connectivity translates into revenue. Avant family of mid-range FPGAs is winning sockets at higher ASPs.",
+    "why": "Lattice has near-monopoly in low-power small-FPGA segment — power-efficient, design-win-driven, structurally high-margin. Demand for FPGAs in industrial/auto/comms applications recovers as customer inventories normalize. Mid-range Avant family expansion materially grows TAM.",
+    "risk": "Watch: FPGA market is heavily customer-design-driven — slow inventory burndown can extend the recovery timeline. Also, Altera (Intel spin) and AMD-Xilinx compete fiercely at the mid-range. Small-cap with high beta to semiconductor cycle moves.",
+    "business": "US semiconductor company that makes small, low-power FPGAs (field-programmable gate arrays — chips you can reconfigure after manufacture). Strong in industrial automation, telecom infrastructure, and increasingly in AI server peripheral connectivity.",
+    "thesis": {
+      "bull": [
+        "Small-FPGA inventory correction ending",
+        "Avant mid-range FPGAs winning at higher ASPs",
+        "Industrial/auto/comms recovery",
+        "Near-monopoly low-power small FPGA"
+      ],
+      "bear": [
+        "FPGA design-win driven — slow inventory burndown",
+        "Altera (Intel) + AMD-Xilinx compete fiercely",
+        "Small-cap high-beta to semi cycle",
+        "Mid-range Avant ramp execution"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — bookings + guide",
+        "Major industrial design-win disclosures",
+        "Altera spin progress"
+      ]
+    }
+  },
+  "BWLPG.OL": {
+    "happening": "BW LPG is breaking out as VLGC (very large gas carrier) day-rates remain elevated and US LPG export growth continues. The Avance Gas merger has consolidated the fleet and improved pricing power. Trading division is contributing materially to earnings.",
+    "why": "Three tailwinds: (1) US LPG exports growing 8-10% annually with no end in sight; (2) Panama Canal constraints continue to support tonne-mile demand; (3) industry orderbook remains historically low at ~6-8% of fleet, supporting rates. Dividend yield + buyback is structurally high.",
+    "risk": "Watch: shipping rates are extremely volatile and sentiment-driven — any softening in seaborne LPG demand (China industrial slowdown) hits rates fast. Also, vessel oversupply risk if new orders pick up. Currency translation (USD revenue, NOK reporting) creates noise.",
+    "business": "Owner-operator of VLGCs (very large gas carriers) — the ships that move LPG (propane/butane) across oceans. Merged with Avance Gas in 2024 to become the largest VLGC owner globally.",
+    "thesis": {
+      "bull": [
+        "US LPG exports growing 8-10% annually",
+        "Panama Canal constraints support tonne-mile demand",
+        "Industry orderbook historically low ~6-8% of fleet",
+        "Avance Gas merger consolidates pricing power"
+      ],
+      "bear": [
+        "Shipping rates extremely volatile, sentiment-driven",
+        "China industrial slowdown hits seaborne LPG",
+        "Vessel oversupply risk if orders pick up",
+        "FX translation noise"
+      ],
+      "catalysts": [
+        "Q4 2025 results (Feb 2026) — rate + dividend declaration",
+        "US LPG export volume data",
+        "Panama Canal transit capacity updates"
+      ]
+    }
+  },
+  "AKAM": {
+    "happening": "Akamai is breaking out as the cloud computing pivot (Linode acquisition integration) finally translates to high-growth revenue and the legacy CDN business stabilizes. Security segment continues to grow at high-teens with strong margins.",
+    "why": "Akamai is becoming a credible alt-cloud (alongside hyperscalers) for edge-focused workloads. Security business is sticky, recurring, and high-margin. Linode-derived compute revenue grows 25%+ annually. Cost discipline + buyback creates EPS leverage even on modest revenue growth.",
+    "risk": "Watch: CDN faces structural pricing pressure from Cloudflare and Fastly. Also, AWS/GCP can compete more aggressively on edge compute if they choose. Akamai's enterprise sales motion is slow to adapt to faster-growing developer-led products.",
+    "business": "Originally a CDN (content delivery network) — caches website content on servers near end-users to speed up loading. Now also a major cybersecurity vendor (Akamai Security) and increasingly a cloud-compute provider (Linode acquisition).",
+    "thesis": {
+      "bull": [
+        "Cloud computing pivot (Linode) translating to growth",
+        "Security continues high-teens with strong margins",
+        "Linode-derived compute growing 25%+ annually",
+        "Cost discipline + buyback creates EPS leverage"
+      ],
+      "bear": [
+        "CDN faces Cloudflare/Fastly pricing pressure",
+        "AWS/GCP could compete on edge compute",
+        "Enterprise sales motion slow to adapt",
+        "Legacy revenue mix headwind"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — Security + Compute segment growth",
+        "Cloudflare competitive product launches",
+        "Major Akamai cloud customer wins"
+      ]
+    }
+  },
+  "NHY.OL": {
+    "happening": "Norsk Hydro is breaking out as aluminum prices rise on supply discipline + power-cost-driven smelter closures in Europe. The company's hydroelectric self-supply gives a structural cost advantage over coal-powered Chinese competitors.",
+    "why": "Aluminum is a hidden electrification beneficiary — EVs, grid, and aerospace all increase per-unit aluminum content. Supply growth is constrained by power availability (LME aluminum production is the most energy-intensive base metal). Hydro's renewable-power generation portfolio adds an option value to spot power prices.",
+    "risk": "Watch: aluminum prices are highly cyclical and China-policy-driven — any Chinese stimulus pivot toward construction could either help or hurt depending on smelter response. Also, EU CBAM (carbon border adjustment) implementation is a wild card.",
+    "business": "Norwegian aluminum producer + renewable power generator. Makes aluminum used in EVs, beverage cans, aerospace, and construction. Has captive hydroelectric power, giving it a structural cost advantage vs Chinese coal-powered competitors.",
+    "thesis": {
+      "bull": [
+        "Aluminum supply discipline from European smelter closures",
+        "Hidden electrification beneficiary (EVs, grid)",
+        "Hydroelectric self-supply structural cost advantage",
+        "Renewable power generation option value"
+      ],
+      "bear": [
+        "Aluminum prices highly cyclical, China-driven",
+        "EU CBAM implementation wild card",
+        "Smelter operating leverage cuts both ways",
+        "Energy cost volatility"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — production + power margin",
+        "LME aluminum price path",
+        "EU CBAM rule clarifications"
+      ]
+    }
+  },
+  "BP.L": {
+    "happening": "BP is breaking out as the company finally commits to oil and gas growth, walking back its 2020 energy-transition reset. New CEO has delivered cost cuts ahead of plan, and upstream production is stabilizing after years of decline.",
+    "why": "BP at a depressed valuation now has a credible self-help story: (1) reset capex plan favoring high-return oil over low-return renewables; (2) ~$20B asset disposal program; (3) buyback yield + dividend yield = ~10%. Activist Elliott pressure has accelerated change.",
+    "risk": "Watch: oil price sensitivity is high — any sustained dip below $65 Brent compresses the capital return story. Also, balance sheet is more levered than Shell/TotalEnergies, leaving less flexibility in a downturn. Execution risk on the strategy reset is real.",
+    "business": "British integrated oil & gas major. Upstream (E&P), downstream (refining, retail fuel), and trading. Trying to walk a tightrope between maximizing oil & gas cash flow and developing low-carbon businesses (renewables, biofuels, hydrogen).",
+    "thesis": {
+      "bull": [
+        "Self-help story credible: reset capex toward high-return oil",
+        "~$20B asset disposal program",
+        "~10% combined buyback + dividend yield",
+        "Activist Elliott pressure accelerates change"
+      ],
+      "bear": [
+        "Oil price sensitivity high",
+        "Balance sheet more levered than Shell/TOT",
+        "Strategy reset execution risk",
+        "Climate/transition narrative overhang"
+      ],
+      "catalysts": [
+        "Q4 2025 results (Feb 2026) — disposal + buyback program updates",
+        "Capital Markets Day Q2 2026",
+        "Brent path"
+      ]
+    }
+  },
+  "SCT.L": {
+    "happening": "Softcat is breaking out as UK IT-reseller demand normalizes post-2024 weakness and AI-related infrastructure refresh accelerates. Operating margin expansion from scale and mix is meaningful.",
+    "why": "Softcat is the highest-quality UK IT reseller — best-in-class customer service, gross margin trending up, balance sheet net cash. AI-related hardware refresh (servers, networking, security) is starting to drive vendor activity. Dividend + special dividend yield is structurally high.",
+    "risk": "Watch: UK SMB IT spending is sensitive to UK macro — any sustained downturn (consumer-led recession) hits enterprise sentiment. Also, vendor concentration (Microsoft, Cisco, Dell) means margin pressure if vendor incentives tighten.",
+    "business": "UK IT reseller and value-added distributor. Sells software (Microsoft, Adobe), hardware (Dell, Cisco, Lenovo), and services to mid-market UK businesses. High-quality customer service moat, debt-free, consistent dividend grower.",
+    "thesis": {
+      "bull": [
+        "UK IT-reseller demand normalizing",
+        "AI-related hardware refresh accelerating",
+        "Best-in-class customer service moat",
+        "Special dividend yield structural"
+      ],
+      "bear": [
+        "UK SMB IT spending sensitive to UK macro",
+        "Vendor concentration (MSFT, Cisco, Dell) margin risk",
+        "Slow vendor incentive changes",
+        "UK consumer-led recession risk"
+      ],
+      "catalysts": [
+        "H1 trading update (Jan 2026) — gross profit growth",
+        "UK macro inflection signals",
+        "Microsoft/Cisco channel partner programs"
+      ]
+    }
+  },
+  "MTZ": {
+    "happening": "MasTec is breaking out as electrical transmission build-out backlog reaches record levels and the company's clean energy segment recovers from 2024 inventory issues. Communications segment growth has reaccelerated as fiber-to-the-home buildouts resume.",
+    "why": "MasTec is a key beneficiary of three multi-year tailwinds: (1) US grid modernization; (2) data-center power infrastructure (substations, transmission); (3) fiber and 5G buildout. Backlog is at multi-year highs with rising mix toward higher-margin segments.",
+    "risk": "Watch: large-project execution risk is structural — any major cost overrun hits hard. Also, oil/gas pipeline segment is volatile and project-dependent. Working capital swings are significant given billing terms.",
+    "business": "US infrastructure construction company. Three big segments: communications (5G + fiber buildout), electrical transmission (grid hardening), and clean energy (solar/wind installation). Major hyperscaler grid infrastructure contractor.",
+    "thesis": {
+      "bull": [
+        "Electrical transmission backlog at record levels",
+        "Clean energy segment recovering from 2024 inventory issues",
+        "Communications growth reaccelerating",
+        "Major hyperscaler grid contractor"
+      ],
+      "bear": [
+        "Large-project execution risk structural",
+        "Oil/gas pipeline segment volatile",
+        "Working capital swings significant",
+        "Solar/wind installation cyclical"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — backlog + segment guide",
+        "Major transmission EPC awards",
+        "Solar IRA project timeline"
+      ]
+    }
+  },
+  "FTNT": {
+    "happening": "Fortinet is breaking out as the unified SASE platform (combining firewall, SD-WAN, and cloud security) wins enterprise consolidation deals. Operating margin is expanding as the FortiGate hardware cycle stabilizes after a 2024 reset.",
+    "why": "Fortinet is the only cyber-vendor combining ASIC-based network security with cloud-delivered SASE — this matters for hybrid enterprises. Free cash flow margin is industry-leading at 30%+. Buyback yield + reinvestment is creating sustainable EPS compounding.",
+    "risk": "Watch: cybersecurity competition is fierce — Palo Alto Networks and Zscaler are well-funded. Also, FortiGate hardware refresh cycle creates revenue lumpiness. Service-attached margins compress when hardware mix declines.",
+    "business": "US cybersecurity company. Best known for FortiGate firewalls (hardware appliances using custom ASIC chips), now also delivers cloud-based SASE/security services. Differentiator vs Palo Alto: vertically integrated hardware + software at lower price points.",
+    "thesis": {
+      "bull": [
+        "Unified SASE platform wins enterprise consolidation deals",
+        "Operating margin expanding post hardware cycle reset",
+        "Industry-leading 30%+ FCF margin",
+        "ASIC-based + cloud-delivered = unique vs peers"
+      ],
+      "bear": [
+        "Cybersecurity competition fierce (PANW, ZS)",
+        "FortiGate hardware refresh creates revenue lumpiness",
+        "Service margins compress on hardware decline",
+        "Pricing pressure at low end"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — billings + FCF margin",
+        "RSA Conference April 2026 announcements",
+        "Palo Alto Networks competitive updates"
+      ]
+    }
+  },
+  "EQNR.OL": {
+    "happening": "Equinor is breaking out as Norwegian production stays strong and the company narrows its focus back to upstream oil and gas after partly retracting renewable ambitions. Capital return through buybacks + dividend is among the most attractive in integrated peers.",
+    "why": "Same Norwegian sector dynamics as Vår and Aker BP, but with greater scale and integrated downstream/trading optionality. New CEO has signaled disciplined capex and shareholder return prioritization. Production growth from Johan Sverdrup Phase 3 + Bacalhau (Brazil) provides multi-year visibility.",
+    "risk": "Watch: oil price beta is high; Norwegian special tax regime caps upside. Also, offshore wind execution losses continue to be a drag (Empire Wind cost overruns, Dogger Bank pressure).",
+    "business": "Norwegian integrated energy major (~67% state-owned). Upstream-heavy compared to BP/Shell — most revenue from Norwegian oil & gas production. Also has a meaningful US shale position and a growing (loss-making) offshore wind business.",
+    "thesis": {
+      "bull": [
+        "Norwegian production stays strong",
+        "New CEO signals disciplined capex + capital return",
+        "Production growth from Sverdrup + Bacalhau",
+        "Trading optionality vs pure E&Ps"
+      ],
+      "bear": [
+        "Same Norwegian 78% tax exposure",
+        "Offshore wind execution losses (Empire Wind, Dogger)",
+        "Oil beta high",
+        "US shale exposure dilutes returns"
+      ],
+      "catalysts": [
+        "Q4 2025 results (Feb 2026) — buyback program + dividend",
+        "Capital Markets Day Q2 2026",
+        "Bacalhau production startup"
+      ]
+    }
+  },
+  "DPLM.L": {
+    "happening": "Diploma is breaking out as the specialty industrial distribution model proves resilient — organic growth + bolt-on M&A continues to compound earnings at high-teens annually. Recent US acquisitions are integrating ahead of expectations.",
+    "why": "Diploma is a high-quality compounder: diverse end-market exposure, high gross margins, low capex intensity, disciplined M&A. The model — buy small specialty distributors at sensible multiples and improve operations — has delivered 20%+ EPS CAGR for over a decade.",
+    "risk": "Watch: any industrial-demand slowdown (especially aerospace, healthcare, automotive) hits across segments. Also, M&A pipeline depends on private-market pricing — if multiples expand, returns compress. Valuation is full at ~30× P/E.",
+    "business": "UK-listed serial acquirer of specialty industrial distributors. Buys small B2B distributors (aerospace fasteners, lab consumables, hydraulic seals) and lets them keep operating independently. ~20% EPS CAGR for 15+ years.",
+    "thesis": {
+      "bull": [
+        "High-quality compounder model — 20%+ EPS CAGR",
+        "Recent US acquisitions integrating ahead of expectations",
+        "Disciplined M&A track record",
+        "Diverse end-market exposure"
+      ],
+      "bear": [
+        "Industrial-demand slowdown hits across segments",
+        "M&A pipeline depends on private-market pricing",
+        "Valuation full at ~30× P/E",
+        "Higher rates compress acquisition returns"
+      ],
+      "catalysts": [
+        "H1 results (May 2026) — organic growth + acquisition pipeline",
+        "Major bolt-on M&A announcements",
+        "US end-market demand signals"
+      ]
+    }
+  },
+  "ARW": {
+    "happening": "Arrow Electronics is breaking out as electronic components distribution stabilizes after a brutal 2024 destocking cycle. ECS (Enterprise Computing Solutions) segment continues to grow with cloud-vendor commitments.",
+    "why": "Arrow benefits from any normalization in semiconductor lead times — distribution acts as inventory cushion when manufacturers can't fully serve customers directly. ECS segment growth provides counter-cyclical balance. Buyback authorization is large vs market cap.",
+    "risk": "Watch: distribution is structurally low-margin and any pricing pressure passes through. Also, ECS competes against cloud-direct purchasing — if hyperscalers route around distribution, growth slows. Working capital is enormous (~$10B inventory).",
+    "business": "US electronic components distributor. Sells semiconductors, capacitors, sensors, etc. from chip-makers (TI, Analog Devices) to OEMs (auto, industrial, medical). Also has an ECS business reselling cloud services + enterprise software.",
+    "thesis": {
+      "bull": [
+        "Distribution stabilizes after 2024 destocking",
+        "ECS segment grows with cloud commitments",
+        "Counter-cyclical mix balance",
+        "Buyback authorization large"
+      ],
+      "bear": [
+        "Distribution structurally low-margin",
+        "ECS competes against cloud-direct purchasing",
+        "Working capital ~$10B inventory",
+        "Pricing pressure passes through"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — segment normalization",
+        "Semi book-to-bill ratios",
+        "Major hyperscaler distribution agreements"
+      ]
+    }
+  },
+  "HUM": {
+    "happening": "Humana is breaking out as the worst of the Medicare Advantage margin reset (driven by 2024 utilization spike) appears to be behind the company. 2027 bid season looks more rational across the industry, and Humana's PBM divestiture has cleaned the structure.",
+    "why": "Medicare Advantage enrollment continues to grow structurally as baby boomers age into eligibility. Humana is one of the two scaled pure-play MA insurers (with UnitedHealth) with disciplined underwriting. The dramatic share price drawdown over 2024-2025 has reset expectations to achievable.",
+    "risk": "Watch: CMS reimbursement rates and risk adjustment policy are political — any major policy shift hits hard. Also, medical loss ratio remains elevated and may not normalize quickly. Pharmacy benefit dynamics still in flux.",
+    "business": "US health insurer specialized in Medicare Advantage (~85% of revenue). One of the two scaled pure-play MA insurers (with UnitedHealth). Recently divested PBM and is focused exclusively on senior health insurance.",
+    "thesis": {
+      "bull": [
+        "MA enrollment growing structurally as boomers age in",
+        "One of two scaled pure-play MA insurers",
+        "2027 bid season looks more rational",
+        "Dramatic share price drawdown reset expectations"
+      ],
+      "bear": [
+        "CMS reimbursement + risk adjustment political",
+        "Medical loss ratio remains elevated",
+        "Pharmacy benefit dynamics in flux",
+        "Star ratings volatility"
+      ],
+      "catalysts": [
+        "Q4 2025 earnings (Feb 2026) — 2026 guidance + MLR commentary",
+        "2027 CMS Advance Notice (April 2026)",
+        "Star ratings September 2026"
+      ]
+    }
+  },
+  "SNX": {
+    "happening": "TD Synnex is breaking out as the IT distribution cycle normalizes and AI-related infrastructure refresh accelerates. The Tech Data merger synergies are flowing through to operating margins ahead of guidance.",
+    "why": "Similar setup to Arrow — IT distribution benefits from any normalization in vendor supply chains. Synnex has greater scale + more cloud-services attach than Arrow. AI hardware refresh provides incremental tailwind to a structurally low-growth business.",
+    "risk": "Watch: same distribution-margin structural risk as Arrow. Also, Synnex's cloud-services business competes against direct cloud vendor sales. M&A integration noise creates earnings volatility.",
+    "business": "US IT distributor (formed from Synnex + Tech Data merger). Similar business to Arrow but more focused on PCs, servers, and cloud services for SMB resellers. Top-3 global IT distributor by revenue.",
+    "thesis": {
+      "bull": [
+        "IT distribution cycle normalizing",
+        "AI infrastructure refresh accelerating",
+        "Tech Data merger synergies above guidance",
+        "Cloud services attach expanding"
+      ],
+      "bear": [
+        "Same distribution-margin risk as Arrow",
+        "Cloud-services competes direct cloud",
+        "M&A integration noise",
+        "SMB spending sensitivity"
+      ],
+      "catalysts": [
+        "Q1 FY26 earnings (Jan 2026) — billings + AI server segment",
+        "Major hyperscaler partnership announcements",
+        "Tech Data integration milestones"
+      ]
+    }
+  },
+  "TCAP.L": {
+    "happening": "TP ICAP is breaking out as inter-dealer broking volumes recover with rates volatility and the Liquidnet acquisition delivers margin synergies. Data revenue is growing at high-teens and providing a recurring base to a cyclical business.",
+    "why": "Higher rates volatility = more inter-dealer trading. TP ICAP's Liquidnet (block equity trading) gives it diversified revenue. Data products provide non-cyclical recurring revenue. Capital return through buybacks + dividend yields ~7%+.",
+    "risk": "Watch: inter-dealer broking is structurally cyclical and tied to bank trading desk activity — any compression in bank trading appetite hits volumes. Also, regulatory pressure on opaque trading venues is a perpetual overhang.",
+    "business": "World's largest inter-dealer broker. Sits between investment banks helping them trade derivatives, FX, and bonds with each other. Also owns Liquidnet (block-trading platform for equities) and Burton-Taylor (financial markets data).",
+    "thesis": {
+      "bull": [
+        "Rates volatility = more inter-dealer trading",
+        "Liquidnet block-trading diversifies revenue",
+        "Data products provide non-cyclical recurring",
+        "~7%+ capital return yield"
+      ],
+      "bear": [
+        "Inter-dealer broking structurally cyclical",
+        "Bank trading desk activity tied",
+        "Regulatory pressure on opaque venues",
+        "Competitor (BGCG) consolidation risk"
+      ],
+      "catalysts": [
+        "FY 2025 results (March 2026) — Liquidnet + Data revenue trajectory",
+        "Bank trading volumes Q1 2026",
+        "Bond market vol path"
+      ]
+    }
+  }
+}
