@@ -982,7 +982,11 @@ function themesFor(s){
                 fresh.narrative.happening || full.happening,
                 fresh.narrative.why || full.why
                ].filter(Boolean).join(' ').toLowerCase();
-  const hits = THEME_RULES.filter(r => r.keywords.some(k => text.includes(k.toLowerCase())));
+  const escRe2 = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const hits = THEME_RULES.filter(r => r.keywords.some(k => {
+    const re = new RegExp('\\b' + escRe2(k.toLowerCase()) + '\\b', 'i');
+    return re.test(text);
+  }));
   // Sector fallback for names with no narrative-matched theme
   if(!hits.length && s.sector){
     const fb = {'Healthcare':'Healthcare','Financial Services':'Fintech & Trading','Basic Materials':'Commodity Materials','Consumer Cyclical':'Travel & Consumer'}[s.sector];
@@ -1612,23 +1616,23 @@ function renderConcallBlock(tk){
 // ==========================================================================
 const THEME_RULES = [
   {theme:'AI Memory & Storage', emoji:'🧠', keywords:['HBM','NAND','DRAM','memory chip','flash memory','SSD','HDD','storage chip','nearline','BiCS','3D NAND']},
-  {theme:'AI Compute Silicon',  emoji:'⚡', keywords:['GPU','accelerator','MI300','MI350','MI400','EPYC','Blackwell','custom silicon','Trainium','Graviton','Cobalt','AI chip','Arm v9','royalty']},
+  {theme:'AI Compute Silicon',  emoji:'⚡', keywords:['GPU','accelerator','MI300','MI350','MI400','EPYC','Blackwell','custom silicon','Trainium','Graviton','AI chip','Arm v9']},
   {theme:'AI Optical & Networking', emoji:'🌐', keywords:['transceiver','optical','800G','1.6T','800ZR','WaveLogic','DCI','data-center interconnect','fiber','networking switch','InP']},
-  {theme:'AI Packaging & Equipment', emoji:'🔬', keywords:['hybrid bonding','CoWoS','ALD','atomic layer','packaging','OSAT','advanced packaging','wafer','lithography','fab']},
+  {theme:'AI Packaging & Equipment', emoji:'🔬', keywords:['hybrid bonding','CoWoS','ALD','atomic layer','packaging','OSAT','advanced packaging','wafer','lithography']},
   {theme:'AI Server Hardware', emoji:'🖥️', keywords:['AI server','XE9680','H100','H200','GB200','Cray','infrastructure solutions','AI-PC','Supermicro','liquid cooling','CDU','busbar','power conversion','48V']},
-  {theme:'AI Cloud / SaaS', emoji:'☁️', keywords:['cloud computing','SaaS','CPaaS','GPU droplet','managed inference','platform','vector DB','API','customer engagement','communications platform']},
+  {theme:'AI Cloud / SaaS', emoji:'☁️', keywords:['cloud computing','SaaS','CPaaS','GPU droplet','managed inference','vector DB','customer engagement','communications platform']},
   {theme:'Data Center Infrastructure', emoji:'🏢', keywords:['data center','data-center','hyperscaler','site preparation','campus','grid solution','GE Vernova','transmission','substation','HVDC']},
   {theme:'EV & Electrification', emoji:'🚗', keywords:['EV','electric vehicle','silicon carbide','SiC','MOSFET','Tesla','automotive','battery','BYD','EV powertrain']},
   {theme:'Grid & Cables', emoji:'⚡', keywords:['cable','HV cable','HVDC','grid build','transmission','interconnect','offshore wind cable','submarine cable','medium-voltage','Encore Wire','Prysmian','Nexans']},
-  {theme:'Offshore Energy Services', emoji:'🛢️', keywords:['offshore','subsea','deep-water','seismic','EPC','FID','drilling','oilfield','pipeline','Subsea 7','Saipem','Petrobras','Guyana','Brazilian']},
+  {theme:'Offshore Energy Services', emoji:'🛢️', keywords:['offshore','subsea','deep-water','seismic','EPC','FID','drilling','oilfield','pipeline','Subsea 7','Saipem','Petrobras','Guyana','Brazil pre-salt']},
   {theme:'Norwegian E&P', emoji:'🇳🇴', keywords:['Norwegian Continental','Norwegian shelf','Johan Sverdrup','Johan Castberg','Yggdrasil','Aker BP','Equinor','Var Energi','Brent','NCS','Norwegian special tax']},
-  {theme:'Defense & Aerospace', emoji:'🛡️', keywords:['defense','F-35','Patriot','Aegis','radar','EW','hypersonics','aerospace','military','DoD','defense electronics','satellite communications']},
-  {theme:'Healthcare', emoji:'🏥', keywords:['Medicare','MA','biotech','pharma','drug','FDA','CMS','health insurer','tardive','Crinecerfont','Ingrezza','schizophrenia','neurology']},
+  {theme:'Defense & Aerospace', emoji:'🛡️', keywords:['defense','F-35','Patriot','Aegis','radar','electronic warfare','hypersonics','aerospace','military','DoD','defense electronics','satellite communications']},
+  {theme:'Healthcare', emoji:'🏥', keywords:['Medicare','Medicare Advantage','biotech','pharma','drug','FDA','CMS','health insurer','tardive','Crinecerfont','Ingrezza','schizophrenia','neurology']},
   {theme:'Cybersecurity', emoji:'🔒', keywords:['cybersecurity','firewall','SASE','FortiGate','security platform','API security','Akamai Security','Palo Alto','Zscaler']},
   {theme:'Fintech & Trading', emoji:'💱', keywords:['trading platform','CFD','spread bet','inter-dealer','Liquidnet','platform fees','investment platform','retail trading','pension','ISA']},
   {theme:'Industrial Distribution / EMS', emoji:'📦', keywords:['contract manufacturer','EMS','distributor','distribution','Tech Data','Arrow','Diploma','reseller','value-added']},
   {theme:'Commodity Materials', emoji:'🪨', keywords:['aluminum','copper','steel','mining','metallurgy','hydroelectric','Glencore','Norsk Hydro','LME']},
-  {theme:'Travel & Consumer', emoji:'🧳', keywords:['rental car','travel','hotel','Avis','Hertz','airline','airport','consumer cyclical']},
+  {theme:'Travel & Consumer', emoji:'🧳', keywords:['rental car','leisure travel','hotel','Avis','Hertz','airline','airport','consumer cyclical']},
   {theme:'Shipping & Logistics', emoji:'🚢', keywords:['VLGC','shipping','LPG carrier','tanker','fleet','tonne-mile','Panama Canal','seaborne']},
   {theme:'Private Capital Vehicles', emoji:'💎', keywords:['private equity','venture','SpaceX','Stripe','Bytedance','Schiehallion','Baillie Gifford','pre-IPO','investment trust','NAV discount']}
 ];
@@ -1636,7 +1640,11 @@ const THEME_RULES = [
 function tagThemes(text){
   if(!text) return [];
   const t = text.toLowerCase();
-  return THEME_RULES.filter(r => r.keywords.some(k => t.includes(k.toLowerCase()))).map(r=>r.theme);
+  const escRe = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return THEME_RULES.filter(r => r.keywords.some(k => {
+    const re = new RegExp('\\b' + escRe(k.toLowerCase()) + '\\b', 'i');
+    return re.test(t);
+  })).map(r=>r.theme);
 }
 
 function buildThemeMap(){
