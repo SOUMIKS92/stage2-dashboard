@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "as_of": "2026-05-24",
+    "note": "Seed data. Refreshed weekly by build_macro.py during Saturday task."
+  },
+  "US10Y": {"ticker": "^TNX", "level": 4.32, "wow_chg": -0.08, "wow_pct": -1.81, "ytd_pct": -8.5},
+  "DXY":   {"ticker": "DX-Y.NYB", "level": 102.4, "wow_chg": 0.35, "wow_pct": 0.34, "ytd_pct": -2.1},
+  "VIX":   {"ticker": "^VIX", "level": 16.8, "wow_chg": -1.2, "wow_pct": -6.67, "ytd_pct": -22.4},
+  "Brent": {"ticker": "BZ=F", "level": 78.2, "wow_chg": 1.1, "wow_pct": 1.43, "ytd_pct": 5.8},
+  "SPX":   {"ticker": "^GSPC", "level": 6210, "wow_chg": 42, "wow_pct": 0.68, "ytd_pct": 9.2},
+  "Gold":  {"ticker": "GC=F", "level": 3180, "wow_chg": 18, "wow_pct": 0.57, "ytd_pct": 11.4}
+}

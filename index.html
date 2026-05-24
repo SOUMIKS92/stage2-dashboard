@@ -274,6 +274,64 @@ tr.selected td{background:rgba(245,166,35,0.08);}
 
 .btn{padding:6px 12px;background:var(--bg3);border:1px solid var(--border);color:var(--text2);font-size:9px;letter-spacing:0.5px;text-transform:uppercase;cursor:pointer;border-radius:4px;font-family:inherit;}
 .btn:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ============================================================
+   MOBILE RESPONSIVE — collapse for phones (<768px) and tablets
+   ============================================================ */
+@media (max-width: 768px) {
+  .header { padding: 0 12px; }
+  .header-top { height: auto; flex-direction: column; align-items: stretch; gap: 8px; padding: 8px 0; }
+  .header-meta { gap: 10px; flex-wrap: wrap; justify-content: flex-start; }
+  .brand-text { font-size: 14px; }
+  .brand-sub { display: none; }
+
+  /* Macro strip: horizontal scroll instead of wrap */
+  #macroStrip { padding: 6px 12px; font-size: 9px; }
+  #macroStrip > div { overflow-x: auto; }
+
+  /* KPI strip: wrap to 2-3 cells per row */
+  .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+  .kpi { padding: 8px 10px; }
+  .kpi-val { font-size: 16px; }
+
+  /* Tabs: horizontal scroll */
+  .tabs { padding: 0 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tab { padding: 10px 12px; font-size: 9px; }
+
+  /* Main content padding */
+  #content { padding: 12px !important; }
+
+  /* Tables -> card layout: wrap rows visually */
+  table { font-size: 10px; }
+  th, td { padding: 5px 4px; }
+  /* Hide low-priority columns on phones */
+  #t50tbl th:nth-child(4), #t50tbl td:nth-child(4),  /* Region */
+  #t50tbl th:nth-child(7), #t50tbl td:nth-child(7),  /* MCap */
+  #t50tbl th:nth-child(9), #t50tbl td:nth-child(9),  /* Sparkline */
+  #t50tbl th:nth-child(11), #t50tbl td:nth-child(11), /* ADX */
+  #t50tbl th:nth-child(14), #t50tbl td:nth-child(14), /* Val */
+  #t50tbl th:nth-child(15), #t50tbl td:nth-child(15)  /* 6M Proj */
+    { display: none; }
+
+  /* Drill-down: stack rows single-column */
+  .row { grid-template-columns: 1fr !important; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .fund-grid { grid-template-columns: 1fr !important; }
+
+  /* Themes view: events stack better */
+  .card { padding: 10px !important; }
+
+  /* Drill-down narrative card padding */
+  .narrative-card { padding: 10px !important; }
+  .narrative-section h4 { font-size: 10px; }
+  .narrative-section p { font-size: 11px; line-height: 1.5; }
+}
+
+/* Tablet / narrow desktop */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .kpi-strip { grid-template-columns: repeat(4, 1fr); }
+  #t50tbl th:nth-child(7), #t50tbl td:nth-child(7) { display: none; } /* hide MCap */
+}
 </style>
 </head>
 <body>
@@ -307,6 +365,7 @@ tr.selected td{background:rgba(245,166,35,0.08);}
       <button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme" aria-label="Toggle theme">🌙</button>
     </div>
   </div>
+  <div id="macroStrip" style="display:none;background:var(--bg2);border-bottom:1px solid var(--border);padding:6px 24px;font-family:'JetBrains Mono',monospace;font-size:10px;"></div>
   <div class="kpi-strip" id="kpiStrip">
     <div class="kpi"><div class="kpi-label">Total Universe</div><div class="kpi-val white" id="kpi-universe">—</div><div class="kpi-sub">valid OHLCV names</div></div>
     <div class="kpi"><div class="kpi-label">Stage 2 Qualified</div><div class="kpi-val white" id="kpi-qualified">—</div><div class="kpi-sub">all 8 filters pass</div></div>
@@ -326,6 +385,7 @@ tr.selected td{background:rgba(245,166,35,0.08);}
   <div class="tab" data-tab="projections">6M Projections</div>
   <div class="tab" data-tab="heatmap">Heatmap</div>
   <div class="tab" data-tab="themes">Themes</div>
+  <div class="tab" data-tab="earnings">Earnings 7d</div>
   <div class="tab" data-tab="wow">WoW Diff</div>
   <div class="tab" data-tab="methodology">Methodology</div>
 </div>
@@ -396,6 +456,45 @@ const sectorColors = {
 })();
 
 // ==========================================================================
+// MACRO OVERLAY STRIP — thin row at top showing 10Y, DXY, VIX, Brent, SPX, Gold
+// ==========================================================================
+function renderMacroStrip(){
+  const m = STATE.macro;
+  if(!m || typeof m !== 'object') return;
+  const el = document.getElementById('macroStrip');
+  if(!el) return;
+  const fmt = (v, d=2) => v==null ? '—' : v.toFixed(d);
+  const fmtPct = v => v==null ? '—' : (v>=0 ? '+' : '') + v.toFixed(2) + '%';
+  const clr = v => v==null ? 'var(--text3)' : v>=0 ? 'var(--green)' : 'var(--red)';
+  // VIX inverts: rising VIX is risk-off (red), falling is risk-on (green)
+  const vixClr = v => v==null ? 'var(--text3)' : v>=0 ? 'var(--red)' : 'var(--green)';
+  const item = (name, level, wow, ytd, special) => {
+    const wowClr = special === 'vix' ? vixClr(wow) : clr(wow);
+    return `<span style="display:inline-flex;align-items:center;gap:6px;margin-right:18px;white-space:nowrap;">
+      <span style="color:var(--text3);">${name}</span>
+      <strong style="color:var(--text1);">${level}</strong>
+      <span style="color:${wowClr};font-size:9px;">WoW ${fmtPct(wow)}</span>
+      <span style="color:var(--text3);font-size:9px;">YTD ${fmtPct(ytd)}</span>
+    </span>`;
+  };
+  const asOf = (m._meta && m._meta.as_of) || '';
+  el.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;overflow-x:auto;">
+      <div style="display:flex;align-items:center;">
+        <span style="color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-right:14px;">Macro</span>
+        ${m.US10Y ? item('10Y', fmt(m.US10Y.level)+'%', m.US10Y.wow_pct, m.US10Y.ytd_pct) : ''}
+        ${m.DXY   ? item('DXY', fmt(m.DXY.level,1),     m.DXY.wow_pct,   m.DXY.ytd_pct) : ''}
+        ${m.VIX   ? item('VIX', fmt(m.VIX.level,1),     m.VIX.wow_pct,   m.VIX.ytd_pct, 'vix') : ''}
+        ${m.Brent ? item('Brent $/bbl', fmt(m.Brent.level,1), m.Brent.wow_pct, m.Brent.ytd_pct) : ''}
+        ${m.SPX   ? item('SPX', fmt(m.SPX.level,0),     m.SPX.wow_pct,   m.SPX.ytd_pct) : ''}
+        ${m.Gold  ? item('Gold $/oz', fmt(m.Gold.level,0), m.Gold.wow_pct, m.Gold.ytd_pct) : ''}
+      </div>
+      <span style="color:var(--text3);font-size:9px;white-space:nowrap;">as of ${asOf}</span>
+    </div>`;
+  el.style.display = 'block';
+}
+
+// ==========================================================================
 // LIVE MODE — auto-fetch LATEST.xlsx from the host (Netlify) on page load.
 // Falls back to drag-drop if the file isn't reachable (e.g., opened locally).
 // ==========================================================================
@@ -413,6 +512,11 @@ const sectorColors = {
       const nr = await fetch('./narratives.json', {cache: 'no-cache'});
       if(nr.ok) { STATE.allNarr = await nr.json(); console.log('[live mode] loaded narratives.json'); }
     } catch(e) { console.log('No narratives.json found — falling back to Fresh Breakouts only'); }
+    // Macro overlay strip
+    try {
+      const mr = await fetch('./macro.json', {cache: 'no-cache'});
+      if(mr.ok) { STATE.macro = await mr.json(); renderMacroStrip(); }
+    } catch(e) { console.log('No macro.json found — macro strip hidden'); }
     render();
     // Repurpose the dropzone label to a refresh hint
     const dzEl = document.getElementById('dz');
@@ -713,6 +817,7 @@ function switchTab(name, el){
   else if(name==='projections') content.innerHTML = renderProjections();
   else if(name==='heatmap') content.innerHTML = renderHeatmap();
   else if(name==='themes') content.innerHTML = renderThemes();
+  else if(name==='earnings') content.innerHTML = renderEarnings();
   else if(name==='wow') content.innerHTML = renderWow();
   else if(name==='methodology') content.innerHTML = renderMethodology();
 }
@@ -1409,6 +1514,55 @@ function renderThesis(nar){
       ${cats.length ? `<ul style="list-style:none;padding-left:0;font-size:11px;line-height:1.7;color:var(--text2);display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">${cats.map(c=>`<li style="padding:6px 10px;background:var(--bg3);border-radius:4px;border-left:2px solid var(--gold);">${c}</li>`).join('')}</ul>` : '<p style="color:var(--text3);font-size:11px;">—</p>'}
     </div>
   </div>`;
+}
+
+// ==========================================================================
+// EARNINGS THIS WEEK — names from the Top 50 reporting in the next 7 days
+// ==========================================================================
+function renderEarnings(){
+  const today = new Date();
+  // STATE.top has daysEarn (int) and nextEarn (date string). Filter to <=7 days ahead, >=0.
+  const upcoming = STATE.top.filter(s => s.daysEarn != null && s.daysEarn >= 0 && s.daysEarn <= 7)
+                            .sort((a,b) => a.daysEarn - b.daysEarn);
+  if(!upcoming.length){
+    return `<div class="empty"><h2>No Top 50 names reporting in the next 7 days</h2>
+      <p>Earnings dates are pulled per stock from yfinance during the Saturday run. If you expect a name and don't see it, the calendar feed may be stale.</p></div>`;
+  }
+  const fmtDate = d => d ? new Date(d).toLocaleDateString('en-IN',{day:'2-digit',month:'short'}) : '—';
+  const badgeClr = d => d <= 2 ? 'var(--red)' : d <= 5 ? 'var(--gold)' : 'var(--green)';
+  return `
+    <div class="section-title">Earnings This Week — Top 50 Reporters</div>
+    <p style="font-size:11px;color:var(--text3);margin-bottom:14px;">${upcoming.length} names from your Top 50 report earnings in the next 7 days. Sorted by proximity. Red badge = within 48 hours · gold = within 5 days · green = 5-7 days.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;">
+      ${upcoming.map(s => {
+        const cc = (STATE.concall||{})[s.ticker] || {};
+        const themes = (typeof themesFor === 'function') ? themesFor(s).slice(0,3) : [];
+        return `<div class="card" onclick="document.querySelector('.tab[data-tab=top50]').click();setTimeout(()=>showDetail('${s.ticker}','t50detail'),100);" style="padding:14px;cursor:pointer;transition:all 0.15s;border:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--gold);">${s.ticker}</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:2px;">${(s.name||'').slice(0,40)}</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="background:rgba(245,166,35,0.10);color:${badgeClr(s.daysEarn)};border:1px solid ${badgeClr(s.daysEarn)};padding:3px 8px;border-radius:10px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;">${s.daysEarn === 0 ? 'TODAY' : 'in ' + s.daysEarn + 'd'}</div>
+              <div style="font-size:9px;color:var(--text3);margin-top:4px;font-family:'JetBrains Mono',monospace;">${fmtDate(s.nextEarn)}</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
+            ${regionBadge(s.region)}
+            ${sChip(s.sector)}
+            ${themes.map(t => `<span title="${t.theme}" style="font-size:11px;padding:1px 5px;background:rgba(245,166,35,0.10);border:1px solid rgba(245,166,35,0.25);border-radius:3px;">${t.emoji}</span>`).join('')}
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;font-size:10px;color:var(--text2);">
+            <div><div style="color:var(--text3);font-size:9px;">Composite</div><strong style="color:${s.composite>=0?'var(--green)':'var(--red)'};">${s.composite>=0?'+':''}${(s.composite||0).toFixed(2)}</strong></div>
+            <div><div style="color:var(--text3);font-size:9px;">6M Proj</div><strong style="color:${(s.proj6m||0)>=0?'var(--green)':'var(--red)'};">${(s.proj6m||0)>=0?'+':''}${((s.proj6m||0)*100).toFixed(0)}%</strong></div>
+            <div><div style="color:var(--text3);font-size:9px;">Quality</div><strong style="color:var(--text1);">${s.quality!=null?s.quality.toFixed(0):'—'}</strong></div>
+          </div>
+          ${cc.headline ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:10px;color:var(--text2);line-height:1.5;"><span style="color:var(--gold);font-weight:700;">Last call:</span> ${cc.headline.slice(0,140)}${cc.headline.length>140?'…':''}</div>` : ''}
+        </div>`;
+      }).join('')}
+    </div>
+  `;
 }
 
 // ==========================================================================
