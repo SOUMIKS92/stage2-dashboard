@@ -517,6 +517,16 @@ function renderMacroStrip(){
       const mr = await fetch('./macro.json', {cache: 'no-cache'});
       if(mr.ok) { STATE.macro = await mr.json(); renderMacroStrip(); }
     } catch(e) { console.log('No macro.json found — macro strip hidden'); }
+    // v9: business 1-pagers (quarterly refresh, drill-down only)
+    try {
+      const opr = await fetch('./business_onepagers.json', {cache: 'no-cache'});
+      if(opr.ok) { STATE.onepagers = await opr.json(); console.log('[live mode] loaded business_onepagers.json'); }
+    } catch(e) { console.log('No business_onepagers.json — 1-pager block will be hidden'); }
+    // v9: forward valuations (weekly refresh, drill-down only)
+    try {
+      const vr = await fetch('./valuations.json', {cache: 'no-cache'});
+      if(vr.ok) { STATE.valuations = await vr.json(); console.log('[live mode] loaded valuations.json'); }
+    } catch(e) { console.log('No valuations.json — valuation block will be hidden'); }
     render();
     // Repurpose the dropzone label to a refresh hint
     const dzEl = document.getElementById('dz');
@@ -1121,6 +1131,8 @@ function showDetail(tk, targetId){
         </div>
         ${(nar.narrative.bull || nar.narrative.bear || nar.narrative.catalysts) ? renderThesis(nar.narrative) : ''}
       ` : ''}
+      ${renderOnePagerBlock(tk)}
+      ${renderValuationBlock(tk, r)}
       ${renderConcallBlock(tk)}
     </div>
   `;
@@ -1613,6 +1625,162 @@ function renderConcallBlock(tk){
     <div style="margin-top:12px;">
       <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">⚡ Q&A Flashpoints</div>
       ${qaItems||'<p style="color:var(--text3);font-size:11px;margin:0;">No flashpoint Q&A captured.</p>'}
+    </div>
+  </div>`;
+}
+
+// ==========================================================================
+// BUSINESS 1-PAGER BLOCK (v9) — shown in drill-down between thesis and concall
+// ==========================================================================
+function renderOnePagerBlock(tk){
+  const op = STATE.onepagers && STATE.onepagers[tk];
+  if(!op){
+    return `<div style="margin-top:14px;background:var(--bg2);border:1px dashed var(--border);border-radius:8px;padding:14px;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">📋 Business 1-Pager</div>
+      <div style="font-size:11px;color:var(--text3);">1-pager not yet on file for ${tk}. Saturday agent will populate after next concall.</div>
+    </div>`;
+  }
+  const mixRow = (lst, labelKey) => (lst||[]).map(x=>{
+    const lab = (x[labelKey]||'').toString();
+    const sh  = x.share_pct;
+    const trendArrow = x.trend==='growing'?' ↑':(x.trend==='shrinking'?' ↓':'');
+    return `<div style="display:flex;justify-content:space-between;padding:4px 8px;background:var(--bg3);border-radius:4px;font-size:11px;line-height:1.4;">
+      <span style="color:var(--text1);max-width:78%;">${lab}${trendArrow}</span>
+      ${sh!=null?`<span style="font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:700;">${sh}%</span>`:''}
+    </div>`;
+  }).join('');
+  const chipRow = (lst) => (lst||[]).map(x=>`<span style="background:var(--bg3);color:var(--text2);padding:3px 8px;border-radius:10px;font-size:10px;font-family:'JetBrains Mono',monospace;border:1px solid var(--border);">${x}</span>`).join(' ');
+  const riskBullets = (op.key_risks||[]).map(r=>`<li style="padding:4px 0 4px 14px;position:relative;color:var(--text2);font-size:11px;line-height:1.5;"><span style="position:absolute;left:0;color:#ff7e58;">▸</span>${r}</li>`).join('');
+  const sourceLinks = (op.sources||[]).map(s=>`<a href="${s.url||'#'}" target="_blank" rel="noopener" style="color:var(--text3);font-size:10px;text-decoration:none;border-bottom:1px dotted var(--text3);margin-right:10px;">${s.label||s.url} ↗</a>`).join('');
+  const moat = op.moat || {};
+
+  return `<div style="margin-top:14px;background:var(--bg2);border:1px solid rgba(120,180,255,0.30);border-radius:8px;padding:16px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:14px;">📋</span>
+        <h4 style="font-family:'Syne',sans-serif;font-size:12px;color:#78b4ff;text-transform:uppercase;letter-spacing:0.7px;margin:0;">Business 1-Pager</h4>
+        ${op.last_refreshed?`<span style="color:var(--text3);font-size:10px;font-family:'JetBrains Mono',monospace;">refreshed ${op.last_refreshed}</span>`:''}
+      </div>
+    </div>
+    ${op.company_overview?`<div style="background:rgba(120,180,255,0.06);border-left:3px solid #78b4ff;padding:10px 12px;border-radius:4px;margin-bottom:14px;font-size:12.5px;line-height:1.55;color:var(--text1);">${op.company_overview}</div>`:''}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">💰 Revenue Mix</div>
+        ${op.revenue_mix && op.revenue_mix.length?`<div style="display:flex;flex-direction:column;gap:4px;margin-bottom:12px;">${mixRow(op.revenue_mix,'segment')}</div>`:'<p style="color:var(--text3);font-size:11px;margin:0 0 12px;">Not separately disclosed.</p>'}
+        <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">🌍 Geographic Mix</div>
+        ${op.geo_mix && op.geo_mix.length?`<div style="display:flex;flex-direction:column;gap:4px;">${mixRow(op.geo_mix,'region')}</div>`:'<p style="color:var(--text3);font-size:11px;margin:0;">Not separately disclosed.</p>'}
+      </div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">🎯 End Markets</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;">${chipRow(op.end_markets)||'<span style="color:var(--text3);font-size:11px;">—</span>'}</div>
+        <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">⚔️ Top Competitors</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;">${chipRow(op.top_competitors)||'<span style="color:var(--text3);font-size:11px;">—</span>'}</div>
+        ${(op.key_customers && op.key_customers.length)?`
+          <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">🤝 Key Customers</div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;">${chipRow(op.key_customers)}</div>
+        `:''}
+      </div>
+    </div>
+    ${moat.narrative?`<div style="margin-top:14px;background:rgba(245,166,35,0.06);border-left:3px solid var(--gold);padding:10px 12px;border-radius:4px;">
+      <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px;">🏰 Moat${moat.type?` — ${moat.type}`:''}</div>
+      <div style="font-size:11.5px;line-height:1.55;color:var(--text1);">${moat.narrative}</div>
+    </div>`:''}
+    ${riskBullets?`<div style="margin-top:14px;">
+      <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:5px;">⚠️ Key Risks</div>
+      <ul style="list-style:none;padding:0;margin:0;">${riskBullets}</ul>
+    </div>`:''}
+    ${sourceLinks?`<div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">${sourceLinks}</div>`:''}
+  </div>`;
+}
+
+// ==========================================================================
+// FORWARD VALUATION BLOCK (v9) — multi-method multiples re-rating
+// ==========================================================================
+function renderValuationBlock(tk, row){
+  const v = STATE.valuations && STATE.valuations[tk];
+  if(!v || !v.blended){
+    return `<div style="margin-top:14px;background:var(--bg2);border:1px dashed var(--border);border-radius:8px;padding:14px;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;">💹 Forward Valuation</div>
+      <div style="font-size:11px;color:var(--text3);">No valuation on file for ${tk}.</div>
+    </div>`;
+  }
+  const price = v.as_of_price;
+  const b = v.blended;
+  const methods = v.methods || {};
+  const outliers = v.outliers || [];
+
+  const pctColor = (pct) => pct > 5 ? '#00e67a' : (pct < -5 ? '#ff4b4b' : 'var(--text2)');
+  const pctSign  = (pct) => pct > 0 ? '+' : '';
+  const dollar   = (x) => x==null?'—':`$${Number(x).toFixed(2)}`;
+
+  const renderMethodRow = (key, label, m) => {
+    if(!m) return '';
+    const ups = m.upside_pct_base;
+    const upsColor = pctColor(ups);
+    const src = m.sector_source || 'analyst';
+    const cohortBadge = src === 'sector_cohort' ? `<span style="background:rgba(0,200,150,0.12);color:#00c896;font-size:9px;padding:1px 5px;border-radius:6px;font-family:'JetBrains Mono',monospace;">cohort N=${m.sector_cohort_n}</span>` :
+                       src === 'anchored_own_multiple' ? `<span style="background:rgba(245,166,35,0.12);color:var(--gold);font-size:9px;padding:1px 5px;border-radius:6px;font-family:'JetBrains Mono',monospace;">anchored ±15%</span>` :
+                       `<span style="background:rgba(120,180,255,0.12);color:#78b4ff;font-size:9px;padding:1px 5px;border-radius:6px;font-family:'JetBrains Mono',monospace;">N=${m.analysts_n||'?'}</span>`;
+    return `<div style="background:var(--bg3);border-radius:6px;padding:10px 12px;margin-bottom:6px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;flex-wrap:wrap;gap:6px;">
+        <span style="font-size:11px;color:var(--text1);font-weight:600;">${label}</span>
+        ${cohortBadge}
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;">
+        <div><div style="color:var(--text3);font-size:9px;text-transform:uppercase;margin-bottom:2px;">Bear</div><div style="color:#ff7e58;font-weight:700;">${dollar(m.fair_value_bear)}</div></div>
+        <div><div style="color:var(--text3);font-size:9px;text-transform:uppercase;margin-bottom:2px;">Base</div><div style="color:var(--text1);font-weight:700;">${dollar(m.fair_value_base)}</div></div>
+        <div><div style="color:var(--text3);font-size:9px;text-transform:uppercase;margin-bottom:2px;">Bull</div><div style="color:#00e67a;font-weight:700;">${dollar(m.fair_value_bull)}</div></div>
+      </div>
+      <div style="text-align:center;margin-top:4px;color:${upsColor};font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:600;">Base upside: ${pctSign(ups)}${ups==null?'—':ups.toFixed(1)+'%'}</div>
+    </div>`;
+  };
+
+  const outlierNote = outliers.length ? `<div style="margin-top:8px;font-size:10px;color:var(--text3);background:var(--bg3);padding:6px 10px;border-radius:4px;border-left:2px solid #ff7e58;">⚠ Excluded as outlier: ${outliers.map(o=>o.method+' ('+o.ratio_to_price+'× price)').join(', ')}</div>` : '';
+
+  // Blended summary band — show as fair value zone vs current price
+  const upsBase = b.upside_pct_base;
+  const upsBull = b.upside_pct_bull;
+  const upsBear = b.upside_pct_bear;
+  const blendColor = pctColor(upsBase);
+
+  return `<div style="margin-top:14px;background:var(--bg2);border:1px solid rgba(0,200,150,0.30);border-radius:8px;padding:16px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:14px;">💹</span>
+        <h4 style="font-family:'Syne',sans-serif;font-size:12px;color:#00c896;text-transform:uppercase;letter-spacing:0.7px;margin:0;">Forward Valuation — Multi-Method Blend</h4>
+      </div>
+      <span style="color:var(--text3);font-size:10px;font-family:'JetBrains Mono',monospace;">at ${dollar(price)}</span>
+    </div>
+
+    <div style="background:rgba(0,200,150,0.06);border-left:3px solid #00c896;padding:12px 14px;border-radius:4px;margin-bottom:14px;">
+      <div style="font-family:'Syne',sans-serif;font-size:10px;color:#00c896;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;">📊 Blended Fair Value (${(b.methods_used||[]).length}/3 methods)</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;font-family:'JetBrains Mono',monospace;text-align:center;">
+        <div>
+          <div style="color:var(--text3);font-size:10px;text-transform:uppercase;margin-bottom:3px;">Bear</div>
+          <div style="font-size:18px;color:#ff7e58;font-weight:700;">${dollar(b.bear)}</div>
+          <div style="font-size:10px;color:${pctColor(upsBear)};margin-top:2px;">${pctSign(upsBear)}${upsBear==null?'—':upsBear.toFixed(1)+'%'}</div>
+        </div>
+        <div>
+          <div style="color:var(--text3);font-size:10px;text-transform:uppercase;margin-bottom:3px;">Base</div>
+          <div style="font-size:22px;color:var(--text1);font-weight:700;">${dollar(b.base)}</div>
+          <div style="font-size:11px;color:${blendColor};margin-top:2px;font-weight:600;">${pctSign(upsBase)}${upsBase==null?'—':upsBase.toFixed(1)+'%'}</div>
+        </div>
+        <div>
+          <div style="color:var(--text3);font-size:10px;text-transform:uppercase;margin-bottom:3px;">Bull</div>
+          <div style="font-size:18px;color:#00e67a;font-weight:700;">${dollar(b.bull)}</div>
+          <div style="font-size:10px;color:${pctColor(upsBull)};margin-top:2px;">${pctSign(upsBull)}${upsBull==null?'—':upsBull.toFixed(1)+'%'}</div>
+        </div>
+      </div>
+      ${outlierNote}
+    </div>
+
+    <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;">🔬 Method Detail</div>
+    ${renderMethodRow('fwd_pe', 'Forward P/E re-rating', methods.fwd_pe)}
+    ${renderMethodRow('fwd_ev_ebitda', 'EV/EBITDA re-rating', methods.fwd_ev_ebitda)}
+    ${renderMethodRow('analyst_target', 'Sell-side analyst target', methods.analyst_target)}
+
+    <div style="margin-top:10px;font-size:9.5px;color:var(--text3);line-height:1.5;">
+      Bull/Base/Bear bands use sector cohort 25/50/75 multiple percentiles; thin-cohort sectors (N&lt;3) use own multiple ±15% sensitivity. Methods producing fair value &gt;2.5× or &lt;0.4× of current price are excluded from blend as outliers. Blending weights: 35% Forward P/E + 35% EV/EBITDA + 30% Analyst Target. Not investment advice — research framing only.
     </div>
   </div>`;
 }

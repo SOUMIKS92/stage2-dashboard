@@ -1,0 +1,4170 @@
+{
+  "_meta": {
+    "as_of": "2026-05-24",
+    "schema_version": "1.0",
+    "structure": "8-block: company_overview, revenue_mix, geo_mix, end_markets, top_competitors, moat, key_customers, key_risks, sources",
+    "refresh_policy": "Quarterly \u2014 only refresh tickers whose concall_date is newer than last_refreshed. See agent_orchestration_helpers.py.",
+    "notes": "Backfilled 2026-05-25 by 5 parallel business-onepager-author subagents using WebSearch over IR pages and 10-K/20-F filings.",
+    "agent_dispatch": {
+      "batch_1": [
+        "AMD",
+        "BESI.AS",
+        "DELL",
+        "DOCN",
+        "MU",
+        "NOD.OL",
+        "PRY.MI",
+        "SNDK",
+        "STMPA.PA",
+        "STX"
+      ],
+      "batch_2": [
+        "CAR",
+        "CIEN",
+        "COHR",
+        "FLEX",
+        "ON",
+        "STRL",
+        "SUBC.OL",
+        "TTMI",
+        "VICR",
+        "WDC"
+      ],
+      "batch_3": [
+        "AJB.L",
+        "ASM.AS",
+        "GEV",
+        "GLW",
+        "IGG.L",
+        "LITE",
+        "MTSI",
+        "NBIX",
+        "SPM.MI",
+        "TGS.OL"
+      ],
+      "batch_4": [
+        "AKAM",
+        "AKRBP.OL",
+        "AMKR",
+        "BWLPG.OL",
+        "HPE",
+        "LSCC",
+        "MNTN.L",
+        "NHY.OL",
+        "TWLO",
+        "VAR.OL"
+      ],
+      "batch_5": [
+        "ARW",
+        "BP.L",
+        "DPLM.L",
+        "EQNR.OL",
+        "FTNT",
+        "HUM",
+        "MTZ",
+        "SCT.L",
+        "SNX",
+        "TCAP.L"
+      ]
+    },
+    "tickers_n": 50
+  },
+  "STMPA.PA": {
+    "ticker": "STMPA.PA",
+    "company": "STMicroelectronics N.V.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Franco-Italian IDM (integrated device manufacturer) that designs and fabricates a broad mix of analog, power, microcontroller, MEMS sensor and RF chips. ~80% of revenue comes from automotive and industrial customers buying microcontrollers (STM32 franchise), silicon-carbide (SiC) power devices for EV inverters, and MEMS sensors. ST owns its own fabs in France, Italy and Singapore and is co-investing with Tower and GlobalFoundries on a new 300mm fab at Crolles.",
+    "revenue_mix": [
+      {
+        "segment": "Analog, Power & Discrete, MEMS and Sensors (APMS \u2014 combines AM&S + P&D)",
+        "share_pct": 55,
+        "trend": "declining"
+      },
+      {
+        "segment": "Microcontrollers, Digital ICs & RF (MDRF \u2014 combines EMP + RF&OC)",
+        "share_pct": 45,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "EMEA",
+        "share_pct": 28
+      },
+      {
+        "region": "Americas",
+        "share_pct": 16
+      },
+      {
+        "region": "Asia Pacific ex-China",
+        "share_pct": 30
+      },
+      {
+        "region": "Greater China",
+        "share_pct": 26
+      }
+    ],
+    "end_markets": [
+      "Automotive (EV inverters via SiC, ADAS, body electronics)",
+      "Industrial automation & power",
+      "Personal electronics (Apple ToF/imaging, MEMS sensors)",
+      "Communications equipment & IoT"
+    ],
+    "top_competitors": [
+      "Infineon (auto MCUs, SiC)",
+      "NXP Semiconductors (auto MCUs)",
+      "onsemi (SiC, image sensors)",
+      "Renesas (auto MCUs)",
+      "Wolfspeed (SiC substrates)"
+    ],
+    "moat": {
+      "type": "Vertically integrated SiC + STM32 microcontroller ecosystem lock-in",
+      "narrative": "ST is one of only two volume merchant SiC suppliers (with Wolfspeed) and supplies Tesla's main traction inverter \u2014 fab-internal SiC substrate growth at Catania/Norrkoping is a process advantage few peers can replicate. The STM32 MCU franchise has ~50,000 active customers and >1M registered developers, creating switching costs in industrial designs."
+    },
+    "key_customers": [
+      "Apple (largest customer, historically ~15-17% of revenue for image sensors)",
+      "Tesla (SiC traction inverter)",
+      "Bosch, Continental, Stellantis (auto Tier 1s and OEMs)",
+      "Mobileye/Intel (auto SoC partnerships)"
+    ],
+    "key_risks": [
+      "FY2025 revenue fell -11% to $11.8B with Power & Discrete (SiC) down -31% on ASP collapse \u2014 Chinese SiC entrants (Sicc, TankeBlue) plus Wolfspeed Chapter 11 disruption pressuring pricing through 2026",
+      "Apple revenue concentration: loss of MEMS/ToF socket on iPhone 17 reset cycle would create a multi-quarter air pocket",
+      "French + Italian governments together hold ~27.5% via STM Holding \u2014 limits capacity rationalisation; 2025 layoff plan triggered French union pushback and political scrutiny"
+    ],
+    "sources": [
+      {
+        "label": "STM 20-F FY2025 (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000932787/000093278726000009/stm-20251231.htm"
+      },
+      {
+        "label": "STM Q4 FY2025 6-K press release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000932787/000094787125000683/ss5123623_6k.htm"
+      },
+      {
+        "label": "Wikipedia STMicroelectronics",
+        "url": "https://en.wikipedia.org/wiki/STMicroelectronics"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "SNDK": {
+    "ticker": "SNDK",
+    "company": "Sandisk Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Pure-play NAND flash memory company spun off from Western Digital on Feb 21, 2025. Designs, manufactures (via JV with Kioxia in Yokkaichi/Kitakami, Japan) and sells NAND wafers, client SSDs, enterprise SSDs, removable cards and USB drives. ~$7B revenue run-rate. The spin separated NAND from WD's hard-drive business so each could be valued on different cycle dynamics.",
+    "revenue_mix": [
+      {
+        "segment": "Cloud / Data Center (enterprise SSDs)",
+        "share_pct": 25,
+        "trend": "growing"
+      },
+      {
+        "segment": "Client (PC OEM SSDs, gaming, embedded)",
+        "share_pct": 45,
+        "trend": "stable"
+      },
+      {
+        "segment": "Consumer (retail cards, USBs, SanDisk-branded drives)",
+        "share_pct": 30,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia (ex-China)",
+        "share_pct": 45
+      },
+      {
+        "region": "Americas",
+        "share_pct": 30
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 15
+      },
+      {
+        "region": "China",
+        "share_pct": 10
+      }
+    ],
+    "end_markets": [
+      "AI inference servers (high-capacity TLC/QLC enterprise SSDs)",
+      "Consumer PCs & gaming laptops",
+      "Mobile/embedded (eMMC, UFS)",
+      "Retail consumer storage (cards, USBs under SanDisk brand)"
+    ],
+    "top_competitors": [
+      "Samsung Electronics (32% NAND share)",
+      "SK Hynix / Solidigm (19% share)",
+      "Kioxia (15% share, JV partner)",
+      "Micron (13% share)",
+      "YMTC (China)"
+    ],
+    "moat": {
+      "type": "Joint-venture NAND fab co-investment with Kioxia + retail brand",
+      "narrative": "The Yokkaichi/Kitakami JV with Kioxia gives Sandisk 50% capacity claim on the world's #3-#4 NAND fab footprint at a fraction of standalone capex \u2014 replicating this from scratch would cost >$30B and 5+ years. SanDisk retains the premium consumer brand (cards, drives) that commands 20-30% retail price premium vs Samsung/Lexar."
+    },
+    "key_customers": [
+      "Hyperscalers (AWS, Microsoft Azure, Google Cloud \u2014 enterprise SSD)",
+      "PC OEMs (Dell, HP, Lenovo, Asus)",
+      "Apple, Samsung (mobile NAND)",
+      "Smartphone OEMs in China"
+    ],
+    "key_risks": [
+      "NAND pricing is highly cyclical \u2014 bull cycle since 2H24 driven by AI/HBM crowd-out of conventional DRAM/NAND wafer starts; supply-glut risk if Samsung/SK accelerate node migrations into 2027",
+      "Customer/JV dependency on Kioxia: any equity action by Bain/Toshiba on Kioxia (announced 2025 IPO + secondaries) reshapes Sandisk's bargaining and supply economics",
+      "Trails Samsung and SK on BiCS8/QLC enterprise SSD qualification \u2014 risk of missing the AI inference SSD design-in cycle through 2026"
+    ],
+    "sources": [
+      {
+        "label": "Sandisk 10-K FY2025 (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002023554/000202355425000034/sndk-20250627.htm"
+      },
+      {
+        "label": "Sandisk Q1 FY2026 press release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002023554/000162828025050180/sndkq1fy26ex991-pressrelea.htm"
+      },
+      {
+        "label": "TrendForce NAND share Q3 2025",
+        "url": "https://www.trendforce.com/news/2026/01/29/news-second-tier-no-more-kioxia-and-sandisk-balance-alliance-and-rivalry-in-ai-nand-race/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "DOCN": {
+    "ticker": "DOCN",
+    "company": "DigitalOcean Holdings, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Cloud infrastructure provider targeting developers, startups and SMBs \u2014 sells compute (Droplets), managed Kubernetes, managed databases, object storage, and (since 2024 Paperspace acquisition) GPU instances and the Gradient AI platform for inference. Revenue is subscription, usage-based; FY2025 revenue $901M (+15%), hit $1B annualized monthly run-rate in Dec 2025. Pricing is typically 40-50% below AWS/Azure/GCP for equivalent compute.",
+    "revenue_mix": [
+      {
+        "segment": "Scalers+ (customers spending >$100/month)",
+        "share_pct": 88,
+        "trend": "growing"
+      },
+      {
+        "segment": "Builders & Learners (small customers <$100/month)",
+        "share_pct": 12,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "North America",
+        "share_pct": 38
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 30
+      },
+      {
+        "region": "Asia",
+        "share_pct": 25
+      },
+      {
+        "region": "Other",
+        "share_pct": 7
+      }
+    ],
+    "end_markets": [
+      "AI/ML startups (Gradient inference, GPU Droplets)",
+      "SaaS startups & ISVs",
+      "Digital agencies & web shops",
+      "Developer tools and open-source projects"
+    ],
+    "top_competitors": [
+      "AWS (Lightsail directly targets DO's segment)",
+      "Microsoft Azure",
+      "Google Cloud",
+      "Vultr, Linode/Akamai, Hetzner (peer SMB clouds)",
+      "CoreWeave, Lambda Labs (GPU-cloud specifically)"
+    ],
+    "moat": {
+      "type": "Developer-experience simplicity + price-point for SMB segment",
+      "narrative": "Self-serve UI, transparent flat-rate pricing and 1-click app marketplace are explicitly designed for solo developers \u2014 hyperscalers' enterprise-first console is a moat-by-neglect for DO. Switching costs are low individually but high in aggregate once an SMB has tutorials/scripts/CI tooling wired to DO APIs."
+    },
+    "key_customers": [
+      "~640K paying customers, no >10% concentration",
+      "Million-dollar-plus ARR cohort: $133M ARR (+123% YoY in 2025)",
+      "AI cohort: $120M ARR (+150% YoY)"
+    ],
+    "key_risks": [
+      "AWS Lightsail / Azure Container Apps directly priced to undercut DO's SMB segment \u2014 hyperscaler $380B+ AI capex (2025) creates margin pressure across the stack",
+      "AI revenue growth depends on Gradient/GPU Droplet execution; Chief Product & Technology Officer resigned in 2025, raising execution risk on the AI inference roadmap",
+      "GPU capex intensity: keeping inventory of Nvidia H100/H200/B200 current strains a balance sheet that historically ran asset-light SMB compute"
+    ],
+    "sources": [
+      {
+        "label": "DOCN Q4 FY2025 press release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001582961/000158296125000033/a2024-q4dopressrelease.htm"
+      },
+      {
+        "label": "DOCN Q3 2025 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001582961/000158296125000150/docn-20250930.htm"
+      },
+      {
+        "label": "DigitalOcean IR Q3 2025 release",
+        "url": "https://investors.digitalocean.com/news/news-details/2025/DigitalOcean-Announces-Third-Quarter-2025-Financial-Results/default.aspx"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "NOD.OL": {
+    "ticker": "NOD.OL",
+    "company": "Nordic Semiconductor ASA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Norwegian fabless semiconductor company specializing in ultra-low-power wireless connectivity SoCs (system-on-chip). Dominant in Bluetooth Low Energy with ~40% global unit share. Sells nRF52/53/54-series BLE chips, nRF91 cellular IoT modems, and (newer) nRF7002 Wi-Fi 6 companion chips. Foundry partners are TSMC and Samsung. Revenue ~$650-700M for 2025E. Sells to ~6,000+ customers across consumer electronics, wearables, medical and industrial IoT.",
+    "revenue_mix": [
+      {
+        "segment": "Short-range wireless (Bluetooth LE, Thread, Matter, Wi-Fi)",
+        "share_pct": 85,
+        "trend": "growing"
+      },
+      {
+        "segment": "Cellular IoT (LTE-M, NB-IoT, DECT NR+ via nRF91)",
+        "share_pct": 12,
+        "trend": "growing"
+      },
+      {
+        "segment": "Power management & other",
+        "share_pct": 3,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia (ex-China)",
+        "share_pct": 35
+      },
+      {
+        "region": "Americas",
+        "share_pct": 25
+      },
+      {
+        "region": "China",
+        "share_pct": 25
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Wearables (smartwatches, fitness, hearables)",
+      "Smart home (Matter, Thread mesh devices)",
+      "Medical IoT (CGM patches, e.g., Dexcom)",
+      "PC/gaming peripherals (Logitech mice/keyboards)",
+      "Asset tracking & industrial"
+    ],
+    "top_competitors": [
+      "Silicon Labs (multi-protocol IoT SoCs)",
+      "Qualcomm (high-end BLE/Wi-Fi combos)",
+      "Texas Instruments (CC26xx/CC27xx series)",
+      "NXP Semiconductors (KW series)",
+      "Espressif (low-cost Wi-Fi/BLE combos)"
+    ],
+    "moat": {
+      "type": "BLE share leadership + nRF Connect SDK developer ecosystem",
+      "narrative": "Nordic's nRF Connect SDK has been the de facto reference platform for BLE developers since 2010s; engineers who learn it on a project tend to spec the same MCU on next-gen designs. >43% BLE unit share creates volume cost advantages that smaller peers like Silicon Labs and TI can't match in cents-per-chip negotiations with consumer OEMs."
+    },
+    "key_customers": [
+      "Logitech (PC peripherals)",
+      "Apple (ecosystem accessories)",
+      "Dexcom (G7 CGM uses nRF52)",
+      "SimpliSafe, Ring, smart-home OEMs",
+      "Garmin, Fitbit, wearables OEMs"
+    ],
+    "key_risks": [
+      "UBS Sell rating (Apr 2025) flagged 2026 growth deceleration as 2024-25 inventory restocking ends \u2014 short-range Bluetooth IC unit demand maturing",
+      "Customer concentration: top 10 customers ~40% of revenue; any wearables OEM ramp/de-spec is material",
+      "Espressif (Chinese ESP32) and Chinese BLE entrants encroaching at the low end with combo Wi-Fi+BLE parts at <50% of Nordic's ASP"
+    ],
+    "sources": [
+      {
+        "label": "Nordic Q2 2025 results",
+        "url": "https://www.nordicsemi.com/-/media/Investor-Relations-and-QA/Quartely-Reports/2025/Q2_Quarterly_Report_2025.pdf"
+      },
+      {
+        "label": "Nordic Q1 2026 report",
+        "url": "https://www.nordicsemi.com/-/media/Investor-Relations-and-QA/Quartely-Reports/2026/NOD-Q1-2026-Report.pdf"
+      },
+      {
+        "label": "Wikipedia Nordic Semiconductor",
+        "url": "https://en.wikipedia.org/wiki/Nordic_Semiconductor"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "MU": {
+    "ticker": "MU",
+    "company": "Micron Technology, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "One of three global DRAM IDMs (with Samsung, SK Hynix) and a top-5 NAND maker. Fabricates DRAM (commodity DDR4/5, LPDDR for mobile/server, HBM for AI) and NAND in Taiwan, Japan, Singapore, US (Idaho, NY-planned). FY2025 (ended Aug 2025) revenue a record $28.6B (+62% YoY). HBM3E shipping in volume to Nvidia (Blackwell) and AMD (MI350), with HBM4 ramping calendar 2026.",
+    "revenue_mix": [
+      {
+        "segment": "DRAM (DDR5, LPDDR, HBM)",
+        "share_pct": 76,
+        "trend": "growing"
+      },
+      {
+        "segment": "NAND (client + datacenter SSDs, mobile)",
+        "share_pct": 23,
+        "trend": "growing"
+      },
+      {
+        "segment": "Other (NOR, technology licensing)",
+        "share_pct": 1,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia ex-China (Taiwan large)",
+        "share_pct": 45
+      },
+      {
+        "region": "Americas",
+        "share_pct": 28
+      },
+      {
+        "region": "China",
+        "share_pct": 15
+      },
+      {
+        "region": "EMEA + Other",
+        "share_pct": 12
+      }
+    ],
+    "end_markets": [
+      "AI data center (HBM for GPU/ASIC, server DDR5, LP server DRAM, datacenter SSD)",
+      "Smartphones (LPDDR5X to Apple, Samsung)",
+      "Automotive (DDR4/LPDDR for ADAS/IVI)",
+      "Industrial & embedded",
+      "PC & gaming"
+    ],
+    "top_competitors": [
+      "Samsung Electronics (DRAM #1, NAND #1)",
+      "SK Hynix (DRAM #2, NAND #2 incl Solidigm)",
+      "Kioxia (NAND)",
+      "Sandisk (NAND)",
+      "ChangXin/CXMT (China DRAM rising threat)",
+      "YMTC (China NAND)"
+    ],
+    "moat": {
+      "type": "Process technology leadership in HBM + capital scale",
+      "narrative": "Micron HBM3E shipped first-to-market at 8-high and 12-high with the lowest power per bit, winning Nvidia Blackwell qualification ahead of Samsung. Only 3 firms globally can build HBM at scale; replicating a leading-edge DRAM fab costs ~$20-25B and 4 years. Sole-source for low-power server DRAM in volume (LP-DDR5X for ARM/Nvidia GB200)."
+    },
+    "key_customers": [
+      "Nvidia (HBM3E for B200/B300, LPDDR for GB200 Grace)",
+      "AMD (HBM3E for MI350/MI355X)",
+      "Apple (LPDDR for iPhone)",
+      "Samsung mobile, hyperscalers (Microsoft, Meta, Google for server DDR5/SSD)"
+    ],
+    "key_risks": [
+      "China DRAM (CXMT) ramping at trailing nodes \u2014 risk of DDR4/LPDDR4 oversupply pressuring commodity segment; US export-control reciprocity also restricts Micron's China shipments after May 2023 cybersecurity review",
+      "HBM4 yields and HBM4E timing \u2014 any slip vs Samsung (catching up) or SK Hynix would forfeit AI memory premium pricing in 2026-27",
+      "Memory cycle peaks historically lasted 4-6 quarters; consensus assumes through-cycle margins persist into FY2027 \u2014 single supply glut quarter could reset earnings by 30-50%"
+    ],
+    "sources": [
+      {
+        "label": "Micron Q4 FY2025 transcript",
+        "url": "https://investors.micron.com/static-files/5ea95475-639b-4cfc-91fd-b9b4a2bb5e63"
+      },
+      {
+        "label": "Micron Q3 FY2025 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000019/a2025q3ex991-pressrelease.htm"
+      },
+      {
+        "label": "TrendForce HBM market share",
+        "url": "https://www.trendforce.com/news/2025/06/26/news-micron-scales-up-hbm-to-four-major-gpuasic-clients-targets-24-market-share-by-year-end/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "AMD": {
+    "ticker": "AMD",
+    "company": "Advanced Micro Devices, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Fabless designer of x86 CPUs (EPYC server, Ryzen client), data-center GPUs (Instinct MI series), gaming GPUs (Radeon), semi-custom SoCs (PS5, Xbox), and embedded/FPGA products (post-Xilinx 2022 deal). Outsources fabrication to TSMC (5nm/3nm). FY2025 revenue $34.6B (+34%), with Data Center segment $16.6B (+32%) overtaking Client+Gaming combined as largest segment.",
+    "revenue_mix": [
+      {
+        "segment": "Data Center (EPYC CPUs, Instinct GPUs, Pensando DPUs)",
+        "share_pct": 48,
+        "trend": "growing"
+      },
+      {
+        "segment": "Client (Ryzen desktop + mobile CPUs)",
+        "share_pct": 31,
+        "trend": "growing"
+      },
+      {
+        "segment": "Gaming (Radeon discrete GPUs + semi-custom PS5/Xbox SoCs)",
+        "share_pct": 11,
+        "trend": "growing"
+      },
+      {
+        "segment": "Embedded (Xilinx FPGAs + adaptive SoCs)",
+        "share_pct": 10,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 50
+      },
+      {
+        "region": "Taiwan / China (ship-to)",
+        "share_pct": 25
+      },
+      {
+        "region": "Singapore + APAC",
+        "share_pct": 15
+      },
+      {
+        "region": "EMEA + Other",
+        "share_pct": 10
+      }
+    ],
+    "end_markets": [
+      "AI training & inference (hyperscaler GPU clusters)",
+      "Cloud & enterprise servers (EPYC)",
+      "PC OEM (Ryzen for Dell, HP, Lenovo)",
+      "Console gaming (Sony PS5, Microsoft Xbox)",
+      "Industrial, aerospace, defense (Xilinx)"
+    ],
+    "top_competitors": [
+      "Nvidia (AI GPU dominance, CUDA moat)",
+      "Intel (server + client CPUs, Gaudi accelerator)",
+      "Broadcom (custom AI ASICs for Google, Meta)",
+      "Marvell (custom ASICs for AWS Trainium)",
+      "Apple (M-series chips taking PC share)"
+    ],
+    "moat": {
+      "type": "x86 server CPU duopoly with Intel + AI GPU optionality",
+      "narrative": "EPYC has taken ~30%+ x86 server CPU revenue share from Intel since 2017 via chiplet manufacturing on TSMC leading nodes \u2014 Intel's foundry struggles make this share durable through 2027. On AI, AMD is the #2 merchant GPU with $9.4B 2025 DC GPU revenue; ROCm software still trails CUDA but hyperscalers (Microsoft, Meta, Oracle) actively co-fund AMD to avoid Nvidia monopoly pricing."
+    },
+    "key_customers": [
+      "Microsoft (Azure EPYC + Instinct MI300/MI350)",
+      "Meta (MI300X for Llama inference)",
+      "Oracle, Google, AWS (EPYC server CPUs)",
+      "Sony PlayStation, Microsoft Xbox (semi-custom)",
+      "Dell, HP, Lenovo (PC OEM Ryzen)"
+    ],
+    "key_risks": [
+      "Nvidia CUDA software lock-in: ROCm maturity gap costs 10-30% real-world performance vs benchmarks; risk of MI400 (Helios rack) slipping vs Nvidia Rubin in 2026-27",
+      "US AI chip export controls to China: MI308 license requirements limit ~$1-2B addressable revenue; further restrictions on advanced HBM-equipped AI accelerators a recurring catalyst",
+      "Custom ASIC threat: Broadcom (Google TPU), Marvell (AWS Trainium) and Meta MTIA bypass merchant GPU buys \u2014 hyperscaler in-house silicon could cap AMD's TAM"
+    ],
+    "sources": [
+      {
+        "label": "AMD FY2025 10-K (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000021/amd-20251227.htm"
+      },
+      {
+        "label": "AMD Q4 FY2025 press release",
+        "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results"
+      },
+      {
+        "label": "AMD Q1 FY2025 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000002488/000000248825000045/q12025991.htm"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "DELL": {
+    "ticker": "DELL",
+    "company": "Dell Technologies Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Hardware-led enterprise IT vendor with two main businesses: Infrastructure Solutions Group (servers, storage, networking \u2014 including AI-server racks built on Nvidia HGX/GB200) and Client Solutions Group (PCs, workstations, displays). Direct sales model to enterprise + channel for SMB and consumer. FY2025 (ended Jan-Feb 2025) revenue ~$95.6B; ISG $43.6B (+29%) overtaking flat CSG $48.4B. #1 share in AI servers (~20%).",
+    "revenue_mix": [
+      {
+        "segment": "Client Solutions Group (Commercial + Consumer PCs)",
+        "share_pct": 51,
+        "trend": "stable"
+      },
+      {
+        "segment": "Infrastructure Solutions Group (Servers, Storage, Networking)",
+        "share_pct": 46,
+        "trend": "growing"
+      },
+      {
+        "segment": "Other (VMware resale, Secureworks legacy)",
+        "share_pct": 3,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Americas",
+        "share_pct": 52
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 27
+      },
+      {
+        "region": "APJ",
+        "share_pct": 21
+      }
+    ],
+    "end_markets": [
+      "Hyperscaler AI infrastructure (GB200 NVL72 racks)",
+      "Enterprise data center (servers + PowerStore storage)",
+      "Tier-2 cloud (CoreWeave, xAI)",
+      "Commercial PC (Latitude, OptiPlex, Precision)",
+      "Consumer PC + gaming (XPS, Alienware)"
+    ],
+    "top_competitors": [
+      "Hewlett Packard Enterprise (HPE) \u2014 servers, storage",
+      "Lenovo (servers + PCs)",
+      "Super Micro Computer (AI server)",
+      "HP Inc. (PCs)",
+      "Apple (premium commercial PCs)",
+      "Pure Storage, NetApp (enterprise storage)"
+    ],
+    "moat": {
+      "type": "AI-rack systems integration scale + direct enterprise channel",
+      "narrative": "Dell ships Nvidia GB200 NVL72 racks (~$3-4M each) with full liquid-cooling, networking and deployment services \u2014 Super Micro has the price but Dell wins enterprise + sovereign deals on serviceability. PC OEM scale (~50M units/yr) plus a global enterprise direct-sales force creates a distribution moat that's expensive to replicate in either business in isolation."
+    },
+    "key_customers": [
+      "xAI (multi-billion GB200 deals)",
+      "CoreWeave (AI cloud capacity build-out)",
+      "Meta, Microsoft, Oracle (selective hyperscaler AI racks)",
+      "US federal government & DoD (commercial PCs)",
+      "Fortune 500 enterprises across verticals"
+    ],
+    "key_risks": [
+      "AI-server margin compression: ISG operating margin ~5-7% as Nvidia GPU cost is pass-through; backlog of ~$9B is mix-shifted to thin-margin hyperscaler builds rather than fat-margin enterprise",
+      "PC refresh cycle: CSG was flat in FY2025 \u2014 if Windows 10 EoL Oct-2025 catalysed Windows 11/AI-PC refresh fades in 2026 it removes the bull case for CSG",
+      "Hyperscaler in-sourcing: Microsoft, Google, Meta building their own white-box AI racks via ODMs (Foxconn, Quanta) compresses Dell's hyperscaler share over time"
+    ],
+    "sources": [
+      {
+        "label": "Dell Q4 FY2025 press release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001571996/000157199625000014/exhibit991earnings8kq4fy25.htm"
+      },
+      {
+        "label": "Dell Q3 FY26 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001571996/000157199625000118/exhibit991earnings8kq3fy26.htm"
+      },
+      {
+        "label": "Dell FY2025 full-year results",
+        "url": "https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2025~02~dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-2025-financial-results.htm"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "BESI.AS": {
+    "ticker": "BESI.AS",
+    "company": "BE Semiconductor Industries N.V.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Dutch back-end semiconductor assembly equipment maker, specializing in die-attach tools \u2014 flip-chip bonders, thermocompression bonders (TCB) and (the strategic crown jewel) hybrid bonders used to stack chiplets at sub-micron precision for HBM, advanced logic and co-packaged optics. Sells to OSATs and IDMs. Mid-2025 raised long-term targets to \u20ac1.5-1.9B revenue at 40-55% operating margins. Applied Materials took a 9% stake in April 2025 to co-develop hybrid bonding.",
+    "revenue_mix": [
+      {
+        "segment": "Die Attach (flip-chip, TCB, hybrid bonders)",
+        "share_pct": 70,
+        "trend": "growing"
+      },
+      {
+        "segment": "Packaging (epoxy/sealing, plating)",
+        "share_pct": 20,
+        "trend": "stable"
+      },
+      {
+        "segment": "Spares, service and aftermarket",
+        "share_pct": 10,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia (Taiwan, Korea, China main)",
+        "share_pct": 75
+      },
+      {
+        "region": "Europe",
+        "share_pct": 15
+      },
+      {
+        "region": "North America",
+        "share_pct": 10
+      }
+    ],
+    "end_markets": [
+      "Advanced packaging for AI accelerators (HBM stacking, CoWoS)",
+      "Logic 2.5D/3D heterogeneous integration",
+      "Smartphone application processors",
+      "Automotive power & sensor modules",
+      "Memory (HBM, NAND multi-die packages)"
+    ],
+    "top_competitors": [
+      "ASMPT (ASM Pacific Technology) \u2014 primary die-attach rival, broader portfolio",
+      "Kulicke & Soffa (TCB, ball/wire bonders)",
+      "EV Group, SUSS MicroTec (hybrid-bonding wafer-level)",
+      "Shinkawa, Fasford (Japanese die-attach)"
+    ],
+    "moat": {
+      "type": "Hybrid-bonding placement-accuracy lead + AMAT partnership",
+      "narrative": "BESI hybrid bonders achieve sub-200nm placement accuracy required for advanced HBM4/3D-logic stacking \u2014 first to volume orders at TSMC and a leading logic IDM (likely Intel). 18 customers, 150+ cumulative system orders. April 2025 Applied Materials 9% strategic equity stake locks in joint roadmap for chemical/wafer-level hybrid bonding flow, foreclosing ASMPT's catch-up path."
+    },
+    "key_customers": [
+      "TSMC (CoWoS hybrid bonding for AI accelerators)",
+      "Intel (logic stacking \u2014 co-developed with Applied Materials)",
+      "OSATs: ASE, Amkor, JCET",
+      "SK Hynix, Micron, Samsung (memory packaging)"
+    ],
+    "key_risks": [
+      "Highly cyclical capex spending: order book swings \u00b150% in a quarter; hybrid-bonding ramp delays at TSMC/Intel HBM4 (now expected late-2026) could push out \u20ac100M+ of revenue",
+      "Customer concentration in 2-3 leading-edge logic/memory IDMs \u2014 any HBM4-stack architecture change (e.g., back to microbump) would re-rate the long-term \u20ac1.5-1.9B target",
+      "ASMPT and K&S TCB competition: thermocompression bonding 'good enough' for HBM3E/HBM4 base layers, limiting hybrid bonding TAM in near term"
+    ],
+    "sources": [
+      {
+        "label": "BESI Q4 FY2025 results (globenewswire)",
+        "url": "https://www.globenewswire.com/news-release/2026/02/19/3240803/0/en/BE-Semiconductor-Industries-N-V-Announces-Q4-25-and-Full-Year-2025-Results.html"
+      },
+      {
+        "label": "BESI 2025 Investor Day press release",
+        "url": "https://www.besi.com/investor-relations/press-releases/details/be-semiconductor-industries-nv-increases-financial-targets-at-2025-investor-day/"
+      },
+      {
+        "label": "Yole hybrid bonding analysis",
+        "url": "https://www.yolegroup.com/strategy-insights/advanced-packaging-is-the-engine-driving-back%E2%80%91next-end-equipment-growth/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "STX": {
+    "ticker": "STX",
+    "company": "Seagate Technology Holdings plc",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "World #1 (tied with Western Digital) maker of nearline hard disk drives for cloud and enterprise storage \u2014 also legacy mission-critical, client/edge and consumer storage. FY2025 (ended June 27, 2025) revenue $9.1B (+39% YoY). Industry now a 3-vendor oligopoly: Seagate, Western Digital, Toshiba. In June 2025 launched Mozaic 3+ HAMR (heat-assisted magnetic recording) platform at 32TB+, the industry's first volume HAMR ramp.",
+    "revenue_mix": [
+      {
+        "segment": "Mass Capacity (nearline cloud + enterprise HDDs)",
+        "share_pct": 80,
+        "trend": "growing"
+      },
+      {
+        "segment": "Legacy (mission-critical HDDs, client desktop/notebook, consumer)",
+        "share_pct": 18,
+        "trend": "declining"
+      },
+      {
+        "segment": "Non-HDD (Lyve cloud storage, systems, services)",
+        "share_pct": 2,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia Pacific",
+        "share_pct": 55
+      },
+      {
+        "region": "Americas",
+        "share_pct": 30
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Hyperscale cloud (AWS, Azure, Google, Meta data lakes)",
+      "Enterprise on-prem storage",
+      "Video surveillance & NVR",
+      "Edge/IoT archival storage",
+      "Consumer external drives + NAS"
+    ],
+    "top_competitors": [
+      "Western Digital (HDD spin-off post-Sandisk separation)",
+      "Toshiba (Kioxia parent \u2014 third HDD maker)",
+      "Solid-state alternatives: Samsung, SK Hynix, Sandisk (NAND SSDs eroding low-end HDD use cases)"
+    ],
+    "moat": {
+      "type": "HAMR areal-density technology lead + 3-vendor HDD oligopoly",
+      "narrative": "HDDs are a >$25B oligopoly with effectively 2-3 producers; entry requires multi-decade R&D in head/media stacks (read/write heads, glass platters) and >$3B fab tooling. Seagate's HAMR Mozaic 3+ shipped in volume Q4 CY2024 / 1H 2025 ahead of WD's heat-assisted competitor \u2014 areal density lead translates to lower $/TB at hyperscale TCO, locking in cloud RFPs for 2026-27."
+    },
+    "key_customers": [
+      "AWS, Microsoft Azure, Google Cloud, Meta (hyperscaler nearline)",
+      "Backblaze, OVH, Tier-2 clouds",
+      "Dell, HPE, NetApp, Pure Storage (OEM channel)",
+      "Hikvision, Dahua (video surveillance)"
+    ],
+    "key_risks": [
+      "QLC NAND SSD price-per-bit declines could accelerate substitution into 'warm' storage tiers historically owned by nearline HDD \u2014 Sandisk/Solidigm 122TB QLC SSDs at $0.10/GB approaching HDD economics by 2027",
+      "HDD demand inherently tied to hyperscaler capex cycles \u2014 any 2026 AI/cloud capex digestion (CoreWeave funding hiccup, Microsoft pause) hits HDD orders with 1-2 quarter lag",
+      "HAMR yield ramp execution: Seagate's lead depends on getting HAMR volume yields up before WD's parallel ePMR/HAMR roadmap closes the gap"
+    ],
+    "sources": [
+      {
+        "label": "Seagate Q4 FY2025 press release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001137789/000113778925000148/stxq42025pressreleasefinan.htm"
+      },
+      {
+        "label": "Seagate Q4 FY2025 earnings script",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001137789/000113778925000150/fq425consolidatedscript-8x.htm"
+      },
+      {
+        "label": "Seagate Q3 FY2025 release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001137789/000113778925000070/stxq32025pressreleasefinan.htm"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "PRY.MI": {
+    "ticker": "PRY.MI",
+    "company": "Prysmian S.p.A.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "World's largest cable manufacturer by revenue (FY2025: \u20ac19.65B, +5.4% organic). Makes high-voltage submarine/land power cables for grid interconnectors and offshore wind, medium-voltage distribution cables, low-voltage building wire (mainly US via 2024 Encore Wire acquisition), and fiber-optic telecom cables. Operates >100 plants in 50 countries. ~40% global submarine HV cable share.",
+    "revenue_mix": [
+      {
+        "segment": "Transmission (HV submarine + land cables for grid interconnectors, offshore wind export)",
+        "share_pct": 18,
+        "trend": "growing"
+      },
+      {
+        "segment": "Power Grid (medium-voltage T&D cables)",
+        "share_pct": 22,
+        "trend": "growing"
+      },
+      {
+        "segment": "Electrification (industrial + construction building wire, specialties \u2014 incl Encore Wire US)",
+        "share_pct": 50,
+        "trend": "stable"
+      },
+      {
+        "segment": "Digital Solutions (fiber optic & telecom cables, datacenter cabling)",
+        "share_pct": 10,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "North America",
+        "share_pct": 40
+      },
+      {
+        "region": "Europe",
+        "share_pct": 35
+      },
+      {
+        "region": "LATAM",
+        "share_pct": 10
+      },
+      {
+        "region": "APAC + MEART",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Offshore wind farms (submarine export cables, inter-array)",
+      "Grid interconnectors (HVDC links between countries / continents)",
+      "US grid modernization & data center electrification",
+      "Telecom carriers (fiber rollouts)",
+      "Industrial construction & EV charging"
+    ],
+    "top_competitors": [
+      "Nexans (France) \u2014 direct submarine/HV rival (~21% share)",
+      "NKT (Denmark) \u2014 pure-play HV after ABB cable acquisition (~14% share)",
+      "LS Cable & System (Korea)",
+      "Southwire (US building wire \u2014 direct Encore Wire competitor)",
+      "Sumitomo Electric (Japan, submarine)"
+    ],
+    "moat": {
+      "type": "Submarine HV cable installation vessels + \u20ac17B backlog",
+      "narrative": "HV submarine cable is a 3-supplier market (Prysmian, Nexans, NKT) \u2014 new entry blocked by specialized cable-lay vessels (Prysmian operates Leonardo da Vinci, Ulisse, Cable Enterprise), 3-5 year project lead times and TSO/utility pre-qualification requirements. Transmission backlog stood at \u20ac17B end-2025 (~7 years of segment revenue). Encore Wire acquisition gives US building-wire #1 share at moment of Inflation Reduction Act + data center electrification capex."
+    },
+    "key_customers": [
+      "European TSOs: TenneT, National Grid, RTE, 50Hertz, Terna (interconnectors)",
+      "Offshore wind developers: \u00d8rsted, Iberdrola, Equinor, RWE",
+      "US utilities + electrical distributors (post-Encore Wire)",
+      "Telecom: AT&T, Verizon, Deutsche Telekom (fiber)"
+    ],
+    "key_risks": [
+      "Copper price volatility \u2014 Prysmian passes through but margin lag in 1-2 quarter contracts; 2025 US Section 232 copper tariff threat creates working-capital and price-mix uncertainty",
+      "Offshore wind cycle: backlog visibility strong through 2028 but inflation/permitting halted/repriced US Atlantic wind (Vineyard, Empire) \u2014 risk of cancellations / cable order push-outs",
+      "Execution risk on long-cycle HV projects: 2H 2025 disclosed margin pressure on legacy SAPEI/Tyrrhenian Link cables; one offshore install failure (cable burial, joint failure) can trigger \u20ac100M+ warranty/insurance hits"
+    ],
+    "sources": [
+      {
+        "label": "Prysmian FY2025 results",
+        "url": "https://www.prysmian.com/en/media/press-releases/prysmian-continues-growth-and-margin-expansion-in-q4-25-2025-is-prysmian-s-best-year-yet"
+      },
+      {
+        "label": "Prysmian Q4 FY2025 press release PDF",
+        "url": "https://www.prysmian.com/sites/www.prysmian.com/files/media/documents/PR_Prysmian_FY25_26022026.pdf"
+      },
+      {
+        "label": "Prysmian 9M 2025 financial report",
+        "url": "https://www.prysmian.com/sites/www.prysmian.com/files/media/documents/investors/ENG%20-%20Financial%20Report-%2030%20september%202025.pdf"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "VICR": {
+    "ticker": "VICR",
+    "company": "Vicor Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Vicor designs and manufactures high-density modular power components for AI servers, data centers, aerospace/defense, and industrial systems. Revenue comes from selling power modules (Bricks, Factorized Power, Vertical Power Delivery) and, increasingly, from licensing its IP portfolio to OEMs and hyperscalers building proprietary power architectures. Vertical integration via its Andover, Massachusetts ChiP fab is core to the model.",
+    "revenue_mix": [
+      {
+        "segment": "Brick Products (legacy DC-DC converters)",
+        "share_pct": 39,
+        "trend": "shrinking"
+      },
+      {
+        "segment": "Advanced Products (NBM, VPD, Factorized Power, royalties)",
+        "share_pct": 61,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 49
+      },
+      {
+        "region": "Asia Pacific (China ~12%)",
+        "share_pct": 40
+      },
+      {
+        "region": "Europe",
+        "share_pct": 11
+      }
+    ],
+    "end_markets": [
+      "AI data center power delivery (hyperscalers)",
+      "Aerospace & defense (radar, satellites)",
+      "High-performance computing",
+      "Industrial automation and EV charging"
+    ],
+    "top_competitors": [
+      "Monolithic Power Systems (MPWR)",
+      "Infineon Technologies (PMICs)",
+      "Texas Instruments (analog power)",
+      "Delta Electronics (system-level power)"
+    ],
+    "moat": {
+      "type": "Patent portfolio + vertical fab integration",
+      "narrative": "Vicor owns foundational IP on Factorized Power Architecture, NBM, and Vertical Power Delivery for sub-1V high-current AI accelerator rails; it has won multiple ITC injunctions in 2025 against Chinese copy-cat suppliers, forcing OEMs and hyperscalers to take licenses. Royalty revenue now exceeds R&D spend and is targeted to double over 2 years."
+    },
+    "key_customers": [
+      "Hyperscale cloud providers (unnamed, concentrated)",
+      "Leading AI accelerator OEMs (likely NVIDIA ecosystem ODMs)",
+      "Defense primes via aerospace channel"
+    ],
+    "key_risks": [
+      "Heavy customer concentration in a handful of hyperscalers and one AI accelerator design platform \u2014 order timing is lumpy",
+      "China revenue ~12% exposed to export controls and to Chinese domestic SiC/power-module substitution",
+      "Royalty income depends on continued IP enforcement victories; an adverse ITC or appellate ruling would crater the licensing thesis"
+    ],
+    "sources": [
+      {
+        "label": "Vicor 2025 10-K (filed March 2026)",
+        "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526194934/vicr-2025-10-k-ars.pdf"
+      },
+      {
+        "label": "Q3 2025 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000751978/000119312525256259/vicr-20250930.htm"
+      },
+      {
+        "label": "BeyondSPX - Vicor IP and VPD analysis",
+        "url": "https://beyondspx.com/quote/VICR/vicor-s-power-revolution-ip-dominance-and-next-gen-vpd-propel-record-outlook-nasdaq-vicr"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "FLEX": {
+    "ticker": "FLEX",
+    "company": "Flex Ltd.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Flex is a global #2-3 Electronics Manufacturing Services (EMS) provider with FY25 revenue of ~$25.8B. It designs, manufactures, assembles, and supplies finished products and embedded systems for OEMs across data center, automotive, industrial, healthcare, and consumer markets. Revenue is from contract manufacturing fees plus growing value-added services (design, supply chain orchestration, embedded power).",
+    "revenue_mix": [
+      {
+        "segment": "Flex Agility Solutions (FAS) - cloud, consumer, lifestyle, mobile",
+        "share_pct": 55,
+        "trend": "shrinking"
+      },
+      {
+        "segment": "Flex Reliability Solutions (FRS) - auto, industrial, health, capital equip, power",
+        "share_pct": 45,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Americas",
+        "share_pct": 50
+      },
+      {
+        "region": "Asia",
+        "share_pct": 35
+      },
+      {
+        "region": "Europe",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "AI data center / cloud infrastructure (CDS sub-segment)",
+      "Automotive electrification (compute platforms, power)",
+      "Industrial & capital equipment",
+      "Health solutions (medical devices, drug delivery)"
+    ],
+    "top_competitors": [
+      "Jabil (JBL, ~$28B rev)",
+      "Foxconn / Hon Hai (~$190B rev)",
+      "Celestica (CLS, data-center focused)",
+      "Sanmina (SANM)"
+    ],
+    "moat": {
+      "type": "Scale + high-mix manufacturing footprint + sticky design-in relationships",
+      "narrative": "Flex differentiates from Foxconn-scale players by owning embedded power (Anord Mardix data-center power-pod franchise) and high-mix Reliability Solutions where switching costs are high once a product is qualified into FDA-regulated, automotive, or hyperscaler programs. Reliability segment generates 5%+ operating margin vs. EMS industry 3-4%."
+    },
+    "key_customers": [
+      "Hyperscaler data-center customers (CDS power pods)",
+      "Major automotive OEMs (compute and power electronics)",
+      "Medical device leaders (Health Solutions)"
+    ],
+    "key_risks": [
+      "FAS exposure to consumer device demand softness \u2014 cloud/AI ramp must offset lifestyle decline",
+      "Tariff and reshoring policy whiplash (Mexico, China) raises capex and working capital needs",
+      "Margin compression risk in commoditized assembly as Foxconn pushes into US data-center build-out (e.g. NVIDIA Houston)"
+    ],
+    "sources": [
+      {
+        "label": "Flex 8-K FY25 results",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637425000048/flexex991-9262025.htm"
+      },
+      {
+        "label": "Flex Q1 FY26 release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637425000041/flexex991-7242025.htm"
+      },
+      {
+        "label": "Flex SWOT (GuruFocus, Nov 2025)",
+        "url": "https://www.gurufocus.com/news/8592323/decoding-flex-ltd-flex-a-strategic-swot-insight"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "COHR": {
+    "ticker": "COHR",
+    "company": "Coherent Corp.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Coherent is a vertically integrated optics and compound-semiconductor supplier. It makes 800G/1.6T optical transceivers, lasers, and engineered materials (silicon carbide, indium phosphide) sold to AI data center hyperscalers, telecom carriers, semiconductor equipment makers, and industrial laser end users. FY25 revenue was $5.81B (+23% YoY), driven primarily by AI datacom transceivers.",
+    "revenue_mix": [
+      {
+        "segment": "Networking (transceivers, optics, datacom + telecom)",
+        "share_pct": 62,
+        "trend": "growing"
+      },
+      {
+        "segment": "Lasers (industrial, semicap, display)",
+        "share_pct": 23,
+        "trend": "stable"
+      },
+      {
+        "segment": "Materials (SiC substrates, ceramics, optoelectronic devices)",
+        "share_pct": 15,
+        "trend": "shrinking"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "North America",
+        "share_pct": 45
+      },
+      {
+        "region": "Asia Pacific (China, Japan, Korea)",
+        "share_pct": 35
+      },
+      {
+        "region": "Europe",
+        "share_pct": 15
+      },
+      {
+        "region": "Other",
+        "share_pct": 5
+      }
+    ],
+    "end_markets": [
+      "AI/cloud data center (800G & 1.6T pluggables)",
+      "Telecom long-haul coherent transport",
+      "Semiconductor capital equipment (ASML, AMAT)",
+      "Industrial cutting/welding lasers and display annealing"
+    ],
+    "top_competitors": [
+      "Lumentum (LITE) - direct in optical components",
+      "Marvell (MRVL) - DSP-based transceivers",
+      "Innolight - China datacom transceiver leader",
+      "II-VI legacy peers (Eoptolink, Accelink)"
+    ],
+    "moat": {
+      "type": "Vertical integration in InP and SiC + scarce optical capacity",
+      "narrative": "Coherent owns end-to-end InP epi/wafer/laser/transceiver capability \u2014 one of few suppliers (with Lumentum) that NVIDIA picked for its $4B March 2026 priority-capacity investment to back 800G/1.6T and CPO. Six-inch InP wafer capability and Sherman, TX fab create a multi-year lead on Chinese rivals."
+    },
+    "key_customers": [
+      "NVIDIA (CPO partner + capacity reservation)",
+      "Cisco/Arista (datacom transceivers)",
+      "ASML, Applied Materials (laser annealing)",
+      "Hyperscalers (Microsoft, Meta, Google) via switch OEMs"
+    ],
+    "key_risks": [
+      "Datacom transceiver concentration \u2014 book-to-bill >4x is great but creates whiplash if hyperscaler capex pauses in 2026-27",
+      "Materials/SiC segment in decline due to weak auto EV demand and Wolfspeed/Chinese price war",
+      "Co-Packaged Optics (CPO) could displace pluggable revenue late-decade if hyperscalers move to switch-integrated optics"
+    ],
+    "sources": [
+      {
+        "label": "Coherent Q3 FY25 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000820318/000119312525129060/d908147dex992.htm"
+      },
+      {
+        "label": "Futurum Coherent Q3 FY25 analysis",
+        "url": "https://futurumgroup.com/insights/coherent-q3-fy-2025-delivers-record-revenue-led-by-strength-in-ai-infrastructure/"
+      },
+      {
+        "label": "IO Fund NVIDIA $4B Optical Strategy",
+        "url": "https://io-fund.com/ai-stocks/nvidia-4b-optical-strategy-cpo-ai-data-centers"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "WDC": {
+    "ticker": "WDC",
+    "company": "Western Digital Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Post-SanDisk spinoff (Feb 2025), Western Digital is a pure-play hard disk drive maker. ~100% of revenue comes from HDDs, dominated by high-capacity nearline drives sold into cloud and AI data centers. Manufactures in Thailand and Malaysia with R&D centered in Fremont/Irvine.",
+    "revenue_mix": [
+      {
+        "segment": "Cloud / Nearline HDD (enterprise data center)",
+        "share_pct": 75,
+        "trend": "growing"
+      },
+      {
+        "segment": "Client HDD (PCs, gaming)",
+        "share_pct": 15,
+        "trend": "shrinking"
+      },
+      {
+        "segment": "Consumer (external/retail drives)",
+        "share_pct": 10,
+        "trend": "shrinking"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia (China, Hong Kong, rest)",
+        "share_pct": 55
+      },
+      {
+        "region": "Americas",
+        "share_pct": 30
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Hyperscale cloud storage (AI training data lakes, exabyte-scale)",
+      "Enterprise/on-prem storage arrays",
+      "Client computing (PCs)",
+      "Smart video/surveillance"
+    ],
+    "top_competitors": [
+      "Seagate Technology (STX) - duopoly partner in HDD",
+      "Toshiba/Kioxia (HDD division, distant #3)"
+    ],
+    "moat": {
+      "type": "HDD duopoly + areal-density tech leadership",
+      "narrative": "HDD is a structural duopoly with Seagate (~63/37 share favoring WDC by Q1 2025); 30+ years of accumulated head/media IP and capital intensity mean no new entrant is plausible. ePMR and incoming HAMR/UltraSMR technology lets WDC ship 32TB+ nearline drives where SSDs are still ~6x the $/TB cost for cold/warm data."
+    },
+    "key_customers": [
+      "Top-10 customers = 73% of revenue",
+      "3 customers each >10% (one ~18%, ~16%, ~13%) \u2014 almost certainly Microsoft, Meta, AWS/Google class hyperscalers",
+      "Major OEMs (Dell, HPE, Lenovo)"
+    ],
+    "key_risks": [
+      "Top-3 customer concentration ~47% \u2014 order pauses by any one hyperscaler can swing a quarter",
+      "QLC NAND price erosion could pull-in HDD/SSD crossover for nearline 2-3 years earlier than expected",
+      "Cyclical glut risk after current AI capex super-cycle \u2014 historical HDD industry has seen 30%+ revenue drops"
+    ],
+    "sources": [
+      {
+        "label": "WDC Q3 FY25 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000106040/000010604025000026/wdc-20250328.htm"
+      },
+      {
+        "label": "WDC FY26 Proxy DEF 14A",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000106040/000162828025044298/wdc-20251006.htm"
+      },
+      {
+        "label": "ts2.tech WDC 2025 analysis",
+        "url": "https://ts2.tech/en/western-digital-wdc-stock-soars-in-2025-sandisk-legacy-2026-outlook/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "TTMI": {
+    "ticker": "TTMI",
+    "company": "TTM Technologies, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "TTM Technologies is North America's largest printed circuit board (PCB) and RF components manufacturer, with FY25 revenue ~$2.9B. It sells highly engineered PCBs and RF subassemblies primarily to US aerospace & defense primes plus commercial AI/data-center and networking customers. ~18,200 employees across 24 facilities in North America and Asia.",
+    "revenue_mix": [
+      {
+        "segment": "Aerospace & Defense",
+        "share_pct": 44,
+        "trend": "growing"
+      },
+      {
+        "segment": "Data Center Computing & Networking (AI)",
+        "share_pct": 28,
+        "trend": "growing"
+      },
+      {
+        "segment": "Automotive / Medical / Industrial & Instrumentation",
+        "share_pct": 22,
+        "trend": "stable"
+      },
+      {
+        "segment": "RF&S Components (radar, EW subassemblies)",
+        "share_pct": 6,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "North America (US-heavy)",
+        "share_pct": 65
+      },
+      {
+        "region": "Asia (China, Malaysia/Penang)",
+        "share_pct": 33
+      },
+      {
+        "region": "Europe",
+        "share_pct": 2
+      }
+    ],
+    "end_markets": [
+      "US defense radar/EW programs (F-35, Patriot, Aegis)",
+      "AI/HPC server backplanes & accelerator cards",
+      "5G networking",
+      "Automotive ADAS, medical devices"
+    ],
+    "top_competitors": [
+      "Sanmina (defense PCBs)",
+      "Mercury Systems (RF subsystems)",
+      "AT&S (Austria, commercial high-end PCB)",
+      "Founder Tech, Gold Circuit (Asian commercial PCB)"
+    ],
+    "moat": {
+      "type": "Trusted/cleared US-based defense PCB supply + record backlog",
+      "narrative": "TTM is one of very few US-domiciled, security-cleared 'Trusted Supplier' PCB fabs for DoD programs \u2014 most rivals offshored decades ago. Defense backlog hit a record $1.61B in 2025 giving multi-year visibility; new Syracuse defense PCB facility (DoD-funded $42M) deepens the moat."
+    },
+    "key_customers": [
+      "Raytheon Technologies / RTX (Integrated Defense Systems)",
+      "Lockheed Martin",
+      "John Deere",
+      "Hyperscaler AI server ODMs (Penang facility ramping)"
+    ],
+    "key_risks": [
+      "Heavy A&D concentration tied to US defense budget appropriations and program timing",
+      "China commercial PCB segment squeezed by domestic Chinese substrate makers \u2014 TTM has announced China site review/exits",
+      "AI commercial ramp at new Penang fab carries execution risk; yields and qualification with hyperscalers must hit ramp curve"
+    ],
+    "sources": [
+      {
+        "label": "TTMI Q2 2025 press release",
+        "url": "https://investors.ttm.com/news-events/press-releases/detail/385/ttm-technologies-inc-reports-second-quarter-2025-results"
+      },
+      {
+        "label": "TTMI 2025 10-K summary",
+        "url": "https://www.stocktitan.net/sec-filings/TTMI/10-k-ttm-technologies-inc-files-annual-report-d46360a0e6ad.html"
+      },
+      {
+        "label": "MatrixBCG competitive landscape",
+        "url": "https://matrixbcg.com/blogs/competitors/ttm"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "CIEN": {
+    "ticker": "CIEN",
+    "company": "Ciena Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Ciena is the leading pure-play optical networking equipment vendor. It sells coherent optical transport systems (long-haul, metro, submarine, DCI), routing/switching gear, and Blue Planet automation software to telecom carriers and, increasingly, hyperscale cloud and 'neocloud' AI providers. Revenue is hardware-led with growing software/services attach.",
+    "revenue_mix": [
+      {
+        "segment": "Networking Platforms (Optical + Routing/Switching)",
+        "share_pct": 78,
+        "trend": "growing"
+      },
+      {
+        "segment": "Global Services (install, maintenance, training)",
+        "share_pct": 13,
+        "trend": "stable"
+      },
+      {
+        "segment": "Platform Software & Services (MCP/Navigator)",
+        "share_pct": 7,
+        "trend": "growing"
+      },
+      {
+        "segment": "Blue Planet Automation Software",
+        "share_pct": 2,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Americas (US-heavy)",
+        "share_pct": 65
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 18
+      },
+      {
+        "region": "Asia Pacific & Japan",
+        "share_pct": 17
+      }
+    ],
+    "end_markets": [
+      "Hyperscaler & neocloud DCI / Metro Optical Fiber Networks (MOFN)",
+      "Tier-1 telco backbone (AT&T, Verizon, BT, Deutsche Telekom)",
+      "Submarine cable systems",
+      "Enterprise & government"
+    ],
+    "top_competitors": [
+      "Nokia (incl. Infinera, acquired 2024)",
+      "Cisco Systems (Acacia / NCS)",
+      "Huawei (blocked from US/EU but dominant in APAC/EMEA)",
+      "Marvell + Coherent (component-level encroachment via CPO)"
+    ],
+    "moat": {
+      "type": "Coherent DSP technology lead + carrier-class qualification",
+      "narrative": "WaveLogic 6 Extreme is the only shipping 1.6 Tb/s coherent solution in 2025 (160,000+ WL5 modems already deployed). Submarine and Tier-1 telco qualification cycles span years \u2014 Ciena has 30+ MOFN wins and 12+ neocloud wins in FY25, locking in multi-year deployments hyperscalers will not lightly displace. Acquired Nubis (Sept 2025) extends moat into inside-the-data-center optical."
+    },
+    "key_customers": [
+      "AT&T, Verizon, Lumen, BT (carrier base)",
+      "Microsoft, Google, Meta (direct cloud-provider revenue +94% YoY, 40% of rev in Q3 FY25)",
+      "AI 'neoclouds' (CoreWeave, Lambda-class)"
+    ],
+    "key_risks": [
+      "Telco capex cycle remains weak in NA \u2014 non-telco must continue offsetting (currently 53% of rev)",
+      "CPO (co-packaged optics) and direct-attach pluggables risk disintermediating Ciena's transponder revenue late-decade",
+      "Nokia+Infinera combo (2024 close) creates a stronger Western pluggable/transport competitor with deeper pockets"
+    ],
+    "sources": [
+      {
+        "label": "Ciena Q4 FY25 earnings 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000936395/000162828025056425/ex9922025q4earningsprese.htm"
+      },
+      {
+        "label": "Ciena Q3 FY25 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000936395/000093639525000037/ex9922025q3earningsprese.htm"
+      },
+      {
+        "label": "Ciena Q2 FY25 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000936395/000093639525000025/cien-20250503.htm"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "SUBC.OL": {
+    "ticker": "SUBC.OL",
+    "company": "Subsea 7 S.A.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Subsea 7 is one of the world's two largest subsea EPCI (Engineering, Procurement, Construction, Installation) contractors. It designs, builds and installs deepwater oil & gas production systems (SURF, conventional, life-of-field) and offshore wind foundations/inter-array cables, operating a global fleet of ~40 specialized vessels. FY25 revenue $7.1B, Adj. EBITDA $1.5B (+36% YoY).",
+    "revenue_mix": [
+      {
+        "segment": "Subsea & Conventional (oil & gas EPCI)",
+        "share_pct": 82,
+        "trend": "growing"
+      },
+      {
+        "segment": "Renewables (offshore wind foundations, inter-array cables)",
+        "share_pct": 18,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Europe (Norway, UK North Sea)",
+        "share_pct": 35
+      },
+      {
+        "region": "Africa (Angola, Nigeria, Egypt)",
+        "share_pct": 25
+      },
+      {
+        "region": "Americas (Brazil, GoM, Guyana)",
+        "share_pct": 25
+      },
+      {
+        "region": "Asia Pacific & Middle East",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Deepwater oil & gas (Brazil pre-salt, Guyana, Norway, Angola)",
+      "Offshore wind farm foundations (Dogger Bank, East Anglia, Taiwan)",
+      "Carbon capture & storage transport pipelines",
+      "Life-of-field decommissioning"
+    ],
+    "top_competitors": [
+      "Saipem (proposed merger partner July 2025)",
+      "TechnipFMC (FTI)",
+      "McDermott International",
+      "Aker Solutions, Heerema Marine Contractors (specialized HLV)"
+    ],
+    "moat": {
+      "type": "Scarce specialized vessel fleet + integrated EPCI track record",
+      "narrative": "Subsea pipelay/heavy-lift vessels (Seven Borealis, Seven Vega) take 4-5 years and $500M+ to build; the global fleet is owned by 4-5 firms. 25+ years of supermajor delivery history with Equinor, Shell, TotalEnergies, BP creates qualified-vendor lock-in. Pending Saipem merger (Saipem7, expected H2 2026) would create \u20ac43B backlog colossus."
+    },
+    "key_customers": [
+      "Equinor (Fram S\u00f8r FEED Jan 2025, multiple awards)",
+      "Petrobras (Brazil pre-salt)",
+      "Shell, BP, TotalEnergies, ExxonMobil, Eni, Chevron",
+      "SSE/Equinor (Dogger Bank), ScottishPower (East Anglia THREE)"
+    ],
+    "key_risks": [
+      "EC antitrust review of Saipem merger \u2014 major oil supermajors have lobbied against approval citing consolidation harm",
+      "Renewables segment margin (16.6%) materially lower than O&G (22.6%); mix shift could compress group EBITDA margin if wind grows faster than oil",
+      "Vessel availability tightness has driven 2025 pricing, but new builds entering 2027-28 could ease capacity premiums"
+    ],
+    "sources": [
+      {
+        "label": "Subsea 7 Q4 2025 slides / record backlog",
+        "url": "https://www.investing.com/news/company-news/subsea-7-q4-2025-slides-record-backlog-36-ebitda-growth-93CH-4527456"
+      },
+      {
+        "label": "Subsea 7 2025 Annual Report IR page",
+        "url": "https://www.subsea7.com/en/investors/annual-report-2025.html"
+      },
+      {
+        "label": "Riviera - Saipem-Subsea7 merger opposition",
+        "url": "https://www.rivieramm.com/news-content-hub/news-content-hub/saipem-to-acquire-subsea7-creating-a-contractor-colossus-86063"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "ON": {
+    "ticker": "ON",
+    "company": "ON Semiconductor Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "onsemi (ON) is a focused power and sensing semiconductor company. It sells silicon and silicon-carbide (SiC) power discretes/modules, analog/mixed-signal ICs, and CMOS image sensors primarily into automotive (EV traction inverters, ADAS) and industrial (renewable energy, factory automation, AI server power) end markets. ~$7B annual revenue run-rate in 2025.",
+    "revenue_mix": [
+      {
+        "segment": "Power Solutions Group (PSG) - SiC + Si power",
+        "share_pct": 47,
+        "trend": "stable"
+      },
+      {
+        "segment": "Analog & Mixed-Signal Group (AMG)",
+        "share_pct": 38,
+        "trend": "stable"
+      },
+      {
+        "segment": "Intelligent Sensing Group (ISG) - CMOS image sensors",
+        "share_pct": 15,
+        "trend": "shrinking"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia Pacific (China + rest)",
+        "share_pct": 55
+      },
+      {
+        "region": "Americas",
+        "share_pct": 20
+      },
+      {
+        "region": "Europe",
+        "share_pct": 18
+      },
+      {
+        "region": "Japan/Korea",
+        "share_pct": 7
+      }
+    ],
+    "end_markets": [
+      "Automotive (EV traction inverters, ADAS cameras, BMS) \u2014 ~50% of revenue",
+      "Industrial (renewables/solar inverters, factory automation, AI server power)",
+      "Aerospace & medical",
+      "Consumer / mobile"
+    ],
+    "top_competitors": [
+      "STMicroelectronics (STM) - SiC leader at 29% share",
+      "Infineon Technologies (IFX.DE) - automotive power leader",
+      "Wolfspeed (WOLF) - SiC pure-play, post-bankruptcy Sept 2025",
+      "Sony (IMX image sensors), Rohm (SiC)"
+    ],
+    "moat": {
+      "type": "200mm SiC vertical integration + automotive design-in cycles",
+      "narrative": "onsemi acquired GTAT (SiC boule growth) in 2021 and is one of only 3 vertically-integrated SiC players (substrates -> epi -> device -> module). 200mm SiC ramp at New Hampshire/Czech fabs targeted to deliver structural cost advantage. Multi-year EV inverter design wins (BMW, Volkswagen, Hyundai) with LTSAs lock revenue 5-7 years out."
+    },
+    "key_customers": [
+      "BMW, Volkswagen, Hyundai (SiC traction inverter LTSAs)",
+      "Continental, Bosch, Denso (Tier 1)",
+      "Tesla historical relationship \u2014 though Tesla now in-house chip design + Samsung $16.5B 2025 deal",
+      "Hyperscaler AI server power (emerging vertical 2026)"
+    ],
+    "key_risks": [
+      "SiC pricing collapse from Chinese entrants (53% of global SiC capacity targeted by 2027) plus Wolfspeed restructuring dumping capacity",
+      "EV demand softness \u2014 global automotive SiC growth 2025 was below initial LTSA expectations, leading to inventory adjustments",
+      "ISG image sensor segment losing share to Sony in automotive cameras (-18% YoY in Q3 2025)"
+    ],
+    "sources": [
+      {
+        "label": "onsemi 2025 Annual Report (ARS)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126012903/ef20069670_ars.pdf"
+      },
+      {
+        "label": "onsemi Q3 2025 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001097864/000114036125040094/ef20058125_ex99-1.htm"
+      },
+      {
+        "label": "24/7 Wall St - onsemi SiC and Sony competition",
+        "url": "https://247wallst.com/technology-3/2026/05/11/onsemi-is-facing-a-continued-slowdown-in-sic-and-greater-competition-in-cis-from-sony/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "STRL": {
+    "ticker": "STRL",
+    "company": "Sterling Infrastructure, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Sterling is a US infrastructure construction services company delivering site development (E-Infrastructure), heavy civil transportation, and residential/commercial concrete foundations (Building Solutions). FY25 revenue $2.49B (+18%); the E-Infrastructure data center business is the growth engine. 2025 CEC Facilities acquisition added mission-critical mechanical/electrical capability.",
+    "revenue_mix": [
+      {
+        "segment": "E-Infrastructure Solutions (data centers, semis, e-commerce sites)",
+        "share_pct": 50,
+        "trend": "growing"
+      },
+      {
+        "segment": "Transportation Solutions (highways, bridges, airports)",
+        "share_pct": 32,
+        "trend": "growing"
+      },
+      {
+        "segment": "Building Solutions (residential/commercial concrete)",
+        "share_pct": 18,
+        "trend": "shrinking"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States (Southeast / Texas / Rocky Mountain heavy)",
+        "share_pct": 100
+      }
+    ],
+    "end_markets": [
+      "Hyperscale data center site development (largest end market within E-Infra)",
+      "Semiconductor fab site prep (Texas, Arizona)",
+      "E-commerce distribution warehouses",
+      "DOT highway/bridge infrastructure (IIJA-funded)"
+    ],
+    "top_competitors": [
+      "MasTec (MTZ) - much larger, less data-center focused",
+      "Quanta Services (PWR) - electrical/grid",
+      "Granite Construction (GVA) - transportation overlap",
+      "Primoris Services (PRIM)"
+    ],
+    "moat": {
+      "type": "Integrated civil-to-mechanical turnkey + entrenched hyperscaler relationships",
+      "narrative": "Sterling is one of very few mid-size contractors that can self-perform from ground-breaking through mechanical/electrical fit-out on hyperscale data center sites; CEC acquisition (2025) extended the wrap. Record $2.6B backlog with concentrated repeat blue-chip clientele (Amazon, Meta class) means hyperscalers prefer the agility vs. signing more bureaucratic Quanta/MasTec."
+    },
+    "key_customers": [
+      "Amazon (AWS) and Meta \u2014 named hyperscaler clients per analyst commentary",
+      "Major semiconductor fab developers in Texas/Arizona",
+      "State DOTs (Texas, Utah, Nevada, Hawaii)"
+    ],
+    "key_risks": [
+      "Customer concentration in hyperscaler data center capex \u2014 a Microsoft/Amazon capex pause or site-selection shift away from Sun Belt would directly hit pipeline",
+      "Building Solutions exposure to weak residential housing (revenue declined 1% in 2025)",
+      "Skilled-labor and equipment-availability constraints could cap conversion of $2.6B backlog if industry-wide bidding inflates costs"
+    ],
+    "sources": [
+      {
+        "label": "Sterling Q3 2025 press release",
+        "url": "https://www.strlco.com/news/sterling-reports-record-third-quarter-2025-results-and-increases-full-year-guidance/"
+      },
+      {
+        "label": "Investing.com Q3 2025 slides",
+        "url": "https://www.investing.com/news/company-news/sterling-infrastructure-q3-2025-slides-revenue-surges-32-eps-jumps-58-93CH-4331259"
+      },
+      {
+        "label": "FinancialContent Sterling deep dive",
+        "url": "https://markets.financialcontent.com/stocks/article/finterra-2026-3-2-the-infrastructure-renaissance-a-deep-dive-into-sterling-infrastructure-strl"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "CAR": {
+    "ticker": "CAR",
+    "company": "Avis Budget Group, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Avis Budget operates vehicle rental services globally under the Avis, Budget, Payless, and Zipcar brands. It runs ~684,000 vehicles across ~10,000 locations in ~180 countries and completed ~38M rental transactions in 2025. Revenue comes from time-and-mileage rental, ancillary fees (insurance, GPS, fuel), and used-vehicle sales when fleet is retired. FY25 revenue ~$11.7B.",
+    "revenue_mix": [
+      {
+        "segment": "Americas (US, Canada, Latin America)",
+        "share_pct": 76,
+        "trend": "stable"
+      },
+      {
+        "segment": "International (EMEA, APAC)",
+        "share_pct": 24,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States (airport + off-airport)",
+        "share_pct": 70
+      },
+      {
+        "region": "Europe",
+        "share_pct": 18
+      },
+      {
+        "region": "Asia Pacific / Australia / NZ",
+        "share_pct": 6
+      },
+      {
+        "region": "Canada + Latin America",
+        "share_pct": 6
+      }
+    ],
+    "end_markets": [
+      "Leisure airport rental (~60% of US bookings)",
+      "Corporate business travel (T&E contracts)",
+      "Replacement/insurance rental (insurer referrals)",
+      "Car-sharing (Zipcar urban subscription)"
+    ],
+    "top_competitors": [
+      "Enterprise Holdings (Enterprise, National, Alamo \u2014 private, largest US share)",
+      "Hertz Global Holdings (HTZ) - Hertz, Dollar, Thrifty",
+      "Sixt SE (European focus, expanding US)",
+      "Turo (peer-to-peer)"
+    ],
+    "moat": {
+      "type": "Airport concession + scale fleet purchasing",
+      "narrative": "Long-term airport concession rights (limited-slot kiosks at top US/EU airports) create a durable distribution channel for the Avis/Budget/Enterprise/Hertz oligopoly; new entrants cannot replicate footprint. Fleet purchasing power (~250k+ units/year) drives OEM discounts unavailable to smaller renters. No technology moat \u2014 execution business."
+    },
+    "key_customers": [
+      "Corporate accounts (large enterprise T&E contracts)",
+      "Online travel agencies (Expedia, Booking, Hotwire) - distribution partners",
+      "Insurance carriers (State Farm, Geico) for replacement rentals"
+    ],
+    "key_risks": [
+      "Used-vehicle residual values softening \u2014 recalls grounded ~14,000 Avis cars in 2025 creating fleet-value uncertainty; Hertz took ~$60M Q4 2025 non-cash residual charge",
+      "Highly leveraged balance sheet \u2014 vehicle-backed ABS debt sensitive to spread widening and rising rates",
+      "Travel demand cyclicality + corporate T&E mix shift (remote work permanence reduces business rental days)"
+    ],
+    "sources": [
+      {
+        "label": "Avis Budget Q2 2025 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000723612/000072361225000067/car-20250630.htm"
+      },
+      {
+        "label": "Avis Budget Q4 2025 results coverage",
+        "url": "https://www.tradingview.com/news/tradingview:f21863d9163e9:0-avis-budget-group-reports-fourth-quarter-and-full-year-results/"
+      },
+      {
+        "label": "Investing.com CAR Q4 2025 slides",
+        "url": "https://www.investing.com/news/company-news/avis-budget-group-q4-2025-slides-fleet-cost-reductions-drive-ebitda-gains-despite-revenue-decline-93CH-4514113"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "TGS.OL": {
+    "ticker": "TGS.OL",
+    "company": "TGS ASA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "TGS is a Norwegian seismic data company that licenses pre-recorded multi-client subsurface data libraries to oil & gas exploration companies, with proprietary contract acquisition added via the July 2024 merger with PGS. Customers pay 'late sales' to access existing surveys plus 'pre-funding' to underwrite new shoots, giving TGS a capital-light, multi-use revenue model. The combined entity now also operates seismic vessels and increasingly markets new-energy data (CCS site characterization, offshore wind) on top of the legacy hydrocarbon library.",
+    "revenue_mix": [
+      {
+        "segment": "Multi-Client (data library late sales + pre-funding)",
+        "share_pct": 75,
+        "trend": "growing"
+      },
+      {
+        "segment": "Proprietary / Contract Acquisition (vessel-based)",
+        "share_pct": 20,
+        "trend": "stable"
+      },
+      {
+        "segment": "Digital, New Energy & Imaging Services",
+        "share_pct": 5,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "North & South America",
+        "share_pct": 45
+      },
+      {
+        "region": "EMEA (incl. North Sea, Mediterranean, West Africa)",
+        "share_pct": 35
+      },
+      {
+        "region": "Asia Pacific",
+        "share_pct": 20
+      }
+    ],
+    "end_markets": [
+      "Offshore oil & gas exploration (NOCs and IOCs)",
+      "Carbon capture & storage site assessment",
+      "Offshore wind site characterization",
+      "Deepwater frontier basin licensing rounds"
+    ],
+    "top_competitors": [
+      "Viridien (formerly CGG)",
+      "Shearwater GeoServices (largest seismic fleet)",
+      "SLB (WesternGeco legacy)",
+      "Magseis Fairfield (OBN)"
+    ],
+    "moat": {
+      "type": "Sunk-cost data library + scale on the only fleet capable of frontier shoots",
+      "narrative": "The pre-PGS data library has ~95% gross margins on each incremental late sale since survey costs are sunk; post-merger TGS owns the world's largest 3D seismic library (~1.4m km2) and 11 high-end Ramform vessels, a fleet that would cost >$3bn to replicate and that competitors Viridien and Shearwater cannot match in capacity."
+    },
+    "key_customers": [
+      "ExxonMobil",
+      "Equinor",
+      "Petrobras",
+      "Shell",
+      "Saudi Aramco"
+    ],
+    "key_risks": [
+      "E&P customer capex cuts in H1 2026 \u2014 management has flagged a 'challenging' first half as IOCs delay licensing-round spending",
+      "PGS integration execution \u2014 $1.5bn combined revenue base must absorb fleet rationalisation and >$100m synergies on schedule",
+      "Multi-client capex of $500\u2013575m in 2026 raises balance-sheet risk if pre-funding ratios fall below the 50\u201360% threshold management targets"
+    ],
+    "sources": [
+      {
+        "label": "TGS 2025 Annual Report",
+        "url": "https://www.tgs.com/hubfs/Financial%20Reports/Annual%20Reports/2025%20Annual%20Report/TGS%202025%20Annual%20Report.pdf"
+      },
+      {
+        "label": "TGS 2025 Annual Report press release",
+        "url": "https://www.tgs.com/press-releases/tgs-2025-annual-report"
+      },
+      {
+        "label": "Filingreader \u2014 TGS 2025 revenue post-PGS",
+        "url": "https://filingreader.com/news-wire/oslo/2026-03-20/tgs-reports-2025-revenue-growth-following-strategic-pgs-merger"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "LITE": {
+    "ticker": "LITE",
+    "company": "Lumentum Holdings Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Lumentum designs and manufactures optical and photonic components \u2014 indium phosphide lasers, EMLs, transceivers, ROADMs, and 3D-sensing VCSELs \u2014 for two end markets: AI/cloud data center interconnect (Datacom) and telecom optical networking, plus a smaller Industrial Tech segment selling lasers and 3D-sensing modules. Revenue is unit + ASP driven, with the AI buildout shifting mix sharply toward Cloud & Networking and away from the legacy iPhone Face-ID VCSEL business that historically tied the company to Apple.",
+    "revenue_mix": [
+      {
+        "segment": "Cloud & Networking \u2014 Datacom (AI/cloud transceivers, EMLs)",
+        "share_pct": 60,
+        "trend": "growing rapidly"
+      },
+      {
+        "segment": "Cloud & Networking \u2014 Telecom (ROADMs, coherent optics)",
+        "share_pct": 28,
+        "trend": "stable"
+      },
+      {
+        "segment": "Industrial Tech (3D sensing VCSELs, industrial lasers)",
+        "share_pct": 12,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia Pacific (Thailand contract-manufacturing routed, China end-demand)",
+        "share_pct": 55
+      },
+      {
+        "region": "Americas (incl. US hyperscalers)",
+        "share_pct": 30
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "AI/ML training and inference clusters (800G/1.6T optics)",
+      "Cloud hyperscaler data center interconnect",
+      "Telecom carrier networks (metro/long-haul DWDM)",
+      "Consumer electronics 3D sensing (Apple Face ID)"
+    ],
+    "top_competitors": [
+      "Coherent Corp. (transceiver volume leader)",
+      "Marvell Technology (silicon photonics + DSPs)",
+      "Innolight (China transceiver share leader)",
+      "Eoptolink (China)"
+    ],
+    "moat": {
+      "type": "Vertically integrated InP laser fab + NVIDIA strategic alignment",
+      "narrative": "Lumentum is one of only ~3 western firms (with Coherent and II-VI legacy) that fabricates its own indium-phosphide EML and DFB laser chips \u2014 the scarce input for 1.6T AI optics \u2014 and the November 2025 $2bn NVIDIA investment locked in multi-billion purchase commitments and priority capacity for next-gen LPO/CPO optics, displacing pure-play assemblers."
+    },
+    "key_customers": [
+      "NVIDIA (strategic, multi-bn capacity commitment)",
+      "Apple (declining VCSEL volume, historically ~20% of revenue)",
+      "Cisco",
+      "Ciena",
+      "hyperscaler ODMs supplying Google/Meta/Microsoft"
+    ],
+    "key_risks": [
+      "AI capex air-pocket \u2014 >60% of revenue now from cloud/AI customers, any hyperscaler digestion phase would compress utilization at the Thailand fab",
+      "Coherent and Chinese vendors (Innolight, Eoptolink) winning share at 800G as transceiver assembly commoditizes",
+      "US export controls on advanced optics to China \u2014 China was 9% of Q1 FY26 revenue and rising restrictions could cap upside"
+    ],
+    "sources": [
+      {
+        "label": "Lumentum FY2025 10-K (stocktitan summary)",
+        "url": "https://www.stocktitan.net/sec-filings/LITE/10-k-lumentum-holdings-inc-files-annual-report-929529804b86.html"
+      },
+      {
+        "label": "Lumentum Q1 FY26 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001633978/000162828025048860/lite_ex991xq1fy26.htm"
+      },
+      {
+        "label": "NVIDIA $2B Photonics Play coverage",
+        "url": "https://tech-insider.org/nvidia-silicon-photonics-lumentum-coherent-ai-data-center-2026/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "AJB.L": {
+    "ticker": "AJB.L",
+    "company": "AJ Bell plc",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "AJ Bell is a UK investment platform operating a dual model: a 'D2C' (direct-to-consumer) platform for self-directed retail investors using AJ Bell Investcentre/Dodl, and an 'advised' platform used by independent financial advisers. Revenue is the sum of custody/platform fees on AUA (~\u00a3103bn at FY25 end), dealing commissions, and net interest on client cash balances \u2014 the latter being highly sensitive to BoE base rate. The company also runs an in-house fund range (AJ Bell Funds, managed-portfolio service) that adds a higher-margin asset management overlay.",
+    "revenue_mix": [
+      {
+        "segment": "Platform recurring fees (custody + admin on AUA, both Advised and D2C)",
+        "share_pct": 55,
+        "trend": "growing"
+      },
+      {
+        "segment": "Net interest income on customer cash",
+        "share_pct": 25,
+        "trend": "declining (rate cuts)"
+      },
+      {
+        "segment": "Dealing/transactional commissions and FX",
+        "share_pct": 12,
+        "trend": "stable"
+      },
+      {
+        "segment": "Investments (AJ Bell Funds, MPS, ancillary)",
+        "share_pct": 8,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United Kingdom",
+        "share_pct": 100
+      }
+    ],
+    "end_markets": [
+      "UK retail self-directed investors (SIPP and ISA wrappers)",
+      "UK independent financial advisers (Investcentre platform)",
+      "Mass-affluent pension consolidators",
+      "First-time investors via Dodl app"
+    ],
+    "top_competitors": [
+      "Hargreaves Lansdown (UK D2C market leader, now private)",
+      "Interactive Investor (Abrdn subsidiary)",
+      "Quilter (advised platform)",
+      "Transact (IntegraFin)",
+      "abrdn Wrap"
+    ],
+    "moat": {
+      "type": "Switching friction on tax-wrapped accounts + scale economics on cash margins",
+      "narrative": "Moving a SIPP/ISA in-specie takes 6\u201312 weeks and risks being out of market, creating strong inertia \u2014 AJ Bell's customer churn runs below 5%/yr. At ~\u00a3103bn AUA, the firm sits in the top 3 UK platforms, giving it bank-grade rates on pooled client cash that single-digit-bn challengers (Vanguard UK, Freetrade) cannot match."
+    },
+    "key_customers": [
+      "Over 488,000 D2C retail customers",
+      "Network of UK IFAs using Investcentre platform",
+      "Workplace pension scheme members (Touch)",
+      "Dodl app users (mass-market entry tier)"
+    ],
+    "key_risks": [
+      "BoE rate cuts in 2026 directly compress net interest margin on the ~\u00a35\u20136bn of client cash balances \u2014 ~25% of revenue is rate-sensitive",
+      "Hargreaves Lansdown private-equity ownership (CVC/Nordic Capital, completed 2025) may trigger aggressive D2C pricing war",
+      "FCA scrutiny of platform cash retention practices following 2024 Dear-CEO letter could force AJ Bell to pass more interest through to clients"
+    ],
+    "sources": [
+      {
+        "label": "AJ Bell FY25 Annual Report and Accounts",
+        "url": "https://www.ajbell.co.uk/group/sites/ajbell.co.uk/files/accounts/FY25-annual-report.pdf"
+      },
+      {
+        "label": "AJ Bell Investor Relations \u2014 Final Results",
+        "url": "https://www.ajbell.co.uk/group/investor-relations/market-announcements/final-results-4"
+      },
+      {
+        "label": "AJ Bell Investor Relations hub",
+        "url": "https://www.ajbell.co.uk/group/investor-relations/annual-reports"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "GEV": {
+    "ticker": "GEV",
+    "company": "GE Vernova Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "GE Vernova is the energy business spun off from General Electric in April 2024, organized into three segments: Power (gas, nuclear, hydro, steam turbines and decades-long service agreements), Wind (onshore + offshore turbines and blades), and Electrification (HV transformers, switchgear, grid software, storage). Revenue is a mix of large equipment sales tied to electricity capacity additions plus a deep, high-margin service annuity on the ~7,000 GE-built gas turbines and ~55,000 wind turbines in the installed base.",
+    "revenue_mix": [
+      {
+        "segment": "Power (gas, nuclear, steam, hydro turbines + services)",
+        "share_pct": 54,
+        "trend": "growing"
+      },
+      {
+        "segment": "Wind (onshore + offshore turbines, blades)",
+        "share_pct": 25,
+        "trend": "declining (offshore drag)"
+      },
+      {
+        "segment": "Electrification (grid equipment, power conversion, software)",
+        "share_pct": 20,
+        "trend": "growing rapidly"
+      },
+      {
+        "segment": "Corporate / other",
+        "share_pct": 1,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 46
+      },
+      {
+        "region": "Europe",
+        "share_pct": 20
+      },
+      {
+        "region": "Middle East & Africa",
+        "share_pct": 14
+      },
+      {
+        "region": "Asia",
+        "share_pct": 12
+      },
+      {
+        "region": "Americas (ex-US)",
+        "share_pct": 8
+      }
+    ],
+    "end_markets": [
+      "US data center / hyperscaler power supply (gas turbines)",
+      "Utility-scale grid build-out (HVDC, transformers)",
+      "Onshore wind farm OEMs and developers",
+      "European offshore wind (Dogger Bank etc.)",
+      "Nuclear new-build (BWRX-300 SMR with Hitachi)"
+    ],
+    "top_competitors": [
+      "Siemens Energy (gas turbines + grid)",
+      "Mitsubishi Power (gas turbines)",
+      "Vestas (onshore wind)",
+      "Hitachi Energy (transformers)",
+      "Schneider Electric & ABB (electrification)"
+    ],
+    "moat": {
+      "type": "Installed base service annuity + duopoly in heavy-duty gas turbines",
+      "narrative": "GEV and Siemens Energy together hold >70% global share of heavy-duty H-class gas turbines, and each new HA-class delivery locks in a 20\u201330 year service contract at ~25% EBIT margin; the installed base of ~7,000 gas turbines and 55,000 GE wind turbines generates a multi-decade aftermarket annuity competitors cannot replicate without taking 5+ years to qualify on hot-section parts."
+    },
+    "key_customers": [
+      "US investor-owned utilities (Dominion, Southern, Duke)",
+      "Hyperscalers contracting gas turbines (Microsoft, Amazon, Meta via OPAs)",
+      "Saudi Electricity Company",
+      "Iberdrola, EDF (offshore wind)",
+      "Vistra and NRG (US merchant power)"
+    ],
+    "key_risks": [
+      "Offshore Wind continues to lose money \u2014 Vineyard Wind, Dogger Bank delays and warranty reserves on Haliade-X turbines remain a drag through 2026",
+      "Heavy-duty gas turbine capacity is sold out through 2028 \u2014 execution risk on the Greenville, SC ramp and supplier bottlenecks for forgings/castings",
+      "Prolec GE acquisition (~$5bn, Mexican transformer JV buy-in) integration plus US tariff regime on Mexican-made transformers creates near-term margin uncertainty"
+    ],
+    "sources": [
+      {
+        "label": "GE Vernova FY2025 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001996810/000199681026000015/gev-20251231.htm"
+      },
+      {
+        "label": "GE Vernova Q4/FY25 Earnings Release",
+        "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_01282026.pdf"
+      },
+      {
+        "label": "GE Vernova 2025 Annual Report",
+        "url": "https://www.gevernova.com/sites/default/files/gevernova_2025_annual_report.pdf"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "NBIX": {
+    "ticker": "NBIX",
+    "company": "Neurocrine Biosciences, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Neurocrine is a US neuroscience-focused biopharma whose revenue is ~99% derived from two commercial products: INGREZZA (valbenazine), a VMAT2 inhibitor for tardive dyskinesia and Huntington's chorea, and CRENESSITY (crinecerfont), a CRF1 antagonist launched in late 2024 for congenital adrenal hyperplasia. A small royalty stream from AbbVie on the elagolix franchise (Orilissa/Oriahnn) rounds out revenue. There is no diversified base \u2014 the entire investment case rests on INGREZZA growth, the CRENESSITY rare-disease ramp, and the schizophrenia/MDD pipeline (NBI-1117568 muscarinic agonist).",
+    "revenue_mix": [
+      {
+        "segment": "INGREZZA net product sales (tardive dyskinesia + Huntington's chorea)",
+        "share_pct": 87,
+        "trend": "growing"
+      },
+      {
+        "segment": "CRENESSITY net product sales (congenital adrenal hyperplasia)",
+        "share_pct": 11,
+        "trend": "growing rapidly"
+      },
+      {
+        "segment": "AbbVie royalties (elagolix franchise) + collaboration revenue",
+        "share_pct": 2,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 98
+      },
+      {
+        "region": "Rest of World (Mitsubishi Tanabe collaboration on valbenazine in Japan)",
+        "share_pct": 2
+      }
+    ],
+    "end_markets": [
+      "Tardive dyskinesia patients on antipsychotics (psychiatry/neurology)",
+      "Huntington's disease chorea",
+      "Congenital adrenal hyperplasia (paediatric + adult endocrinology)",
+      "Long-acting injectable schizophrenia (pipeline)"
+    ],
+    "top_competitors": [
+      "Teva Pharmaceutical \u2014 AUSTEDO XR (deutetrabenazine) in TD/HD",
+      "Spruce Biosciences \u2014 tildacerfont in CAH (clinical-stage)",
+      "Adamas / Allergan \u2014 generic valbenazine (post-2030 LOE risk)",
+      "Karuna/Bristol-Myers Squibb \u2014 Cobenfy in adjacent psychiatric markets"
+    ],
+    "moat": {
+      "type": "First-mover + composition-of-matter patents on the only two approved drugs in their categories",
+      "narrative": "INGREZZA is one of only two FDA-approved VMAT2 inhibitors for TD, protected by composition-of-matter patents to ~2030 and reinforced by 2025 head-to-head data showing nearly 2x higher VMAT2 occupancy than Teva's Austedo XR \u2014 sticky once-daily dosing in a chronic patient population. CRENESSITY is the first and only CRF1 antagonist approved for CAH, addressing a 25,000-patient US orphan market with no direct competitor."
+    },
+    "key_customers": [
+      "US Medicare Part D plans (~50% of INGREZZA volume)",
+      "Medicaid managed-care formularies",
+      "Specialty pharmacies (Accredo, CVS Specialty)",
+      "Long-term-care facilities prescribing for antipsychotic-induced TD"
+    ],
+    "key_risks": [
+      "August 2025 DOJ civil investigative demand on INGREZZA marketing practices + September 2025 FDA untitled letter on misleading advertising \u2014 potential settlement and prescriber-behavior changes",
+      "INGREZZA in IRA Medicare price negotiation crosshairs by 2027\u20132028; Austedo already selected, setting a discount precedent",
+      "Single-product concentration \u2014 INGREZZA is 87% of revenue and faces composition-of-matter LOE by 2030 absent successful pipeline (NBI-1117568 muscarinic in schizophrenia must deliver)"
+    ],
+    "sources": [
+      {
+        "label": "Neurocrine Biosciences FY2025 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000914475/000091447526000007/nbix-20251231.htm"
+      },
+      {
+        "label": "Stocktitan 10-K summary \u2014 DOJ inquiry detail",
+        "url": "https://www.stocktitan.net/sec-filings/NBIX/10-k-neurocrine-biosciences-inc-files-annual-report-17ba5c7e0b11.html"
+      },
+      {
+        "label": "Neurocrine head-to-head INGREZZA vs AUSTEDO XR data",
+        "url": "https://neurocrine.gcs-web.com/news-releases/news-release-details/neurocrine-biosciences-presents-head-head-ingrezzar-valbenazine"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "MTSI": {
+    "ticker": "MTSI",
+    "company": "MACOM Technology Solutions Holdings, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "MACOM designs and manufactures high-performance analog RF, microwave, millimetre-wave, and photonic semiconductors used in three end markets: Industrial & Defense (radar, EW, satellite), Data Center (high-speed optical components for 400G/800G), and Telecom (5G backhaul, PON, cable infrastructure). The company uses a mix of in-house fabs (GaAs, GaN, InP, silicon photonics in Lowell MA) and foundry capacity, with a strategy of premium pricing in defense/aerospace and design-win-driven growth in AI data center optics.",
+    "revenue_mix": [
+      {
+        "segment": "Industrial & Defense",
+        "share_pct": 43,
+        "trend": "growing"
+      },
+      {
+        "segment": "Data Center",
+        "share_pct": 30,
+        "trend": "growing rapidly"
+      },
+      {
+        "segment": "Telecom (5G, PON, cable)",
+        "share_pct": 27,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 45
+      },
+      {
+        "region": "Asia (China, Taiwan, rest-of-APAC)",
+        "share_pct": 35
+      },
+      {
+        "region": "Europe",
+        "share_pct": 15
+      },
+      {
+        "region": "Other",
+        "share_pct": 5
+      }
+    ],
+    "end_markets": [
+      "US DoD radar and electronic warfare programs",
+      "Hyperscale data center 400G/800G optical transceivers",
+      "5G fronthaul/backhaul RF",
+      "Passive optical networks (PON) for FTTH",
+      "Satellite communications (LEO constellations)"
+    ],
+    "top_competitors": [
+      "Analog Devices (RF / mixed signal)",
+      "Qorvo (defense RF)",
+      "Marvell Technology (data center optics DSP)",
+      "Semtech / Sumitomo (high-speed optical)",
+      "Skyworks (RF, less direct)"
+    ],
+    "moat": {
+      "type": "Niche III-V semiconductor IP + DoD trusted-foundry status",
+      "narrative": "MACOM operates a US-based GaN-on-SiC and InP laser fab with Department of Defense Trusted Foundry accreditation \u2014 one of a handful of US suppliers cleared for classified radar and EW programs, supporting >50% gross margins. Recent Wolfspeed RF GaN-on-SiC business acquisition (closed 2023) consolidated the western GaN-on-SiC supply base, leaving primarily Qorvo as a head-on competitor in defense GaN."
+    },
+    "key_customers": [
+      "US prime defense contractors (Lockheed Martin, Raytheon/RTX, Northrop Grumman, L3Harris)",
+      "Cisco and other systems OEMs for data center optics",
+      "Ciena, Nokia (telecom transport)",
+      "Hyperscaler ODMs"
+    ],
+    "key_risks": [
+      "US-China export controls \u2014 ~35% of revenue is APAC and rising restrictions on advanced optical/RF ICs could cap China data center exposure",
+      "Defense budget cycle risk \u2014 Industrial & Defense at 43% of revenue is tied to US DoD continuing-resolution timing and program-specific cuts",
+      "Competition from Marvell + Coherent at 1.6T optics \u2014 MACOM is sub-scale vs. Marvell in DSPs and risks being designed out of next-gen AI transceivers"
+    ],
+    "sources": [
+      {
+        "label": "MACOM Q4/FY25 Earnings Release",
+        "url": "https://www.macom.com/updates/news/2025/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2025-financi"
+      },
+      {
+        "label": "MACOM Q3 FY25 8-K (segment splits)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001493594/000149359425000036/ex99_1earningsreleaseq3fy25.htm"
+      },
+      {
+        "label": "MACOM Q4 FY25 earnings call transcript",
+        "url": "https://www.fool.com/earnings/call-transcripts/2025/11/06/macom-mtsi-q4-2025-earnings-call-transcript/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "IGG.L": {
+    "ticker": "IGG.L",
+    "company": "IG Group Holdings plc",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "IG Group is a UK-headquartered online retail derivatives broker offering CFDs, financial spread betting (UK-only tax wrapper), FX, options and a growing exchange-traded share dealing business (boosted by the April 2025 Freetrade acquisition). Revenue is dominated by client trading spreads, financing charges on leveraged positions, and \u2014 increasingly \u2014 net interest income on client money. The institutional 'tastytrade' US options/futures broker (acquired 2021) and Freetrade UK commission-free share dealing diversify away from the legacy UK/EU CFD core that faces structural regulatory headwinds.",
+    "revenue_mix": [
+      {
+        "segment": "OTC Derivatives \u2014 CFDs + spread betting (legacy IG core)",
+        "share_pct": 70,
+        "trend": "stable"
+      },
+      {
+        "segment": "Exchange-traded derivatives (tastytrade US options/futures)",
+        "share_pct": 18,
+        "trend": "growing"
+      },
+      {
+        "segment": "Stock trading & investments (Freetrade, share dealing, ISAs)",
+        "share_pct": 8,
+        "trend": "growing"
+      },
+      {
+        "segment": "Net interest income on client money",
+        "share_pct": 4,
+        "trend": "declining (rate cuts)"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "UK & Ireland",
+        "share_pct": 32
+      },
+      {
+        "region": "APAC & Middle East",
+        "share_pct": 30
+      },
+      {
+        "region": "Americas (tastytrade US)",
+        "share_pct": 22
+      },
+      {
+        "region": "Europe",
+        "share_pct": 12
+      },
+      {
+        "region": "Institutional & Emerging Markets",
+        "share_pct": 4
+      }
+    ],
+    "end_markets": [
+      "UK and EU retail leveraged traders (CFDs / spread bets)",
+      "US retail options/futures traders (tastytrade)",
+      "UK retail stock investors (Freetrade, ISA)",
+      "Singapore, Australia, Dubai active retail traders",
+      "Institutional clients (white-label, prime)"
+    ],
+    "top_competitors": [
+      "Plus500 (CFDs)",
+      "CMC Markets (CFDs/spread betting, UK)",
+      "eToro (social trading + crypto)",
+      "Interactive Brokers (US multi-asset)",
+      "Robinhood (US retail options)"
+    ],
+    "moat": {
+      "type": "50-year regulatory permission stack + technology platform scale",
+      "narrative": "IG holds licenses across ~20 jurisdictions including FCA, BaFin, ASIC, MAS, CFTC/NFA \u2014 a moat ~5\u20137 years to replicate and that disqualifies most challengers from the UK/EU/AUS retail market post-ESMA leverage caps. Its self-built trading platform handles >1m trades/day with sub-50ms execution, and the \u00a31bn+ annual marketing spend across decades has built unaided brand recall that low-cost neobrokers struggle to match in serious-trader segments."
+    },
+    "key_customers": [
+      "~300,000 active retail OTC clients globally",
+      "~115,000 tastytrade US active accounts",
+      "~700,000 Freetrade UK retail investors (post-acquisition)",
+      "Institutional FX/CFD white-label partners"
+    ],
+    "key_risks": [
+      "FCA / ESMA further tightening on retail CFD leverage or 'negative balance protection' would directly compress UK+EU revenue (~44% of group)",
+      "BoE/Fed rate cuts in 2026 erode client-money interest income that has been a hidden tailwind since 2022",
+      "Retail trading volumes are cyclical \u2014 a low-volatility 'risk-off' market environment (as in H1 2024) can cut OTC revenue per client by 20\u201330% quickly"
+    ],
+    "sources": [
+      {
+        "label": "IG Group CY2025 Results RNS",
+        "url": "https://www.iggroup.com/~/media/Files/I/IG-Group/documents/investors/financial-results/results-reports-and-presentations/2026/igg-cy25-results-rns.pdf"
+      },
+      {
+        "label": "IG Group Annual Report 2025",
+        "url": "https://www.iggroup.com/~/media/Files/I/IG-Group/documents/investors/financial-results/results-reports-and-presentations/2025/annual-report-2025.pdf"
+      },
+      {
+        "label": "Finance Magnates \u2014 IG Group \u00a31.12bn revenue analysis",
+        "url": "https://www.financemagnates.com/forex/brokers/ig-group-publishes-first-annual-report-under-new-calendar-details-112-billion-revenue/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "GLW": {
+    "ticker": "GLW",
+    "company": "Corning Incorporated",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Corning is a specialty glass and ceramics manufacturer organized into five reporting segments. Optical Communications (largest) sells fiber and connectivity to telecom carriers and increasingly to AI data centers; Display Technologies supplies LCD/OLED substrate glass to panel makers (LG Display, BOE, Samsung Display); Specialty Materials makes Gorilla Glass for smartphones; Environmental Technologies sells ceramic substrates and filters for auto emissions; Life Sciences supplies labware. Hemlock Semiconductor (polysilicon for solar/semi) and emerging solar businesses sit in a sixth bucket.",
+    "revenue_mix": [
+      {
+        "segment": "Optical Communications (fiber, cable, AI data center connectivity)",
+        "share_pct": 39,
+        "trend": "growing rapidly"
+      },
+      {
+        "segment": "Display Technologies (LCD/OLED substrate glass)",
+        "share_pct": 22,
+        "trend": "stable (FX headwind)"
+      },
+      {
+        "segment": "Specialty Materials (Gorilla Glass, advanced optics)",
+        "share_pct": 13,
+        "trend": "growing"
+      },
+      {
+        "segment": "Automotive (ceramic substrates, gasoline particulate filters)",
+        "share_pct": 11,
+        "trend": "declining"
+      },
+      {
+        "segment": "Hemlock & Emerging Growth (polysilicon, US solar)",
+        "share_pct": 9,
+        "trend": "growing"
+      },
+      {
+        "segment": "Life Sciences (labware, bioprocessing)",
+        "share_pct": 6,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 43
+      },
+      {
+        "region": "Asia (China, Korea, Taiwan, Japan)",
+        "share_pct": 40
+      },
+      {
+        "region": "Europe",
+        "share_pct": 12
+      },
+      {
+        "region": "Other",
+        "share_pct": 5
+      }
+    ],
+    "end_markets": [
+      "AI/cloud hyperscaler data centers (Gen-AI fiber buildout)",
+      "US fiber-to-the-home (BEAD-funded carrier rollouts)",
+      "TV and IT-monitor panel manufacturing",
+      "Smartphones (Apple, Samsung Gorilla Glass)",
+      "Auto emissions and EV thermal management",
+      "US solar manufacturing (Hemlock polysilicon)"
+    ],
+    "top_competitors": [
+      "Prysmian, Sumitomo Electric, Fujikura (optical fiber/cable)",
+      "AGC, Nippon Electric Glass (display substrates)",
+      "Schott / SCHOTT MINIFAB, Asahi (specialty glass)",
+      "Wacker Chemie, OCI (polysilicon)",
+      "Thermo Fisher / Avantor (life sciences)"
+    ],
+    "moat": {
+      "type": "Process patents + scale on tank-furnace fixed assets",
+      "narrative": "Corning's fusion-draw glass process for ultra-thin display substrates is patented and produces Gen-10.5 sheets that competitors cannot match in flatness for OLED TV/IT \u2014 capex per new tank exceeds $1bn, and ramp takes 3+ years. In Optical, the company has multi-year hyperscaler agreements (Meta, AT&T) for AI-grade fiber with proprietary bend-insensitive technology that locks in volumes through 2028."
+    },
+    "key_customers": [
+      "Apple (Gorilla Glass + advanced optics, multi-bn-yr)",
+      "Meta and other hyperscalers (multi-year optical fiber contracts)",
+      "AT&T, Lumen, Verizon (US fiber rollouts)",
+      "LG Display, BOE, Samsung Display",
+      "Auto OEMs and emissions tier-1s (Faurecia, Tenneco)"
+    ],
+    "key_risks": [
+      "Optical Communications growth is concentrated in 2\u20133 hyperscalers \u2014 a digestion phase at Meta/Microsoft on AI fiber would deflate ~$2bn run-rate built since 2024",
+      "Display Glass yen exposure remains a meaningful FX drag \u2014 Japanese display customers price in JPY, and a stronger yen reverses this only partially",
+      "Hemlock polysilicon exposed to US solar tariff / IRA policy under the new US administration; auto Environmental segment exposed to ICE-to-EV transition (gasoline filters)"
+    ],
+    "sources": [
+      {
+        "label": "Corning 2025 10-K (TradingView summary)",
+        "url": "https://www.tradingview.com/news/tradingview:ff8403fcf1371:0-corning-inc-ny-sec-10-k-report/"
+      },
+      {
+        "label": "Corning FY2025 Springboard Plan Update",
+        "url": "https://www.corning.com/worldwide/en/about-us/news-events/news-releases/2026/05/corning-upgrades-and-extends-springboard-plan-outlines-new-phase-of-accelerating-growth.html"
+      },
+      {
+        "label": "Corning IR \u2014 Outstanding 2025 Financial Results",
+        "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Announces-Outstanding-2025-Financial-Results-1--Upgrades-Springboard-Plan-for-Faster-Sales-Growth-on-Significantly-Enhanced-Financial-Profile/default.aspx"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "ASM.AS": {
+    "ticker": "ASM.AS",
+    "company": "ASM International NV",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "ASM International is a Dutch supplier of wafer-processing equipment for semiconductor manufacturing, with dominant share in Atomic Layer Deposition (ALD) and Epitaxy (Epi) \u2014 the two deposition techniques essential for gate-all-around (GAA) transistors at 2nm and below. Revenue is split between equipment sales (~80%) and spares/services on the installed base (~20%). The December 2025 Axus Technology acquisition added CMP for compound semiconductors. Customers are the top-3 logic/foundry players plus DRAM makers using ALD for HBM.",
+    "revenue_mix": [
+      {
+        "segment": "Equipment \u2014 ALD (atomic layer deposition, primarily logic/foundry)",
+        "share_pct": 55,
+        "trend": "growing rapidly"
+      },
+      {
+        "segment": "Equipment \u2014 Epitaxy and other (Epi, vertical furnaces, PEALD)",
+        "share_pct": 25,
+        "trend": "growing"
+      },
+      {
+        "segment": "Spares & Services (installed-base aftermarket)",
+        "share_pct": 18,
+        "trend": "growing"
+      },
+      {
+        "segment": "CMP (post Axus acquisition, compound semi)",
+        "share_pct": 2,
+        "trend": "new"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "China",
+        "share_pct": 32
+      },
+      {
+        "region": "Taiwan & Korea (TSMC, Samsung, SK Hynix)",
+        "share_pct": 35
+      },
+      {
+        "region": "United States (Intel, Micron, Texas Instruments)",
+        "share_pct": 20
+      },
+      {
+        "region": "Europe & Other",
+        "share_pct": 13
+      }
+    ],
+    "end_markets": [
+      "Advanced logic / foundry \u2014 2nm GAA at TSMC, Samsung, Intel",
+      "DRAM (HBM stacking, high-k metal-gate)",
+      "Power / analog wafer fabs (compound semi)",
+      "Image sensors / CIS (CMOS sensors)",
+      "Advanced packaging / hybrid bonding"
+    ],
+    "top_competitors": [
+      "Applied Materials (broader deposition + Epi)",
+      "Lam Research (memory deposition, etch)",
+      "Tokyo Electron (TEL \u2014 ALD, coater/developer)",
+      "Kokusai Electric (vertical furnace ALD)"
+    ],
+    "moat": {
+      "type": "Technology leadership and 100% win-rate on critical ALD layers at top-3 foundries",
+      "narrative": "ASM holds >55% global ALD market share and is the sole-source qualified supplier for the high-k metal gate ALD layers in TSMC's N2 and Samsung's SF2 GAA nodes \u2014 replacing a qualified ALD chamber typically takes 2\u20133 years and risks the customer's yield ramp. Pulsar/XP, Synergis and Intrepid ES platforms have multi-year design-in lead times that lock revenue per wafer at each new node."
+    },
+    "key_customers": [
+      "TSMC (largest customer, ~25\u201330% of revenue)",
+      "Samsung Electronics (logic + DRAM)",
+      "Intel (US fabs)",
+      "SK Hynix (HBM)",
+      "Micron, Texas Instruments (analog)"
+    ],
+    "key_risks": [
+      "China export controls \u2014 China was >30% of 2025 revenue and Dutch government tightened in late 2025; further US/Dutch alignment could cap Chinese mid-end logic shipments",
+      "Customer concentration \u2014 top-3 foundries = ~65% of revenue, leaving ASM exposed to a TSMC N2 capex slip or Intel Foundry budget cut",
+      "Memory cycle volatility \u2014 HBM-driven 2024\u201325 strength could reverse if DRAM oversupply returns in late 2026"
+    ],
+    "sources": [
+      {
+        "label": "ASM Q4 / FY25 results press release",
+        "url": "https://www.asm.com/press-releases/3248697"
+      },
+      {
+        "label": "ASM Q3 2025 results (PDF)",
+        "url": "https://www.asm.com/media/3ukhabzj/20251028-asm-reports-q3-2025-results.pdf"
+      },
+      {
+        "label": "ASM SWOT \u2014 ALD share and customer concentration",
+        "url": "https://www.dcfmodeling.com/products/asmas-swot-analysis"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "SPM.MI": {
+    "ticker": "SPM.MI",
+    "company": "Saipem SpA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Saipem is an Italian oil & gas engineering and construction contractor with three business lines: Asset Based Services (offshore + onshore E&C, the FDS2/Castorone fleet of pipelay and heavy-lift vessels), Drilling Offshore (a fleet of ~15 deepwater and harsh-environment rigs), and Energy Carriers (large lump-sum onshore EPC projects \u2014 LNG plants, refineries, fertilizers). Eni and CDP retain meaningful equity stakes. The February 2025-agreed merger with Subsea7 (Saipem7), targeted to close H2 2026, will create the world's largest offshore E&C contractor with \u20ac43bn backlog.",
+    "revenue_mix": [
+      {
+        "segment": "Energy Carriers (onshore EPC \u2014 LNG, refineries, fertilizers)",
+        "share_pct": 36,
+        "trend": "stable"
+      },
+      {
+        "segment": "Asset Based Services \u2014 Offshore & Onshore E&C",
+        "share_pct": 53,
+        "trend": "growing"
+      },
+      {
+        "segment": "Drilling Offshore (deepwater + harsh-env rigs)",
+        "share_pct": 5,
+        "trend": "declining (Aramco suspensions)"
+      },
+      {
+        "segment": "Other / corporate",
+        "share_pct": 6,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Middle East (Saudi Arabia, UAE, Qatar, Iraq)",
+        "share_pct": 42
+      },
+      {
+        "region": "Africa (Mozambique, Angola, Egypt, Nigeria)",
+        "share_pct": 18
+      },
+      {
+        "region": "Americas (Guyana, Brazil, Mexico)",
+        "share_pct": 18
+      },
+      {
+        "region": "Europe & CIS",
+        "share_pct": 13
+      },
+      {
+        "region": "Asia Pacific",
+        "share_pct": 9
+      }
+    ],
+    "end_markets": [
+      "Deepwater oil & gas field development (subsea + SURF)",
+      "Onshore LNG liquefaction plants (Qatar NFE/NFS, Mozambique)",
+      "Saudi Aramco offshore long-term agreement (until 2027)",
+      "Floating offshore wind (newer service line)",
+      "Hydrogen / CCS EPC (emerging)"
+    ],
+    "top_competitors": [
+      "Subsea7 (merger partner \u2014 pre-deal, direct rival in SURF)",
+      "TechnipFMC (subsea integrated)",
+      "McDermott International (LNG EPC)",
+      "Aker Solutions (subsea + Norwegian projects)",
+      "China Petroleum Engineering / Worley (onshore EPC)"
+    ],
+    "moat": {
+      "type": "Owned high-spec fleet + multi-decade NOC relationships",
+      "narrative": "Saipem owns the FDS2 and Castorone J-lay/S-lay vessels and Saipem 7000 semi-submersible crane (one of only ~3 globally that can lift >10,000 tonnes) \u2014 replacement cost is several billion USD and lead times are 5+ years. The decades-long Saudi Aramco Long-Term Agreement (renewed to 2027) and Eni-anchored project flow in Mozambique/Angola lock in EPC work that newer entrants cannot win without trusted-supplier prequalification."
+    },
+    "key_customers": [
+      "Saudi Aramco (LTA-anchored)",
+      "Eni (anchor shareholder, deepwater Angola/Mozambique LNG)",
+      "QatarEnergy (NFE/NFS LNG)",
+      "Petrobras (Brazilian subsea)",
+      "ExxonMobil (Guyana)"
+    ],
+    "key_risks": [
+      "Saipem7 / Subsea7 merger requires Brazilian CADE approval \u2014 Petrobras and ExxonMobil have publicly opposed citing concentration of ~47% of Petrobras-contracted subsea vessels",
+      "Aramco rig suspensions in 2024\u201325 reduced the Drilling Offshore fleet by 3 units \u2014 further LTA renegotiation risk in 2027",
+      "Energy Carriers lump-sum EPC carries cost-overrun risk on multi-year fixed-price LNG projects \u2014 Saipem has historically taken multi-bn-\u20ac writedowns (2018, 2022) on such contracts"
+    ],
+    "sources": [
+      {
+        "label": "Saipem FY 2025 Results Presentation",
+        "url": "https://www.saipem.com/sites/default/files/2026-02/Saipem_FY_2025_Results_Presentation.pdf"
+      },
+      {
+        "label": "Saipem Q4/FY25 Preliminary Results press release",
+        "url": "https://www.saipem.com/en/media/press-releases/2026-02-24/saipem-preliminary-results-fourth-quarter-and-financial-year-2025"
+      },
+      {
+        "label": "Saipem-Subsea7 Merger Agreement Signing",
+        "url": "https://www.saipem.com/en/media/press-releases/2025-07-24/saipem-and-subsea7-announce-signing-merger-agreement"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "AMKR": {
+    "ticker": "AMKR",
+    "company": "Amkor Technology, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Amkor is the world's #2 outsourced semiconductor assembly and test (OSAT) provider, behind Taiwan's ASE. It packages and tests finished silicon for fabless and IDM customers across flip-chip, wafer-level, advanced SiP, and 2.5D/3D interposer formats. Revenue is essentially fee-per-package, with Advanced Products (high-density flip-chip, FCBGA, 2.5D) generating ~83% of FY25 sales of $6.7bn.",
+    "revenue_mix": [
+      {
+        "segment": "Advanced Products (flip-chip, wafer-level, SiP, 2.5D)",
+        "share_pct": 83,
+        "trend": "growing"
+      },
+      {
+        "segment": "Mainstream Products (wirebond, traditional packages)",
+        "share_pct": 17,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia Pacific (Korea, Taiwan, Philippines, Malaysia, Vietnam, China, Japan)",
+        "share_pct": 65
+      },
+      {
+        "region": "Americas (Arizona greenfield + US sales)",
+        "share_pct": 25
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 10
+      }
+    ],
+    "end_markets": [
+      "Communications (iPhone APs, RF, premium smartphones)",
+      "Computing (AI GPUs/accelerators, data center, PC)",
+      "Automotive & Industrial (ADAS, infotainment, MCUs)",
+      "Consumer (hearables, wearables, IoT)"
+    ],
+    "top_competitors": [
+      "ASE Technology Holding (TWSE: 3711, OSAT #1)",
+      "JCET Group (China)",
+      "Powertech Technology (Taiwan)",
+      "TSMC (in-house advanced packaging \u2014 CoWoS)"
+    ],
+    "moat": {
+      "type": "Customer co-design lock-in on advanced packaging + scarce capacity",
+      "narrative": "Amkor's edge is being the only non-Taiwan OSAT with full FCBGA/2.5D capacity at scale; Apple has signed up as anchor customer for the $2bn Arizona fab being built with CHIPS Act funding, locking in 7+ year advanced-package volumes. Switching costs are real \u2014 qualifying a new OSAT for a leading-edge SoC takes 12-18 months of joint engineering."
+    },
+    "key_customers": [
+      "Apple (~30% of FY25 revenue, largest customer)",
+      "Qualcomm (~11%)",
+      "Top 10 customers = ~72% of sales",
+      "AI/data-center hyperscaler accelerator programs (undisclosed names)"
+    ],
+    "key_risks": [
+      "Extreme Apple concentration (~30%) \u2014 any iPhone unit weakness or insourcing of advanced packaging hits revenue immediately",
+      "TSMC's CoWoS capacity ramp could pull AI accelerator packaging in-house and away from OSATs",
+      "Arizona fab ramp execution risk \u2014 $2bn capex with first revenue not until 2027 and labor/yield uncertainty"
+    ],
+    "sources": [
+      {
+        "label": "Amkor FY2025 10-K (Form ARS)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000119312526140294/d94485dars.pdf"
+      },
+      {
+        "label": "Amkor Q3 2025 earnings release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001047127/000104712725000187/amkr9302025erex-991.htm"
+      },
+      {
+        "label": "Benzinga: Arizona AI packaging bet",
+        "url": "https://www.benzinga.com/Opinion/26/04/52033089/amkor-technology-the-arizona-ai-packaging-bet-is-real-but-youre-already-paying-for-it"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "TWLO": {
+    "ticker": "TWLO",
+    "company": "Twilio Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Twilio is the leading CPaaS (Communications Platform-as-a-Service) provider, selling APIs that let developers embed SMS, voice, email (SendGrid), and WhatsApp messaging into their applications. Revenue is largely usage-based \u2014 Twilio buys carrier termination wholesale and resells per-message with a markup. FY25 revenue ~$5.1bn with the company reaching its first full year of GAAP profitability.",
+    "revenue_mix": [
+      {
+        "segment": "Communications (Messaging, Voice, Email/SendGrid)",
+        "share_pct": 94,
+        "trend": "growing"
+      },
+      {
+        "segment": "Segment (CDP \u2014 Customer Data Platform)",
+        "share_pct": 6,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 64
+      },
+      {
+        "region": "International (EMEA, APAC, LatAm)",
+        "share_pct": 36
+      }
+    ],
+    "end_markets": [
+      "Tech / internet platforms (Uber, Airbnb, DoorDash style 2-sided marketplaces)",
+      "Financial services (2FA, fraud alerts, account notifications)",
+      "Retail & e-commerce (order confirmations, marketing)",
+      "Healthcare (appointment reminders, telehealth)"
+    ],
+    "top_competitors": [
+      "Sinch (Sweden \u2014 closest scale CPaaS competitor)",
+      "Bird (formerly MessageBird, EMEA strength)",
+      "Infobip (private, global)",
+      "Amazon SNS / AWS End User Messaging (hyperscaler in-house)"
+    ],
+    "moat": {
+      "type": "Developer mindshare + carrier interconnect scale",
+      "narrative": "Twilio has 600+ direct carrier interconnects and >10m developer accounts \u2014 the highest message-deliverability rates in CPaaS come from owning those routes rather than reselling. The Communications API SDK is deeply embedded in app code, making rip-and-replace painful, though commoditisation of A2P SMS pricing limits long-run pricing power."
+    },
+    "key_customers": [
+      "No customer >10% of revenue (intentionally disclosed)",
+      "Uber, Airbnb, Lyft, DoorDash (long-disclosed reference accounts)",
+      "Stripe, Shopify, ServiceNow",
+      "OpenAI uses Twilio for voice infrastructure"
+    ],
+    "key_risks": [
+      "A2P SMS pricing compression in mature US/EU markets \u2014 carriers (AT&T, T-Mobile) keep raising fees Twilio passes through, squeezing dollar-based growth",
+      "Hyperscaler competition (AWS End User Messaging, Microsoft ACS) bundling CPaaS into broader cloud contracts",
+      "RCS migration and Apple/Google rich-messaging displacing pure SMS revenue stream over 3-5 years"
+    ],
+    "sources": [
+      {
+        "label": "Twilio FY2025 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001447669/000144766926000021/twlo-20251231.htm"
+      },
+      {
+        "label": "Twilio Q3 2025 earnings release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001447669/000144766925000147/twloq325ex991.htm"
+      },
+      {
+        "label": "Prelude: Top Twilio competitors 2026",
+        "url": "https://prelude.so/blog/twilio-competitors"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "VAR.OL": {
+    "ticker": "VAR.OL",
+    "company": "V\u00e5r Energi ASA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "V\u00e5r Energi is the third-largest oil and gas producer on the Norwegian Continental Shelf, formed from the 2018 merger of Eni Norge and Point Resources and majority-owned by Italy's Eni (~63%). It produces ~330 kboepd from operated fields including Goliat (Barents), Balder, Gj\u00f8a, Duva, Ringhorne, Fenja, plus partner stakes. Revenue is commodity-linked sales of crude, gas, and NGLs.",
+    "revenue_mix": [
+      {
+        "segment": "Crude oil sales",
+        "share_pct": 62,
+        "trend": "stable"
+      },
+      {
+        "segment": "Natural gas sales (piped to Europe)",
+        "share_pct": 33,
+        "trend": "growing"
+      },
+      {
+        "segment": "NGL / LPG",
+        "share_pct": 5,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Norway (all upstream production on NCS)",
+        "share_pct": 100
+      }
+    ],
+    "end_markets": [
+      "European gas buyers (replacing Russian pipe gas post-2022)",
+      "Global refiners (Brent-linked crude)",
+      "European petrochemicals (NGL feedstock)"
+    ],
+    "top_competitors": [
+      "Equinor (Norwegian state major, dominant NCS operator)",
+      "Aker BP",
+      "Shell (NCS partner & competitor)",
+      "TotalEnergies (NCS operator)"
+    ],
+    "moat": {
+      "type": "Low-cost NCS production with strategic gas position",
+      "narrative": "V\u00e5r's ~$30/boe full-cycle break-even on legacy fields plus Balder X redevelopment gives capital-efficient barrels at a time European gas pricing carries a structural premium. Eni majority ownership provides technical depth and a guaranteed offtake channel but limits independent strategic flexibility."
+    },
+    "key_customers": [
+      "European utilities and gas traders via Gassco/Gassled pipeline system",
+      "Eni S.p.A. (offtake and marketing)",
+      "Refining majors (Shell, ExxonMobil, BP) for crude offtake"
+    ],
+    "key_risks": [
+      "Brent price sensitivity \u2014 every $10/bbl move hits FCF ~$700m; 2025 oil weakened to mid-$60s",
+      "Project execution on the 20-project growth pipeline targeting 400 kboepd by 2026 \u2014 Balder X delays already pushed first oil",
+      "Norway's increased CO2 tax + EU CBAM exposure raise operating costs faster than peers in lower-tax jurisdictions"
+    ],
+    "sources": [
+      {
+        "label": "V\u00e5r Energi Investor Relations",
+        "url": "https://varenergi.no/en/investor/"
+      },
+      {
+        "label": "Production update December 2025",
+        "url": "https://live.euronext.com/en/products/equities/company-news/2025-12-22-var-energi-asa-production-update-december-2025"
+      },
+      {
+        "label": "Rigzone: 20 new projects to sustain Norway production",
+        "url": "https://www.rigzone.com/news/wire/var_energi_plans_20_new_projects_to_sustain_norway_production-18-dec-2025-182562-article/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "MNTN.L": {
+    "ticker": "MNTN.L",
+    "company": "The Schiehallion Fund Limited",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Schiehallion is a Guernsey-domiciled closed-end investment trust managed by Baillie Gifford, providing public-market access to a portfolio of late-stage private 'crossover' companies expected to IPO. It charges a 0.9% ongoing fee and reported a 65% share-price total return in the year to Jan 2026 driven by markups in SpaceX and ByteDance. Net assets ~$1.8bn.",
+    "revenue_mix": [
+      {
+        "segment": "Unrealised gains on private equity holdings (mark-to-model)",
+        "share_pct": 95,
+        "trend": "growing"
+      },
+      {
+        "segment": "Realised gains + dividends / interest income",
+        "share_pct": 5,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States (SpaceX, Stripe, Databricks, Anthropic, Wayve)",
+        "share_pct": 60
+      },
+      {
+        "region": "Europe (Bending Spoons, Wise, Tekever, Klarna)",
+        "share_pct": 25
+      },
+      {
+        "region": "China / Asia (ByteDance core position)",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Late-stage venture / pre-IPO equity (UK retail + institutional)",
+      "Wealth management platforms (Hargreaves Lansdown, AJ Bell)",
+      "UK self-directed ISAs/SIPPs seeking private-market access"
+    ],
+    "top_competitors": [
+      "Scottish Mortgage Investment Trust (also Baillie Gifford, listed unicorns)",
+      "Chrysalis Investments (UK pre-IPO trust)",
+      "Pershing Square Holdings (different style)",
+      "Direct secondary platforms (Forge, EquityZen) for accredited investors"
+    ],
+    "moat": {
+      "type": "Baillie Gifford deal access + structural liquidity arbitrage",
+      "narrative": "Baillie Gifford's two-decade track record with founders gives Schiehallion proprietary allocations in oversubscribed rounds (SpaceX, Stripe, ByteDance, Anthropic) that retail investors cannot access elsewhere. The closed-end structure prevents forced selling, but discounts to NAV (chronic 25-40%) reflect public scepticism of private valuation marks."
+    },
+    "key_customers": [
+      "UK and EU retail/wealth investors accessing the LSE-listed shares",
+      "Institutional NAV holders rolling C-share to ordinary share class"
+    ],
+    "key_risks": [
+      "Persistent NAV discount (~30%) reflecting market doubt on private marks \u2014 IPO window for SpaceX/Stripe/Databricks is the key catalyst",
+      "Concentration risk \u2014 top 10 holdings >60% of NAV with SpaceX alone at ~9-12% means a single mark-down materially hits NAV",
+      "ByteDance political/regulatory risk (US TikTok ban precedent) plus US-China secondary sanctions exposure"
+    ],
+    "sources": [
+      {
+        "label": "Baillie Gifford Schiehallion Fund page",
+        "url": "https://www.bailliegifford.com/en/uk/institutional-investor/funds/schiehallion-fund/"
+      },
+      {
+        "label": "QuotedData: Schiehallion FY2026 update",
+        "url": "https://quoteddata.com/2026/04/baillie-giffords-schiehallion-looks-forward-to-generational-ipos-from-spacex-and-others-after-a-defining-year/"
+      },
+      {
+        "label": "Scottish Financial Review: 65% returns",
+        "url": "https://scottishfinancialreview.com/2026/04/08/b-giffords-1-8bn-schiehallion-fund-returns-65/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "AKRBP.OL": {
+    "ticker": "AKRBP.OL",
+    "company": "Aker BP ASA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Aker BP is a pure-play Norwegian Continental Shelf E&P, formed from the 2016 merger of Det Norske Oljeselskap (Aker) and BP Norge, now also incorporating Lundin Energy (2022). It produces ~415 kboepd, anchored by a 31.6% stake in Johan Sverdrup \u2014 one of the world's largest, lowest-carbon oilfields. FY25 revenue ~$10.7bn. Listed on Oslo, controlled by Aker ASA (~21%) and BP (~16%).",
+    "revenue_mix": [
+      {
+        "segment": "Crude oil + condensate sales",
+        "share_pct": 80,
+        "trend": "stable"
+      },
+      {
+        "segment": "Natural gas sales",
+        "share_pct": 15,
+        "trend": "growing"
+      },
+      {
+        "segment": "NGL",
+        "share_pct": 5,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Norway (NCS \u2014 100% of production)",
+        "share_pct": 100
+      }
+    ],
+    "end_markets": [
+      "European gas buyers (post-Russia gas premium pricing)",
+      "Global crude refiners (Brent-linked light sweet)",
+      "Petrochemicals (NGL feedstock)"
+    ],
+    "top_competitors": [
+      "Equinor (Norwegian state oil major)",
+      "V\u00e5r Energi (third NCS player)",
+      "Shell, TotalEnergies, ConocoPhillips (NCS partners/competitors)"
+    ],
+    "moat": {
+      "type": "Lowest break-even and lowest CO2-intensity barrels in the OECD",
+      "narrative": "Johan Sverdrup operates at ~$15/bbl break-even with 0.67 kg CO2/boe (vs ~16 kg industry average) \u2014 meaning Aker BP's barrels survive both low oil prices and incoming EU CBAM/carbon pricing better than virtually any peer. Phase 3 FID adds 40-50mmboe of resources at modest capex."
+    },
+    "key_customers": [
+      "Equinor Marketing & Trading (oil/gas offtake)",
+      "European gas hub buyers via Gassco system",
+      "BP (offtake counterparty and shareholder)"
+    ],
+    "key_risks": [
+      "High dividend payout (~$2.2bn annually) leaves limited buffer if Brent breaks below $60",
+      "Concentration on Johan Sverdrup (~45% of production) \u2014 any unplanned downtime is material",
+      "Norwegian taxation: 78% marginal tax rate means commodity windfalls disproportionately accrue to the state"
+    ],
+    "sources": [
+      {
+        "label": "Aker BP Q1 2025 earnings call transcript",
+        "url": "https://akerbp.com/wp-content/uploads/2025/05/corrected-transcript-aker-bp-asaakrbp-no-q1-2025-earnings-call-7-may-2025-2-30-am-et.pdf"
+      },
+      {
+        "label": "Morningstar AKRBP overview",
+        "url": "https://www.morningstar.com/stocks/xosl/akrbp/quote"
+      },
+      {
+        "label": "Ad-hoc-news: Q1 2025 and Sverdrup Phase 3",
+        "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/aker-bp-asa-stock-no0010345853-q1-results-new-sverdrup-phase-and/69369760"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "HPE": {
+    "ticker": "HPE",
+    "company": "Hewlett Packard Enterprise Company",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "HPE is an enterprise IT infrastructure vendor selling servers (ProLiant, Cray supercomputers, Nvidia-based AI systems), storage (Alletra, Nimble), networking (Aruba + newly acquired Juniper as of July 2025), and a hybrid-cloud consumption platform called GreenLake. Post-Juniper, FY25 ARR run-rate hit $3.1bn (up 77%) with Q3 revenue $9.14bn. Spun out of HP Inc. in 2015.",
+    "revenue_mix": [
+      {
+        "segment": "Server (general-purpose + AI servers, ProLiant, Cray)",
+        "share_pct": 54,
+        "trend": "growing"
+      },
+      {
+        "segment": "Networking (Aruba + Juniper)",
+        "share_pct": 19,
+        "trend": "growing"
+      },
+      {
+        "segment": "Hybrid Cloud (storage, GreenLake compute)",
+        "share_pct": 16,
+        "trend": "stable"
+      },
+      {
+        "segment": "Financial Services (HPE Capital leasing)",
+        "share_pct": 10,
+        "trend": "stable"
+      },
+      {
+        "segment": "Corporate / Other",
+        "share_pct": 1,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Americas",
+        "share_pct": 45
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 35
+      },
+      {
+        "region": "Asia Pacific & Japan",
+        "share_pct": 20
+      }
+    ],
+    "end_markets": [
+      "Large enterprise data centers (Fortune 1000 IT refresh)",
+      "AI model builders + sovereign AI clouds (national clouds in EU/Middle East)",
+      "Hyperscaler 'tier-2' (HPC supercomputing \u2014 Frontier, Aurora, El Capitan)",
+      "Service providers and telcos (Juniper installed base)"
+    ],
+    "top_competitors": [
+      "Dell Technologies (servers \u2014 closest peer)",
+      "Cisco Systems (networking, now expanded competition post-Juniper)",
+      "Lenovo (servers, esp. China + emerging markets)",
+      "Arista Networks (data-center switching)",
+      "Pure Storage / NetApp (storage)"
+    ],
+    "moat": {
+      "type": "Installed base + GreenLake consumption lock-in + supercomputing IP",
+      "narrative": "HPE owns the dominant share of exascale supercomputing wins (Frontier, El Capitan, Aurora via Cray) and is the only credible non-Cisco/non-Arista enterprise networking alternative post-Juniper deal. GreenLake's $3.1bn ARR creates multi-year subscription stickiness, but core x86 server business remains a commoditised price war with Dell/Lenovo."
+    },
+    "key_customers": [
+      "US DOE national labs (Oak Ridge, Lawrence Livermore, Argonne \u2014 supercomputing)",
+      "X.ai / xAI (multibillion AI server order disclosed in 2024)",
+      "Large telcos (AT&T, Deutsche Telekom \u2014 Juniper installed base)",
+      "Major enterprises across Fortune 500"
+    ],
+    "key_risks": [
+      "Juniper integration execution \u2014 $14bn deal closed July 2025, $1.4bn impairment already taken in Q3, antitrust concessions still constrain pricing",
+      "Margin compression in AI servers \u2014 Dell aggressively undercut HPE in 2025, AI gross margins are dilutive to corporate average",
+      "Customer concentration in AI bookings \u2014 a few hyperscaler/sovereign deals drive the backlog and can slip or cancel"
+    ],
+    "sources": [
+      {
+        "label": "HPE Q3 2025 8-K earnings release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001645590/000164559025000096/ex-991x932025x8k.htm"
+      },
+      {
+        "label": "Futurum: HPE Q3 FY2025 results",
+        "url": "https://futurumgroup.com/insights/hpe-q3-fy-2025-results-mark-record-sales-arr-growth-and-server-momentum/"
+      },
+      {
+        "label": "Stocktitan: HPE Q3 2025 10-Q Juniper merger",
+        "url": "https://www.stocktitan.net/sec-filings/HPE/10-q-hewlett-packard-enterprise-company-quarterly-earnings-report-b18979e2cc51.html"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "LSCC": {
+    "ticker": "LSCC",
+    "company": "Lattice Semiconductor Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Lattice is a fabless designer of low-power, small-form-factor FPGAs (field-programmable gate arrays) \u2014 programmable logic chips used as glue/control logic in servers, 5G base stations, automotive, and industrial systems. Unlike AMD/Xilinx and Intel/Altera, Lattice focuses exclusively on the low-power edge of FPGA market. Manufactured at TSMC and Samsung Foundry. FY25 non-GAAP gross margin 69.4%.",
+    "revenue_mix": [
+      {
+        "segment": "Communications & Computing (server BMCs, 5G, data center)",
+        "share_pct": 56,
+        "trend": "growing"
+      },
+      {
+        "segment": "Industrial & Automotive (factory automation, ADAS, EV)",
+        "share_pct": 37,
+        "trend": "stable"
+      },
+      {
+        "segment": "Consumer (client compute, displays)",
+        "share_pct": 7,
+        "trend": "declining"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia (esp. China, Taiwan, Japan)",
+        "share_pct": 55
+      },
+      {
+        "region": "Americas",
+        "share_pct": 25
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 20
+      }
+    ],
+    "end_markets": [
+      "Server platform management (every Nvidia/Intel/AMD AI server needs BMC FPGAs)",
+      "5G radio access network base stations",
+      "Industrial automation, robotics, factory I/O",
+      "Automotive ADAS, infotainment, EV battery monitoring"
+    ],
+    "top_competitors": [
+      "AMD (Xilinx) \u2014 dominant high-end FPGA but pulling out of low-end",
+      "Intel (Altera, now being divested) \u2014 direct overlap mid-range",
+      "Microchip Technology (PolarFire low-power FPGAs)",
+      "Efinix and Gowin (Chinese FPGA challengers)"
+    ],
+    "moat": {
+      "type": "Low-power niche leadership + software (Lattice sensAI, Propel)",
+      "narrative": "Lattice is the only FPGA vendor laser-focused on small-form-factor, mW-class power envelopes \u2014 AMD/Xilinx don't bother below $20 ASP, leaving Lattice with ~85% share of low-density FPGAs sold for server BMC/security applications. Every AI server shipped includes 2-4 Lattice parts for platform management, creating an AI-attach growth vector independent of GPU vendor selection."
+    },
+    "key_customers": [
+      "Server OEMs (Dell, HPE, Supermicro, Lenovo) for BMC/platform management",
+      "Ericsson, Nokia, Samsung (5G RAN)",
+      "Automotive Tier-1s (Continental, Bosch, Aptiv)",
+      "Distributors Arrow Electronics and Avnet (most revenue flows through distis)"
+    ],
+    "key_risks": [
+      "Inventory correction cycle in industrial/auto end markets \u2014 2024 saw a deep destocking that hit Lattice harder than analog peers",
+      "Intel Altera spin-off (Altera now standalone, hungry for share) and AMD Xilinx product roadmap moving down into Lattice's mid-range Avant family",
+      "China FPGA self-sufficiency push (Gowin, Anlogic) eroding share in the 55% Asia revenue base"
+    ],
+    "sources": [
+      {
+        "label": "Lattice Semi FY2025 earnings press release",
+        "url": "https://ir.latticesemi.com/news-releases/news-release-details/lattice-semiconductor-reports-record-communications-computing-0"
+      },
+      {
+        "label": "Lattice Q3 2025 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000855658/000143774925032775/ex_857387.htm"
+      },
+      {
+        "label": "Futurum: Lattice Q3 FY2025 Comms & Compute record",
+        "url": "https://futurumgroup.com/insights/lattice-semiconductor-q3-fy-2025-delivers-record-comms-compute-revenue/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "BWLPG.OL": {
+    "ticker": "BWLPG.OL",
+    "company": "BW LPG Limited",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "BW LPG is the world's largest owner-operator of Very Large Gas Carriers (VLGCs) \u2014 the ~84,000-cbm ships that move propane and butane from US Gulf and Middle East loading ports to Asian and European buyers. Fleet of ~51 vessels (post-Avance Gas acquisition), of which 22 are dual-fuel LPG-propelled (can burn their own cargo). Bermuda-incorporated, Oslo-listed, controlled by BW Group (Sohmen-Pao family).",
+    "revenue_mix": [
+      {
+        "segment": "Shipping \u2014 spot + time-charter TCE on VLGC fleet",
+        "share_pct": 80,
+        "trend": "growing"
+      },
+      {
+        "segment": "Product Services (LPG trading, optionality)",
+        "share_pct": 15,
+        "trend": "stable"
+      },
+      {
+        "segment": "BW LPG India (Indian coastal LPG transport)",
+        "share_pct": 5,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Trade routes: US Gulf to Asia (largest)",
+        "share_pct": 55
+      },
+      {
+        "region": "Middle East (AG) to Asia",
+        "share_pct": 30
+      },
+      {
+        "region": "Intra-Asia and West Africa exports",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Asian petrochemical PDH (propane dehydrogenation) plants \u2014 China, Korea, Japan",
+      "Indian LPG cooking fuel imports (state oil cos IOC/BPCL/HPCL)",
+      "European heating and autogas (post-Russia gas substitution)",
+      "Bunkering \u2014 BW vessels increasingly burn LPG as marine fuel"
+    ],
+    "top_competitors": [
+      "Dorian LPG (NYSE: LPG, US-listed pure-play VLGC operator)",
+      "Avance Gas (acquired by BW LPG in 2024 \u2014 fleet consolidation)",
+      "Pacific Gas (Mitsui OSK)",
+      "Petredec (private \u2014 Singapore-based)"
+    ],
+    "moat": {
+      "type": "Scale + dual-fuel green premium",
+      "narrative": "BW LPG controls ~12% of the global VLGC fleet (51 of ~413 ships) \u2014 largest single owner. The 22 LPG dual-fuel vessels are a real differentiator: oil-major and trader charterers pay a premium for IMO-compliant carbon footprints, and only BW has a fleet-scale dual-fuel offering. Commodity shipping is still cyclical, however \u2014 moat is share, not pricing power."
+    },
+    "key_customers": [
+      "Indian Oil Corporation, BPCL, HPCL (cooking-fuel imports into India)",
+      "Chinese PDH operators (Wanhua, Satellite Chemical, Oriental Energy)",
+      "Vitol, Trafigura, Glencore (charter via trading desks)",
+      "Aramco Trading, ADNOC (Middle East FOB lifters)"
+    ],
+    "key_risks": [
+      "VLGC orderbook is 108 vessels vs 413 on the water (~26%) \u2014 heavy newbuild delivery wave 2026-2027 likely to compress spot rates",
+      "Panama Canal transit constraints and US LPG export terminal bottlenecks (Enterprise, Energy Transfer) cap arbitrage volumes",
+      "Cyclical TCE rates \u2014 Q3 2025 strong ($200m TCE) but VLGC rates have historically swung 60%+ peak-to-trough"
+    ],
+    "sources": [
+      {
+        "label": "BW LPG Q4 2025 financial results",
+        "url": "https://www.businesswire.com/news/home/20260302419875/en/BW-LPG-Limited-Financial-Results-for-Q4-2025"
+      },
+      {
+        "label": "BW LPG 2025 Integrated Annual Report",
+        "url": "https://www.bwlpg.com/bw-lpg-limited-2025-integrated-annual-report/"
+      },
+      {
+        "label": "BW LPG VLGC fleet list",
+        "url": "https://www.bwlpg.com/vlgc-fleet/vlgc-fleet-list/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "AKAM": {
+    "ticker": "AKAM",
+    "company": "Akamai Technologies, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Akamai operates a globally distributed edge network of 4,200+ points of presence used to (a) accelerate and cache web/video traffic \u2014 its original CDN business; (b) deliver web application + API security (WAF, bot/DDoS protection, Zero Trust); and (c) increasingly, distributed cloud compute (the 2023 Linode acquisition). FY25 revenue $4.2bn with security + compute now 69% of total and growing high-teens, offsetting the structural CDN decline.",
+    "revenue_mix": [
+      {
+        "segment": "Security (WAF, bot mgmt, API Security, Zero Trust)",
+        "share_pct": 51,
+        "trend": "growing"
+      },
+      {
+        "segment": "Delivery (legacy CDN \u2014 video, web acceleration)",
+        "share_pct": 30,
+        "trend": "declining"
+      },
+      {
+        "segment": "Compute (Linode-based distributed cloud)",
+        "share_pct": 19,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 48
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 27
+      },
+      {
+        "region": "Asia Pacific & Japan",
+        "share_pct": 20
+      },
+      {
+        "region": "Latin America",
+        "share_pct": 5
+      }
+    ],
+    "end_markets": [
+      "Media & entertainment (video streaming \u2014 Disney+, NFL, news outlets)",
+      "Financial services (security on online banking, brokerage)",
+      "E-commerce + retail (peak-traffic capacity, bot protection)",
+      "SaaS/internet platforms migrating workloads off hyperscalers"
+    ],
+    "top_competitors": [
+      "Cloudflare (the existential competitor \u2014 security + edge compute, faster-growing)",
+      "Fastly (CDN, smaller)",
+      "AWS CloudFront / Azure Front Door / Google Cloud CDN (hyperscaler bundled CDN)",
+      "Imperva, F5 Networks (security WAF specifically)"
+    ],
+    "moat": {
+      "type": "Edge footprint scale + enterprise security relationships",
+      "narrative": "Akamai's 4,200+ edge PoPs in 130+ countries is the largest privately-operated edge network \u2014 only it and Cloudflare have meaningful global reach for low-latency security inspection. Long-tenured enterprise security contracts (banks, federal agencies) carry switching costs given audit/compliance integration; commodity CDN delivery, however, is in structural decline and Cloudflare is winning the developer mindshare battle on new workloads."
+    },
+    "key_customers": [
+      "Major streaming platforms (Disney/ESPN, Netflix historically \u2014 though Netflix has pulled most volume in-house)",
+      "US federal government (FedRAMP authorised \u2014 Department of Defense, etc.)",
+      "Top 10 global banks (online banking security)",
+      "Apple, Microsoft, Adobe (long-disclosed reference accounts)"
+    ],
+    "key_risks": [
+      "CDN price compression + insourcing \u2014 Netflix and Meta moved off Akamai years ago; remaining streamers may follow as Cloudflare/in-house options mature",
+      "Cloudflare market-share gains in zero-trust and WAF where it has more developer momentum and integrated free-tier funnel",
+      "Compute (Linode) needs to scale fast enough to offset CDN decline \u2014 competing with AWS/GCP/Azure on price is structurally difficult"
+    ],
+    "sources": [
+      {
+        "label": "Akamai Q3 2025 8-K earnings release",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001086222/000108622225000252/exhibit991-q32025.htm"
+      },
+      {
+        "label": "Akamai Q1 2025 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001086222/000108622225000146/exhibit991-q12025.htm"
+      },
+      {
+        "label": "GuruFocus: Akamai Q3 2025 highlights",
+        "url": "https://www.gurufocus.com/news/3194222/akamai-technologies-inc-akam-q3-2025-earnings-call-highlights-strong-growth-in-cloud-and-security-segments"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "NHY.OL": {
+    "ticker": "NHY.OL",
+    "company": "Norsk Hydro ASA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Norsk Hydro is a fully integrated aluminium and renewable energy company \u2014 it mines bauxite in Brazil (Paragominas), refines alumina (Alunorte, the world's largest non-Chinese refinery), smelts primary aluminium powered ~70% by self-owned hydropower, extrudes downstream profiles for autos/building/industrial, and recycles scrap. Norwegian state owns 34.3%. FY25 revenue NOK 208bn.",
+    "revenue_mix": [
+      {
+        "segment": "Hydro Extrusions (downstream profiles)",
+        "share_pct": 36,
+        "trend": "stable"
+      },
+      {
+        "segment": "Hydro Aluminium Metal (primary smelting + casting)",
+        "share_pct": 28,
+        "trend": "growing"
+      },
+      {
+        "segment": "Hydro Metal Markets (trading + recycling)",
+        "share_pct": 22,
+        "trend": "growing"
+      },
+      {
+        "segment": "Hydro Bauxite & Alumina",
+        "share_pct": 11,
+        "trend": "stable"
+      },
+      {
+        "segment": "Hydro Energy (power trading, hydropower)",
+        "share_pct": 3,
+        "trend": "stable"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Europe (Germany largest single market)",
+        "share_pct": 52
+      },
+      {
+        "region": "North America",
+        "share_pct": 25
+      },
+      {
+        "region": "South America (Brazil \u2014 bauxite/alumina)",
+        "share_pct": 12
+      },
+      {
+        "region": "Asia + Rest of World",
+        "share_pct": 11
+      }
+    ],
+    "end_markets": [
+      "Automotive (BMW, Mercedes, Stellantis \u2014 body sheet, EV battery housings)",
+      "Building & construction (window/facade systems \u2014 Hydro Building Systems)",
+      "Packaging (beverage can stock)",
+      "Industrial (heat exchangers, electrical conductors)"
+    ],
+    "top_competitors": [
+      "Alcoa (US \u2014 vertically integrated peer)",
+      "Rio Tinto (Canadian/Australian smelting)",
+      "Constellium (extrusions \u2014 direct overlap)",
+      "Novelis (rolled products, owned by Hindalco)",
+      "Chinese smelters (Chalco, Hongqiao \u2014 primary metal price-setters)"
+    ],
+    "moat": {
+      "type": "Renewable-powered low-carbon aluminium + integrated supply chain",
+      "narrative": "Hydro is the lowest-CO2 large primary aluminium producer globally (~4 kg CO2/kg Al vs ~20 kg for Chinese coal-powered smelters) \u2014 directly monetised via 'Hydro REDUXA' (<4 kg) and 'CIRCAL' (recycled) green-premium products that automakers like BMW pay 10-15% over LME. EU CBAM (carbon border adjustment, fully phasing in 2026) structurally benefits Hydro vs Chinese/Russian/Indian imports."
+    },
+    "key_customers": [
+      "BMW (long-term green-aluminium supply agreement)",
+      "Mercedes-Benz, Volkswagen, Stellantis",
+      "Sch\u00fcco / Reynaers (building systems)",
+      "Ball Corporation, Crown Holdings (beverage can stock)"
+    ],
+    "key_risks": [
+      "LME aluminium price sensitivity \u2014 every $100/t move ~NOK 1.6bn EBITDA; alumina prices were volatile through 2025",
+      "European demand weakness \u2014 auto/construction softness in Germany (largest market) and high European power costs squeeze smelting margins",
+      "Brazil operating risk at Alunorte refinery (historic 2018 spill, periodic regulatory pressure) plus Bel\u00e9m-area infrastructure exposure"
+    ],
+    "sources": [
+      {
+        "label": "Norsk Hydro Q1 2025 report",
+        "url": "https://www.hydro.com/globalassets/06-investors/reports-and-presentations/quarterly-reports/2025/q1c1l5/report-q1-2025.pdf"
+      },
+      {
+        "label": "Investing.com: Norsk Hydro Q3 2025 transcript",
+        "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-norsk-hydro-q3-2025-sees-revenue-growth-strategic-shifts-93CH-4306657"
+      },
+      {
+        "label": "Hydro Q4 2024 results press release",
+        "url": "https://www.hydro.com/en/global/media/news/2025/hydros-fourth-quarter-2024-resultsbauxite--alumina-record-results-partnering-for-a-green-transition/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "BP.L": {
+    "ticker": "BP.L",
+    "company": "BP p.l.c.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "BP is a UK-based integrated oil & gas major producing ~2.24 million boe/d, with operations spanning upstream (Gulf of America, North Sea, Azerbaijan, Trinidad), gas & low-carbon energy, and a downstream customers & products arm (refining, retail fuel stations, Castrol lubricants). It makes money by selling crude oil, natural gas, LNG, refined products and convenience-retail items, with refining margins, Henry Hub/TTF gas prices and Brent crude as the key earnings drivers.",
+    "revenue_mix": [
+      {
+        "segment": "Customers & Products (refining, retail fuel, Castrol)",
+        "share_pct": 70,
+        "trend": "stable"
+      },
+      {
+        "segment": "Oil Production & Operations (upstream oil)",
+        "share_pct": 18,
+        "trend": "stable"
+      },
+      {
+        "segment": "Gas & Low Carbon Energy (gas upstream + LNG + renewables)",
+        "share_pct": 12,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "USA",
+        "share_pct": 35
+      },
+      {
+        "region": "UK/Europe",
+        "share_pct": 30
+      },
+      {
+        "region": "Rest of World (Azerbaijan, Trinidad, Africa, Asia)",
+        "share_pct": 35
+      }
+    ],
+    "end_markets": [
+      "Refined product wholesale & retail (bp/Amoco stations)",
+      "Industrial & marine fuels",
+      "Aviation fuel (Air bp)",
+      "LNG to Asian/European utilities",
+      "Lubricants (Castrol \u2014 sold majority to Stonepeak 2025)"
+    ],
+    "top_competitors": [
+      "Shell",
+      "ExxonMobil",
+      "Chevron",
+      "TotalEnergies"
+    ],
+    "moat": {
+      "type": "Long-cycle reserves + integrated trading desk",
+      "narrative": "BP's moat sits in irreplaceable long-life upstream positions (Azerbaijan ACG, Gulf of America Thunder Horse/Mad Dog, North Sea) plus one of the industry's largest commodity trading books that monetises volatility. Brand-led retail network of ~21,000 fuel sites adds downstream optionality, but the deepwater technical edge is the structural advantage."
+    },
+    "key_customers": [
+      "Azerbaijan State Oil Fund (SOFAZ \u2014 $8.4bn in 2025 payments)",
+      "Global airline majors via Air bp",
+      "European utilities buying LNG",
+      "Convenience-store consumers at ~21,000 bp/Amoco sites"
+    ],
+    "key_risks": [
+      "Activist Elliott Investment Management (~5% stake) pressuring board to cut renewables capex and accelerate Castrol-style divestments \u2014 strategic uncertainty",
+      "UK Energy Profits Levy and proposed EU windfall taxes compressing North Sea/European cash margins",
+      "Persistent take-out speculation (Shell publicly assessing BP through 2025) creating management distraction and potential forced restructuring"
+    ],
+    "sources": [
+      {
+        "label": "BP FY2025 Form 6-K filings (SEC)",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000313807&type=6-K"
+      },
+      {
+        "label": "BP Castrol sale to Stonepeak announcement",
+        "url": "https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
+      },
+      {
+        "label": "CNBC: BP takeover speculation 2025",
+        "url": "https://www.cnbc.com/2025/09/26/oil-giant-bp-quietly-steps-out-of-the-takeover-spotlight.html"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "SCT.L": {
+    "ticker": "SCT.L",
+    "company": "Softcat plc",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Softcat is a UK-headquartered value-added IT reseller (VAR) selling software licences, hardware (servers, PCs, networking, storage) and managed services to ~9,800 UK and Irish corporate, public-sector and mid-market customers. It earns spread on resold vendor product (Microsoft is the dominant line card, plus Cisco, HPE, Dell, AWS) and higher-margin attached services like design, implementation, security and managed cloud operations. FY25 (Jul-end) gross invoiced income \u00a33.62bn, gross profit \u00a3494m.",
+    "revenue_mix": [
+      {
+        "segment": "Software (Microsoft 365/Azure, cybersecurity, productivity licences)",
+        "share_pct": 60,
+        "trend": "growing"
+      },
+      {
+        "segment": "Hardware (PCs, servers, networking, storage)",
+        "share_pct": 25,
+        "trend": "stable"
+      },
+      {
+        "segment": "Services (managed services, professional services, support)",
+        "share_pct": 15,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United Kingdom",
+        "share_pct": 95
+      },
+      {
+        "region": "Ireland & international",
+        "share_pct": 5
+      }
+    ],
+    "end_markets": [
+      "UK mid-market corporates",
+      "UK public sector (\u00a3628m FY in public-sector VAR market)",
+      "Education (schools, universities)",
+      "SMB and lower enterprise"
+    ],
+    "top_competitors": [
+      "Bytes Technology Group",
+      "Computacenter",
+      "CDW (international)",
+      "Insight Enterprises"
+    ],
+    "moat": {
+      "type": "Customer relationships + Microsoft partner status",
+      "narrative": "Softcat's structural edge is its consultative sales culture producing a ~98% customer retention rate plus top-tier Microsoft partner certification (LSP/CSP) that unlocks vendor rebates and co-sell motion competitors struggle to match. The mid-market focus (avg deal size below CDW/Computacenter) is sticky because customers lack in-house procurement scale."
+    },
+    "key_customers": [
+      "UK Government departments (top public-sector VAR alongside Bytes)",
+      "Mid-market corporates (no single customer >5% of GP)",
+      "Education sector (universities and academy trusts)"
+    ],
+    "key_risks": [
+      "Microsoft channel economics shifting \u2014 direct-to-customer CSP changes and Azure consumption pricing erode legacy licence resale margins",
+      "Bytes Technology Group out-executing in software-only public-sector deals, taking share at premium margins",
+      "UK public-sector spending consolidation under Crown Commercial Service framework renewals could compress per-deal economics"
+    ],
+    "sources": [
+      {
+        "label": "Softcat FY2025 Annual Report (Jul-end)",
+        "url": "https://www.softcat.com/3917/6432/0494/Softcat-plc-Annual-Report-and-Accounts-2025.pdf_-_Interactive_pdf.pdf"
+      },
+      {
+        "label": "Softcat investor centre",
+        "url": "https://www.softcat.com/about-us/investor-centre"
+      },
+      {
+        "label": "IT Channel Oxygen: public-sector VAR market",
+        "url": "https://itchanneloxygen.com/bytes-and-softcat-dominate-3-7bn-public-sector-var-market/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "MTZ": {
+    "ticker": "MTZ",
+    "company": "MasTec, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "MasTec is a US specialty infrastructure construction contractor that builds and maintains communications networks (fiber, wireless), electric transmission & distribution, oil & gas pipelines, and clean-energy/renewable plants for utilities, telcos and energy majors. Revenue is project- and master-service-agreement based \u2014 MasTec is paid to engineer, procure and construct rather than to own assets. FY25 revenue $14.3bn, 18-month backlog $19bn (record, +33% YoY).",
+    "revenue_mix": [
+      {
+        "segment": "Clean Energy & Infrastructure",
+        "share_pct": 32,
+        "trend": "growing"
+      },
+      {
+        "segment": "Power Delivery (T&D, substations)",
+        "share_pct": 29,
+        "trend": "growing"
+      },
+      {
+        "segment": "Communications (fiber, wireless for AT&T/Verizon/T-Mobile)",
+        "share_pct": 24,
+        "trend": "growing"
+      },
+      {
+        "segment": "Pipeline Infrastructure (natural gas, LNG feeder lines)",
+        "share_pct": 15,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States",
+        "share_pct": 92
+      },
+      {
+        "region": "Canada & Latin America",
+        "share_pct": 8
+      }
+    ],
+    "end_markets": [
+      "Investor-owned electric utilities (T&D buildout)",
+      "Tier-1 telcos (FTTH/5G densification)",
+      "Midstream gas & LNG export developers",
+      "Renewables developers (utility solar, wind, storage)",
+      "Data center power feeders"
+    ],
+    "top_competitors": [
+      "Quanta Services",
+      "Dycom Industries (communications)",
+      "Primoris Services",
+      "Granite Construction"
+    ],
+    "moat": {
+      "type": "Skilled-labor scale + multi-segment MSA relationships",
+      "narrative": "MasTec's edge is one of the few national fleets of certified linemen, welders and splicers (skill set in chronic shortage) deployable across communications, T&D and pipeline simultaneously. Multi-year Master Service Agreements with AT&T, Verizon, Duke, NextEra create switching friction \u2014 customers won't re-bid an active fiber build."
+    },
+    "key_customers": [
+      "AT&T (largest comms customer)",
+      "Verizon",
+      "T-Mobile",
+      "Duke Energy and major IOUs",
+      "NextEra Energy (renewables)"
+    ],
+    "key_risks": [
+      "Communications segment revenue fell from $4.1bn (2024) to $2.5bn (2025) reflecting end of BEAD-stimulus-driven fiber wave \u2014 duration of recovery uncertain",
+      "Concentration on a handful of telco/utility customers \u2014 AT&T/Verizon capex cuts directly hit segment EBITDA",
+      "Pipeline backlog tied to LNG export-permit approvals and politically sensitive new-build projects (Mountain Valley-style litigation risk)"
+    ],
+    "sources": [
+      {
+        "label": "MasTec Q4 & FY2025 results",
+        "url": "https://investors.mastec.com/news-releases/news-release-details/mastec-reports-fourth-quarter-and-full-year-2025-financial"
+      },
+      {
+        "label": "MasTec FY2025 8-K (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000015615/000001561525000130/mtz930258-kex991.htm"
+      },
+      {
+        "label": "Q4 2025 slides \u2014 record backlog",
+        "url": "https://www.investing.com/news/company-news/mastec-q4-2025-slides-record-backlog-fuels-ambitious-growth-targets-93CH-4532137"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "FTNT": {
+    "ticker": "FTNT",
+    "company": "Fortinet, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Fortinet is a US cybersecurity vendor best known for FortiGate next-gen firewalls (~6 million units deployed, >50% global unit share). It monetises hardware product sales plus attached high-margin security subscriptions (FortiGuard threat intelligence) and technical support, and is expanding into Unified SASE and Security Operations as adjacent ARR engines. FY25 revenue $6.80bn, net income $1.85bn \u2014 among the most profitable pure-play security vendors.",
+    "revenue_mix": [
+      {
+        "segment": "Service revenue \u2014 security subscriptions + technical support",
+        "share_pct": 70,
+        "trend": "growing"
+      },
+      {
+        "segment": "Product revenue \u2014 FortiGate appliances + term licences",
+        "share_pct": 30,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Americas",
+        "share_pct": 41
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 37
+      },
+      {
+        "region": "APAC",
+        "share_pct": 22
+      }
+    ],
+    "end_markets": [
+      "Enterprise IT (Fortune 500 SOCs)",
+      "Mid-market and SMB (price-performance sweet spot)",
+      "Service providers / MSSPs",
+      "Government & critical infrastructure (OT/SCADA via FortiGuard ICS)",
+      "Telco SD-WAN deployments"
+    ],
+    "top_competitors": [
+      "Palo Alto Networks",
+      "Cisco (Secure)",
+      "Check Point Software",
+      "Zscaler & Netskope (in SASE specifically)"
+    ],
+    "moat": {
+      "type": "Custom ASIC silicon + installed-base lock-in",
+      "narrative": "Fortinet designs its own Security Processing Unit (SPU) ASICs that deliver materially better throughput-per-dollar than software-only firewalls \u2014 Palo Alto and Check Point cannot match the price/performance at the SMB tier. The 6M+ FortiGate installed base creates a refresh-cycle annuity and a captive upsell pool for SASE/SecOps ARR."
+    },
+    "key_customers": [
+      "Globally diversified \u2014 no single customer >10% of revenue",
+      "Carrier-grade SD-WAN deployments at Tier-1 telcos",
+      "Distribution via Ingram Micro, Exclusive Networks, Westcon-Comstor"
+    ],
+    "key_risks": [
+      "Firewall refresh cycle is ~40\u201350% through and likely peaks 2026 \u2014 product revenue could roll over hard in 2027",
+      "DRAM/NAND prices forecast to rise 60\u201370% in 2026, compressing product gross margin if not fully passed through",
+      "SASE competition from cloud-native Zscaler/Netskope risks capping ARR growth in the segment Fortinet most needs to grow"
+    ],
+    "sources": [
+      {
+        "label": "Fortinet Q4 2025 8-K (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001262039/000126203925000036/ftntq3-2025ex991.htm"
+      },
+      {
+        "label": "Fortinet FY2025 10-K coverage",
+        "url": "https://www.stocktitan.net/sec-filings/FTNT/10-k-fortinet-inc-files-annual-report-8f9f11a1d662.html"
+      },
+      {
+        "label": "SDxCentral: SASE trajectory and firewall fears",
+        "url": "https://www.sdxcentral.com/news/fortinet-financials-float-sase-trajectory-and-firewall-fears/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "EQNR.OL": {
+    "ticker": "EQNR.OL",
+    "company": "Equinor ASA",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Equinor is Norway's state-controlled (67% government) integrated oil & gas major, dominant operator on the Norwegian Continental Shelf (NCS) and the largest natural gas supplier to Europe. It earns revenue producing crude and gas (E&P Norway, E&P International, E&P USA), trading and marketing molecules through MMP, and developing offshore wind via Renewables (REN). FY25 adjusted operating income ~$28bn with European TTF gas prices averaging $14.80/mmbtu in Q1 driving outperformance.",
+    "revenue_mix": [
+      {
+        "segment": "E&P Norway (NCS oil + gas)",
+        "share_pct": 50,
+        "trend": "stable"
+      },
+      {
+        "segment": "E&P International (UK, Brazil, Angola, Algeria)",
+        "share_pct": 18,
+        "trend": "stable"
+      },
+      {
+        "segment": "Marketing, Midstream & Processing (gas trading, refining)",
+        "share_pct": 18,
+        "trend": "stable"
+      },
+      {
+        "segment": "E&P USA (Bakken, Eagle Ford, GoM)",
+        "share_pct": 12,
+        "trend": "stable"
+      },
+      {
+        "segment": "Renewables (offshore wind)",
+        "share_pct": 2,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Norway / EU gas sales",
+        "share_pct": 70
+      },
+      {
+        "region": "United States",
+        "share_pct": 15
+      },
+      {
+        "region": "UK & rest of world",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "European utilities & industrials (gas via Langeled, Nord Stream alternatives)",
+      "European refineries (NCS crude)",
+      "US Henry Hub gas market",
+      "Offshore wind PPAs (UK Dogger Bank, US Empire Wind)"
+    ],
+    "top_competitors": [
+      "Shell",
+      "TotalEnergies",
+      "BP (in NCS)",
+      "Aker BP (NCS pure-play)"
+    ],
+    "moat": {
+      "type": "NCS resource concession + low carbon-intensity barrels",
+      "narrative": "Equinor is the designated operator of most strategic NCS infrastructure (Troll, Johan Sverdrup, Sn\u00f8hvit) \u2014 a position the Norwegian state will not allow to be displaced. NCS barrels have among the lowest scope-1+2 carbon intensities globally (~7 kg CO2/boe vs ~17 industry avg), making Equinor a defensive supplier in a decarbonising EU."
+    },
+    "key_customers": [
+      "Major European utilities (Centrica, RWE, Engie, Uniper) buying piped gas",
+      "European refiners (TotalEnergies, Shell downstream)",
+      "Long-term LNG offtakers (Asian utilities via Hammerfest)"
+    ],
+    "key_risks": [
+      "Empire Wind US offshore project facing Trump-administration permit/tariff headwinds \u2014 multi-billion-dollar 2025 impairments in REN",
+      "UK Energy Profits Levy (78% effective rate) and Labour govt removing investment allowances threatens Rosebank economics",
+      "EU windfall tax proposals from 5-country coalition (Germany/Spain/Italy/Portugal/Austria) could cap MMP and gas upstream margins"
+    ],
+    "sources": [
+      {
+        "label": "Equinor Q4 & FY2025 results",
+        "url": "https://www.equinor.com/news/equinor-fourth-quarter-and-full-year-2025-results"
+      },
+      {
+        "label": "Equinor 2025 20-F (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001140625/000114062526000013/eqnr-20251231.htm"
+      },
+      {
+        "label": "OilPrice: Equinor UK windfall tax",
+        "url": "https://oilprice.com/Energy/Energy-General/Equinor-Warns-Windfall-Tax-May-Discourage-Its-UK-Investments.html"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "DPLM.L": {
+    "ticker": "DPLM.L",
+    "company": "Diploma PLC",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Diploma is a UK-listed FTSE 100 specialist distributor running a portfolio of decentralised businesses across three sectors: Controls (wire harnesses, interconnect, fasteners \u2014 notably Windy City Wire in US), Seals (industrial sealing, gaskets, hydraulics) and Life Sciences (diagnostics consumables, surgical instruments). It makes money by adding engineering know-how, regulatory compliance and just-in-time inventory to commodity components, charging a service premium. FY25 (Sep-end) revenue \u00a31.52bn.",
+    "revenue_mix": [
+      {
+        "segment": "Controls (interconnect, wire harness, fasteners)",
+        "share_pct": 55,
+        "trend": "growing"
+      },
+      {
+        "segment": "Seals (industrial sealing, hydraulics)",
+        "share_pct": 30,
+        "trend": "stable"
+      },
+      {
+        "segment": "Life Sciences (diagnostics, surgical, healthcare)",
+        "share_pct": 15,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "North America",
+        "share_pct": 55
+      },
+      {
+        "region": "UK & Europe",
+        "share_pct": 30
+      },
+      {
+        "region": "Australia/Rest of World",
+        "share_pct": 15
+      }
+    ],
+    "end_markets": [
+      "Industrial automation & infrastructure (data centers, electrification)",
+      "Aerospace & defence (certified components)",
+      "Construction & MRO (heavy equipment aftermarket)",
+      "Clinical diagnostics & surgical (hospitals in Canada/Australia)",
+      "Renewables/EV components"
+    ],
+    "top_competitors": [
+      "Bunzl (broader distribution peer, less technical)",
+      "DistributionNOW",
+      "MSC Industrial Direct",
+      "Fastenal (in fasteners)"
+    ],
+    "moat": {
+      "type": "Decentralised niche specialists + engineering service layer",
+      "narrative": "Diploma deliberately keeps acquired businesses operationally autonomous so customer engineers keep the same point of contact \u2014 combined with proprietary value-add (custom wire-harness assembly at Windy City Wire, regulatory dossiers in Life Sciences), customers pay a 10-25% service premium and switch reluctantly. The bolt-on M&A model (4 acquisitions in Q1 FY26 alone, \u00a375m deployed) compounds the moat."
+    },
+    "key_customers": [
+      "Fragmented \u2014 no single customer >5% of group revenue",
+      "US data center / hyperscaler MEP contractors (Windy City Wire)",
+      "Canadian and Australian hospital systems (Life Sciences)",
+      "OEM and aftermarket heavy-equipment dealers"
+    ],
+    "key_risks": [
+      "Premium valuation (>30x P/E) leaves no margin for execution misstep \u2014 Seals segment already saw 6.8% revenue decline in FY25",
+      "M&A-led growth dependent on continued availability of priced bolt-ons; multiples for niche industrial distributors have re-rated higher",
+      "Windy City Wire concentration risk \u2014 datacenter wire demand cyclicality if hyperscaler capex resets"
+    ],
+    "sources": [
+      {
+        "label": "Diploma FY2025 results presentation",
+        "url": "https://www.diplomaplc.com/media/vu0lh1om/diploma-plc-fy25-slides-final.pdf"
+      },
+      {
+        "label": "Diploma PLC FY2025 announcement",
+        "url": "https://www.diplomaplc.com/news/2025/full-year-results-2025/"
+      },
+      {
+        "label": "Proactive Investors: Controls division upgrades",
+        "url": "https://www.proactiveinvestors.co.uk/companies/news/1092507/diploma-shares-climb-5-as-controls-division-powers-further-upgrades-1092507.html"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "ARW": {
+    "ticker": "ARW",
+    "company": "Arrow Electronics, Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Arrow Electronics is a global technology distributor connecting ~1,500 semiconductor/IP&E suppliers to ~220,000 OEM, contract-manufacturer and reseller customers. The Global Components segment resells chips, passives and IoT building blocks with engineering-design support attached; the Global ECS segment distributes enterprise infrastructure (storage, security, cloud, software) to VARs. Arrow earns gross-margin spread on resold product plus higher-margin design-in services, demand-creation and supply-chain financing. FY25 revenue $30.9bn (+10%).",
+    "revenue_mix": [
+      {
+        "segment": "Global Components (semis, IP&E, computing/memory)",
+        "share_pct": 70,
+        "trend": "growing"
+      },
+      {
+        "segment": "Global Enterprise Computing Solutions (ECS \u2014 storage, security, software)",
+        "share_pct": 30,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Asia/Pacific",
+        "share_pct": 38
+      },
+      {
+        "region": "Americas",
+        "share_pct": 35
+      },
+      {
+        "region": "EMEA",
+        "share_pct": 27
+      }
+    ],
+    "end_markets": [
+      "Industrial OEMs",
+      "Automotive electronics suppliers",
+      "Aerospace & defence",
+      "Telecom/networking",
+      "Enterprise IT (via ECS \u2014 VARs and resellers buying NetApp/Dell/IBM/Cisco/AWS)"
+    ],
+    "top_competitors": [
+      "Avnet (direct broadline duopoly)",
+      "WT Microelectronics (post-Future Electronics merger)",
+      "WPG Holdings (APAC)",
+      "Ingram Micro (in ECS adjacency)"
+    ],
+    "moat": {
+      "type": "Scale-driven supplier economics + engineering design-in",
+      "narrative": "Arrow and Avnet form a global broadline duopoly with cost-to-serve no smaller distributor can replicate \u2014 top suppliers (TI, ADI, NXP, Infineon) need broadline coverage to reach long-tail customers. Design-win engineering support (FAEs embedded with OEM hardware teams) creates 5-7 year customer lock-in on BOMs, and Morningstar upgraded ARW to narrow-moat in 2025 on this basis."
+    },
+    "key_customers": [
+      "Highly diversified \u2014 no single customer >2% of sales",
+      "220,000+ OEM/EMS/reseller accounts",
+      "Global EMS players (Foxconn, Jabil, Flex) buying through Arrow allocation"
+    ],
+    "key_risks": [
+      "Components segment gross margin compressed to 11.2% in H1 2025 (down from cycle-peak 12%+) as inventory destocking lingered \u2014 historically distributor revenues can fall >20% peak-to-trough",
+      "AI-driven semi demand concentrated in hyperscaler direct buys (Nvidia, AMD) \u2014 bypasses distributors, capping Arrow's exposure to the highest-growth chip pool",
+      "Tariff/geopolitical risk on US-China components flow (APAC is 38% of revenue) \u2014 re-routing costs and supplier line-card changes"
+    ],
+    "sources": [
+      {
+        "label": "Arrow Electronics FY2025 Annual Report (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/7536/000110465926036521/arw-20251231xars.pdf"
+      },
+      {
+        "label": "Arrow Q4 FY2025 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000007536/000000753625000029/arw-20251030xex99d1.htm"
+      },
+      {
+        "label": "Morningstar: Moat upgrade for Arrow & Avnet",
+        "url": "https://www.morningstar.com/stocks/moat-ratings-upgrades-arrow-electronics-avnet"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "HUM": {
+    "ticker": "HUM",
+    "company": "Humana Inc.",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "Humana is the #2 US Medicare Advantage (MA) insurer by membership (behind UnitedHealth), with ~5.6 million MA members. The Insurance segment earns risk-adjusted premiums from CMS for MA, stand-alone PDP and group Medicare lives; the CenterWell segment is a vertically integrated provider arm running 350 senior primary-care clinics across 15 states plus a $11.7bn pharmacy benefit operation and home-health business. FY25 revenue ~$128bn (84% Insurance / 15% CenterWell).",
+    "revenue_mix": [
+      {
+        "segment": "Insurance \u2014 Individual Medicare Advantage",
+        "share_pct": 60,
+        "trend": "stable"
+      },
+      {
+        "segment": "Insurance \u2014 Group MA + stand-alone PDP + Medicaid",
+        "share_pct": 25,
+        "trend": "stable"
+      },
+      {
+        "segment": "CenterWell \u2014 pharmacy, primary care, home health",
+        "share_pct": 15,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "United States (Florida, Texas, Kentucky home market concentrated)",
+        "share_pct": 100
+      }
+    ],
+    "end_markets": [
+      "Medicare-eligible seniors 65+ (MA core)",
+      "Medicare Part D beneficiaries",
+      "Employer group retiree coverage (Group MA)",
+      "TRICARE military beneficiaries (East region contract)",
+      "Medicaid managed care in select states"
+    ],
+    "top_competitors": [
+      "UnitedHealth Group (Optum/UHC)",
+      "CVS/Aetna",
+      "Elevance Health",
+      "Centene (in Medicaid/marketplace)"
+    ],
+    "moat": {
+      "type": "Star Ratings scale + CenterWell vertical integration",
+      "narrative": "MA economics are gated by CMS Star Ratings (4+ stars unlocks ~5% quality bonus) \u2014 Humana's historical 4.5-star scale was a structural revenue advantage that competitors couldn't replicate. CenterWell's 350 senior primary-care clinics let Humana capture clinical risk in-house at 15-20% better MLR than fee-for-service settings, creating a self-reinforcing flywheel."
+    },
+    "key_customers": [
+      "CMS (counter-party for all MA/PDP premiums \u2014 effectively a single buyer)",
+      "US Department of Defense (TRICARE East region)",
+      "~5.6M individual MA members across the US"
+    ],
+    "key_risks": [
+      "Star Ratings cliff \u2014 2025 plans rated 4+ stars dropped sharply, meaningfully reducing 2026 quality bonus payments; ongoing CMS lawsuit unresolved",
+      "CMS v28 risk-adjustment model phase-in (final year 2026) cuts coding revenue; mgmt targets 'at least 3% MA pretax margin' by 2027 but flags uncertainty",
+      "Individual MA membership guided to decline 'up to 500,000' in 2025 as Humana exits unprofitable counties \u2014 open question whether margin recovery materialises"
+    ],
+    "sources": [
+      {
+        "label": "Humana Q3 2025 8-K (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000049071/000004907125000055/hum-2025q38kxex99x2detailed.htm"
+      },
+      {
+        "label": "Humana Q4 2024 detailed earnings",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000049071/000004907125000004/hum-2024q48kxex99x2detailed.htm"
+      },
+      {
+        "label": "CenterWell expansion 2026",
+        "url": "https://distilinfo.com/2026/02/18/humana-expands-centerwell-senior-primary-care-network/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "SNX": {
+    "ticker": "SNX",
+    "company": "TD SYNNEX Corporation",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "TD SYNNEX is the world's largest IT distributor (post-2021 Synnex/Tech Data merger), reselling endpoint solutions (PCs, mobile, peripherals, print) and advanced solutions (data center, hybrid cloud, cybersecurity, networking, hyperscale) from ~2,500 vendors to ~150,000 reseller, MSP and integrator customers in 100+ countries. It earns gross-margin spread plus higher-margin services like cloud marketplace orchestration (StreamOne) and Hyve hyperscale ODM manufacturing. FY25 revenue $62.5bn (+7%).",
+    "revenue_mix": [
+      {
+        "segment": "Endpoint Solutions (PCs, mobile, peripherals, print)",
+        "share_pct": 50,
+        "trend": "stable"
+      },
+      {
+        "segment": "Advanced Solutions (data center, security, cloud, networking \u2014 incl. Hyve hyperscale)",
+        "share_pct": 50,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "Americas",
+        "share_pct": 60
+      },
+      {
+        "region": "Europe",
+        "share_pct": 30
+      },
+      {
+        "region": "Asia Pacific & Japan (APJ)",
+        "share_pct": 10
+      }
+    ],
+    "end_markets": [
+      "VARs/resellers serving SMB & mid-market",
+      "Managed Service Providers (MSPs) \u2014 cloud marketplace driven",
+      "System integrators serving enterprise/public sector",
+      "Hyperscalers (Hyve ODM server/storage manufacturing)",
+      "Retail channel partners"
+    ],
+    "top_competitors": [
+      "Ingram Micro (effective duopoly)",
+      "ScanSource (vertical specialist)",
+      "D&H Distributing (SMB focus)",
+      "Westcon-Comstor (security-specialist)"
+    ],
+    "moat": {
+      "type": "Vendor relationships at duopoly scale + Hyve manufacturing",
+      "narrative": "TD SYNNEX and Ingram Micro form a global IT-distribution duopoly that vendors must sell through to reach long-tail resellers \u2014 replicating the line card and 100-country logistics is a multi-billion dollar barrier. Hyve hyperscale ODM (custom server/storage for the cloud titans) is a unique vertical asset competitors don't have, and StreamOne cloud marketplace captures recurring SaaS billing economics."
+    },
+    "key_customers": [
+      "~150,000 channel partners (highly fragmented, no concentration)",
+      "Hyperscalers (named Hyve customers \u2014 historically Meta, Microsoft) for ODM kit",
+      "Microsoft, Cisco, Dell, HPE, Lenovo, AWS as largest line-card suppliers"
+    ],
+    "key_risks": [
+      "Vendor margin compression \u2014 Microsoft/Cisco shifting to direct-CSP and consumption-billing models reduces distributor take rate",
+      "Hyve customer concentration \u2014 hyperscaler in-housing of ODM design (Meta's MTIA, AWS Graviton) could erode the segment's strategic moat",
+      "Cyclical PC/endpoint refresh exposure \u2014 Endpoint Solutions (~50% of mix) tied to commercial PC replacement cycles that pulled forward into 2024-25"
+    ],
+    "sources": [
+      {
+        "label": "TD SYNNEX FY2025 Q4 results",
+        "url": "https://ir.tdsynnex.com/news/news-details/2026/TD-SYNNEX-Reports-Record-Fiscal-2025-Fourth-Quarter-Results/default.aspx"
+      },
+      {
+        "label": "TD SYNNEX Q3 FY2025 8-K (SEC)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001177394/000162828025042687/ex991-fy25q3pressrelease.htm"
+      },
+      {
+        "label": "TD SYNNEX competitive landscape",
+        "url": "https://matrixbcg.com/blogs/competitors/tdsynnex"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  },
+  "TCAP.L": {
+    "ticker": "TCAP.L",
+    "company": "TP ICAP Group PLC",
+    "as_of": "2026-05-24",
+    "last_refreshed_reason": "Initial backfill",
+    "company_overview": "TP ICAP is the world's largest inter-dealer broker (IDB), matching wholesale OTC trades for banks, hedge funds and asset managers across rates, credit, FX, money markets, equities, and energy & commodities. It earns brokerage commissions per transaction (voice + hybrid + electronic), plus a fast-growing data/analytics business (Parameta) selling proprietary OTC pricing data, and a buy-side block-trading venue (Liquidnet) for equities/credit. FY25 revenue \u00a32.4bn (+6% cc).",
+    "revenue_mix": [
+      {
+        "segment": "Global Broking (rates, credit, FX/MM, equities)",
+        "share_pct": 58,
+        "trend": "growing"
+      },
+      {
+        "segment": "Energy & Commodities",
+        "share_pct": 19,
+        "trend": "declining"
+      },
+      {
+        "segment": "Liquidnet (buy-side block trading)",
+        "share_pct": 15,
+        "trend": "growing"
+      },
+      {
+        "segment": "Parameta Solutions (data & analytics)",
+        "share_pct": 8,
+        "trend": "growing"
+      }
+    ],
+    "geo_mix": [
+      {
+        "region": "EMEA",
+        "share_pct": 45
+      },
+      {
+        "region": "Americas",
+        "share_pct": 41
+      },
+      {
+        "region": "APAC",
+        "share_pct": 14
+      }
+    ],
+    "end_markets": [
+      "Global investment banks (sell-side desks \u2014 JPM, GS, MS, Citi, etc.)",
+      "Hedge funds & asset managers (via Liquidnet)",
+      "Commodity trading houses & energy majors (E&C)",
+      "Quant funds & risk vendors buying Parameta data",
+      "Central banks for OTC reference prices"
+    ],
+    "top_competitors": [
+      "BGC Group (direct IDB rival)",
+      "Compagnie Financi\u00e8re Tradition",
+      "LSEG Tradeweb (in electronic credit/rates)",
+      "MarketAxess (in electronic credit specifically)"
+    ],
+    "moat": {
+      "type": "Broker relationships + venue network effects",
+      "narrative": "IDB economics depend on broker rolodexes \u2014 TP ICAP's ~3,000 brokers carry decades of relationships with sell-side desks that cannot be replicated; broker poaching by BGC is the central competitive battleground (and risk). Parameta data is structurally unique: it's the only place to buy proprietary OTC pricing in markets like esoteric rates and emerging-market FX, with no electronic-venue equivalent."
+    },
+    "key_customers": [
+      "Global Tier-1 investment banks (top 20 sell-side desks)",
+      "Buy-side asset managers using Liquidnet for block execution",
+      "Commodity majors and trading houses (E&C client base)",
+      "Risk vendors and quant funds licensing Parameta data"
+    ],
+    "key_risks": [
+      "E&C segment revenue fell 2-7% in FY25 due to broker departures to rivals \u2014 talent retention costs eating margin",
+      "Continued electronification of credit and rates flow (Tradeweb, MarketAxess gaining share) compresses voice-broking economics over time",
+      "Parameta spin-off / IPO repeatedly delayed \u2014 execution overhang on valuation that depends on data-business re-rating"
+    ],
+    "sources": [
+      {
+        "label": "TP ICAP FY2025 Annual Report",
+        "url": "https://tpicap.com/tpicap/sites/g/files/escbpb106/files/2026-04/ARA_Full%20report.pdf"
+      },
+      {
+        "label": "TP ICAP H1 2025 interim results",
+        "url": "https://tpicap.com/tpicap/sites/g/files/escbpb106/files/2025-08/TP%20ICAP%20Interims%202025%20results%20announcement_VFinal.pdf"
+      },
+      {
+        "label": "Finance Magnates: TP ICAP FY2025 results",
+        "url": "https://www.financemagnates.com/institutional-forex/tp-icap-posts-record-315b-revenue-launches-107m-buyback-as-profit-climbs/"
+      }
+    ],
+    "last_refreshed": "2026-05-24"
+  }
+}

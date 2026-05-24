@@ -1,0 +1,3291 @@
+{
+  "_meta": {
+    "as_of": "2026-05-24",
+    "method": "Unit-safe multiples re-rating: Forward P/E + EV/EBITDA + Analyst Target",
+    "blending_weights": {
+      "fwd_pe": 0.35,
+      "fwd_ev_ebitda": 0.35,
+      "analyst_target": 0.3
+    },
+    "sanity_bounds": {
+      "lower": 0.4,
+      "upper": 2.5,
+      "note": "Methods with base fair value outside this multiple of current price are excluded from blend as outliers."
+    },
+    "cohort_min_n": 3,
+    "anchor_band_when_cohort_thin": [
+      0.85,
+      1.0,
+      1.15
+    ],
+    "sectors_with_full_cohort": [
+      "Energy",
+      "Industrials",
+      "Technology"
+    ],
+    "sectors_using_anchored_fallback": [
+      "Basic Materials",
+      "Financial Services",
+      "Healthcare"
+    ],
+    "tickers_n": 50,
+    "valuations_full_3_methods": 27,
+    "valuations_partial_some_kept": 23,
+    "methods_excluded_as_outliers": 20
+  },
+  "STMPA.PA": {
+    "ticker": "STMPA.PA",
+    "company": "STMicroelectronics N.V.",
+    "sector": "Technology",
+    "as_of_price": 57.93,
+    "market_cap_b": 51.49,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 29.28,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 40.14,
+        "fair_value_base": 61.4,
+        "fair_value_bull": 91.27,
+        "upside_pct_base": 6.0,
+        "rationale": "Stock trades at 29.3\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 20.12,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 65.23,
+        "fair_value_base": 121.23,
+        "fair_value_bull": 292.1,
+        "upside_pct_base": 109.27,
+        "rationale": "Stock trades at 20.1\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 28.79,
+        "target_mean": 46.83,
+        "target_high": 58.52,
+        "analysts_n": 21,
+        "fair_value_bear": 28.79,
+        "fair_value_base": 46.83,
+        "fair_value_bull": 58.52,
+        "upside_pct_base": -19.16,
+        "rationale": "Mean of 21 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 45.52,
+      "base": 77.97,
+      "bull": 151.74,
+      "upside_pct_bear": -21.43,
+      "upside_pct_base": 34.59,
+      "upside_pct_bull": 161.93,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "SNDK": {
+    "ticker": "SNDK",
+    "company": "Sandisk Corporation",
+    "sector": "Technology",
+    "as_of_price": 1478.69,
+    "market_cap_b": 218.98,
+    "methods": {
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 38.26,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 875.85,
+        "fair_value_base": 1627.7,
+        "fair_value_bull": 3921.78,
+        "upside_pct_base": 10.08,
+        "rationale": "Stock trades at 38.3\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 1000.0,
+        "target_mean": 1493.36,
+        "target_high": 2350.0,
+        "analysts_n": 22,
+        "fair_value_bear": 1000.0,
+        "fair_value_base": 1493.36,
+        "fair_value_bull": 2350.0,
+        "upside_pct_base": 0.99,
+        "rationale": "Mean of 22 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_pe",
+        "fair_value_base": 5443.44,
+        "ratio_to_price": 3.68,
+        "reason": "fair value 3.7\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 933.15,
+      "base": 1565.7,
+      "bull": 3196.34,
+      "upside_pct_bear": -36.89,
+      "upside_pct_base": 5.88,
+      "upside_pct_bull": 116.16,
+      "methods_used": [
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "DOCN": {
+    "ticker": "DOCN",
+    "company": "DigitalOcean Holdings, Inc.",
+    "sector": "Technology",
+    "as_of_price": 158.46,
+    "market_cap_b": 16.54,
+    "methods": {
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 58.03,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 61.88,
+        "fair_value_base": 115.0,
+        "fair_value_bull": 277.07,
+        "upside_pct_base": -27.43,
+        "rationale": "Stock trades at 58.0\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 135.0,
+        "target_mean": 177.0,
+        "target_high": 200.0,
+        "analysts_n": 12,
+        "fair_value_bear": 135.0,
+        "fair_value_base": 177.0,
+        "fair_value_bull": 200.0,
+        "upside_pct_base": 11.7,
+        "rationale": "Mean of 12 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_pe",
+        "fair_value_base": 53.37,
+        "ratio_to_price": 0.34,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 95.63,
+      "base": 143.62,
+      "bull": 241.5,
+      "upside_pct_bear": -39.65,
+      "upside_pct_base": -9.37,
+      "upside_pct_bull": 52.4,
+      "methods_used": [
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "NOD.OL": {
+    "ticker": "NOD.OL",
+    "company": "Nordic Semiconductor ASA",
+    "sector": "Technology",
+    "as_of_price": 207.6,
+    "market_cap_b": 40.99,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 45.2,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 93.2,
+        "fair_value_base": 142.56,
+        "fair_value_bull": 211.91,
+        "upside_pct_base": -31.33,
+        "rationale": "Stock trades at 45.2\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 134.01,
+        "target_mean": 191.5,
+        "target_high": 235.0,
+        "analysts_n": 16,
+        "fair_value_bear": 134.01,
+        "fair_value_base": 191.5,
+        "fair_value_bull": 235.0,
+        "upside_pct_base": -7.75,
+        "rationale": "Mean of 16 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 9.31,
+        "ratio_to_price": 0.04,
+        "reason": "fair value 0.0\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 112.04,
+      "base": 165.15,
+      "bull": 222.57,
+      "upside_pct_bear": -46.03,
+      "upside_pct_base": -20.45,
+      "upside_pct_bull": 7.21,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "MU": {
+    "ticker": "MU",
+    "company": "Micron Technology, Inc.",
+    "sector": "Technology",
+    "as_of_price": 751.0,
+    "market_cap_b": 846.93,
+    "methods": {
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 22.91,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 742.8,
+        "fair_value_base": 1380.44,
+        "fair_value_bull": 3326.05,
+        "upside_pct_base": 83.81,
+        "rationale": "Stock trades at 22.9\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 249.0,
+        "target_mean": 613.23,
+        "target_high": 1100.0,
+        "analysts_n": 40,
+        "fair_value_bear": 249.0,
+        "fair_value_base": 613.23,
+        "fair_value_bull": 1100.0,
+        "upside_pct_base": -18.35,
+        "rationale": "Mean of 40 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_pe",
+        "fair_value_base": 3188.88,
+        "ratio_to_price": 4.25,
+        "reason": "fair value 4.2\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 514.89,
+      "base": 1026.34,
+      "bull": 2298.64,
+      "upside_pct_bear": -31.44,
+      "upside_pct_base": 36.66,
+      "upside_pct_bull": 206.08,
+      "methods_used": [
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "AMD": {
+    "ticker": "AMD",
+    "company": "Advanced Micro Devices, Inc.",
+    "sector": "Technology",
+    "as_of_price": 467.51,
+    "market_cap_b": 762.32,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 36.07,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 262.98,
+        "fair_value_base": 402.25,
+        "fair_value_bull": 597.91,
+        "upside_pct_base": -13.96,
+        "rationale": "Stock trades at 36.1\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 101.46,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 104.41,
+        "fair_value_base": 194.04,
+        "fair_value_bull": 467.51,
+        "upside_pct_base": -58.5,
+        "rationale": "Stock trades at 101.5\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 225.0,
+        "target_mean": 472.17,
+        "target_high": 625.0,
+        "analysts_n": 48,
+        "fair_value_bear": 225.0,
+        "fair_value_base": 472.17,
+        "fair_value_bull": 625.0,
+        "upside_pct_base": 1.0,
+        "rationale": "Mean of 48 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 196.09,
+      "base": 350.35,
+      "bull": 560.4,
+      "upside_pct_bear": -58.06,
+      "upside_pct_base": -25.06,
+      "upside_pct_bull": 19.87,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "DELL": {
+    "ticker": "DELL",
+    "company": "Dell Technologies Inc.",
+    "sector": "Technology",
+    "as_of_price": 295.19,
+    "market_cap_b": 191.75,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 19.8,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 302.46,
+        "fair_value_base": 462.64,
+        "fair_value_bull": 687.69,
+        "upside_pct_base": 56.73,
+        "rationale": "Stock trades at 19.8\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 18.45,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 362.59,
+        "fair_value_base": 673.85,
+        "fair_value_bull": 1623.57,
+        "upside_pct_base": 128.28,
+        "rationale": "Stock trades at 18.4\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 138.0,
+        "target_mean": 212.22,
+        "target_high": 300.0,
+        "analysts_n": 23,
+        "fair_value_bear": 138.0,
+        "fair_value_base": 212.22,
+        "fair_value_bull": 300.0,
+        "upside_pct_base": -28.11,
+        "rationale": "Mean of 23 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 274.17,
+      "base": 461.44,
+      "bull": 898.94,
+      "upside_pct_bear": -7.12,
+      "upside_pct_base": 56.32,
+      "upside_pct_bull": 204.53,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "BESI.AS": {
+    "ticker": "BESI.AS",
+    "company": "BE Semiconductor Industries N.V.",
+    "sector": "Technology",
+    "as_of_price": 273.6,
+    "market_cap_b": 21.67,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 46.14,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 120.34,
+        "fair_value_base": 184.07,
+        "fair_value_bull": 273.6,
+        "upside_pct_base": -32.72,
+        "rationale": "Stock trades at 46.1\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 103.4,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 59.96,
+        "fair_value_base": 111.43,
+        "fair_value_bull": 268.47,
+        "upside_pct_base": -59.27,
+        "rationale": "Stock trades at 103.4\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 140.0,
+        "target_mean": 250.23,
+        "target_high": 340.0,
+        "analysts_n": 22,
+        "fair_value_bear": 140.0,
+        "fair_value_base": 250.23,
+        "fair_value_bull": 340.0,
+        "upside_pct_base": -8.54,
+        "rationale": "Mean of 22 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 105.11,
+      "base": 178.49,
+      "bull": 291.72,
+      "upside_pct_bear": -61.58,
+      "upside_pct_base": -34.76,
+      "upside_pct_bull": 6.62,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "STX": {
+    "ticker": "STX",
+    "company": "Seagate Technology Holdings plc",
+    "sector": "Technology",
+    "as_of_price": 812.73,
+    "market_cap_b": 182.24,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 31.04,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 531.34,
+        "fair_value_base": 812.73,
+        "fair_value_bull": 1208.07,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 31.0\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 52.72,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 349.29,
+        "fair_value_base": 649.13,
+        "fair_value_bull": 1564.02,
+        "upside_pct_base": -20.13,
+        "rationale": "Stock trades at 52.7\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 545.0,
+        "target_mean": 814.95,
+        "target_high": 1140.0,
+        "analysts_n": 22,
+        "fair_value_bear": 545.0,
+        "fair_value_base": 814.95,
+        "fair_value_bull": 1140.0,
+        "upside_pct_base": 0.27,
+        "rationale": "Mean of 22 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 471.72,
+      "base": 756.14,
+      "bull": 1312.23,
+      "upside_pct_bear": -41.96,
+      "upside_pct_base": -6.96,
+      "upside_pct_bull": 61.46,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "PRY.MI": {
+    "ticker": "PRY.MI",
+    "company": "Prysmian S.p.A.",
+    "sector": "Industrials",
+    "as_of_price": 149.8,
+    "market_cap_b": 42.96,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 26.26,
+        "target_pe_bear": 26.82,
+        "target_pe_base": 30.55,
+        "target_pe_bull": 32.68,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 153.0,
+        "fair_value_base": 174.28,
+        "fair_value_bull": 186.46,
+        "upside_pct_base": 16.34,
+        "rationale": "Stock trades at 26.3\u00d7 forward earnings. Applying Industrials sector cohort 6-name P/E percentiles (bear 26.8\u00d7 / base 30.6\u00d7 / bull 32.7\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 18.66,
+        "target_evebitda_bear": 22.48,
+        "target_evebitda_base": 25.92,
+        "target_evebitda_bull": 35.62,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 180.47,
+        "fair_value_base": 208.05,
+        "fair_value_bull": 285.95,
+        "upside_pct_base": 38.88,
+        "rationale": "Stock trades at 18.7\u00d7 forward EBITDA. Applying Industrials sector cohort 6-name EV/EBITDA percentiles (bear 22.5\u00d7 / base 25.9\u00d7 / bull 35.6\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 90.0,
+        "target_mean": 132.35,
+        "target_high": 175.0,
+        "analysts_n": 20,
+        "fair_value_bear": 90.0,
+        "fair_value_base": 132.35,
+        "fair_value_bull": 175.0,
+        "upside_pct_base": -11.65,
+        "rationale": "Mean of 20 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 143.71,
+      "base": 173.52,
+      "bull": 217.84,
+      "upside_pct_bear": -4.06,
+      "upside_pct_base": 15.83,
+      "upside_pct_bull": 45.42,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "VICR": {
+    "ticker": "VICR",
+    "company": "Vicor Corporation",
+    "sector": "Technology",
+    "as_of_price": 267.99,
+    "market_cap_b": 12.22,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 50.98,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 106.67,
+        "fair_value_base": 163.16,
+        "fair_value_bull": 242.53,
+        "upside_pct_base": -39.12,
+        "rationale": "Stock trades at 51.0\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 260.0,
+        "target_mean": 282.5,
+        "target_high": 325.0,
+        "analysts_n": 4,
+        "fair_value_bear": 260.0,
+        "fair_value_base": 282.5,
+        "fair_value_bull": 325.0,
+        "upside_pct_base": 5.41,
+        "rationale": "Mean of 4 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 76.46,
+        "ratio_to_price": 0.29,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 177.44,
+      "base": 218.24,
+      "bull": 280.59,
+      "upside_pct_bear": -33.79,
+      "upside_pct_base": -18.56,
+      "upside_pct_bull": 4.7,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "FLEX": {
+    "ticker": "FLEX",
+    "company": "Flex Ltd.",
+    "sector": "Technology",
+    "as_of_price": 132.47,
+    "market_cap_b": 48.53,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 19.52,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 137.71,
+        "fair_value_base": 210.64,
+        "fair_value_bull": 313.09,
+        "upside_pct_base": 59.01,
+        "rationale": "Stock trades at 19.5\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 24.57,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 122.18,
+        "fair_value_base": 227.06,
+        "fair_value_bull": 547.07,
+        "upside_pct_base": 71.4,
+        "rationale": "Stock trades at 24.6\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 80.0,
+        "target_mean": 159.0,
+        "target_high": 180.0,
+        "analysts_n": 9,
+        "fair_value_bear": 80.0,
+        "fair_value_base": 159.0,
+        "fair_value_bull": 180.0,
+        "upside_pct_base": 20.03,
+        "rationale": "Mean of 9 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 114.96,
+      "base": 200.89,
+      "bull": 355.06,
+      "upside_pct_bear": -13.22,
+      "upside_pct_base": 51.65,
+      "upside_pct_bull": 168.03,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "COHR": {
+    "ticker": "COHR",
+    "company": "Coherent Corp.",
+    "sector": "Technology",
+    "as_of_price": 377.57,
+    "market_cap_b": 73.87,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 46.64,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 164.28,
+        "fair_value_base": 251.28,
+        "fair_value_bull": 373.51,
+        "upside_pct_base": -33.45,
+        "rationale": "Stock trades at 46.6\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 57.25,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 149.45,
+        "fair_value_base": 277.73,
+        "fair_value_bull": 669.17,
+        "upside_pct_base": -26.44,
+        "rationale": "Stock trades at 57.2\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 230.0,
+        "target_mean": 380.62,
+        "target_high": 461.96,
+        "analysts_n": 21,
+        "fair_value_bear": 230.0,
+        "fair_value_base": 380.62,
+        "fair_value_bull": 461.96,
+        "upside_pct_base": 0.81,
+        "rationale": "Mean of 21 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 178.81,
+      "base": 299.34,
+      "bull": 503.53,
+      "upside_pct_bear": -52.64,
+      "upside_pct_base": -20.72,
+      "upside_pct_bull": 33.36,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "WDC": {
+    "ticker": "WDC",
+    "company": "Western Digital Corporation",
+    "sector": "Technology",
+    "as_of_price": 484.28,
+    "market_cap_b": 166.92,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 27.8,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 353.5,
+        "fair_value_base": 540.71,
+        "fair_value_bull": 803.73,
+        "upside_pct_base": 11.65,
+        "rationale": "Stock trades at 27.8\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 42.11,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 260.59,
+        "fair_value_base": 484.28,
+        "fair_value_bull": 1166.83,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 42.1\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 360.0,
+        "target_mean": 507.61,
+        "target_high": 660.0,
+        "analysts_n": 23,
+        "fair_value_bear": 360.0,
+        "fair_value_base": 507.61,
+        "fair_value_bull": 660.0,
+        "upside_pct_base": 4.82,
+        "rationale": "Mean of 23 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 322.93,
+      "base": 511.03,
+      "bull": 887.7,
+      "upside_pct_bear": -33.32,
+      "upside_pct_base": 5.52,
+      "upside_pct_bull": 83.3,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "TTMI": {
+    "ticker": "TTMI",
+    "company": "TTM Technologies, Inc.",
+    "sector": "Technology",
+    "as_of_price": 189.92,
+    "market_cap_b": 19.72,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 36.54,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 105.47,
+        "fair_value_base": 161.32,
+        "fair_value_bull": 239.8,
+        "upside_pct_base": -15.06,
+        "rationale": "Stock trades at 36.5\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 46.38,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 92.78,
+        "fair_value_base": 172.42,
+        "fair_value_bull": 415.43,
+        "upside_pct_base": -9.21,
+        "rationale": "Stock trades at 46.4\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 160.0,
+        "target_mean": 174.25,
+        "target_high": 182.0,
+        "analysts_n": 4,
+        "fair_value_bear": 160.0,
+        "fair_value_base": 174.25,
+        "fair_value_bull": 182.0,
+        "upside_pct_base": -8.25,
+        "rationale": "Mean of 4 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 117.39,
+      "base": 169.08,
+      "bull": 283.93,
+      "upside_pct_bear": -38.19,
+      "upside_pct_base": -10.97,
+      "upside_pct_bull": 49.5,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "CIEN": {
+    "ticker": "CIEN",
+    "company": "Ciena Corporation",
+    "sector": "Technology",
+    "as_of_price": 583.74,
+    "market_cap_b": 82.54,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 66.78,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 177.39,
+        "fair_value_base": 271.33,
+        "fair_value_bull": 403.31,
+        "upside_pct_base": -53.52,
+        "rationale": "Stock trades at 66.8\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 240.0,
+        "target_mean": 452.12,
+        "target_high": 675.0,
+        "analysts_n": 19,
+        "fair_value_bear": 240.0,
+        "fair_value_base": 452.12,
+        "fair_value_bull": 675.0,
+        "upside_pct_base": -22.55,
+        "rationale": "Mean of 19 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 169.31,
+        "ratio_to_price": 0.29,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 206.29,
+      "base": 354.77,
+      "bull": 528.71,
+      "upside_pct_bear": -64.66,
+      "upside_pct_base": -39.22,
+      "upside_pct_bull": -9.43,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "SUBC.OL": {
+    "ticker": "SUBC.OL",
+    "company": "Subsea 7 S.A.",
+    "sector": "Energy",
+    "as_of_price": 310.8,
+    "market_cap_b": 92.04,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 13.58,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 256.66,
+        "fair_value_base": 300.87,
+        "fair_value_bull": 310.91,
+        "upside_pct_base": -3.2,
+        "rationale": "Stock trades at 13.6\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 232.34,
+        "target_mean": 329.03,
+        "target_high": 436.73,
+        "analysts_n": 16,
+        "fair_value_bear": 232.34,
+        "fair_value_base": 329.03,
+        "fair_value_bull": 436.73,
+        "upside_pct_base": 5.86,
+        "rationale": "Mean of 16 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 112.36,
+        "ratio_to_price": 0.36,
+        "reason": "fair value 0.4\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 245.44,
+      "base": 313.87,
+      "bull": 368.98,
+      "upside_pct_bear": -21.03,
+      "upside_pct_base": 0.99,
+      "upside_pct_bull": 18.72,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "ON": {
+    "ticker": "ON",
+    "company": "ON Semiconductor Corporation",
+    "sector": "Technology",
+    "as_of_price": 116.2,
+    "market_cap_b": 45.18,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 27.33,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 86.26,
+        "fair_value_base": 131.94,
+        "fair_value_bull": 196.13,
+        "upside_pct_base": 13.55,
+        "rationale": "Stock trades at 27.3\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 22.66,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 116.2,
+        "fair_value_base": 215.95,
+        "fair_value_bull": 520.31,
+        "upside_pct_base": 85.84,
+        "rationale": "Stock trades at 22.7\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 68.0,
+        "target_mean": 103.97,
+        "target_high": 130.0,
+        "analysts_n": 29,
+        "fair_value_bear": 68.0,
+        "fair_value_base": 103.97,
+        "fair_value_bull": 130.0,
+        "upside_pct_base": -10.53,
+        "rationale": "Mean of 29 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 91.26,
+      "base": 152.95,
+      "bull": 289.75,
+      "upside_pct_bear": -21.46,
+      "upside_pct_base": 31.63,
+      "upside_pct_bull": 149.36,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "STRL": {
+    "ticker": "STRL",
+    "company": "Sterling Infrastructure, Inc.",
+    "sector": "Industrials",
+    "as_of_price": 732.94,
+    "market_cap_b": 22.49,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 32.71,
+        "target_pe_bear": 26.82,
+        "target_pe_base": 30.55,
+        "target_pe_bull": 32.68,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 600.9,
+        "fair_value_base": 684.5,
+        "fair_value_bull": 732.31,
+        "upside_pct_base": -6.61,
+        "rationale": "Stock trades at 32.7\u00d7 forward earnings. Applying Industrials sector cohort 6-name P/E percentiles (bear 26.8\u00d7 / base 30.6\u00d7 / bull 32.7\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 38.44,
+        "target_evebitda_bear": 22.48,
+        "target_evebitda_base": 25.92,
+        "target_evebitda_bull": 35.62,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 428.68,
+        "fair_value_base": 494.18,
+        "fair_value_bull": 679.21,
+        "upside_pct_base": -32.58,
+        "rationale": "Stock trades at 38.4\u00d7 forward EBITDA. Applying Industrials sector cohort 6-name EV/EBITDA percentiles (bear 22.5\u00d7 / base 25.9\u00d7 / bull 35.6\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 884.0,
+        "target_mean": 935.8,
+        "target_high": 1000.0,
+        "analysts_n": 5,
+        "fair_value_bear": 884.0,
+        "fair_value_base": 935.8,
+        "fair_value_bull": 1000.0,
+        "upside_pct_base": 27.68,
+        "rationale": "Mean of 5 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 625.55,
+      "base": 693.28,
+      "bull": 794.03,
+      "upside_pct_bear": -14.65,
+      "upside_pct_base": -5.41,
+      "upside_pct_bull": 8.34,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "CAR": {
+    "ticker": "CAR",
+    "company": "Avis Budget Group, Inc.",
+    "sector": "Industrials",
+    "as_of_price": 167.05,
+    "market_cap_b": 5.9,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 21.61,
+        "target_pe_bear": 26.82,
+        "target_pe_base": 30.55,
+        "target_pe_bull": 32.68,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 207.28,
+        "fair_value_base": 236.12,
+        "fair_value_bull": 252.61,
+        "upside_pct_base": 41.34,
+        "rationale": "Stock trades at 21.6\u00d7 forward earnings. Applying Industrials sector cohort 6-name P/E percentiles (bear 26.8\u00d7 / base 30.6\u00d7 / bull 32.7\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 21.76,
+        "target_evebitda_bear": 22.48,
+        "target_evebitda_base": 25.92,
+        "target_evebitda_bull": 35.62,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 172.64,
+        "fair_value_base": 199.02,
+        "fair_value_bull": 273.54,
+        "upside_pct_base": 19.14,
+        "rationale": "Stock trades at 21.8\u00d7 forward EBITDA. Applying Industrials sector cohort 6-name EV/EBITDA percentiles (bear 22.5\u00d7 / base 25.9\u00d7 / bull 35.6\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 85.0,
+        "target_mean": 127.0,
+        "target_high": 160.0,
+        "analysts_n": 7,
+        "fair_value_bear": 85.0,
+        "fair_value_base": 127.0,
+        "fair_value_bull": 160.0,
+        "upside_pct_base": -23.97,
+        "rationale": "Mean of 7 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 158.47,
+      "base": 190.4,
+      "bull": 232.15,
+      "upside_pct_bear": -5.13,
+      "upside_pct_base": 13.98,
+      "upside_pct_bull": 38.97,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "TGS.OL": {
+    "ticker": "TGS.OL",
+    "company": "TGS ASA",
+    "sector": "Energy",
+    "as_of_price": 152.8,
+    "market_cap_b": 30.03,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 13.14,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 130.38,
+        "fair_value_base": 152.84,
+        "fair_value_bull": 157.94,
+        "upside_pct_base": 0.02,
+        "rationale": "Stock trades at 13.1\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 49.03,
+        "target_evebitda_bear": 14.53,
+        "target_evebitda_base": 25.33,
+        "target_evebitda_bull": 54.29,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 45.28,
+        "fair_value_base": 78.94,
+        "fair_value_bull": 169.19,
+        "upside_pct_base": -48.34,
+        "rationale": "Stock trades at 49.0\u00d7 forward EBITDA. Applying Energy sector cohort 8-name EV/EBITDA percentiles (bear 14.5\u00d7 / base 25.3\u00d7 / bull 54.3\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 59.87,
+        "target_mean": 152.23,
+        "target_high": 199.92,
+        "analysts_n": 8,
+        "fair_value_bear": 59.87,
+        "fair_value_base": 152.23,
+        "fair_value_bull": 199.92,
+        "upside_pct_base": -0.37,
+        "rationale": "Mean of 8 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 79.44,
+      "base": 126.79,
+      "bull": 174.47,
+      "upside_pct_bear": -48.01,
+      "upside_pct_base": -17.02,
+      "upside_pct_bull": 14.18,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "LITE": {
+    "ticker": "LITE",
+    "company": "Lumentum Holdings Inc.",
+    "sector": "Technology",
+    "as_of_price": 946.9,
+    "market_cap_b": 73.67,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 52.31,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 367.31,
+        "fair_value_base": 561.82,
+        "fair_value_bull": 835.11,
+        "upside_pct_base": -40.67,
+        "rationale": "Stock trades at 52.3\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 600.0,
+        "target_mean": 1104.68,
+        "target_high": 1400.0,
+        "analysts_n": 24,
+        "fair_value_bear": 600.0,
+        "fair_value_base": 1104.68,
+        "fair_value_bull": 1400.0,
+        "upside_pct_base": 16.66,
+        "rationale": "Mean of 24 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 298.2,
+        "ratio_to_price": 0.31,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 474.71,
+      "base": 812.37,
+      "bull": 1095.83,
+      "upside_pct_bear": -49.87,
+      "upside_pct_base": -14.21,
+      "upside_pct_bull": 15.73,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "AJB.L": {
+    "ticker": "AJB.L",
+    "company": "AJ Bell plc",
+    "sector": "Financial Services",
+    "as_of_price": 643.0,
+    "market_cap_b": 2.54,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 21.11,
+        "target_pe_bear": 9.78,
+        "target_pe_base": 11.79,
+        "target_pe_bull": 15.39,
+        "sector_cohort_n": 4,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 297.93,
+        "fair_value_base": 359.11,
+        "fair_value_bull": 468.69,
+        "upside_pct_base": -44.15,
+        "rationale": "Stock trades at 21.1\u00d7 forward earnings. Applying Financial Services sector cohort 4-name P/E percentiles (bear 9.8\u00d7 / base 11.8\u00d7 / bull 15.4\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 520.0,
+        "target_mean": 591.38,
+        "target_high": 720.0,
+        "analysts_n": 16,
+        "fair_value_bear": 520.0,
+        "fair_value_base": 591.38,
+        "fair_value_bull": 720.0,
+        "upside_pct_base": -8.03,
+        "rationale": "Mean of 16 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 400.42,
+      "base": 466.31,
+      "bull": 584.68,
+      "upside_pct_bear": -37.73,
+      "upside_pct_base": -27.48,
+      "upside_pct_bull": -9.07,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "GEV": {
+    "ticker": "GEV",
+    "company": "GE Vernova Inc.",
+    "sector": "Industrials",
+    "as_of_price": 1038.74,
+    "market_cap_b": 279.13,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 42.38,
+        "target_pe_bear": 26.82,
+        "target_pe_base": 30.55,
+        "target_pe_bull": 32.68,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 657.38,
+        "fair_value_base": 748.84,
+        "fair_value_bull": 801.14,
+        "upside_pct_base": -27.91,
+        "rationale": "Stock trades at 42.4\u00d7 forward earnings. Applying Industrials sector cohort 6-name P/E percentiles (bear 26.8\u00d7 / base 30.6\u00d7 / bull 32.7\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 836.0,
+        "target_mean": 1217.17,
+        "target_high": 1424.0,
+        "analysts_n": 32,
+        "fair_value_bear": 836.0,
+        "fair_value_base": 1217.17,
+        "fair_value_bull": 1424.0,
+        "upside_pct_base": 17.18,
+        "rationale": "Mean of 32 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 335.26,
+        "ratio_to_price": 0.32,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 739.82,
+      "base": 964.99,
+      "bull": 1088.61,
+      "upside_pct_bear": -28.78,
+      "upside_pct_base": -7.1,
+      "upside_pct_bull": 4.8,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "NBIX": {
+    "ticker": "NBIX",
+    "company": "Neurocrine Biosciences, Inc.",
+    "sector": "Healthcare",
+    "as_of_price": 156.7,
+    "market_cap_b": 15.76,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 12.33,
+        "target_pe_bear": 10.48,
+        "target_pe_base": 12.33,
+        "target_pe_bull": 14.18,
+        "sector_cohort_n": 1,
+        "sector_source": "anchored_own_multiple",
+        "fair_value_bear": 133.19,
+        "fair_value_base": 156.7,
+        "fair_value_bull": 180.2,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 12.3\u00d7 forward earnings. Applying Healthcare sector own multiple \u00b115% P/E percentiles (bear 10.5\u00d7 / base 12.3\u00d7 / bull 14.2\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 17.99,
+        "target_evebitda_bear": 15.29,
+        "target_evebitda_base": 17.99,
+        "target_evebitda_bull": 20.68,
+        "sector_cohort_n": 1,
+        "sector_source": "anchored_own_multiple",
+        "fair_value_bear": 133.19,
+        "fair_value_base": 156.7,
+        "fair_value_bull": 180.2,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 18.0\u00d7 forward EBITDA. Applying Healthcare sector own multiple \u00b115% EV/EBITDA percentiles (bear 15.3\u00d7 / base 18.0\u00d7 / bull 20.7\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 144.0,
+        "target_mean": 192.06,
+        "target_high": 250.65,
+        "analysts_n": 28,
+        "fair_value_bear": 144.0,
+        "fair_value_base": 192.06,
+        "fair_value_bull": 250.65,
+        "upside_pct_base": 22.56,
+        "rationale": "Mean of 28 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 136.43,
+      "base": 167.31,
+      "bull": 201.33,
+      "upside_pct_bear": -12.93,
+      "upside_pct_base": 6.77,
+      "upside_pct_bull": 28.48,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "MTSI": {
+    "ticker": "MTSI",
+    "company": "MACOM Technology Solutions Holdings, Inc.",
+    "sector": "Technology",
+    "as_of_price": 385.98,
+    "market_cap_b": 29.45,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 56.39,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 138.9,
+        "fair_value_base": 212.46,
+        "fair_value_bull": 315.8,
+        "upside_pct_base": -44.96,
+        "rationale": "Stock trades at 56.4\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 345.0,
+        "target_mean": 393.0,
+        "target_high": 450.0,
+        "analysts_n": 14,
+        "fair_value_bear": 345.0,
+        "fair_value_base": 393.0,
+        "fair_value_bull": 450.0,
+        "upside_pct_base": 1.82,
+        "rationale": "Mean of 14 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 130.81,
+        "ratio_to_price": 0.34,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 234.02,
+      "base": 295.79,
+      "bull": 377.74,
+      "upside_pct_bear": -39.37,
+      "upside_pct_base": -23.37,
+      "upside_pct_bull": -2.14,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "IGG.L": {
+    "ticker": "IGG.L",
+    "company": "IG Group Holdings plc",
+    "sector": "Financial Services",
+    "as_of_price": 1850.0,
+    "market_cap_b": 6.12,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 13.48,
+        "target_pe_bear": 9.78,
+        "target_pe_base": 11.79,
+        "target_pe_bull": 15.39,
+        "sector_cohort_n": 4,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 1342.38,
+        "fair_value_base": 1618.05,
+        "fair_value_bull": 2111.79,
+        "upside_pct_base": -12.54,
+        "rationale": "Stock trades at 13.5\u00d7 forward earnings. Applying Financial Services sector cohort 4-name P/E percentiles (bear 9.8\u00d7 / base 11.8\u00d7 / bull 15.4\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 1100.0,
+        "target_mean": 1684.5,
+        "target_high": 2200.0,
+        "analysts_n": 8,
+        "fair_value_bear": 1100.0,
+        "fair_value_base": 1684.5,
+        "fair_value_bull": 2200.0,
+        "upside_pct_base": -8.95,
+        "rationale": "Mean of 8 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 1230.51,
+      "base": 1648.72,
+      "bull": 2152.5,
+      "upside_pct_bear": -33.49,
+      "upside_pct_base": -10.88,
+      "upside_pct_bull": 16.35,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "GLW": {
+    "ticker": "GLW",
+    "company": "Corning Incorporated",
+    "sector": "Technology",
+    "as_of_price": 194.05,
+    "market_cap_b": 167.01,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 45.94,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 85.71,
+        "fair_value_base": 131.1,
+        "fair_value_bull": 194.87,
+        "upside_pct_base": -32.44,
+        "rationale": "Stock trades at 45.9\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 44.97,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 97.77,
+        "fair_value_base": 181.69,
+        "fair_value_bull": 437.77,
+        "upside_pct_base": -6.37,
+        "rationale": "Stock trades at 45.0\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 149.0,
+        "target_mean": 197.67,
+        "target_high": 230.0,
+        "analysts_n": 15,
+        "fair_value_bear": 149.0,
+        "fair_value_base": 197.67,
+        "fair_value_bull": 230.0,
+        "upside_pct_base": 1.86,
+        "rationale": "Mean of 15 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 108.92,
+      "base": 168.78,
+      "bull": 290.42,
+      "upside_pct_bear": -43.87,
+      "upside_pct_base": -13.02,
+      "upside_pct_bull": 49.66,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "ASM.AS": {
+    "ticker": "ASM.AS",
+    "company": "ASM International NV",
+    "sector": "Technology",
+    "as_of_price": 900.8,
+    "market_cap_b": 44.04,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 33.38,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 547.68,
+        "fair_value_base": 837.71,
+        "fair_value_bull": 1245.2,
+        "upside_pct_base": -7.0,
+        "rationale": "Stock trades at 33.4\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 39.54,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 516.2,
+        "fair_value_base": 959.33,
+        "fair_value_bull": 2311.4,
+        "upside_pct_base": 6.5,
+        "rationale": "Stock trades at 39.5\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 639.0,
+        "target_mean": 918.1,
+        "target_high": 1095.0,
+        "analysts_n": 20,
+        "fair_value_bear": 639.0,
+        "fair_value_base": 918.1,
+        "fair_value_bull": 1095.0,
+        "upside_pct_base": 1.92,
+        "rationale": "Mean of 20 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 564.06,
+      "base": 904.39,
+      "bull": 1573.31,
+      "upside_pct_bear": -37.38,
+      "upside_pct_base": 0.4,
+      "upside_pct_bull": 74.66,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "SPM.MI": {
+    "ticker": "SPM.MI",
+    "company": "Saipem SpA",
+    "sector": "Energy",
+    "as_of_price": 4.23,
+    "market_cap_b": 8.21,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 14.08,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 3.37,
+        "fair_value_base": 3.95,
+        "fair_value_bull": 4.08,
+        "upside_pct_base": -6.67,
+        "rationale": "Stock trades at 14.1\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 3.4,
+        "target_mean": 4.77,
+        "target_high": 6.0,
+        "analysts_n": 17,
+        "fair_value_bear": 3.4,
+        "fair_value_base": 4.77,
+        "fair_value_bull": 6.0,
+        "upside_pct_base": 12.79,
+        "rationale": "Mean of 17 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 15.91,
+        "ratio_to_price": 3.76,
+        "reason": "fair value 3.8\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 3.38,
+      "base": 4.33,
+      "bull": 4.97,
+      "upside_pct_bear": -20.0,
+      "upside_pct_base": 2.33,
+      "upside_pct_bull": 17.4,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "AMKR": {
+    "ticker": "AMKR",
+    "company": "Amkor Technology, Inc.",
+    "sector": "Technology",
+    "as_of_price": 65.75,
+    "market_cap_b": 16.3,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 26.82,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 49.76,
+        "fair_value_base": 76.11,
+        "fair_value_bull": 113.13,
+        "upside_pct_base": 15.75,
+        "rationale": "Stock trades at 26.8\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 60.0,
+        "target_mean": 75.5,
+        "target_high": 90.0,
+        "analysts_n": 8,
+        "fair_value_bear": 60.0,
+        "fair_value_base": 75.5,
+        "fair_value_bull": 90.0,
+        "upside_pct_base": 14.83,
+        "rationale": "Mean of 8 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 205.5,
+        "ratio_to_price": 3.13,
+        "reason": "fair value 3.1\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 54.49,
+      "base": 75.83,
+      "bull": 102.45,
+      "upside_pct_bear": -17.13,
+      "upside_pct_base": 15.33,
+      "upside_pct_bull": 55.82,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "TWLO": {
+    "ticker": "TWLO",
+    "company": "Twilio Inc.",
+    "sector": "Technology",
+    "as_of_price": 187.88,
+    "market_cap_b": 28.52,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 28.48,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 133.85,
+        "fair_value_base": 204.73,
+        "fair_value_bull": 304.32,
+        "upside_pct_base": 8.97,
+        "rationale": "Stock trades at 28.5\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 61.93,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 68.74,
+        "fair_value_base": 127.75,
+        "fair_value_bull": 307.8,
+        "upside_pct_base": -32.0,
+        "rationale": "Stock trades at 61.9\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 120.0,
+        "target_mean": 195.09,
+        "target_high": 250.0,
+        "analysts_n": 28,
+        "fair_value_bear": 120.0,
+        "fair_value_base": 195.09,
+        "fair_value_bull": 250.0,
+        "upside_pct_base": 3.84,
+        "rationale": "Mean of 28 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 106.91,
+      "base": 174.89,
+      "bull": 289.24,
+      "upside_pct_bear": -43.1,
+      "upside_pct_base": -6.91,
+      "upside_pct_bull": 53.95,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "VAR.OL": {
+    "ticker": "VAR.OL",
+    "company": "V\u00e5r Energi ASA",
+    "sector": "Energy",
+    "as_of_price": 47.22,
+    "market_cap_b": 117.88,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 11.4,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 46.44,
+        "fair_value_base": 54.43,
+        "fair_value_bull": 56.25,
+        "upside_pct_base": 15.28,
+        "rationale": "Stock trades at 11.4\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 17.12,
+        "target_evebitda_bear": 14.53,
+        "target_evebitda_base": 25.33,
+        "target_evebitda_bull": 54.29,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 40.06,
+        "fair_value_base": 69.84,
+        "fair_value_bull": 149.69,
+        "upside_pct_base": 47.91,
+        "rationale": "Stock trades at 17.1\u00d7 forward EBITDA. Applying Energy sector cohort 8-name EV/EBITDA percentiles (bear 14.5\u00d7 / base 25.3\u00d7 / bull 54.3\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 37.72,
+        "target_mean": 48.54,
+        "target_high": 59.38,
+        "analysts_n": 15,
+        "fair_value_bear": 37.72,
+        "fair_value_base": 48.54,
+        "fair_value_bull": 59.38,
+        "upside_pct_base": 2.8,
+        "rationale": "Mean of 15 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 41.59,
+      "base": 58.06,
+      "bull": 89.89,
+      "upside_pct_bear": -11.92,
+      "upside_pct_base": 22.95,
+      "upside_pct_bull": 90.37,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "MNTN.L": {
+    "ticker": "MNTN.L",
+    "company": "The Schiehallion Fund Limited",
+    "sector": "Financial Services",
+    "as_of_price": 2.05,
+    "market_cap_b": 2.09,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 10.1,
+        "target_pe_bear": 9.78,
+        "target_pe_base": 11.79,
+        "target_pe_bull": 15.39,
+        "sector_cohort_n": 4,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 1.99,
+        "fair_value_base": 2.39,
+        "fair_value_bull": 3.12,
+        "upside_pct_base": 16.73,
+        "rationale": "Stock trades at 10.1\u00d7 forward earnings. Applying Financial Services sector cohort 4-name P/E percentiles (bear 9.8\u00d7 / base 11.8\u00d7 / bull 15.4\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 1.25,
+        "target_mean": 1.25,
+        "target_high": 1.25,
+        "analysts_n": 1,
+        "fair_value_bear": 1.25,
+        "fair_value_base": 1.25,
+        "fair_value_bull": 1.25,
+        "upside_pct_base": -39.02,
+        "rationale": "Mean of 1 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 1.65,
+      "base": 1.86,
+      "bull": 2.26,
+      "upside_pct_bear": -19.59,
+      "upside_pct_base": -9.08,
+      "upside_pct_bull": 10.09,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "AKRBP.OL": {
+    "ticker": "AKRBP.OL",
+    "company": "Aker BP ASA",
+    "sector": "Energy",
+    "as_of_price": 351.6,
+    "market_cap_b": 222.12,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 13.6,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 289.94,
+        "fair_value_base": 339.87,
+        "fair_value_bull": 351.22,
+        "upside_pct_base": -3.34,
+        "rationale": "Stock trades at 13.6\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 25.33,
+        "target_evebitda_bear": 14.53,
+        "target_evebitda_base": 25.33,
+        "target_evebitda_bull": 54.29,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 201.62,
+        "fair_value_base": 351.54,
+        "fair_value_bull": 753.43,
+        "upside_pct_base": -0.02,
+        "rationale": "Stock trades at 25.3\u00d7 forward EBITDA. Applying Energy sector cohort 8-name EV/EBITDA percentiles (bear 14.5\u00d7 / base 25.3\u00d7 / bull 54.3\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 175.0,
+        "target_mean": 320.11,
+        "target_high": 400.0,
+        "analysts_n": 18,
+        "fair_value_bear": 175.0,
+        "fair_value_base": 320.11,
+        "fair_value_bull": 400.0,
+        "upside_pct_base": -8.96,
+        "rationale": "Mean of 18 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 224.55,
+      "base": 338.03,
+      "bull": 506.63,
+      "upside_pct_bear": -36.14,
+      "upside_pct_base": -3.86,
+      "upside_pct_bull": 44.09,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "HPE": {
+    "ticker": "HPE",
+    "company": "Hewlett Packard Enterprise Company",
+    "sector": "Technology",
+    "as_of_price": 37.58,
+    "market_cap_b": 49.86,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 13.75,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 55.44,
+        "fair_value_base": 84.81,
+        "fair_value_bull": 126.06,
+        "upside_pct_base": 125.67,
+        "rationale": "Stock trades at 13.8\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 21.0,
+        "target_mean": 29.92,
+        "target_high": 40.0,
+        "analysts_n": 19,
+        "fair_value_bear": 21.0,
+        "fair_value_base": 29.92,
+        "fair_value_bull": 40.0,
+        "upside_pct_base": -20.39,
+        "rationale": "Mean of 19 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 115.94,
+        "ratio_to_price": 3.09,
+        "reason": "fair value 3.1\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 39.54,
+      "base": 59.48,
+      "bull": 86.34,
+      "upside_pct_bear": 5.23,
+      "upside_pct_base": 58.27,
+      "upside_pct_bull": 129.75,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "LSCC": {
+    "ticker": "LSCC",
+    "company": "Lattice Semiconductor Corporation",
+    "sector": "Technology",
+    "as_of_price": 143.22,
+    "market_cap_b": 19.62,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 61.97,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 46.9,
+        "fair_value_base": 71.74,
+        "fair_value_bull": 106.63,
+        "upside_pct_base": -49.91,
+        "rationale": "Stock trades at 62.0\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 105.0,
+        "target_mean": 146.92,
+        "target_high": 175.0,
+        "analysts_n": 13,
+        "fair_value_bear": 105.0,
+        "fair_value_base": 146.92,
+        "fair_value_bull": 175.0,
+        "upside_pct_base": 2.59,
+        "rationale": "Mean of 13 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 21.67,
+        "ratio_to_price": 0.15,
+        "reason": "fair value 0.2\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 73.72,
+      "base": 106.44,
+      "bull": 138.19,
+      "upside_pct_bear": -48.53,
+      "upside_pct_base": -25.68,
+      "upside_pct_bull": -3.52,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "BWLPG.OL": {
+    "ticker": "BWLPG.OL",
+    "company": "BW LPG Limited",
+    "sector": "Energy",
+    "as_of_price": 203.8,
+    "market_cap_b": 30.94,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 13.15,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 173.82,
+        "fair_value_base": 203.75,
+        "fair_value_bull": 210.55,
+        "upside_pct_base": -0.02,
+        "rationale": "Stock trades at 13.1\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 185.89,
+        "target_mean": 202.85,
+        "target_high": 236.41,
+        "analysts_n": 5,
+        "fair_value_bear": 185.89,
+        "fair_value_base": 202.85,
+        "fair_value_bull": 236.41,
+        "upside_pct_base": -0.47,
+        "rationale": "Mean of 5 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 70.68,
+        "ratio_to_price": 0.35,
+        "reason": "fair value 0.3\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 179.39,
+      "base": 203.33,
+      "bull": 222.49,
+      "upside_pct_bear": -11.98,
+      "upside_pct_base": -0.23,
+      "upside_pct_bull": 9.17,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "AKAM": {
+    "ticker": "AKAM",
+    "company": "Akamai Technologies, Inc.",
+    "sector": "Technology",
+    "as_of_price": 147.23,
+    "market_cap_b": 21.41,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 20.53,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 145.54,
+        "fair_value_base": 222.62,
+        "fair_value_bull": 330.91,
+        "upside_pct_base": 51.2,
+        "rationale": "Stock trades at 20.5\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 22.97,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 145.26,
+        "fair_value_base": 269.95,
+        "fair_value_bull": 650.41,
+        "upside_pct_base": 83.35,
+        "rationale": "Stock trades at 23.0\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 87.0,
+        "target_mean": 157.16,
+        "target_high": 195.0,
+        "analysts_n": 22,
+        "fair_value_bear": 87.0,
+        "fair_value_base": 157.16,
+        "fair_value_bull": 195.0,
+        "upside_pct_base": 6.74,
+        "rationale": "Mean of 22 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 127.88,
+      "base": 219.55,
+      "bull": 401.96,
+      "upside_pct_bear": -13.14,
+      "upside_pct_base": 49.12,
+      "upside_pct_bull": 173.02,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "NHY.OL": {
+    "ticker": "NHY.OL",
+    "company": "Norsk Hydro ASA",
+    "sector": "Basic Materials",
+    "as_of_price": 110.9,
+    "market_cap_b": 217.95,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 11.33,
+        "target_pe_bear": 9.63,
+        "target_pe_base": 11.33,
+        "target_pe_bull": 13.03,
+        "sector_cohort_n": 1,
+        "sector_source": "anchored_own_multiple",
+        "fair_value_bear": 94.27,
+        "fair_value_base": 110.9,
+        "fair_value_bull": 127.54,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 11.3\u00d7 forward earnings. Applying Basic Materials sector own multiple \u00b115% P/E percentiles (bear 9.6\u00d7 / base 11.3\u00d7 / bull 13.0\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 5.01,
+        "target_evebitda_bear": 4.26,
+        "target_evebitda_base": 5.01,
+        "target_evebitda_bull": 5.76,
+        "sector_cohort_n": 1,
+        "sector_source": "anchored_own_multiple",
+        "fair_value_bear": 94.27,
+        "fair_value_base": 110.9,
+        "fair_value_bull": 127.54,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 5.0\u00d7 forward EBITDA. Applying Basic Materials sector own multiple \u00b115% EV/EBITDA percentiles (bear 4.3\u00d7 / base 5.0\u00d7 / bull 5.8\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 60.0,
+        "target_mean": 105.59,
+        "target_high": 137.0,
+        "analysts_n": 17,
+        "fair_value_bear": 60.0,
+        "fair_value_base": 105.59,
+        "fair_value_bull": 137.0,
+        "upside_pct_base": -4.79,
+        "rationale": "Mean of 17 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 83.99,
+      "base": 109.31,
+      "bull": 130.38,
+      "upside_pct_bear": -24.27,
+      "upside_pct_base": -1.44,
+      "upside_pct_bull": 17.56,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "BP.L": {
+    "ticker": "BP.L",
+    "company": "BP p.l.c.",
+    "sector": "Energy",
+    "as_of_price": 551.2,
+    "market_cap_b": 85.16,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 10.65,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 580.6,
+        "fair_value_base": 680.59,
+        "fair_value_bull": 703.31,
+        "upside_pct_base": 23.47,
+        "rationale": "Stock trades at 10.6\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 462.52,
+        "target_mean": 624.33,
+        "target_high": 710.07,
+        "analysts_n": 19,
+        "fair_value_bear": 462.52,
+        "fair_value_base": 624.33,
+        "fair_value_bull": 710.07,
+        "upside_pct_base": 13.27,
+        "rationale": "Mean of 19 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 3317.09,
+        "ratio_to_price": 6.02,
+        "reason": "fair value 6.0\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 526.1,
+      "base": 654.62,
+      "bull": 706.43,
+      "upside_pct_bear": -4.55,
+      "upside_pct_base": 18.76,
+      "upside_pct_bull": 28.16,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "SCT.L": {
+    "ticker": "SCT.L",
+    "company": "Softcat plc",
+    "sector": "Technology",
+    "as_of_price": 1627.0,
+    "market_cap_b": 3.19,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 20.29,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 1627.0,
+        "fair_value_base": 2488.62,
+        "fair_value_bull": 3699.16,
+        "upside_pct_base": 52.96,
+        "rationale": "Stock trades at 20.3\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 1210.0,
+        "target_mean": 1683.75,
+        "target_high": 2135.0,
+        "analysts_n": 12,
+        "fair_value_bear": 1210.0,
+        "fair_value_base": 1683.75,
+        "fair_value_bull": 2135.0,
+        "upside_pct_base": 3.49,
+        "rationale": "Mean of 12 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 4558.72,
+        "ratio_to_price": 2.8,
+        "reason": "fair value 2.8\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 1434.54,
+      "base": 2117.14,
+      "bull": 2977.24,
+      "upside_pct_bear": -11.83,
+      "upside_pct_base": 30.13,
+      "upside_pct_bull": 82.99,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "MTZ": {
+    "ticker": "MTZ",
+    "company": "MasTec, Inc.",
+    "sector": "Industrials",
+    "as_of_price": 382.11,
+    "market_cap_b": 30.19,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 32.6,
+        "target_pe_bear": 26.82,
+        "target_pe_base": 30.55,
+        "target_pe_bull": 32.68,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 314.35,
+        "fair_value_base": 358.09,
+        "fair_value_bull": 383.1,
+        "upside_pct_base": -6.29,
+        "rationale": "Stock trades at 32.6\u00d7 forward earnings. Applying Industrials sector cohort 6-name P/E percentiles (bear 26.8\u00d7 / base 30.6\u00d7 / bull 32.7\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 27.17,
+        "target_evebitda_bear": 22.48,
+        "target_evebitda_base": 25.92,
+        "target_evebitda_bull": 35.62,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 316.2,
+        "fair_value_base": 364.52,
+        "fair_value_bull": 501.0,
+        "upside_pct_base": -4.6,
+        "rationale": "Stock trades at 27.2\u00d7 forward EBITDA. Applying Industrials sector cohort 6-name EV/EBITDA percentiles (bear 22.5\u00d7 / base 25.9\u00d7 / bull 35.6\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 256.0,
+        "target_mean": 473.05,
+        "target_high": 545.0,
+        "analysts_n": 20,
+        "fair_value_bear": 256.0,
+        "fair_value_base": 473.05,
+        "fair_value_bull": 545.0,
+        "upside_pct_base": 23.8,
+        "rationale": "Mean of 20 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 297.49,
+      "base": 394.83,
+      "bull": 472.94,
+      "upside_pct_bear": -22.14,
+      "upside_pct_base": 3.33,
+      "upside_pct_bull": 23.77,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "FTNT": {
+    "ticker": "FTNT",
+    "company": "Fortinet, Inc.",
+    "sector": "Technology",
+    "as_of_price": 133.93,
+    "market_cap_b": 98.12,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 39.1,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 69.51,
+        "fair_value_base": 106.32,
+        "fair_value_bull": 158.03,
+        "upside_pct_base": -20.62,
+        "rationale": "Stock trades at 39.1\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 40.4,
+        "target_evebitda_bear": 22.66,
+        "target_evebitda_base": 42.11,
+        "target_evebitda_bull": 101.46,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 75.12,
+        "fair_value_base": 139.61,
+        "fair_value_bull": 336.37,
+        "upside_pct_base": 4.24,
+        "rationale": "Stock trades at 40.4\u00d7 forward EBITDA. Applying Technology sector cohort 29-name EV/EBITDA percentiles (bear 22.7\u00d7 / base 42.1\u00d7 / bull 101.5\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 70.0,
+        "target_mean": 107.17,
+        "target_high": 130.0,
+        "analysts_n": 36,
+        "fair_value_bear": 70.0,
+        "fair_value_base": 107.17,
+        "fair_value_bull": 130.0,
+        "upside_pct_base": -19.98,
+        "rationale": "Mean of 36 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 71.62,
+      "base": 118.23,
+      "bull": 212.04,
+      "upside_pct_bear": -46.52,
+      "upside_pct_base": -11.73,
+      "upside_pct_bull": 58.32,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "EQNR.OL": {
+    "ticker": "EQNR.OL",
+    "company": "Equinor ASA",
+    "sector": "Energy",
+    "as_of_price": 360.0,
+    "market_cap_b": 897.02,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 9.93,
+        "target_pe_bear": 11.21,
+        "target_pe_base": 13.14,
+        "target_pe_bull": 13.58,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 406.39,
+        "fair_value_base": 476.39,
+        "fair_value_bull": 492.29,
+        "upside_pct_base": 32.33,
+        "rationale": "Stock trades at 9.9\u00d7 forward earnings. Applying Energy sector cohort 8-name P/E percentiles (bear 11.2\u00d7 / base 13.1\u00d7 / bull 13.6\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 25.32,
+        "target_evebitda_bear": 14.53,
+        "target_evebitda_base": 25.33,
+        "target_evebitda_bull": 54.29,
+        "sector_cohort_n": 8,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 206.51,
+        "fair_value_base": 360.06,
+        "fair_value_bull": 771.7,
+        "upside_pct_base": 0.02,
+        "rationale": "Stock trades at 25.3\u00d7 forward EBITDA. Applying Energy sector cohort 8-name EV/EBITDA percentiles (bear 14.5\u00d7 / base 25.3\u00d7 / bull 54.3\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 259.2,
+        "target_mean": 352.9,
+        "target_high": 413.97,
+        "analysts_n": 24,
+        "fair_value_bear": 259.2,
+        "fair_value_base": 352.9,
+        "fair_value_bull": 413.97,
+        "upside_pct_base": -1.97,
+        "rationale": "Mean of 24 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 292.27,
+      "base": 398.63,
+      "bull": 566.59,
+      "upside_pct_bear": -18.81,
+      "upside_pct_base": 10.73,
+      "upside_pct_bull": 57.39,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "DPLM.L": {
+    "ticker": "DPLM.L",
+    "company": "Diploma PLC",
+    "sector": "Industrials",
+    "as_of_price": 7025.0,
+    "market_cap_b": 9.42,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 28.5,
+        "target_pe_bear": 26.82,
+        "target_pe_base": 30.55,
+        "target_pe_bull": 32.68,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 6610.49,
+        "fair_value_base": 7530.19,
+        "fair_value_bull": 8056.14,
+        "upside_pct_base": 7.19,
+        "rationale": "Stock trades at 28.5\u00d7 forward earnings. Applying Industrials sector cohort 6-name P/E percentiles (bear 26.8\u00d7 / base 30.6\u00d7 / bull 32.7\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 24.67,
+        "target_evebitda_bear": 22.48,
+        "target_evebitda_base": 25.92,
+        "target_evebitda_bull": 35.62,
+        "sector_cohort_n": 6,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 6402.85,
+        "fair_value_base": 7381.25,
+        "fair_value_bull": 10144.94,
+        "upside_pct_base": 5.07,
+        "rationale": "Stock trades at 24.7\u00d7 forward EBITDA. Applying Industrials sector cohort 6-name EV/EBITDA percentiles (bear 22.5\u00d7 / base 25.9\u00d7 / bull 35.6\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 5700.0,
+        "target_mean": 7390.0,
+        "target_high": 9000.0,
+        "analysts_n": 16,
+        "fair_value_bear": 5700.0,
+        "fair_value_base": 7390.0,
+        "fair_value_bull": 9000.0,
+        "upside_pct_base": 5.2,
+        "rationale": "Mean of 16 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 6264.67,
+      "base": 7436.0,
+      "bull": 9070.38,
+      "upside_pct_bear": -10.82,
+      "upside_pct_base": 5.85,
+      "upside_pct_bull": 29.12,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "ARW": {
+    "ticker": "ARW",
+    "company": "Arrow Electronics, Inc.",
+    "sector": "Technology",
+    "as_of_price": 217.33,
+    "market_cap_b": 11.11,
+    "methods": {
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 165.0,
+        "target_mean": 214.5,
+        "target_high": 240.0,
+        "analysts_n": 4,
+        "fair_value_bear": 165.0,
+        "fair_value_base": 214.5,
+        "fair_value_bull": 240.0,
+        "upside_pct_base": -1.3,
+        "rationale": "Mean of 4 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_pe",
+        "fair_value_base": 661.28,
+        "ratio_to_price": 3.04,
+        "reason": "fair value 3.0\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      },
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 877.87,
+        "ratio_to_price": 4.04,
+        "reason": "fair value 4.0\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 165.0,
+      "base": 214.5,
+      "bull": 240.0,
+      "upside_pct_bear": -24.08,
+      "upside_pct_base": -1.3,
+      "upside_pct_bull": 10.43,
+      "methods_used": [
+        "analyst_target"
+      ],
+      "weighting": {
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 1
+  },
+  "HUM": {
+    "ticker": "HUM",
+    "company": "Humana Inc.",
+    "sector": "Healthcare",
+    "as_of_price": 307.95,
+    "market_cap_b": 36.97,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 19.89,
+        "target_pe_bear": 16.91,
+        "target_pe_base": 19.89,
+        "target_pe_bull": 22.88,
+        "sector_cohort_n": 1,
+        "sector_source": "anchored_own_multiple",
+        "fair_value_bear": 261.76,
+        "fair_value_base": 307.95,
+        "fair_value_bull": 354.14,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 19.9\u00d7 forward earnings. Applying Healthcare sector own multiple \u00b115% P/E percentiles (bear 16.9\u00d7 / base 19.9\u00d7 / bull 22.9\u00d7) implies fair value re-rating."
+      },
+      "fwd_ev_ebitda": {
+        "method": "EV/EBITDA re-rating",
+        "own_ev_ebitda": 8.76,
+        "target_evebitda_bear": 7.44,
+        "target_evebitda_base": 8.76,
+        "target_evebitda_bull": 10.07,
+        "sector_cohort_n": 1,
+        "sector_source": "anchored_own_multiple",
+        "fair_value_bear": 261.76,
+        "fair_value_base": 307.95,
+        "fair_value_bull": 354.14,
+        "upside_pct_base": 0.0,
+        "rationale": "Stock trades at 8.8\u00d7 forward EBITDA. Applying Healthcare sector own multiple \u00b115% EV/EBITDA percentiles (bear 7.4\u00d7 / base 8.8\u00d7 / bull 10.1\u00d7) implies re-rating. Note: first-order ratio approximation \u2014 ignores marginal net-debt sensitivity."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 180.0,
+        "target_mean": 262.54,
+        "target_high": 441.0,
+        "analysts_n": 24,
+        "fair_value_bear": 180.0,
+        "fair_value_base": 262.54,
+        "fair_value_bull": 441.0,
+        "upside_pct_base": -14.75,
+        "rationale": "Mean of 24 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 237.23,
+      "base": 294.33,
+      "bull": 380.2,
+      "upside_pct_bear": -22.96,
+      "upside_pct_base": -4.42,
+      "upside_pct_bull": 23.46,
+      "methods_used": [
+        "fwd_pe",
+        "fwd_ev_ebitda",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "fwd_ev_ebitda": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 3
+  },
+  "SNX": {
+    "ticker": "SNX",
+    "company": "TD SYNNEX Corporation",
+    "sector": "Technology",
+    "as_of_price": 237.34,
+    "market_cap_b": 19.14,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 12.85,
+        "target_pe_bear": 20.29,
+        "target_pe_base": 31.04,
+        "target_pe_bull": 46.14,
+        "sector_cohort_n": 29,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 374.82,
+        "fair_value_base": 573.32,
+        "fair_value_bull": 852.21,
+        "upside_pct_base": 141.56,
+        "rationale": "Stock trades at 12.8\u00d7 forward earnings. Applying Technology sector cohort 29-name P/E percentiles (bear 20.3\u00d7 / base 31.0\u00d7 / bull 46.1\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 166.0,
+        "target_mean": 234.27,
+        "target_high": 271.0,
+        "analysts_n": 11,
+        "fair_value_bear": 166.0,
+        "fair_value_base": 234.27,
+        "fair_value_bull": 271.0,
+        "upside_pct_base": -1.29,
+        "rationale": "Mean of 11 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [
+      {
+        "method": "fwd_ev_ebitda",
+        "fair_value_base": 893.07,
+        "ratio_to_price": 3.76,
+        "reason": "fair value 3.8\u00d7 current price \u2014 outside sanity band [0.4\u00d7, 2.5\u00d7]. Likely a sector-cohort mismatch."
+      }
+    ],
+    "blended": {
+      "bear": 278.44,
+      "base": 416.84,
+      "bull": 583.96,
+      "upside_pct_bear": 17.32,
+      "upside_pct_base": 75.63,
+      "upside_pct_bull": 146.04,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  },
+  "TCAP.L": {
+    "ticker": "TCAP.L",
+    "company": "TP ICAP Group PLC",
+    "sector": "Financial Services",
+    "as_of_price": 318.6,
+    "market_cap_b": 2.33,
+    "methods": {
+      "fwd_pe": {
+        "method": "Forward P/E re-rating",
+        "own_fwd_pe": 8.82,
+        "target_pe_bear": 9.78,
+        "target_pe_base": 11.79,
+        "target_pe_bull": 15.39,
+        "sector_cohort_n": 4,
+        "sector_source": "sector_cohort",
+        "fair_value_bear": 353.1,
+        "fair_value_base": 425.61,
+        "fair_value_bull": 555.48,
+        "upside_pct_base": 33.59,
+        "rationale": "Stock trades at 8.8\u00d7 forward earnings. Applying Financial Services sector cohort 4-name P/E percentiles (bear 9.8\u00d7 / base 11.8\u00d7 / bull 15.4\u00d7) implies fair value re-rating."
+      },
+      "analyst_target": {
+        "method": "Sell-side analyst target (Low / Mean / High)",
+        "target_low": 264.0,
+        "target_mean": 308.4,
+        "target_high": 337.0,
+        "analysts_n": 5,
+        "fair_value_bear": 264.0,
+        "fair_value_base": 308.4,
+        "fair_value_bull": 337.0,
+        "upside_pct_base": -3.2,
+        "rationale": "Mean of 5 sell-side analyst targets; Low/High give the dispersion band."
+      }
+    },
+    "outliers": [],
+    "blended": {
+      "bear": 311.98,
+      "base": 371.51,
+      "bull": 454.64,
+      "upside_pct_bear": -2.08,
+      "upside_pct_base": 16.61,
+      "upside_pct_bull": 42.7,
+      "methods_used": [
+        "fwd_pe",
+        "analyst_target"
+      ],
+      "weighting": {
+        "fwd_pe": 0.35,
+        "analyst_target": 0.3
+      },
+      "note": "Weighted average of methods that passed sanity filter. Bull/Bear bands derived from sector cohort multiple percentiles + analyst Low/High; not a probabilistic confidence interval."
+    },
+    "n_methods_used": 2
+  }
+}

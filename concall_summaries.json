@@ -1,0 +1,1061 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "as_of": "2026-05-24",
+    "structure": "5-block: quarter, call_date, headline, guidance_changes, strategic_themes (3), qa_flashpoints (2)",
+    "notes": "Backfilled 2026-05-24 by 5 parallel concall-summarizer subagents using WebSearch over transcripts/IR pages. Refreshed weekly going forward by Saturday agent.",
+    "agent_dispatch": {
+      "batch_1": "STMPA.PA, SNDK, DOCN, NOD.OL, MU, AMD, DELL, BESI.AS, STX, PRY.MI",
+      "batch_2": "VICR, FLEX, COHR, WDC, TTMI, CIEN, SUBC.OL, ON, STRL, CAR",
+      "batch_3": "TGS.OL, LITE, AJB.L, GEV, NBIX, MTSI, IGG.L, GLW, ASM.AS, SPM.MI",
+      "batch_4": "AMKR, TWLO, VAR.OL, MNTN.L, AKRBP.OL, HPE, LSCC, BWLPG.OL, AKAM, NHY.OL",
+      "batch_5": "BP.L, SCT.L, MTZ, FTNT, EQNR.OL, DPLM.L, ARW, HUM, SNX, TCAP.L"
+    }
+  },
+  "STMPA.PA": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-23",
+    "headline": "Revenue beat at $3.1B with Q2 guide of $3.45B signaling cyclical bottom is behind ST, but Q1 EPS missed at $0.13 vs $0.17 consensus on restructuring drag and unused capacity charges.",
+    "guidance_changes": [
+      "Q2 revenue guide: ~$3.1B Q1 actual -> $3.45B (+11.6% QoQ, +24.9% YoY)",
+      "Q2 gross margin guide: 33.8% Q1 actual -> 34.8% (incl. ~100bps unused capacity charges)"
+    ],
+    "strategic_themes": [
+      "NXP MEMS sensor business acquisition closed in Q1, adding ~$40M to quarterly revenue and broadening sensors portfolio",
+      "Embedded Processing (+31.3% YoY) and RF & Optical Communications (+33.9% YoY) led growth as analog/industrial inventory destock ends",
+      "Manufacturing footprint reshaping continues with restructuring charges weighing on near-term GM"
+    ],
+    "qa_flashpoints": [
+      "On Q2 GM bridge and unused capacity (Bernstein/Citi): mgmt quantified ~100bps unused capacity headwind staying in Q2 - implying utilization recovery is back-half-loaded",
+      "On automotive end-market trajectory (UBS): mgmt highlighted sequential improvement but stopped short of declaring a recovery in MCU/power - implying European OEM destock not fully complete"
+    ],
+    "source_url": "https://www.insidermonkey.com/blog/stmicroelectronics-n-v-nysestm-q1-2026-earnings-call-transcript-1745751/",
+    "transcript_available": true
+  },
+  "SNDK": {
+    "quarter": "Q3 FY2026",
+    "call_date": "2026-04-30",
+    "headline": "Sandisk delivered a NAND-supercycle blowout - Q3 revenue of $5.95B (+251% YoY, +97% sequentially) with 78.4% GM, and locked in a $42B multi-year revenue backlog underpinned by $11B of enforceable hyperscaler guarantees.",
+    "guidance_changes": [
+      "Q4 FY26 revenue guide: $5.95B Q3 actual -> $7.75B-$8.25B (midpoint +35% QoQ)",
+      "Q4 FY26 non-GAAP diluted EPS guide: $23.41 Q3 actual -> $30.00-$33.00"
+    ],
+    "strategic_themes": [
+      "Datacenter revenue up 645% YoY to $1.47B as enterprise SSD with TLC ramps and QLC Stargate platform readies for hyperscaler AI inferencing",
+      "Five multi-year NBM agreements now cover one-third of FY27 bit supply with $11B in enforceable financial guarantees",
+      "BiCS8 218-layer node ramp coupled with deliberate bit-shipment discipline to preserve pricing into a supply-constrained 2027"
+    ],
+    "qa_flashpoints": [
+      "On sustainability of NAND ASP spike (Morgan Stanley): mgmt declined to call a near-term peak and pointed to contracted backlog stretching into 2027 - implying they see structural rather than cyclical pricing",
+      "On capex discipline vs demand pull (Wells Fargo): mgmt held the line on bit-supply growth despite triple-digit demand - implying willingness to leave revenue on the table to defend pricing"
+    ],
+    "source_url": "https://seekingalpha.com/article/4897076-sandisk-corporation-sndk-q3-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "DOCN": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-05",
+    "headline": "DigitalOcean's AI bet is paying off - Q1 revenue of $258M (+22% YoY) blew past consensus, AI ARR up 221% to $170M, and mgmt raised 2026 growth guide while flagging 50%+ growth for 2027 on the new AI-Native Cloud launch.",
+    "guidance_changes": [
+      "FY2026 revenue growth guide: prior ~20% -> 25%-27% YoY",
+      "FY2027 revenue growth outlook: not previously framed -> 50%+ on AI-Native Cloud ramp"
+    ],
+    "strategic_themes": [
+      "AI-Native Cloud platform launched with 15+ new products across 5 integrated layers",
+      "Secured 60 MW of incremental data center capacity bringing total committed capacity to 135 MW through 2027",
+      "$1M+ ARR customer cohort grew 179% YoY to $183M in ARR, validating upmarket move beyond traditional SMB/developer base"
+    ],
+    "qa_flashpoints": [
+      "On GPU pricing durability (Jefferies/Goldman): mgmt said no evidence of price compression - implying confidence inference pricing holds firm even as hyperscaler GPU supply normalizes",
+      "On capacity utilization vs $888M raise (Citi): mgmt framed the equity raise as enabling rapid capacity secure-up - implying demand visibility is high enough that they're now supply-constrained"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/05/digitalocean-docn-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "NOD.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-28",
+    "headline": "Nordic posted a clean beat with Q1 revenue of $192M (+24% YoY) and GM of 52.1%, validating the long-term >20% growth / >50% GM / 25% EBITDA model with new cellular IoT platforms broadening the TAM.",
+    "guidance_changes": [
+      "Q2 2026 revenue guide: $192M Q1 actual -> $200M-$220M",
+      "Q2 2026 gross margin guide: 52.1% Q1 actual -> above 50% (held)"
+    ],
+    "strategic_themes": [
+      "Bluetooth Low Energy short-range wireless remains the cash engine and drove the bulk of Q1 revenue beat",
+      "nRF92 and nRF93 cellular IoT platforms ramping, expanding addressable market beyond BLE into NB-IoT/LTE-M",
+      "Operating leverage flowing through - adjusted EBITDA up to $23.9M (margin 11%, +44% YoY) with management reiterating march toward 25% target"
+    ],
+    "qa_flashpoints": [
+      "On sustainability of >20% growth into 2027 (DNB/Carnegie): mgmt explicitly reiterated the through-decade ambition - implying internal design-win pipeline beyond BLE is firming up",
+      "On Wi-Fi product roadmap traction (ABG SC): mgmt was measured about near-term Wi-Fi revenue contribution - implying Wi-Fi is a 2027+ story, not a 2026 driver"
+    ],
+    "source_url": "https://www.nordicsemi.com/-/media/Investor-Relations-and-QA/Quartely-Reports/2026/NOD-Q1-2026-Report.pdf",
+    "transcript_available": true
+  },
+  "MU": {
+    "quarter": "Q2 FY2026",
+    "call_date": "2026-03-18",
+    "headline": "Micron is in a profit supercycle - quarterly revenue nearly tripled YoY with new records across DRAM, NAND, HBM, and every business unit.",
+    "guidance_changes": [
+      "Q3 FY26 revenue guide: record $33.5B +/- $750M (new quarterly record)",
+      "Q3 FY26 gross margin guide: ~81%",
+      "Q3 FY26 non-GAAP EPS guide: record $19.15 +/- $0.40",
+      "FY26 capex guide: prior ~$20B -> above $25B",
+      "Quarterly dividend: raised 30%"
+    ],
+    "strategic_themes": [
+      "HBM3E 12-Hi at scale plus HBM4 36GB 12-Hi volume shipments for NVIDIA Vera Rubin platform - Micron sold out of HBM for several quarters",
+      "HBM4 16-Hi (48GB) sampled with HBM4E in development for 2027 ramp",
+      "Balance sheet strongest ever - $5B+ debt reduction over three quarters, strongest net cash position in company history"
+    ],
+    "qa_flashpoints": [
+      "On HBM share against Samsung re-entry (Morgan Stanley): mgmt emphasized customer qualification leadership and yield maturity advantage on HBM4 - implying they don't see Samsung as a near-term share threat into 2027",
+      "On NAND vs DRAM mix and CapEx allocation (Bernstein): mgmt raised CapEx to >$25B but pointed primarily to HBM and leading-edge DRAM nodes - implying NAND bit-supply discipline continues"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/03/18/micron-mu-q2-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "AMD": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-05",
+    "headline": "AMD beat across the board with Q1 revenue of $10.3B (+38% YoY) led by 57% Data Center growth, and Lisa Su laid out a path to >$20 EPS over the strategic horizon as MI350 ramps into hyperscaler pods.",
+    "guidance_changes": [
+      "Q2 2026 revenue guide: $10.3B Q1 actual -> ~$11.2B (+46% YoY)",
+      "Q2 2026 non-GAAP gross margin guide: ~56%",
+      "Long-term EPS framework: >$20 EPS strategic-horizon target reaffirmed/elevated"
+    ],
+    "strategic_themes": [
+      "Instinct MI350 series ramping into hyperscaler pods alongside MI325 transition; AI accelerators now ~73% of Data Center revenue at $4.2B+ in Q1",
+      "Meta 6 GW multi-year deal anchoring MI450 (Helios) roadmap visibility into 2027",
+      "EPYC Turin server CPU share gains and Ryzen client momentum diversifying growth across every segment"
+    ],
+    "qa_flashpoints": [
+      "On China MI325 license status (Morgan Stanley): mgmt confirmed license applications submitted but explicitly excluded incremental China GPU revenue from guidance - implying they assume no approvals",
+      "On MI350 vs MI450 transition risk (Bernstein/Goldman): mgmt described the transition as overlapping rather than cliff-edged with both ramping at hyperscalers - implying no air-pocket between cycles"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/06/amd-amd-q1-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "DELL": {
+    "quarter": "Q4 FY2026",
+    "call_date": "2026-02-26",
+    "headline": "Dell closed FY26 with record Q4 revenue of $33.4B (+39%) and EPS of $3.89 (+45%), entering FY27 with a $43B AI server backlog and guiding ~$50B in AI server revenue for the year (+100% YoY).",
+    "guidance_changes": [
+      "Q1 FY27 revenue guide: $33.4B Q4 actual -> $34.7B-$35.7B (midpoint $35.2B, +51% YoY)",
+      "Q1 FY27 EPS guide: $3.89 Q4 actual -> $2.90 +/- $0.10",
+      "FY27 AI-optimized server revenue guide: ~$25B FY26 shipped -> ~$50B (+100% YoY)",
+      "FY27 total revenue guide: ~$140B midpoint (+23% YoY)"
+    ],
+    "strategic_themes": [
+      "AI-optimized server bookings of $64B+ in FY26 with $43B backlog entering FY27",
+      "Dell IP storage portfolio (PowerScale, PowerMax, PowerStore, ObjectScale) growing double-digit",
+      "PC refresh cycle for Windows 11 / AI PC plus commercial demand expected to inflect in CY2026"
+    ],
+    "qa_flashpoints": [
+      "On AI server gross margin dilution (Morgan Stanley/Bernstein): mgmt guided FY27 GM rate up YoY excluding AI mix - implying core ex-AI business margins are expanding",
+      "On backlog conversion velocity (Citi/Goldman): mgmt sidestepped giving a specific shipment cadence on the $43B backlog - implying supply (GPU allocation, liquid-cooling capacity) rather than demand is the binding constraint"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/02/26/dell-dell-q4-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "BESI.AS": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-24",
+    "headline": "BESI's hybrid bonding flywheel ignited - Q1 orders surged 105% YoY to 269.7M EUR (above prior 2024 peak) with the hybrid bonding customer base expanding to 20 across logic, memory, photonics and mobile.",
+    "guidance_changes": [
+      "Q2 2026 revenue guide: 184.9M EUR Q1 actual -> +30% to +40% sequential (240M-259M EUR)",
+      "Q2 2026 gross margin guide: 63.5% Q1 actual -> 64%-66%"
+    ],
+    "strategic_themes": [
+      "Hybrid bonding unit orders more than doubled sequentially, with 2 evaluation tools shipped to a second memory customer for HBM applications",
+      "NVIDIA Rubin Ultra / Feynman GPU roadmap relies on 3D die-stacking with hybrid bonding via TSMC SoIC",
+      "High-end mobile and 2.5D AI photonics / data center applications drove the Q1 revenue beat"
+    ],
+    "qa_flashpoints": [
+      "On HBM hybrid bonding mainstream timeline (ASML/Degroof Petercam): mgmt pointed to mainstream HBM hybrid bonding volume production in 2027 - implying the second memory customer engagement is real but commercial revenue is still 4-6 quarters out",
+      "On capacity vs order ramp (Berenberg/Morgan Stanley): mgmt was confident on margin expansion to 64-66% in Q2 despite the order surge - implying disciplined capacity additions and pricing power"
+    ],
+    "source_url": "https://www.gurufocus.com/news/8814576/q1-2026-be-semiconductor-industries-nv-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "STX": {
+    "quarter": "Q3 FY2026",
+    "call_date": "2026-04-28",
+    "headline": "Seagate posted a blowout HAMR-driven Q3 with revenue of $3.11B (+44% YoY), non-GAAP EPS of $4.10, and ~$1B FCF - with Q4 guide near $3.45B / ~$5.00 EPS and two of the largest CSPs now qualified on Mozaic 4+ HAMR.",
+    "guidance_changes": [
+      "Q4 FY26 revenue guide: $3.11B Q3 actual -> ~$3.45B (+11% QoQ)",
+      "Q4 FY26 non-GAAP EPS guide: $4.10 Q3 actual -> ~$5.00",
+      "Non-GAAP gross margin: 47.0% Q3 actual (record), Q4 guide implies further expansion"
+    ],
+    "strategic_themes": [
+      "Mozaic 4+ HAMR platform now qualified at two of the three largest CSPs",
+      "Nearline cloud/hyperscale exabytes up 6% sequentially in Q3 with the vast majority of HAMR supply allocated to cloud customers",
+      "Capacity discipline + tight supply backdrop + HDD/SSD TCO advantage for AI training storage tier"
+    ],
+    "qa_flashpoints": [
+      "On HAMR yield and qualification at third CSP (Wells Fargo/BofA): mgmt confirmed two CSPs qualified and described the third as 'on track' - implying the qualification risk that bears flagged through 2024-2025 is essentially closed",
+      "On supply tightness vs CY2027 capacity adds (Citi/Evercore): mgmt declined to call peak pricing - implying they expect supply to lag demand well into 2027"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/28/seagate-stx-q3-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "PRY.MI": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-30",
+    "headline": "Prysmian beat with Q1 revenue of 5.2B EUR (+9.4% YoY, +5.0% organic) and adj. EBITDA of 601M EUR (+14%, margin 14.2% / +110bps), with mgmt signaling they will exceed the top end of FY26 guidance on Transmission and Digital Solutions strength.",
+    "guidance_changes": [
+      "FY26 adjusted EBITDA guide: 2,625M-2,775M EUR (midpoint 2,700M) - confidence raised to upper end",
+      "2028 CMD adjusted EBITDA target: 3B+ EUR reaffirmed on track"
+    ],
+    "strategic_themes": [
+      "Transmission segment delivered 146M EUR EBITDA at 20.1% margin with two new lines online in Q1, a new cable-laying vessel joining in Q4 2026",
+      "Digital Solutions / data center pull from hyperscalers is the key margin-mix lever",
+      "Power Grids (10.6% margin) and Electrification (8.7% margin) remained pressured by metal premiums"
+    ],
+    "qa_flashpoints": [
+      "On hyperscaler long-term agreement economics (Mediobanca/Morgan Stanley): mgmt referenced 'accelerating' long-term agreements but stopped short of disclosing pricing structure - implying these are firm-volume, formula-priced contracts insulating Prysmian from copper volatility",
+      "On Electrification margin recovery (Kepler/Equita): mgmt attributed weakness to metal inflation and Specialties demand rather than competitive pressure - implying confidence the 8.7% margin is the trough"
+    ],
+    "source_url": "https://seekingalpha.com/article/4896440-prysmian-s-p-a-2026-q1-results-earnings-call-presentation",
+    "transcript_available": true
+  },
+  "VICR": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-22",
+    "headline": "Record Q1 with backlog up 70% QoQ to $300.6M validates the AI/HPC power thesis, but full-year guide stays conservative pending second ITC ruling in 2027.",
+    "guidance_changes": [
+      "FY26 revenue framework: introduced ~$570M target (vs ~$480M FY25 base)",
+      "Q2 2026 revenue: implied ~$126M (vs Q1 actual $113M)",
+      "Fab One capacity ceiling: reaffirmed at ~$1.5B annual revenue with second fab planning underway"
+    ],
+    "strategic_themes": [
+      "Advanced Products ramping for hyperscaler 48V/800V vertical power delivery at HPC/AI customers",
+      "Licensing program positioning OEMs and hyperscalers as Vicor licensees, gated on second ITC exclusion order",
+      "Second-fab capacity expansion via acquired buildings to accelerate ramp beyond Fab One's $1.5B ceiling"
+    ],
+    "qa_flashpoints": [
+      "On licensing economics and timing (Needham): mgmt declined to model any new licensee revenue into FY26 guide - implying upside is back-half-loaded and ITC-dependent",
+      "On book-to-bill above 2.0 and capacity tightness (B. Riley): mgmt acknowledged demand is outrunning Fab One - signaling shipments rather than bookings will be the FY26 bottleneck"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/03/vicor-vicr-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "FLEX": {
+    "quarter": "Q4 2026",
+    "call_date": "2026-05-06",
+    "headline": "Flex announced a planned spin-off of its Cloud & Power Infrastructure segment (targeted 1Q calendar 2027), unmasking a 65-75% growth SpinCo and leaving RemainCo as a slower, healthcare/automation story.",
+    "guidance_changes": [
+      "CPI SpinCo FY27 revenue growth: introduced at +65% to +75% YoY",
+      "CPI SpinCo FY28 revenue growth: introduced at >80% YoY",
+      "RemainCo Flex revenue growth: low-to-mid single-digit through the spin period",
+      "FY26 adjusted operating margin: 6.3% (up 70 bps YoY)"
+    ],
+    "strategic_themes": [
+      "Cloud & Power Infrastructure spin into standalone public company targeting hyperscaler data-center power and liquid cooling",
+      "RemainCo reorientation toward regulated healthcare, warehouse automation, and networking",
+      "Record Q4 adjusted gross margin of 9.9% driven by mix shift to higher-value power and cloud platforms"
+    ],
+    "qa_flashpoints": [
+      "On SpinCo scale and customer concentration (JPMorgan): mgmt defended diversification across hyperscaler end-markets but did not disclose specific customer % concentration - implying the SpinCo S-1 will be the first real look",
+      "On RemainCo's growth profile post-spin (Goldman): mgmt's 'low-to-mid single-digit' framing for the stub business landed as conservative - signaling mgmt is setting an easy bar to beat"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/06/flex-flex-q4-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "COHR": {
+    "quarter": "Q3 2026",
+    "call_date": "2026-05-06",
+    "headline": "NVIDIA's $2B equity stake plus a multi-year supply agreement reframes Coherent as the optical partner of choice for scale-out and scale-up AI networks through end of decade.",
+    "guidance_changes": [
+      "Q4 FY26 revenue: $1.91B-$2.05B (vs Q3 actual $1.81B)",
+      "Q4 FY26 non-GAAP gross margin: 39%-41% (vs Q3 at 39.6%)",
+      "Q4 FY26 non-GAAP operating expenses: $360M-$380M"
+    ],
+    "strategic_themes": [
+      "NVIDIA strategic partnership: $2B equity investment plus supply agreement through end of decade",
+      "Datacom & Communications segment hit $1.4B (60% YoY) led by 1.6T transceivers and data-center interconnect",
+      "Telecom inflection with revenue +60% YoY and +16% sequentially as DCI and 'scale-across' demand re-accelerate"
+    ],
+    "qa_flashpoints": [
+      "On CPO revenue ramp timing (Rosenblatt): mgmt anchored 'initial' scale-out CPO revenue to 2H 2026 with scale-up not until 2H 2027 - signaling the bigger NVIDIA-related step-up is a FY27 story",
+      "On industrial segment weakness ($444M, down from $529M): mgmt attributed it to portfolio pruning - implying the AI optical story is masking ongoing legacy drag"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/06/coherent-cohr-q3-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "WDC": {
+    "quarter": "Q3 2026",
+    "call_date": "2026-04-30",
+    "headline": "HDD-pure-play WDC printed >50% gross margin and 45% YoY revenue growth, anchoring management's call for a 25%+ cloud exabyte CAGR driven by agentic AI workloads.",
+    "guidance_changes": [
+      "Q4 FY26 revenue: $3.65B +/- $100M (vs Q3 actual $3.3B)",
+      "Q4 FY26 non-GAAP gross margin: 51%-52% (vs Q3 >50%)",
+      "Q4 FY26 non-GAAP EPS: $3.25 +/- $0.15 on ~385M shares",
+      "Long-term cloud exabyte growth: reaffirmed >25% CAGR"
+    ],
+    "strategic_themes": [
+      "Cloud capacity-oriented HDDs led by UltraSMR product family driving per-TB ASP +9% YoY through long-term agreements",
+      "Agentic AI and inferencing positioned as the next step-function demand driver for nearline storage",
+      "Pricing discipline via multi-year LTAs locking in volumes and limiting downside visibility risk"
+    ],
+    "qa_flashpoints": [
+      "On the sustainability of >50% gross margin (Morgan Stanley): mgmt pointed to LTA-driven pricing and UltraSMR mix rather than transient supply tightness - implying the new GM range is structural, not cyclical",
+      "On HAMR / next-gen technology transition (Wells Fargo): mgmt deflected on a hard HAMR ramp date and emphasized ePMR/UltraSMR runway - signaling capex discipline and a deliberate lag behind Seagate"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/western-digital-wdc-q3-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "TTMI": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-29",
+    "headline": "Record Q1 with ~80% of sales tied to AI and defense; capex bumped to $310M to accelerate Penang/Syracuse/Wisconsin ramps for AI data-center and aerospace customers.",
+    "guidance_changes": [
+      "Q2 2026 revenue: $930M-$970M (vs Q1 actual $846M)",
+      "FY26 capex: $250M midpoint -> $310M",
+      "Q1 non-GAAP gross margin: 22.3% (+150 bps YoY)"
+    ],
+    "strategic_themes": [
+      "Data Center & Networking now 36% of sales on AI accelerator/switch PCB content",
+      "Aerospace & Defense at 40% of mix backed by multi-year radar and missile programs with U.S. primes",
+      "Penang, Syracuse and Wisconsin facility ramps anchoring multi-year AI/defense capacity build"
+    ],
+    "qa_flashpoints": [
+      "On the $60M capex step-up (Stifel): mgmt framed it as pull-forward of equipment for AI customer commitments - implying demand visibility is firm enough to take the FCF hit",
+      "On Penang ramp drag on segment margin (B. Riley): mgmt reiterated A&D segment OM at 15.6% - signaling investors should look through Penang noise for a clean FY27 margin reset"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/29/ttm-tech-ttmi-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "CIEN": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-03-05",
+    "headline": "Record quarter with revenue +33% YoY and Direct Cloud Provider business +76% YoY, with most new orders booked for 2027 delivery extending visibility into the AI optical buildout.",
+    "guidance_changes": [
+      "FY26 revenue: raised to $5.9B-$6.3B (midpoint ~28% YoY growth)",
+      "FY26 adjusted gross margin: 43.5%-44.5%",
+      "FY26 adjusted operating expenses: $1.52B-$1.53B",
+      "Q2 FY26 revenue: $1.5B +/- $50M"
+    ],
+    "strategic_themes": [
+      "WaveLogic 6 Extreme 1.6T coherent adds 18 customers in the quarter to reach 90",
+      "Direct Cloud Providers at 42% of revenue, +76% YoY, signaling a structural mix shift away from telco carrier dependence",
+      "Strong RLS system and pluggable optical demand in India and MOFN routes tied to long-haul AI traffic"
+    ],
+    "qa_flashpoints": [
+      "On 2027 order visibility (Cowen): mgmt confirmed nearly all new orders are slated for 2027 delivery - implying the AI optical capex cycle has multi-year duration",
+      "On margin trajectory vs mix (Rosenblatt): mgmt held GM guide at 43.5-44.5% despite higher cloud/pluggable mix - signaling concession on price/mix is the cost of locking in multi-year hyperscaler share"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/ciena-cien-q1-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "SUBC.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-30",
+    "headline": "Q1 EBITDA +63% YoY drove a full-year guidance raise, with $13.5B backlog including $5B for 2027 cementing the multi-year offshore cycle.",
+    "guidance_changes": [
+      "FY26 revenue: $7.0-$7.4B -> $7.4-$7.8B",
+      "FY26 adjusted EBITDA margin: ~22% -> ~23%",
+      "Backlog: $13.5B firm orders, with $5.5B remaining 2026, $5.0B 2027 (+17%), $3.0B 2028+"
+    ],
+    "strategic_themes": [
+      "Subsea segment delivered 24% EBITDA margin on tight offshore EPCI capacity for deepwater operators",
+      "Renewables/Seaway7 +15% YoY to $282M with Seaway Ventus and Seaway Aimery operating through North Sea winter",
+      "Offshore wind tailwinds firming: UK AR7 cleared 8.2 GW, Germany moving to CfD, Taiwan 3.6 GW for 2026"
+    ],
+    "qa_flashpoints": [
+      "On the durability of subsea pricing (DNB Markets): mgmt pointed to tight vessel supply through 2027 and 24% margin as evidence the cycle is mid-not-late - implying further EBITDA upside",
+      "On renewables margin path (Pareto): mgmt acknowledged 12% renewables EBITDA still trails subsea but framed UK/Germany/Taiwan award cadence as the catalyst - signaling Seaway7 standalone returns remain a 2027 story"
+    ],
+    "source_url": "https://www.globenewswire.com/news-release/2026/04/30/3284471/0/en/subsea-7-s-a-announces-first-quarter-2026-results.html",
+    "transcript_available": true
+  },
+  "ON": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-04",
+    "headline": "ON beat Q1 with $1.51B revenue and $0.64 EPS, guided Q2 +7% sequentially, and reiterated AI data-center revenue will double YoY in 2026 led by 55% SiC share in new China EV models.",
+    "guidance_changes": [
+      "Q2 2026 revenue: ~+7% QoQ at midpoint (excluding $30M-$40M of planned non-core exits)",
+      "FY26 AI data center revenue: reaffirmed to double YoY",
+      "Q1 non-GAAP EPS: $0.64 (above guide midpoint)"
+    ],
+    "strategic_themes": [
+      "AI data-center high-voltage power conversion ramping with 800V system-level integration for hyperscaler racks",
+      "Silicon carbide leadership at 55% share of new EV models at the 2026 Beijing Auto Show, anchoring China auto growth",
+      "New IGBT-based traction inverter design win with a North American OEM transitioning to direct semiconductor sourcing for 900V EV architectures"
+    ],
+    "qa_flashpoints": [
+      "On the AI data-center 'double' claim (Citi): mgmt held the line but declined to size the absolute revenue base - implying the doubling is off a still-small denominator",
+      "On China EV pricing pressure (Mizuho): mgmt pointed to 55% SiC share and content gains rather than ASPs - signaling ON is competing on socket-count and design-wins"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/04/on-on-q1-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "STRL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-05",
+    "headline": "Revenue +92% and EPS +120% YoY, with mission-critical (data center, semi, manufacturing) now >90% of E-Infrastructure backlog, and management raised full-year guidance.",
+    "guidance_changes": [
+      "FY26 guidance: raised (revenue, EBITDA and EPS) following Q1 16.78% EPS surprise",
+      "Backlog: $3.80B with 2.1x book-to-burn; combined backlog incl. unsigned awards $5.15B at 3.5x",
+      "Combined project visibility: $6.5B (vs prior disclosure)"
+    ],
+    "strategic_themes": [
+      "Data center and semiconductor site work now >90% of E-Infrastructure backlog (vs 84% at YE25), led by a new $500M semiconductor campus award",
+      "CEC acquisition contributed $156M of Q1 E-Infrastructure revenue",
+      "Margin expansion: gross profit +105% YoY to $194.3M outpacing the 92% revenue growth"
+    ],
+    "qa_flashpoints": [
+      "On the durability of mission-critical mix (DA Davidson): mgmt highlighted multi-year hyperscaler and semi customer commitments behind the $5.15B combined backlog - implying the mix shift is not a single-cycle spike",
+      "On capacity to convert backlog (Stifel): mgmt deferred specifics on labor/equipment constraints - signaling execution risk is the chief governor on outyear conversion"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/05/sterling-strl-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "CAR": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-29",
+    "headline": "Americas revenue grew for the first time in 10 quarters (+2.9% YoY) on disciplined fleet cuts and +2.8% RPD, prompting Avis to raise FY26 EBITDA guide to $850M-$1B.",
+    "guidance_changes": [
+      "FY26 adjusted EBITDA: raised to $850M-$1B (with Q1 plan beat by ~$50M)",
+      "Americas RPD: +2.8% YoY in Q1, exiting March near +4%",
+      "Net corporate leverage: targeting 7.6x -> below 6x by year-end"
+    ],
+    "strategic_themes": [
+      "Americas fleet ~20% younger YoY enabling pricing discipline and resetting depreciation per unit",
+      "Avis First premium product rollout positioned as a 2H 2026 financial contributor",
+      "Waymo partnership expansion in Dallas and additional cities positioned as a 2027 monetization story"
+    ],
+    "qa_flashpoints": [
+      "On the durability of pricing exiting Q1 at +4% (Barclays): mgmt expected stabilization in May/June after the Easter shift - signaling the +4% exit rate is not the run-rate to model",
+      "On the path from 7.6x to <6x leverage (Morgan Stanley): mgmt leaned on EBITDA growth plus 'dedicated' debt repayment without committing to asset sales - implying the balance sheet fix is contingent on the EBITDA range holding"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/04/avis-car-q1-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "TGS.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-30",
+    "headline": "Exploration cycle is back: backlog hit $779M (highest since 2019) on 91% vessel utilization and record order inflow.",
+    "guidance_changes": [
+      "2026 multi-client investments: maintained at $500M-$575M",
+      "2026 gross operating cost: held at ~$950M",
+      "Quarterly dividend: held at $0.155/share"
+    ],
+    "strategic_themes": [
+      "Multi-client library monetization rebounding on energy-security demand from IOCs and NOCs across North Sea and offshore Brazil",
+      "Marine acquisition fleet running at 91% utilization with internal production of $137M supporting late-sale upside",
+      "Imaging segment leveraging proprietary OBN datasets as exploration shifts toward reserve replacement"
+    ],
+    "qa_flashpoints": [
+      "On backlog sustainability (Pareto): mgmt pointed to $392M Q1 inflow but declined to commit to repeat run-rate - implying Q1 was front-loaded",
+      "On capex discipline (Clarksons): mgmt held 2026 investment range despite stronger demand - signaling preference to flow upside to dividend/buyback"
+    ],
+    "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-tgs-q1-2026-sees-125-income-growth-93CH-4664456",
+    "transcript_available": true
+  },
+  "LITE": {
+    "quarter": "Q3 2026",
+    "call_date": "2026-05-05",
+    "headline": "NVIDIA $2B direct investment plus record $808M revenue (+90% YoY) reframes Lumentum as a strategic AI optics supplier with structural supply tightness through CY26.",
+    "guidance_changes": [
+      "Q4 FY26 revenue: prior implied ~$830M -> $960M-$1.01B",
+      "Q4 FY26 non-GAAP EPS: -> $2.85-$3.05",
+      "Q4 FY26 non-GAAP operating margin: -> 35%-36%"
+    ],
+    "strategic_themes": [
+      "NVIDIA strategic agreement and $2B equity injection funding US-based EML and transceiver capacity expansion",
+      "Cloud transceiver revenue grew >40% sequentially with 800G/1.6T ramping at hyperscaler customers",
+      "EML laser chip shipments doubled YoY with management guiding >50% unit growth Dec25-Dec26"
+    ],
+    "qa_flashpoints": [
+      "On capacity vs demand (Rosenblatt): mgmt said EMLs, pump lasers and transceivers all remain capacity-constrained into CY27 - implying pricing power is structural",
+      "On NVIDIA exclusivity (Needham): mgmt declined to characterize the agreement as exclusive but emphasized 'preferred supplier' framing - signaling capacity allocation favors NVDA"
+    ],
+    "source_url": "https://seekingalpha.com/article/4898870-lumentum-holdings-inc-lite-q3-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "AJB.L": {
+    "quarter": "H1 2026",
+    "call_date": "2026-05-21",
+    "headline": "AJ Bell raised FY26 guidance on record 79k net new platform customers and 4.2bn GBP net inflows, but cash-interest reliance (~47% of platform revenue) remains the bear case.",
+    "guidance_changes": [
+      "FY26 revenue margin: prior implied ~32bps -> above H1 actual of 33.4bps",
+      "FY26 PBT margin: prior guide -> above 40%",
+      "Interim dividend: +11% YoY; new 15M GBP buyback approved"
+    ],
+    "strategic_themes": [
+      "Platform AUA grew to 108.7bn GBP with 723k customers; D2C 'Dodl' and advised platform both contributing to record net inflows",
+      "Brand and marketing reinvestment compressed PBT margin to 43.2% - explicit trade-off to defend customer growth lead vs Hargreaves Lansdown",
+      "UK policy noise on ISAs and pensions drove >1bn GBP of excess pension withdrawals"
+    ],
+    "qa_flashpoints": [
+      "On cash-interest sensitivity (Deutsche Numis): mgmt acknowledged ~47% of platform revenue is interest-linked and revenue margin will moderate as rates and overseas dealing normalize - implying FY27 consensus may need to rebase down",
+      "On pricing pressure (Peel Hunt): mgmt committed to further price cuts to defend share - signaling willingness to absorb margin compression rather than cede the D2C land grab"
+    ],
+    "source_url": "https://www.marketscreener.com/news/transcript-aj-bell-plc-h1-2026-pre-recorded-earnings-call-may-21-2026-ce7f5adedb8bf025",
+    "transcript_available": true
+  },
+  "GEV": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-23",
+    "headline": "Electrification orders surged 71% YoY to $18.3B and FY guidance raised, but US onshore Wind remains a $250-350M tariff headwind with no visible inflection.",
+    "guidance_changes": [
+      "FY26 revenue: prior $36-37B -> $44.5B-$45.5B (raised)",
+      "FY26 free cash flow: prior $2.0-2.5B -> $6.5B-$7.5B (raised)",
+      "Backlog $200B target: pulled forward from 2028 -> 2027"
+    ],
+    "strategic_themes": [
+      "Power segment gas turbine backlog at record on hyperscaler data center demand - slots now sold through 2028",
+      "Electrification (grid + HVDC) growing 71% YoY with named wins in US transmission and EU offshore interconnect",
+      "Onshore Wind in retrenchment: 25% revenue decline and $382M EBITDA loss as US permitting delays and tariffs push shipments to 2H"
+    ],
+    "qa_flashpoints": [
+      "On tariff exposure (Morgan Stanley): mgmt quantified $250-350M 2026 hit but declined to name supplier substitution path - implying Wind margin recovery is back-half dependent",
+      "On gas turbine pricing (JPMorgan): mgmt said equipment margins are 'considerably better' on the incremental backlog but refused to give absolute number - signaling pricing is well above mid-cycle"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/22/ge-vernova-gev-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "NBIX": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-05",
+    "headline": "First-ever $800M+ revenue quarter (+44% YoY) with CRENESSITY launch running ahead of plan and now annualizing above $600M.",
+    "guidance_changes": [
+      "FY26 INGREZZA net sales: reaffirmed at $2.7B-$2.8B",
+      "CRENESSITY: now annualizing >$600M",
+      "Soleno / VYKAT XR acquisition: on track to close Q2 2026"
+    ],
+    "strategic_themes": [
+      "INGREZZA delivered $657M (+20% YoY) on record new-patient adds and double-digit volume",
+      "CRENESSITY launch in CAH outpacing internal model on strong persistence, broad payer coverage and rapid endocrinologist uptake",
+      "Pipeline catalysts queued: osavampator (MDD), NBI-1117568 / direclidine (schizophrenia) and NBIP-2118 (obesity) all with 2027 readouts"
+    ],
+    "qa_flashpoints": [
+      "On INGREZZA guidance conservatism (Goldman): mgmt declined to raise despite Q1 beat - implying they are reserving capacity for a mid-year raise",
+      "On Soleno integration (Cantor): mgmt deflected on accretion timing but emphasized commercial overlap with rare-disease infrastructure - signaling VYKAT XR will be folded into existing endo salesforce"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/05/neurocrine-nbix-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "MTSI": {
+    "quarter": "Q2 FY2026",
+    "call_date": "2026-05-07",
+    "headline": "Data Center inflection drives Q3 guide to $335M (Street $300M) and full-year DC growth raised to 35-40% on 1.6T optical ramp.",
+    "guidance_changes": [
+      "Q3 FY26 revenue: Street ~$300M -> guided ~$335M midpoint",
+      "FY26 Data Center revenue growth: prior implied 25-30% -> 35-40%",
+      "Q2 actual: revenue $289M (vs $285M consensus), adj EPS $1.09 (vs $1.07)"
+    ],
+    "strategic_themes": [
+      "1.6T optical design wins transitioning to production at hyperscalers - single biggest growth lever",
+      "Defense and aerospace order book strengthening with named radar and EW program wins",
+      "High-speed analog and coherent light products opening pull from non-hyperscaler cloud and telco infrastructure"
+    ],
+    "qa_flashpoints": [
+      "On capacity and lead times (Susquehanna): mgmt said DC backlog is 'very healthy' but declined to quantify book-to-bill - implying tightness is real but they want to avoid setting a ceiling",
+      "On gross margin trajectory (Northland): mgmt held GM guidance flat despite mix shift to DC - signaling DC margins are below corporate average"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/07/macom-mtsi-q2-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "IGG.L": {
+    "quarter": "Q3 FY2026 (AGM Trading Update)",
+    "call_date": "2026-05-19",
+    "headline": "IG raised FY26 organic revenue guide to +10-15% (from high-single-digit) on record 331M GBP quarter and launched a strategic review including possible domicile/listing change.",
+    "guidance_changes": [
+      "FY26 organic revenue growth: high-single-digit -> 10-15% on 1.10bn GBP 2025 base",
+      "Medium-term organic revenue growth: -> at least 10% p.a. beyond FY26",
+      "Medium-term EBITDA margin: sustained mid-40% range"
+    ],
+    "strategic_themes": [
+      "Active customer base grew 12% YoY to 309,200; first trades up 63% YoY driven by UK and APAC",
+      "tastytrade US options franchise and crypto product expansion driving outsized trading revenue (+25% YoY)",
+      "Board strategic review covering acquisitions, domicile change and listing venue - explicit signal of dissatisfaction with London valuation"
+    ],
+    "qa_flashpoints": [
+      "On strategic review scope (Peel Hunt): mgmt confirmed US listing is on the table - implying serious consideration of leaving LSE if multiple gap to US peers persists",
+      "On net interest income decline (Numis): mgmt acknowledged 22% YoY drop and greater customer pass-through - signaling rate-cycle headwind is now structural"
+    ],
+    "source_url": "https://www.iggroup.com/~/media/Files/I/IG-Group/documents/investors/financial-results/results-reports-and-presentations/2026/igg-agm-trading-update.pdf",
+    "transcript_available": true
+  },
+  "GLW": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-28",
+    "headline": "Two new multi-billion-dollar hyperscaler optical agreements (similar to the $6B Meta deal) confirm AI infrastructure is now the dominant Corning growth story.",
+    "guidance_changes": [
+      "Q2 26 sales: guided +14% YoY",
+      "Springboard incremental annualized sales target: +$3B by 2026; +$11B by 2028 (raised)",
+      "Springboard plan extended through 2030 with further upgrade at May 6 investor day"
+    ],
+    "strategic_themes": [
+      "Optical Communications +36% YoY to $1.8B; three signed long-term hyperscaler agreements (Meta + two new) with risk-sharing capacity commitments",
+      "Solar segment ramping US polysilicon-to-module value chain with Hemlock and named utility-scale customer wins",
+      "Display margin discipline maintained via price/yen mechanism while volume mix shifts to gen-AI-driven Optical and Solar"
+    ],
+    "qa_flashpoints": [
+      "On capacity for hyperscalers (BofA): mgmt said they have signed deals 'beyond what we publicly disclosed' but won't name counterparts - implying a third or fourth megadeal is already in hand",
+      "On gross margin trajectory (Wells Fargo): mgmt held GM expansion to ~220bps despite mix tailwind - signaling startup costs on new fiber capacity will weigh near-term"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/28/corning-glw-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "ASM.AS": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-22",
+    "headline": "Record 33.1% operating margin and Q2 guide to 980M EUR reaffirm GAA-driven ALD leadership; first 1.4nm pilot-line contribution expected H2 2026.",
+    "guidance_changes": [
+      "Q2 2026 revenue: -> 980M EUR +/-5% (sequential acceleration from 863M EUR)",
+      "FY26: high-end of prior range increasingly likely (mgmt commentary, not formal raise)",
+      "First 1.4nm pilot-line revenue: now expected in H2 2026"
+    ],
+    "strategic_themes": [
+      "Gate-All-Around ALD ramp at TSMC and Samsung leading edge driving share gains",
+      "Memory rebound: DRAM customers (Samsung, SK Hynix, Micron) returning with HBM-related ALD demand",
+      "China revenue normalizing from 2024 peak as mature-node spend rolls off; Korea and Taiwan now the dominant geographic mix"
+    ],
+    "qa_flashpoints": [
+      "On GAA layer-count tailwind (Citi): mgmt said incremental layers in 2026 are modest vs prior year - implying the GAA volume kicker is more 2027 story",
+      "On High-NA EUV and 1.4nm timing (Morgan Stanley): mgmt confirmed first pilot revenue in H2 26 but declined to size 2027 ramp - signaling visibility beyond 12 months is still customer-dependent"
+    ],
+    "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-asm-international-q1-2026-beats-expectations-stock-jumps-93CH-4629789",
+    "transcript_available": true
+  },
+  "SPM.MI": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-22",
+    "headline": "EBITDA +24% YoY to 434M EUR with backlog at 29.6B EUR; Subsea7 merger on track for H2 2026 close, creating 43B EUR-backlog Saipem7.",
+    "guidance_changes": [
+      "FY26 revenue: low single-digit growth (reaffirmed)",
+      "FY26 EBITDA and EBIT: double-digit growth (reaffirmed)",
+      "Subsea7 merger close: H2 2026 timeline maintained"
+    ],
+    "strategic_themes": [
+      "Offshore E&C deepwater pipeline strong across Guyana (ExxonMobil), Brazil pre-salt (Petrobras) and Namibia (TotalEnergies / Galp)",
+      "Onshore E&C delivering on Qatar NFE and Saudi Jafurah scope with margin discipline restored",
+      "Subsea7 merger to create vertically integrated SURF leader; 300M EUR+ synergy target"
+    ],
+    "qa_flashpoints": [
+      "On merger regulatory risk (Equita): mgmt downplayed CMA and CADE concerns and said no material divestitures expected - implying confidence the deal closes without structural remedies",
+      "On vessel utilization and offshore wind (Mediobanca): mgmt sidestepped specific utilization figures and emphasized oil & gas pivot - signaling offshore wind backlog impairment risk is still being managed"
+    ],
+    "source_url": "https://seekingalpha.com/article/4892767-saipem-spa-sapmy-q1-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "AMKR": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-28",
+    "headline": "Record Q1 with 27% YoY revenue growth as advanced packaging for AI tripled in 2026 outlook and iOS/HBM ramps drove a strong Q2 guide.",
+    "guidance_changes": [
+      "Q2 2026 revenue: implied prior ~$1.55B -> $1.75-$1.85B (about +7% sequential)",
+      "Q2 2026 gross margin: 14.2% Q1 actual -> 14.5-15.5% guide",
+      "FY26 advanced packaging revenue: prior baseline -> 'expected to triple' year-over-year"
+    ],
+    "strategic_themes": [
+      "Advanced packaging for AI compute (HBM-related and new HDFO data center CPU program ramping into 2H26)",
+      "iOS/Apple ecosystem driving stronger-than-seasonal communications growth (+42% YoY in Q1)",
+      "Automotive and industrial recovery alongside Arizona facility build-out for US-based advanced packaging"
+    ],
+    "qa_flashpoints": [
+      "On 2H26 GM trajectory: mgmt guided 'mid-to-high teens' on data center ramps - implying confidence in compute mix structurally lifting margins",
+      "On AI compute customer concentration: mgmt declined to name programs but flagged 'new compute customers' beyond the lead Apple/HBM business - signaling AMKR is broadening AI ASIC/CoWoS-like exposure"
+    ],
+    "source_url": "https://www.benzinga.com/insights/news/26/04/52081984/full-transcript-amkor-tech-q1-2026-earnings-call",
+    "transcript_available": true
+  },
+  "TWLO": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-30",
+    "headline": "Twilio's fastest organic growth since 2022 (+16%) on voice AI inflection drove a sharp raise to FY26 guide and stock-based comp falling below 10% of revenue for the first time.",
+    "guidance_changes": [
+      "FY26 revenue growth: 11.5-12.5% -> 14-15%",
+      "FY26 non-GAAP operating income: $1.04-$1.06B -> $1.08-$1.10B",
+      "FY26 SBC as % of revenue: above 10% prior -> below 10% (first time since IPO)"
+    ],
+    "strategic_themes": [
+      "Voice AI as the new entry point to the Twilio platform - sixth consecutive quarter of voice acceleration, with Voice channel revenue +20% YoY",
+      "ConversationRelay and OpenAI/Anthropic agent integrations positioned as the 'AI orchestration layer' for contact centers",
+      "Cross-sell of Segment + Communications bundle expanding into enterprise wins as messaging carrier fee headwinds offset by AI premium pricing"
+    ],
+    "qa_flashpoints": [
+      "On voice AI durability (Morgan Stanley): mgmt framed AI use cases as 'unprecedented demand' but declined to break out AI revenue contribution - implying they want to avoid bull/bear AI-mix scrutiny",
+      "On gross margin compression from carrier fees: mgmt acknowledged GM pressure but pointed to voice AI as structurally higher margin - implying the GM trough is near"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/twilio-twlo-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "VAR.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-22",
+    "headline": "Record Q1 production of 406 kboepd (+50% YoY) drove EBITDA up 49% to $2.16B, though net profit fell 17.5% on higher D&A from the 2025 project ramp portfolio.",
+    "guidance_changes": [
+      "FY26 production guidance reaffirmed: 390-410 kboepd",
+      "FY26 development CapEx unchanged: $2.5-$2.7B; exploration $250-$300M",
+      "Q2 2026 dividend: $300M (matching Q1, 17 consecutive quarters of stable/growing payout)"
+    ],
+    "strategic_themes": [
+      "Balder X / Jotun FPSO and Johan Castberg ramp delivering record Barents Sea production (88 kboepd, Castberg +13% QoQ)",
+      "Two new project sanctions in 2026 (Goliat Gas Export and King) targeting ~80 mmbbls net reserves",
+      "Three commercial exploration discoveries in Q1 reinforcing Norwegian Continental Shelf inventory"
+    ],
+    "qa_flashpoints": [
+      "On underlifting reversals and Brent-premium fields (Castberg, Grane, Balder): mgmt confirmed structural realized-price uplift - implying consensus revenue models are still under-weighting positive crude-quality differentials",
+      "On maintenance flexibility and 2H26 production cadence: mgmt held the 390-410 kboepd band rather than upgrading despite the 406 Q1 print - implying conservatism around planned summer turnarounds"
+    ],
+    "source_url": "https://seekingalpha.com/article/4892751-var-energi-asa-varry-q1-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "MNTN.L": {
+    "quarter": "N/A",
+    "call_date": "",
+    "headline": "Vehicle does not issue quarterly earnings - Baillie Gifford-managed late-stage private growth trust reports semi-annual NAV with monthly factsheet updates; shares trade at ~4% premium to NAV after a 120% 12-month rally.",
+    "guidance_changes": [],
+    "strategic_themes": [],
+    "qa_flashpoints": [],
+    "source_url": "https://www.bailliegifford.com/en/uk/individual-investors/funds/the-schiehallion-fund-limited/",
+    "transcript_available": false
+  },
+  "AKRBP.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-07",
+    "headline": "Production of 398 kboepd at the high end of guidance, sector-leading $7.7/boe unit cost, and Symra brought on stream nine months early - reinforcing the 2027 Yggdrasil/Valhall PWP-Fenris growth story.",
+    "guidance_changes": [
+      "FY26 production reaffirmed: 370-400 kboepd",
+      "FY26 production cost reaffirmed: ~$8/boe (Q1 ran below at $7.7)",
+      "FY26 CapEx reaffirmed: $6.2-$6.7B",
+      "Quarterly dividend held at $0.6615/share"
+    ],
+    "strategic_themes": [
+      "Symra first oil 9 months ahead of plan + Skarv Satellites accelerated to Q3 2026 - showcasing execution edge on tieback projects",
+      "Yggdrasil and Valhall PWP-Fenris megaprojects on track for 2027 first oil",
+      "97% production efficiency and lowest-quartile unit cost positioning Aker BP as the highest-FCF NCS operator at $60+ Brent"
+    ],
+    "qa_flashpoints": [
+      "On Yggdrasil CapEx creep and 2027 startup risk: mgmt reiterated 'on schedule and within budget' but flagged supply-chain tightness - implying any slippage would be a 6-month event",
+      "On dividend trajectory post-2027 production step-up: mgmt held the $0.6615 quarterly payout flat rather than signaling progression - implying capital allocation discipline ahead of the 2027 FCF inflection"
+    ],
+    "source_url": "https://seekingalpha.com/article/4900051-aker-bp-asa-akrby-q1-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "HPE": {
+    "quarter": "Q1 FY2026",
+    "call_date": "2026-03-09",
+    "headline": "First post-Juniper-close quarter delivered networking revenue +151% YoY and a record $0.65 EPS, but stock dipped on supply-tightness commentary and tariff uncertainty.",
+    "guidance_changes": [
+      "FY26 revenue growth: reaffirmed 17-22%",
+      "FY26 Networking segment growth: raised to 68-73%",
+      "FY26 non-GAAP EPS: raised to $2.30-$2.50",
+      "FY26 free cash flow: raised to at least $2.0B",
+      "Networks-for-AI cumulative order target: raised to $1.7-$1.9B (AI backlog now >$5B)"
+    ],
+    "strategic_themes": [
+      "Juniper integration Phase 1 complete - QFX data center switches and PTX/MX routing already driving cross-sell wins",
+      "AI systems backlog crossed $5B with sovereign and Tier-2 hyperscaler wins balancing the Cloud & AI segment's -2.7% reported decline",
+      "Self-driving networks (Mist AI + Aruba) positioned as the enterprise AI campus standard"
+    ],
+    "qa_flashpoints": [
+      "On tariff exposure post-Supreme Court decision (Morgan Stanley): Neri said HPE is 'monitoring closely' but declined to quantify - implying internal models still see meaningful FY26 GM risk",
+      "On component supply tightness and rising costs: Myers said HPE is taking 'decisive actions to protect profitability' - implying mid-year price increases are likely"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/03/16/hpe-hpe-q1-2026-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "LSCC": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-04",
+    "headline": "Revenue +42% YoY with Compute & Comms +86% as data center FPGA attach rates rise; $1.65B AMI acquisition reframes Lattice as a server-platform secure management player.",
+    "guidance_changes": [
+      "Q2 2026 revenue: ~$146M Q1 prior run-rate -> $185M midpoint (+50% YoY)",
+      "Q2 2026 non-GAAP EPS: $0.29 prior -> $0.44 (+80% YoY)",
+      "Gross margin trajectory: maintained at ~69.5-70% with AMI deemed immediately accretive"
+    ],
+    "strategic_themes": [
+      "$1.65B AMI (American Megatrends) acquisition - doubles TAM into server platform firmware/BMC",
+      "Avant FPGA platform ramping with rising attach rates per AI server rack",
+      "Compute & Communications now 62% of revenue - the AI data center mix shift is structurally complete"
+    ],
+    "qa_flashpoints": [
+      "On AMI organic growth and synergies (Susquehanna): mgmt guided AMI to 'high-teens' growth but explicitly disclaimed any synergy reliance - implying the deal model is conservative and upside is unspoken",
+      "On FPGA-per-server attach rates in AI racks (Deutsche Bank): mgmt said attach rates are 'rising' with new rack architectures - implying content-per-server is the unappreciated lever"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/04/lattice-lscc-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "BWLPG.OL": {
+    "quarter": "Q4 2025",
+    "call_date": "2026-03-03",
+    "headline": "Q4 NPAT of $123M and $0.57/share dividend (100% Shipping payout, 12.5% annualized yield), with Q1 2026 already 94% fixed at ~$54,000/day - a sharp recovery from late-2025 VLGC weakness.",
+    "guidance_changes": [
+      "Q1 2026 TCE: ~$54,000/day fixed at 94% coverage (vs Q4 2025 actual $50,300/day)",
+      "FY26 fixed-rate time charter coverage: 36% at $43,700/day + 4% FFA hedges at $47,900/day",
+      "FY26 all-in cash break-even: $23,400/day (one of the lowest in the listed VLGC peer set)",
+      "FY26 drydock schedule: 13 vessels (193 off-hire days in Q1 alone)"
+    ],
+    "strategic_themes": [
+      "Product Services arm (LPG trading) increasingly insulating quarterly NPAT volatility from spot freight cycles",
+      "US Gulf-to-Asia arbitrage and Panama Canal transit dynamics keeping ton-mile demand structurally elevated",
+      "100% Shipping NPAT payout policy reaffirmed - a clear capital-return signal at sub-1.0x leverage"
+    ],
+    "qa_flashpoints": [
+      "On 2H26 rate trajectory given orderbook deliveries: mgmt pointed to LPG export growth from US Gulf + Middle East offsetting newbuild supply - implying 2026 rate environment will be tighter than VLGC orderbook math suggests",
+      "On dividend sustainability if Q1 spot weakens: mgmt reiterated 100% Shipping NPAT payout as policy - implying willingness to flex dividend down quarter-to-quarter rather than smooth"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/03/03/bw-lpg-bwlp-q4-2025-earnings-call-transcript/",
+    "transcript_available": true
+  },
+  "AKAM": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-07",
+    "headline": "Cloud Infrastructure Services +40% YoY plus a record $1.8B / 7-year frontier AI customer commitment validates Akamai's pivot from CDN to AI inference cloud - stock surged 21%.",
+    "guidance_changes": [
+      "FY26 revenue: guided $4.445-$4.55B (consensus $4.48B)",
+      "FY26 adjusted EPS: $6.40-$7.15 (consensus $6.86)",
+      "FY26 Cloud Infrastructure Services growth: raised to at least 50% (from prior ~40%)",
+      "FY27 outlook: management framed double-digit total revenue growth as the new bar"
+    ],
+    "strategic_themes": [
+      "$1.8B / 7-year contract with a leading frontier AI model provider - anchors the distributed inference / 'edge AI' positioning",
+      "Security portfolio (Guardicore, Bot Manager, API Security) growing +11% - offsetting legacy delivery declines",
+      "GPU and CPU capacity build-out at the edge funded by recent megadeals"
+    ],
+    "qa_flashpoints": [
+      "On the AI megadeal's revenue ramp shape: mgmt said ramp begins 'late 2026' with multi-year build - implying 2026 numbers don't yet reflect the deal",
+      "On CapEx required to fulfill the AI commitment: mgmt acknowledged increased GPU/CPU capex but pointed to long contract duration - implying ROIC will look weak in 2026 before scaling"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/07/akamai-akam-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "NHY.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-29",
+    "headline": "Adjusted EBITDA of NOK 8.7B on LME aluminum surging from $2,995 to $3,400+/t, but Bauxite & Alumina EBITDA collapsed to NOK 747M on weak alumina prices - a tale of two upstream segments.",
+    "guidance_changes": [
+      "Extrusions Q2 2026: higher sales volumes QoQ with stable margins, continued strong US recycling margins",
+      "B&A Q2 2026: production volumes expected to decline seasonally on fewer operating days + maintenance",
+      "Aluminum Metal Q2 2026: raw material/energy/FX cost headwinds called out vs Q1"
+    ],
+    "strategic_themes": [
+      "Recycling business delivered strongest results since 2023 - US scrap spreads remain the most attractive structural growth lever",
+      "Hull Zero test facility (Sunndal) commissioned as a marker toward net-zero aluminum production by 2050",
+      "Brazil B&A (Alunorte/Paragominas) margin compression on PAX in the $297-$315/mt band"
+    ],
+    "qa_flashpoints": [
+      "On alumina price floor and Alunorte profitability: mgmt described Chinese alumina oversupply and Middle East smelter curtailment as drivers - implying B&A weakness is structural through 2026",
+      "On the LME aluminum rally durability after Q1 spike to $3,400+: mgmt avoided forecasting metal prices directly - implying internal models still assume mean-reversion"
+    ],
+    "source_url": "https://seekingalpha.com/article/4895576-norsk-hydro-asa-adr-nhydy-q1-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "BP.L": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-29",
+    "headline": "BP delivered $3.2B underlying RC profit and accelerated its balance-sheet repair pivot, hiking the structural cost-out target by $1B as Auchincloss leans further into oil & gas over low-carbon spend.",
+    "guidance_changes": [
+      "Structural cost reduction target by 2027: $5.5-6.5B -> $6.5-7.5B (raised $1B)",
+      "Corporate hybrid bond financing by end-2027: ~$13.3B -> ~$9B (reduction of ~$4.3B)",
+      "FY26 upstream production: prior 'broadly flat' -> reported production lower on Middle East disruption, underlying broadly flat vs 2025"
+    ],
+    "strategic_themes": [
+      "Portfolio high-grading via Gelsenkirchen refinery divestiture in Germany as part of $20B disposal program",
+      "Capital discipline pivot back to oil & gas (Gulf of America, Iraq, Trinidad LNG) and away from low-carbon capex",
+      "Balance sheet repair prioritized over distributions - net debt reduction target reiterated despite $6B working capital build"
+    ],
+    "qa_flashpoints": [
+      "On buyback pace (Bernstein): mgmt held the $0.75-1.0B/quarter run-rate but emphasized 'balance sheet first' more than a dozen times - implying buyback step-up is firmly back-end loaded into 2H26",
+      "On Rosneft/Russia stake (Barclays): mgmt declined to give an updated exit framework - implying no near-term resolution and continued accounting overhang"
+    ],
+    "source_url": "https://www.sec.gov/Archives/edgar/data/0000313807/000165495426003982/a1042c.htm",
+    "transcript_available": true
+  },
+  "SCT.L": {
+    "quarter": "H1 FY26 (six months ended 31 Jan 2026)",
+    "call_date": "2026-03-18",
+    "headline": "Softcat smashed H1 with 33% gross invoiced income growth and upgraded full-year op profit guide from low single-digit to high single-digit growth, driving a 7%+ pop.",
+    "guidance_changes": [
+      "FY26 underlying operating profit growth: low single-digit -> high single-digit (upgrade)",
+      "Interim dividend: 8.9p -> 9.9p (+11.2%)",
+      "Completed 45M GBP share buyback in February (incremental to prior capital return plan)"
+    ],
+    "strategic_themes": [
+      "Hyperscaler/software momentum (Microsoft, AWS) driving 33.3% gross invoiced income growth to 2,008.6M GBP",
+      "Cash conversion strength at 147.6% funding accelerated UK mid-market customer wins and the 45M GBP buyback",
+      "Continued investment in technical specialists (security, networking, cloud) to support cross-sell"
+    ],
+    "qa_flashpoints": [
+      "On sustainability of the H1 growth rate (Berenberg): mgmt flagged tougher H2 comps and FX tailwinds normalising - implying the high-single-digit FY guide is deliberately conservative",
+      "On AI-related demand pull-forward (Peel Hunt): mgmt described demand as 'broad-based' rather than AI-concentrated - implying the cycle has real legs beyond one workload"
+    ],
+    "source_url": "https://www.softcat.com/about-us/investor-centre/results-centre",
+    "transcript_available": true
+  },
+  "MTZ": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-01",
+    "headline": "MasTec blew past Q1 with EPS of $1.39 (vs $0.99 consensus) on 34% revenue growth and a record $20.3B backlog, prompting a full-year guide raise.",
+    "guidance_changes": [
+      "FY26 revenue guidance: ~$16.7B -> $17.5B",
+      "FY26 adjusted EBITDA: prior ~$1.35B -> $1.5B (8.6% margin)",
+      "Backlog: prior record -> $20.3B (up 28% YoY)"
+    ],
+    "strategic_themes": [
+      "Power Delivery and Clean Energy & Infrastructure segments capturing utility-scale build-out tied to data center load growth across Texas and Southeast",
+      "Pipeline Infrastructure inflection - large interstate gas projects (MVP, Permian-to-Gulf) re-accelerating",
+      "Communications segment stabilization with named customers AT&T and T-Mobile fiber/wireless densification spend ramping"
+    ],
+    "qa_flashpoints": [
+      "On data center power demand visibility (Goldman Sachs): CEO Jose Mas cited multi-year customer commitments and said booked pipeline 'extends well into 2027' - implying mgmt has visibility to defend an even higher 2027 EBITDA bar",
+      "On margin sustainability (Stifel): CFO DiMarco attributed the 73% EBITDA jump to operating leverage rather than mix - implying the 8.6% margin is a floor, not a peak"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/01/mastec-mtz-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "FTNT": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-06",
+    "headline": "Fortinet posted a clean beat with revenue +20%, billings +31%, and a record 35.8% non-GAAP op margin - but reiterated (didn't raise) FY26 guidance, leaving room for upside.",
+    "guidance_changes": [
+      "Q2 2026 revenue guide: new at ~$1.82B (implies ~17% YoY)",
+      "Q2 2026 non-GAAP EPS guide: new at ~$0.71",
+      "FY26 full-year guidance: reiterated (not raised despite Q1 beat)"
+    ],
+    "strategic_themes": [
+      "Unified SASE momentum - product revenue +41% driven by FortiSASE adoption among large enterprise customers",
+      "AI-driven security operations (FortiAI) billings +23% with 20+ AI-enabled SKUs now on the Security Fabric platform",
+      "OT/critical infrastructure security expansion in EMEA and APAC as the third growth pillar"
+    ],
+    "qa_flashpoints": [
+      "On why FY26 guide wasn't raised despite the Q1 beat (Morgan Stanley): CFO Keith Jensen cited macro and FX prudence - implying mgmt is sandbagging and the full-year number is highly de-risked",
+      "On firewall refresh cycle (Goldman Sachs): mgmt said the refresh is 'mid-innings' and extending into 2027 - implying the bear case of a refresh peak in 2026 is wrong"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/06/fortinet-ftnt-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "EQNR.OL": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-07",
+    "headline": "Equinor delivered record Q1 production of 2.3 mmboe/d (+9% YoY) and $9.77B adjusted operating income, but the stock dipped on Norwegian tax timing impact even as guidance and the $1.5B buyback were reaffirmed.",
+    "guidance_changes": [
+      "FY26 production growth: ~3% (reiterated)",
+      "FY26 organic CapEx: $13B (reiterated)",
+      "FY26 share buyback program: up to $1.5B (reiterated; second tranche of up to $375M launched)"
+    ],
+    "strategic_themes": [
+      "Norwegian Continental Shelf (NCS) high-grading - Johan Sverdrup and Johan Castberg driving record Q1 output",
+      "International ramp via US shale (Bakken) and Brazil (Bacalhau) supporting the ~3% production growth path",
+      "Renewables capex discipline - Empire Wind 1 (US) progressing but mgmt explicitly capping low-carbon spend within the $13B envelope"
+    ],
+    "qa_flashpoints": [
+      "On the tax timing drag (Citi): CFO Torgrim Reitan framed it as a one-off Norway timing impact, not a structural rate change - implying the premarket dip overreacted",
+      "On capital returns vs peers (RBC): mgmt held the $0.39/quarter cash dividend flat - implying Equinor is prioritizing balance sheet flex for potential downside in oil"
+    ],
+    "source_url": "https://seekingalpha.com/article/4899704-equinor-asa-eqnr-q1-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "DPLM.L": {
+    "quarter": "H1 FY26 (six months ended 31 March 2026)",
+    "call_date": "2026-05-15",
+    "headline": "Diploma posted a standout H1 with 17% revenue growth, 33% adjusted operating profit growth, and a second FY26 guidance upgrade driven by Controls' 26% organic surge.",
+    "guidance_changes": [
+      "FY26 organic revenue growth guide: ~10% -> 12%",
+      "FY26 acquisition contribution: prior ~3-4% -> ~6%",
+      "FY26 adjusted operating profit growth: prior ~20% -> 30%+",
+      "Interim dividend: +5% YoY increase"
+    ],
+    "strategic_themes": [
+      "Controls division surge (+26% organic) driven by aerospace, defence, data centres and energy end-markets - a US defence interconnect bolt-on adds further capacity",
+      "Disciplined M&A engine - 15 deals for ~310M GBP over the LTM while keeping leverage at 0.8x",
+      "Margin expansion to 24.5% (+300 bps) showing scale benefits in Controls offsetting tougher Seals (+2%) and Life Sciences (+4%) markets"
+    ],
+    "qa_flashpoints": [
+      "On the sustainability of Controls' 26% organic growth (Numis): mgmt indicated defence and data-center order books extend well into FY27 - implying the upgrade cycle isn't a one-quarter phenomenon",
+      "On Seals & Life Sciences weakness (Peel Hunt): mgmt blamed end-market cyclicality, not share loss - implying these segments are a coiled spring once macro stabilizes"
+    ],
+    "source_url": "https://www.diplomaplc.com/investors/results-reports-and-presentations/",
+    "transcript_available": true
+  },
+  "ARW": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-05-07",
+    "headline": "Arrow Electronics blew the doors off with EPS of $5.22 vs $2.82 consensus and revenue +39% YoY to $9.5B, signaling a sharper-than-expected components cycle inflection.",
+    "guidance_changes": [
+      "Q1 EPS: consensus ~$2.82 -> reported $5.22 (85% beat)",
+      "Q1 revenue: consensus ~$8.3B -> reported $9.5B (+14%)",
+      "Q1 operating margin: expanded 160 bps YoY to 4.2%",
+      "Q2 outlook: Supply Chain Services profit expected to normalize after Q1 customer-driven surge"
+    ],
+    "strategic_themes": [
+      "Global Components recovery - Americas and EMEA distribution demand inflecting across industrial, transportation, and aerospace/defence",
+      "Enterprise Computing Solutions (ECS) tailwind - hyperscaler/AI server pull-through plus 4 extra shipping days delivered several hundred million in incremental billings",
+      "Interim leadership stability under CEO Bill Austen executing on cost actions while permanent CEO search continues"
+    ],
+    "qa_flashpoints": [
+      "On the sustainability of components margins (Citi): mgmt said Q1 Supply Chain Services profit was 'customer-driven' and Q2 will normalize - implying the 4.2% op margin is not the new run-rate",
+      "On AI/hyperscaler exposure within ECS (Barclays): mgmt acknowledged AI server demand but cautioned on lumpy timing - implying the ECS beat is real but quarterly volatility will stay elevated"
+    ],
+    "source_url": "https://www.fool.com/earnings/call-transcripts/2026/05/07/arrow-arw-q1-2026-earnings-transcript/",
+    "transcript_available": true
+  },
+  "HUM": {
+    "quarter": "Q1 2026",
+    "call_date": "2026-04-29",
+    "headline": "Humana delivered Q1 adjusted EPS of $10.31 at the high end of guide with Insurance benefit ratio of 89.4% favorable to the 'just under 90%' target, affirming FY26 guidance.",
+    "guidance_changes": [
+      "FY26 adjusted EPS guidance: affirmed (Q1 came in at high end of 110-115% of FY26 seasonal expectation)",
+      "FY26 Insurance segment benefit ratio: affirmed at 92.75% +/- 25 bps",
+      "Q1 Insurance benefit ratio: 89.4% (favorable vs 'just under 90%' guide)"
+    ],
+    "strategic_themes": [
+      "Medicare Advantage margin rebuild - STARS ratings remediation and bid discipline drive the 92.75% benefit ratio path",
+      "State-based Medicaid expansion - ~50,000 member adds from new Michigan, Illinois, and South Carolina contracts",
+      "CenterWell primary care growth and operating leverage as the core long-term margin driver beyond MA cycle"
+    ],
+    "qa_flashpoints": [
+      "On whether Q1 outperformance allows a guide raise (Wells Fargo): mgmt explicitly chose to affirm not raise, citing utilization uncertainty in 2H - implying mgmt sees prudence value in the post-2024 reset",
+      "On 2027 MA bid posture (Cantor): mgmt deflected on specifics but emphasized 'margin recovery is multi-year' - implying investors should not expect MA target margins back to historical levels before 2027/28"
+    ],
+    "source_url": "https://www.sec.gov/Archives/edgar/data/0000049071/000004907126000021/hum-2026q1xex99x2detailedx.htm",
+    "transcript_available": true
+  },
+  "SNX": {
+    "quarter": "Q1 FY26",
+    "call_date": "2026-03-27",
+    "headline": "TD SYNNEX crushed Q1 with EPS of $4.73 vs $3.32 consensus on 24% non-GAAP gross billings growth, led by a 95% surge in Hive driven by AI/cloud data center demand.",
+    "guidance_changes": [
+      "Q2 FY26 non-GAAP gross billings guide: ~$25.1B +/- $500M (~16% YoY at midpoint)",
+      "Q2 FY26 non-GAAP diluted EPS guide: ~$4.00 +/- $0.25",
+      "Q1 EPS: consensus $3.32 -> reported $4.73 (42% beat)"
+    ],
+    "strategic_themes": [
+      "Hive (hyperscale infrastructure) segment +95% YoY in gross billings - cloud & AI data center build-out is now the dominant growth driver",
+      "Core distribution strength across infrastructure, security, and software with named vendor depth (Cisco, Microsoft, Dell, HPE)",
+      "Profitable share gains in the Americas SMB channel offsetting more measured EMEA recovery"
+    ],
+    "qa_flashpoints": [
+      "On Hive margin profile and sustainability (Citi): CFO indicated Hive is dilutive to overall margin but accretive to gross profit dollars and ROIC - implying the optical margin compression narrative is misleading",
+      "On why the stock fell despite the beat (Barclays): mgmt acknowledged the Q2 EPS guide of $4.00 implies sequential moderation - implying investors viewed the print as 'as good as it gets' near-term"
+    ],
+    "source_url": "https://seekingalpha.com/article/4887460-td-synnex-corporation-snx-q1-2026-earnings-call-transcript",
+    "transcript_available": true
+  },
+  "TCAP.L": {
+    "quarter": "FY 2025 (announced March 2026)",
+    "call_date": "2026-03-12",
+    "headline": "TP ICAP posted its strongest-ever year with record $3.15B revenue, launched a 80M GBP buyback, and lifted the dividend 4% as volatility tailwinds and the pending Vantage Capital Markets deal underpin 2026.",
+    "guidance_changes": [
+      "Total FY25 dividend: 16.2p -> 16.8p (+4%)",
+      "New share buyback: 80M GBP (~$107m) announced - 6th program; total returned since 2023 now ~600M GBP",
+      "FY26 outlook: ~9-10M GBP FX headwind to adjusted EBIT at current spot vs FY25"
+    ],
+    "strategic_themes": [
+      "Liquidnet rebuild - multi-asset agency brokerage +10%, equities stable, APAC momentum, with Neptune Networks acquisition extending Fixed Income electronic platform reach",
+      "Parameta Solutions (+5% revenue) deepening buy-side penetration; potential minority IPO still under board review but mgmt flagged IPO market conditions as 'challenging'",
+      "Pending Vantage Capital Markets acquisition (Jan 2026) to strengthen equity derivatives and fixed income presence across Asia-Pacific"
+    ],
+    "qa_flashpoints": [
+      "On Parameta IPO timing (Numis): CEO Nicolas Breteau described IPO market as 'challenging' and gave no fresh timeline - implying the value-unlock catalyst many holders are underwriting slips into 2027 at the earliest",
+      "On capital return capacity post-Vantage and post-Neptune (Peel Hunt): mgmt indicated the 80M GBP buyback can continue at this cadence - implying M&A is not crowding out capital return, but also no step-change higher buyback is coming"
+    ],
+    "source_url": "https://tpicap.com/tpicap/sites/g/files/escbpb106/files/2026-03/TP%20ICAP%20-%20FY%202025%20RNS%20-%20FINAL.pdf",
+    "transcript_available": true
+  }
+}
