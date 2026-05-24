@@ -862,6 +862,20 @@ function filteredSorted(){
   return list;
 }
 
+function themesFor(s){
+  // Tag this row using same logic as the Themes tab
+  if(!s) return [];
+  const nar = (STATE.fresh||[]).find(x=>x.ticker===s.ticker) || {narrative:{}};
+  const text = [s.name, s.sector, nar.narrative.business, nar.narrative.happening, nar.narrative.why].filter(Boolean).join(' ').toLowerCase();
+  const hits = THEME_RULES.filter(r => r.keywords.some(k => text.includes(k.toLowerCase())));
+  // Sector fallback for names with no narrative-matched theme
+  if(!hits.length && s.sector){
+    const fb = {'Healthcare':'Healthcare','Financial Services':'Fintech & Trading','Basic Materials':'Commodity Materials','Consumer Cyclical':'Travel & Consumer'}[s.sector];
+    if(fb){ const r = THEME_RULES.find(x=>x.theme===fb); if(r) hits.push(r); }
+  }
+  return hits.slice(0,3);  // cap at 3 to keep the row tidy
+}
+
 function rowsHtml(){
   return filteredSorted().map(s=>{
     const scoreW = Math.min(Math.abs(s.composite||0)/3*80, 80);
@@ -871,7 +885,7 @@ function rowsHtml(){
     return `<tr data-tk="${s.ticker}" class="${STATE.selected===s.ticker?'selected':''}">
       <td style="text-align:center;"><span class="${rankCls(s.rank)}">${s.rank}</span></td>
       <td class="left"><strong style="color:var(--gold)">${s.ticker}</strong></td>
-      <td class="left" style="color:var(--text2);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${s.name||''}">${(s.name||'').slice(0,30)}</td>
+      <td class="left" style="color:var(--text2);max-width:200px;" title="${s.name||''}"><div style="display:flex;align-items:center;gap:4px;flex-wrap:nowrap;overflow:hidden;"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;">${(s.name||'').slice(0,28)}</span><span style="flex-shrink:0;">${themesFor(s).map(t=>`<span title="${t.theme}" style="display:inline-block;font-size:11px;line-height:1;padding:2px 3px;margin-left:2px;background:rgba(245,166,35,0.10);border:1px solid rgba(245,166,35,0.25);border-radius:3px;cursor:help;">${t.emoji}</span>`).join('')}</span></div></td>
       <td>${regionBadge(s.region)}</td>
       <td>${sChip(s.sector)}</td>
       <td style="color:var(--text2);">${fmtNumPlain(s.price)}</td>
