@@ -92,6 +92,18 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',ui-mono
 .empty h2{font-family:'Syne',sans-serif;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .empty p{color:var(--text2);font-size:11px;line-height:1.6;}
 
+/* LOADING DONUT — shown while LATEST.xlsx is downloading + parsing */
+.load-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 80px;}
+.load-donut{position:relative;width:180px;height:180px;}
+.load-donut svg{width:100%;height:100%;transform:rotate(-90deg);}
+.load-donut .ring-bg{fill:none;stroke:var(--bg4);stroke-width:8;}
+.load-donut .ring-fg{fill:none;stroke:url(#loadGrad);stroke-width:8;stroke-linecap:round;stroke-dasharray:534.07;stroke-dashoffset:534.07;transition:stroke-dashoffset 0.5s cubic-bezier(0.4,0,0.2,1);filter:drop-shadow(0 0 6px rgba(245,166,35,0.4));}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.donut-pct{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;color:var(--gold);letter-spacing:-1px;line-height:1;}
+.donut-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;}
+.load-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;color:var(--text);margin-top:28px;letter-spacing:0.5px;}
+.load-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:8px;letter-spacing:1px;text-transform:uppercase;}
+
 /* CARDS */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;}
 .card h3{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text2);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
@@ -391,9 +403,25 @@ tr.selected td{background:rgba(245,166,35,0.08);}
 </div>
 
 <div class="content" id="content">
-  <div class="empty">
-    <h2>No data loaded</h2>
-    <p>Drop your weekly Stage2_Top50_Global_*.xlsx file into the dropzone above to begin.<br>All processing happens in your browser — nothing leaves your computer.</p>
+  <div class="load-wrap" id="loadWrap">
+    <div class="load-donut">
+      <svg viewBox="0 0 180 180">
+        <defs>
+          <linearGradient id="loadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f5a623"/>
+            <stop offset="100%" stop-color="#ffc85c"/>
+          </linearGradient>
+        </defs>
+        <circle class="ring-bg" cx="90" cy="90" r="85"/>
+        <circle class="ring-fg" id="loadRing" cx="90" cy="90" r="85"/>
+      </svg>
+      <div class="donut-center">
+        <div class="donut-pct" id="loadPct">0%</div>
+        <div class="donut-label" id="loadLabel">Connecting</div>
+      </div>
+    </div>
+    <div class="load-title">Loading this week's scan</div>
+    <div class="load-sub">Stage 2 Global Momentum · Top 50</div>
   </div>
 </div>
 
@@ -495,39 +523,78 @@ function renderMacroStrip(){
 }
 
 // ==========================================================================
+// LOADING DONUT — drives the circular progress indicator from real load events
+// ==========================================================================
+const LOAD = { pct: 0, alive: true };
+const RING_C = 2 * Math.PI * 85; // circumference for r=85
+function setLoadPct(target, label){
+  if(!LOAD.alive) return;
+  LOAD.pct = Math.max(LOAD.pct, Math.min(100, target));
+  const ring = document.getElementById('loadRing');
+  const pctEl = document.getElementById('loadPct');
+  const lblEl = document.getElementById('loadLabel');
+  if(ring) ring.style.strokeDashoffset = RING_C * (1 - LOAD.pct/100);
+  if(pctEl) pctEl.textContent = Math.round(LOAD.pct) + '%';
+  if(lblEl && label) lblEl.textContent = label;
+}
+function stopLoadStage(){
+  LOAD.alive = false;
+  const el = document.getElementById('loadWrap');
+  if(el) el.remove();
+}
+async function fetchWithProgress(url, onBytes){
+  const resp = await fetch(url, {cache:'no-cache'});
+  if(!resp.ok) throw new Error('HTTP ' + resp.status);
+  const total = +resp.headers.get('content-length') || 0;
+  if(!resp.body || !total){ return new Uint8Array(await resp.arrayBuffer()); }
+  const reader = resp.body.getReader();
+  const chunks = []; let received = 0;
+  while(true){
+    const {done, value} = await reader.read();
+    if(done) break;
+    chunks.push(value); received += value.length;
+    onBytes && onBytes(received, total);
+  }
+  const out = new Uint8Array(received); let off = 0;
+  for(const c of chunks){ out.set(c, off); off += c.length; }
+  return out;
+}
+
+// ==========================================================================
 // LIVE MODE — auto-fetch LATEST.xlsx from the host (Netlify) on page load.
 // Falls back to drag-drop if the file isn't reachable (e.g., opened locally).
+// Fetches small JSONs in parallel; tracks xlsx byte progress on the donut.
 // ==========================================================================
 (async function tryAutoLoadLatest(){
   // Skip if running from file:// (local file open) — drag-drop handles it
-  if(location.protocol === 'file:') return;
+  if(location.protocol === 'file:') { stopLoadStage(); return; }
+  setLoadPct(4, 'Connecting');
+  // Fire side fetches in parallel — each adds 5% on arrival
+  const sideFetch = (url, key, bump, finalize) => fetch(url,{cache:'no-cache'})
+    .then(r => r.ok ? r.json() : null)
+    .then(j => { if(j){ STATE[key] = j; finalize && finalize(j); } setLoadPct(LOAD.pct + bump, 'Loading data'); })
+    .catch(()=>{ setLoadPct(LOAD.pct + bump, 'Loading data'); });
+  const fNarr  = sideFetch('./narratives.json',         'allNarr',    5);
+  const fMacro = sideFetch('./macro.json',              'macro',      5, ()=>renderMacroStrip());
+  const fOP    = sideFetch('./business_onepagers.json', 'onepagers',  5);
+  const fVal   = sideFetch('./valuations.json',         'valuations', 5);
   try {
-    const r = await fetch('./Stage2_Top50_Global_LATEST.xlsx', {cache: 'no-cache'});
-    if(!r.ok) { console.log('No LATEST.xlsx at host root — drag-drop mode'); return; }
-    const buf = await r.arrayBuffer();
-    const wb = XLSX.read(new Uint8Array(buf), {type:'array'});
+    setLoadPct(10, 'Downloading');
+    // xlsx is the heaviest file — track byte progress (10% -> 75%)
+    const bytes = await fetchWithProgress('./Stage2_Top50_Global_LATEST.xlsx', (got, total) => {
+      const dlPct = 10 + 65 * (got / total);
+      setLoadPct(dlPct, 'Downloading ' + Math.round(got/1024) + 'kb');
+    });
+    setLoadPct(80, 'Parsing');
+    const wb = XLSX.read(bytes, {type:'array'});
     parseWorkbook(wb);
-    // Also try to pull the full narratives JSON for business intros + theme tagging on ALL 50 names
-    try {
-      const nr = await fetch('./narratives.json', {cache: 'no-cache'});
-      if(nr.ok) { STATE.allNarr = await nr.json(); console.log('[live mode] loaded narratives.json'); }
-    } catch(e) { console.log('No narratives.json found — falling back to Fresh Breakouts only'); }
-    // Macro overlay strip
-    try {
-      const mr = await fetch('./macro.json', {cache: 'no-cache'});
-      if(mr.ok) { STATE.macro = await mr.json(); renderMacroStrip(); }
-    } catch(e) { console.log('No macro.json found — macro strip hidden'); }
-    // v9: business 1-pagers (quarterly refresh, drill-down only)
-    try {
-      const opr = await fetch('./business_onepagers.json', {cache: 'no-cache'});
-      if(opr.ok) { STATE.onepagers = await opr.json(); console.log('[live mode] loaded business_onepagers.json'); }
-    } catch(e) { console.log('No business_onepagers.json — 1-pager block will be hidden'); }
-    // v9: forward valuations (weekly refresh, drill-down only)
-    try {
-      const vr = await fetch('./valuations.json', {cache: 'no-cache'});
-      if(vr.ok) { STATE.valuations = await vr.json(); console.log('[live mode] loaded valuations.json'); }
-    } catch(e) { console.log('No valuations.json — valuation block will be hidden'); }
+    setLoadPct(90, 'Finalizing');
+    await Promise.allSettled([fNarr, fMacro, fOP, fVal]);
+    setLoadPct(100, 'Ready');
+    // Brief pause so the user sees 100% before the dashboard appears
+    await new Promise(r => setTimeout(r, 250));
     render();
+    stopLoadStage();
     // Repurpose the dropzone label to a refresh hint
     const dzEl = document.getElementById('dz');
     if(dzEl) dzEl.firstChild.nextSibling && (dzEl.lastChild.textContent = ' 🔄 Replace');
@@ -539,6 +606,7 @@ function renderMacroStrip(){
     if(stat) stat.textContent = `LIVE · loaded ${fmt}`;
     console.log('[live mode] auto-loaded LATEST.xlsx');
   } catch(e) {
+    stopLoadStage();
     console.log('Auto-load failed (drag-drop still works):', e.message);
   }
 })();
@@ -556,6 +624,7 @@ function loadFile(file){
     const wb = XLSX.read(new Uint8Array(e.target.result), {type:'array'});
     parseWorkbook(wb);
     render();
+    if(typeof stopLoadStage === 'function') stopLoadStage();
   };
   r.readAsArrayBuffer(file);
 }
@@ -1916,47 +1985,4 @@ function renderThemes(){
   const totalEvents = Object.values(STATE.themeDev||{}).reduce((a,v)=>a+(v?.length||0),0);
   return `
     <div class="section-title">Themes — Auto-clustered + Last-Week Development Radar</div>
-    <p style="font-size:11px;color:var(--text3);margin-bottom:14px;">Each Top 50 name is tagged with one or more themes based on keyword match. The "This Week" panel under each theme surfaces major developments in the last 7 days — M&A / deals, earnings beats/misses + guidance changes, regulatory triggers, and capacity/capex announcements — sourced from web search + ticker news during the Saturday refresh. <strong>${totalEvents} events</strong> captured this week.</p>
-    <div style="display:grid;grid-template-columns:1fr;gap:12px;">
-      ${themes.map(t=>{
-        const widthPct = (t.count/maxCount)*100;
-        const scoreColor = t.avgScore>=0 ? 'var(--green)' : 'var(--red)';
-        const evCount = (STATE.themeDev && STATE.themeDev[t.theme]) ? STATE.themeDev[t.theme].length : 0;
-        return `<div class="card" style="padding:14px;">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-              <div style="font-size:18px;">${t.emoji}</div>
-              <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">${t.theme}</div>
-              <div style="font-size:11px;color:var(--text3);">${t.count} names · Avg score ${t.avgScore>=0?'+':''}${t.avgScore.toFixed(2)} ${t.avgQuality!=null?'· Avg Q '+t.avgQuality.toFixed(0):''} ${t.fresh?'· '+t.fresh+' fresh':''}</div>
-              ${(()=>{ const newTks=new Set((STATE.wow||[]).filter(w=>w.status==='NEW').map(w=>w.ticker)); const newN=t.names.filter(n=>newTks.has(n.ticker)).length; return newN>0?`<span style="background:rgba(0,230,122,0.15);color:var(--green);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">+${newN} new this wk</span>`:''; })()}
-              ${evCount?`<span style="background:rgba(245,166,35,0.15);color:var(--gold);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">📡 ${evCount} this wk</span>`:''}
-            </div>
-            <div style="width:140px;height:8px;background:var(--bg3);border-radius:2px;overflow:hidden;">
-              <div style="height:100%;width:${widthPct}%;background:linear-gradient(90deg,${scoreColor},var(--gold));"></div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;">
-            ${t.names.sort((a,b)=>a.rank-b.rank).map(n=>`<div onclick="document.querySelector('.tab[data-tab=top50]').click();setTimeout(()=>showDetail('${n.ticker}','t50detail'),100);" style="background:var(--bg3);border:1px solid var(--border);padding:6px 8px;border-radius:4px;cursor:pointer;font-size:11px;display:flex;justify-content:space-between;align-items:center;">
-              <div><span style="color:var(--text3);">#${n.rank}</span> <strong style="color:var(--gold);margin-left:4px;">${n.ticker}</strong></div>
-              <span style="color:${n.composite>=0?'var(--green)':'var(--red)'};font-weight:600;">${n.composite>=0?'+':''}${(n.composite||0).toFixed(2)}</span>
-            </div>`).join('')}
-          </div>
-          ${renderThemeEventCards(t.theme)}
-        </div>`;
-      }).join('')}
-    </div>
-  `;
-}
-
-</script>
-<footer style="padding:24px 24px 32px;text-align:center;border-top:1px solid var(--border);margin-top:32px;font-family:'JetBrains Mono',monospace;">
-  <div style="font-family:'Syne',sans-serif;font-size:11px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;font-weight:500;">
-    Artha Vichaar Capital
-  </div>
-  <div style="font-size:9px;color:var(--text3);margin-top:6px;letter-spacing:0.5px;">
-    Personal research notes &middot; not investment advice &middot; do your own due diligence
-  </div>
-</footer>
-
-</body>
-</html>
+    <p style="font-size:11px;color:var(--text3);margin-bottom:14px;">Each Top 50 name is tagged with one or more themes based on keyword match. The "This Week" panel under each theme surfaces major developments in the last 7 days — M&A / deals, earnings beats/misses + guidance changes, regulatory triggers, and capacity/capex announcements — sourced from web search + ticker news during the Saturday refresh. <strong>${totalEvents} events</s
