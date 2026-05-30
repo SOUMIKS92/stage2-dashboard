@@ -1966,11 +1966,15 @@ function renderThemeEventCards(themeName){
           <div style="color:var(--text2);font-size:11px;line-height:1.55;">${ev.brief||''}</div>
           ${ev.source ? (function(){
             const s = String(ev.source).trim();
-            const isUrl = /^https?:\/\//i.test(s);
-            const label = isUrl ? (s.replace(/^https?:\/\/(www\.)?/i,'').split('/')[0]) : s;
-            return isUrl
-              ? `<div style="margin-top:6px;"><a href="${s}" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-size:9px;font-style:italic;text-decoration:none;border-bottom:1px dotted var(--gold);">↗ ${label}</a></div>`
-              : `<div style="color:var(--text3);font-size:9px;margin-top:4px;font-style:italic;">${s}</div>`;
+            const m = s.match(/https?:\/\/[^\s|]+/i);
+            if(m){
+              const url = m[0];
+              const label = url.replace(/^https?:\/\/(www\.)?/i,'').split('/')[0];
+              const prefix = s.slice(0, m.index).replace(/[\s|]+$/, '').trim();
+              const prefixHtml = prefix ? `<span style="color:var(--text3);font-size:9px;font-style:italic;margin-right:6px;">${prefix}</span>` : '';
+              return `<div style="margin-top:6px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;">${prefixHtml}<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-size:9px;font-style:italic;text-decoration:none;border-bottom:1px dotted var(--gold);">↗ ${label}</a></div>`;
+            }
+            return `<div style="color:var(--text3);font-size:9px;margin-top:4px;font-style:italic;">${s}</div>`;
           })() : ''}
         </div>`;
       }).join('')}
