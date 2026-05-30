@@ -92,40 +92,6 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',ui-mono
 .empty h2{font-family:'Syne',sans-serif;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .empty p{color:var(--text2);font-size:11px;line-height:1.6;}
 
-/* LOADING STAGE — shown while LATEST.xlsx is downloading + parsing. Rotates this week's top 3 stories. */
-.load-stage{max-width:900px;margin:32px auto;padding:0 24px;}
-.load-bar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:20px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--text3);text-transform:uppercase;}
-.load-bar .left{display:flex;align-items:center;gap:10px;}
-.load-bar .pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:loadpulse 1.2s ease-in-out infinite;box-shadow:0 0 10px var(--gold);}
-@keyframes loadpulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.4);opacity:0.5;}}
-.load-bar .right{color:var(--gold);font-weight:600;}
-.load-progress{display:inline-block;width:120px;height:2px;background:var(--bg4);border-radius:2px;overflow:hidden;margin-left:10px;vertical-align:middle;}
-.load-progress > div{height:100%;background:linear-gradient(90deg,var(--gold) 0%,var(--gold2) 100%);width:0%;transition:width 0.4s ease;}
-.load-deck{position:relative;min-height:280px;}
-.story-card{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:24px 28px;opacity:0;transition:opacity 0.6s ease, transform 0.6s ease;transform:translateY(12px);}
-.story-card.in{opacity:1;transform:translateY(0);}
-.story-card.skeleton{border-left-color:var(--bg4);}
-.story-card.skeleton .skel-line{height:14px;background:linear-gradient(90deg,var(--bg4) 0%,var(--bg3) 50%,var(--bg4) 100%);background-size:200% 100%;animation:shimmer 1.6s linear infinite;border-radius:3px;margin:8px 0;}
-.story-card.skeleton .skel-line.short{width:30%;height:11px;}
-.story-card.skeleton .skel-line.long{width:90%;}
-.story-card.skeleton .skel-line.mid{width:65%;}
-@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
-.story-rank{display:inline-block;font-size:9px;letter-spacing:1.5px;color:var(--gold);font-weight:700;background:rgba(245,166,35,0.10);border:1px solid rgba(245,166,35,0.30);padding:3px 10px;border-radius:10px;margin-bottom:14px;text-transform:uppercase;}
-.story-ticker{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;flex-wrap:wrap;}
-.story-ticker .sym{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--text);letter-spacing:-0.5px;}
-.story-ticker .name{font-size:14px;color:var(--text2);font-weight:500;}
-.story-ticker .sector{font-size:10px;color:var(--text3);background:var(--bg4);padding:3px 8px;border-radius:4px;letter-spacing:0.5px;text-transform:uppercase;}
-.story-headline{font-size:14px;line-height:1.6;color:var(--text);margin-bottom:18px;font-weight:400;}
-.story-metrics{display:flex;gap:24px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--border);}
-.story-metrics .m{font-size:10px;color:var(--text3);letter-spacing:0.8px;text-transform:uppercase;}
-.story-metrics .m strong{display:block;font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--green);margin-top:3px;}
-.story-metrics .m strong.gold{color:var(--gold);}
-.story-metrics .m strong.white{color:var(--text);}
-.load-dots{display:flex;gap:6px;justify-content:center;margin-top:18px;}
-.load-dots .d{width:6px;height:6px;border-radius:50%;background:var(--bg4);transition:all 0.4s ease;}
-.load-dots .d.on{background:var(--gold);width:24px;border-radius:3px;}
-.load-foot{text-align:center;font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-top:14px;}
-
 /* CARDS */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;}
 .card h3{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text2);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
@@ -425,22 +391,9 @@ tr.selected td{background:rgba(245,166,35,0.08);}
 </div>
 
 <div class="content" id="content">
-  <div class="load-stage" id="loadStage">
-    <div class="load-bar">
-      <div class="left"><span class="pulse"></span><span>Fetching this week's scan</span></div>
-      <div class="right"><span id="loadStageMsg">Connecting</span><span class="load-progress"><div id="loadStageBar"></div></span></div>
-    </div>
-    <div class="load-deck" id="loadDeck">
-      <div class="story-card skeleton in" id="loadSkel">
-        <div class="skel-line short"></div>
-        <div class="skel-line mid" style="height:24px;margin-top:14px;"></div>
-        <div class="skel-line long" style="margin-top:20px;"></div>
-        <div class="skel-line long"></div>
-        <div class="skel-line mid"></div>
-      </div>
-    </div>
-    <div class="load-dots" id="loadDots"></div>
-    <div class="load-foot">Top stories from this week — drop Excel above to refresh manually</div>
+  <div class="empty">
+    <h2>No data loaded</h2>
+    <p>Drop your weekly Stage2_Top50_Global_*.xlsx file into the dropzone above to begin.<br>All processing happens in your browser — nothing leaves your computer.</p>
   </div>
 </div>
 
@@ -542,124 +495,39 @@ function renderMacroStrip(){
 }
 
 // ==========================================================================
-// LOADING-STAGE STORIES — populate the rotating "this week's top stories"
-// cards as soon as narratives.json arrives. Auto-dismisses when render() runs.
-// ==========================================================================
-const LOAD = { stories: [], idx: 0, timer: null, alive: true };
-function setLoadProgress(pct, msg){
-  const bar = document.getElementById('loadStageBar');
-  const m = document.getElementById('loadStageMsg');
-  if(bar) bar.style.width = Math.min(100, Math.max(0, pct)) + '%';
-  if(m && msg) m.textContent = msg;
-}
-function buildStoryCard(rank, ticker, narr, weeklyMove){
-  const happening = (narr && narr.happening) ? narr.happening : '';
-  const business  = (narr && narr.business)  ? narr.business  : '';
-  // Try to extract sector hint from business sentence (first noun phrase)
-  return `
-    <div class="story-card" data-rank="${rank}">
-      <div class="story-rank">#${rank} this week · by composite</div>
-      <div class="story-ticker">
-        <span class="sym">${ticker}</span>
-        <span class="sector">${business ? business.split('.')[0].slice(0,60) : 'Top 50'}</span>
-      </div>
-      <div class="story-headline">${happening || business || 'New story incoming.'}</div>
-      <div class="story-metrics">
-        ${weeklyMove != null ? `<div class="m">3M Return<strong class="${weeklyMove>=0?'':'gold'}">${weeklyMove>=0?'+':''}${weeklyMove.toFixed(1)}%</strong></div>` : ''}
-        <div class="m">Rank<strong class="gold">#${rank}</strong></div>
-        <div class="m">Status<strong class="white">Live</strong></div>
-      </div>
-    </div>`;
-}
-function showStory(idx){
-  if(!LOAD.alive) return;
-  const deck = document.getElementById('loadDeck');
-  const dots = document.getElementById('loadDots');
-  if(!deck || !LOAD.stories.length) return;
-  // Remove old in-class, mount new card
-  const story = LOAD.stories[idx % LOAD.stories.length];
-  deck.innerHTML = buildStoryCard(story.rank, story.ticker, story.narr, story.weeklyMove);
-  requestAnimationFrame(()=>{ const c = deck.querySelector('.story-card'); if(c) c.classList.add('in'); });
-  // Dots
-  if(dots){
-    dots.innerHTML = LOAD.stories.map((_,i)=>`<div class="d ${i===(idx%LOAD.stories.length)?'on':''}"></div>`).join('');
-  }
-}
-function startStoryRotation(){
-  if(!LOAD.stories.length) return;
-  showStory(LOAD.idx = 0);
-  LOAD.timer = setInterval(()=>{ if(!LOAD.alive){clearInterval(LOAD.timer);return;} showStory(++LOAD.idx); }, 2400);
-}
-function stopLoadStage(){
-  LOAD.alive = false;
-  if(LOAD.timer) clearInterval(LOAD.timer);
-  const el = document.getElementById('loadStage');
-  if(el) el.remove();
-}
-function seedStoriesFromNarratives(narr){
-  if(!narr) return;
-  const order = Object.keys(narr).filter(k => k !== '_meta').slice(0, 3);
-  LOAD.stories = order.map((tk, i) => ({
-    rank: i + 1,
-    ticker: tk,
-    narr: narr[tk],
-    weeklyMove: null,
-  }));
-  startStoryRotation();
-}
-function patchStoriesWithMoves(topRows){
-  // Once Excel parses, overlay 3M returns from STATE.top
-  if(!topRows || !topRows.length || !LOAD.stories.length) return;
-  for(const s of LOAD.stories){
-    const row = topRows.find(r => (r.ticker || r.Ticker) === s.ticker);
-    if(row){
-      const v = row.ret_3m || row.ret3m || row['3M'] || row['ret_3m'];
-      if(v != null && !isNaN(+v)) s.weeklyMove = +v * (Math.abs(+v) < 5 ? 100 : 1);
-    }
-  }
-  // Re-render current card
-  showStory(LOAD.idx);
-}
-
-// ==========================================================================
 // LIVE MODE — auto-fetch LATEST.xlsx from the host (Netlify) on page load.
 // Falls back to drag-drop if the file isn't reachable (e.g., opened locally).
-// Fetches narratives.json + macro.json + others IN PARALLEL with the Excel
-// so the loading banner has data within milliseconds.
 // ==========================================================================
 (async function tryAutoLoadLatest(){
   // Skip if running from file:// (local file open) — drag-drop handles it
-  if(location.protocol === 'file:') { stopLoadStage(); return; }
-  setLoadProgress(8, 'Connecting');
-  // Fire all fetches in parallel — small JSONs return in <200ms typically
-  const fNarr  = fetch('./narratives.json',         {cache:'no-cache'}).then(r => r.ok ? r.json() : null).catch(()=>null);
-  const fMacro = fetch('./macro.json',              {cache:'no-cache'}).then(r => r.ok ? r.json() : null).catch(()=>null);
-  const fOP    = fetch('./business_onepagers.json', {cache:'no-cache'}).then(r => r.ok ? r.json() : null).catch(()=>null);
-  const fVal   = fetch('./valuations.json',         {cache:'no-cache'}).then(r => r.ok ? r.json() : null).catch(()=>null);
-  const fXlsx  = fetch('./Stage2_Top50_Global_LATEST.xlsx', {cache:'no-cache'});
-
-  // Banner stories come from narratives — show them ASAP
-  fNarr.then(n => {
-    if(n){ STATE.allNarr = n; seedStoriesFromNarratives(n); setLoadProgress(35, 'Loading workbook'); }
-  });
-  fMacro.then(m => { if(m){ STATE.macro = m; renderMacroStrip(); } });
-  fOP.then(o => { if(o) STATE.onepagers = o; });
-  fVal.then(v => { if(v) STATE.valuations = v; });
-
+  if(location.protocol === 'file:') return;
   try {
-    const r = await fXlsx;
-    if(!r.ok) { stopLoadStage(); console.log('No LATEST.xlsx at host root — drag-drop mode'); return; }
-    setLoadProgress(70, 'Parsing data');
+    const r = await fetch('./Stage2_Top50_Global_LATEST.xlsx', {cache: 'no-cache'});
+    if(!r.ok) { console.log('No LATEST.xlsx at host root — drag-drop mode'); return; }
     const buf = await r.arrayBuffer();
     const wb = XLSX.read(new Uint8Array(buf), {type:'array'});
     parseWorkbook(wb);
-    // Wait briefly for in-flight side fetches to finish so their state is honoured
-    await Promise.allSettled([fNarr, fMacro, fOP, fVal]);
-    setLoadProgress(95, 'Rendering');
-    // Patch the loading cards with 3M moves from the workbook before render() removes them
-    patchStoriesWithMoves(STATE.top);
+    // Also try to pull the full narratives JSON for business intros + theme tagging on ALL 50 names
+    try {
+      const nr = await fetch('./narratives.json', {cache: 'no-cache'});
+      if(nr.ok) { STATE.allNarr = await nr.json(); console.log('[live mode] loaded narratives.json'); }
+    } catch(e) { console.log('No narratives.json found — falling back to Fresh Breakouts only'); }
+    // Macro overlay strip
+    try {
+      const mr = await fetch('./macro.json', {cache: 'no-cache'});
+      if(mr.ok) { STATE.macro = await mr.json(); renderMacroStrip(); }
+    } catch(e) { console.log('No macro.json found — macro strip hidden'); }
+    // v9: business 1-pagers (quarterly refresh, drill-down only)
+    try {
+      const opr = await fetch('./business_onepagers.json', {cache: 'no-cache'});
+      if(opr.ok) { STATE.onepagers = await opr.json(); console.log('[live mode] loaded business_onepagers.json'); }
+    } catch(e) { console.log('No business_onepagers.json — 1-pager block will be hidden'); }
+    // v9: forward valuations (weekly refresh, drill-down only)
+    try {
+      const vr = await fetch('./valuations.json', {cache: 'no-cache'});
+      if(vr.ok) { STATE.valuations = await vr.json(); console.log('[live mode] loaded valuations.json'); }
+    } catch(e) { console.log('No valuations.json — valuation block will be hidden'); }
     render();
-    stopLoadStage();
     // Repurpose the dropzone label to a refresh hint
     const dzEl = document.getElementById('dz');
     if(dzEl) dzEl.firstChild.nextSibling && (dzEl.lastChild.textContent = ' 🔄 Replace');
@@ -671,7 +539,6 @@ function patchStoriesWithMoves(topRows){
     if(stat) stat.textContent = `LIVE · loaded ${fmt}`;
     console.log('[live mode] auto-loaded LATEST.xlsx');
   } catch(e) {
-    stopLoadStage();
     console.log('Auto-load failed (drag-drop still works):', e.message);
   }
 })();
@@ -689,7 +556,6 @@ function loadFile(file){
     const wb = XLSX.read(new Uint8Array(e.target.result), {type:'array'});
     parseWorkbook(wb);
     render();
-    if(typeof stopLoadStage === 'function') stopLoadStage();
   };
   r.readAsArrayBuffer(file);
 }
@@ -1986,4 +1852,111 @@ function buildThemeMap(){
       map[t].names.push(s);
       map[t].totalScore += (s.composite||0);
       map[t].totalQuality += (s.quality||0);
-      
+      if(s.fresh) map[t].freshCount += 1;
+    });
+  });
+  // Compute averages, sort
+  return Object.entries(map).map(([theme,d])=>({
+    theme, emoji: (THEME_RULES.find(r=>r.theme===theme)||{}).emoji || '',
+    count: d.names.length,
+    avgScore: d.names.length ? d.totalScore/d.names.length : 0,
+    avgQuality: d.names.length ? d.totalQuality/d.names.length : null,
+    fresh: d.freshCount,
+    names: d.names
+  })).filter(t=>t.count>0).sort((a,b)=>b.count-a.count);
+}
+
+// Category → color used by the theme event chips
+const CAT_COLORS = {
+  'M&A / Deals':      {bg:'rgba(26,115,232,0.10)',  bd:'rgba(26,115,232,0.45)',  fg:'#5aa3ff', icon:'🤝'},
+  'Earnings':         {bg:'rgba(245,166,35,0.10)',  bd:'rgba(245,166,35,0.45)',  fg:'#f5a623', icon:'📊'},
+  'Regulatory':       {bg:'rgba(255,75,75,0.10)',   bd:'rgba(255,75,75,0.45)',   fg:'#ff6a6a', icon:'⚖️'},
+  'Capacity / Capex': {bg:'rgba(0,230,122,0.10)',   bd:'rgba(0,230,122,0.45)',   fg:'#3ee094', icon:'🏗️'}
+};
+
+function renderThemeEventCards(themeName){
+  // For each theme, surface up to 8 events from STATE.themeDev[themeName]
+  const events = (STATE.themeDev && STATE.themeDev[themeName]) || [];
+  if(!events.length){
+    return `<div style="margin-top:10px;padding:10px;background:var(--bg3);border:1px dashed var(--border);border-radius:6px;font-size:11px;color:var(--text3);text-align:center;">
+      <span style="opacity:0.7;">📡</span> No major theme developments in the last 7 days. Saturday agent will refresh next run.
+    </div>`;
+  }
+  // Sort by date desc
+  const sorted = events.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,8);
+  return `<div style="margin-top:12px;border-top:1px solid var(--border);padding-top:10px;">
+    <div style="font-family:'Syne',sans-serif;font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+      <span>📡</span><span>This Week — ${sorted.length} major development${sorted.length===1?'':'s'}</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:6px;">
+      ${sorted.map(ev=>{
+        const c = CAT_COLORS[ev.category] || {bg:'var(--bg3)',bd:'var(--border)',fg:'var(--text2)',icon:'•'};
+        const tk = (ev.tickers||[]).slice(0,5).map(t=>`<span style="background:rgba(245,166,35,0.10);color:var(--gold);padding:1px 5px;border-radius:3px;font-size:9px;font-weight:600;margin-right:3px;">${t}</span>`).join('');
+        return `<div style="background:${c.bg};border:1px solid ${c.bd};border-left:3px solid ${c.fg};border-radius:5px;padding:8px 10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px;">
+            <div style="display:flex;align-items:center;gap:6px;flex:1;min-width:0;">
+              <span style="font-size:11px;">${c.icon}</span>
+              <span style="color:${c.fg};font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;white-space:nowrap;">${ev.category||'Update'}</span>
+              <span style="color:var(--text3);font-size:10px;font-family:'JetBrains Mono',monospace;">${ev.date||''}</span>
+            </div>
+            <div style="white-space:nowrap;">${tk}</div>
+          </div>
+          <div style="color:var(--text1);font-size:12px;font-weight:600;line-height:1.35;margin-bottom:4px;">${ev.headline||''}</div>
+          <div style="color:var(--text2);font-size:11px;line-height:1.55;">${ev.brief||''}</div>
+          ${ev.source ? `<div style="color:var(--text3);font-size:9px;margin-top:4px;font-style:italic;">${ev.source}</div>` : ''}
+        </div>`;
+      }).join('')}
+    </div>
+  </div>`;
+}
+function renderThemes(){
+  const themes = buildThemeMap();
+  if(!themes.length) return '<div class="empty"><h2>No themes detected</h2><p>Theme tagging uses keywords from business + narrative text. Names without narratives don\'t cluster.</p></div>';
+  const maxCount = Math.max(...themes.map(t=>t.count));
+  const totalEvents = Object.values(STATE.themeDev||{}).reduce((a,v)=>a+(v?.length||0),0);
+  return `
+    <div class="section-title">Themes — Auto-clustered + Last-Week Development Radar</div>
+    <p style="font-size:11px;color:var(--text3);margin-bottom:14px;">Each Top 50 name is tagged with one or more themes based on keyword match. The "This Week" panel under each theme surfaces major developments in the last 7 days — M&A / deals, earnings beats/misses + guidance changes, regulatory triggers, and capacity/capex announcements — sourced from web search + ticker news during the Saturday refresh. <strong>${totalEvents} events</strong> captured this week.</p>
+    <div style="display:grid;grid-template-columns:1fr;gap:12px;">
+      ${themes.map(t=>{
+        const widthPct = (t.count/maxCount)*100;
+        const scoreColor = t.avgScore>=0 ? 'var(--green)' : 'var(--red)';
+        const evCount = (STATE.themeDev && STATE.themeDev[t.theme]) ? STATE.themeDev[t.theme].length : 0;
+        return `<div class="card" style="padding:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+              <div style="font-size:18px;">${t.emoji}</div>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">${t.theme}</div>
+              <div style="font-size:11px;color:var(--text3);">${t.count} names · Avg score ${t.avgScore>=0?'+':''}${t.avgScore.toFixed(2)} ${t.avgQuality!=null?'· Avg Q '+t.avgQuality.toFixed(0):''} ${t.fresh?'· '+t.fresh+' fresh':''}</div>
+              ${(()=>{ const newTks=new Set((STATE.wow||[]).filter(w=>w.status==='NEW').map(w=>w.ticker)); const newN=t.names.filter(n=>newTks.has(n.ticker)).length; return newN>0?`<span style="background:rgba(0,230,122,0.15);color:var(--green);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">+${newN} new this wk</span>`:''; })()}
+              ${evCount?`<span style="background:rgba(245,166,35,0.15);color:var(--gold);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">📡 ${evCount} this wk</span>`:''}
+            </div>
+            <div style="width:140px;height:8px;background:var(--bg3);border-radius:2px;overflow:hidden;">
+              <div style="height:100%;width:${widthPct}%;background:linear-gradient(90deg,${scoreColor},var(--gold));"></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;">
+            ${t.names.sort((a,b)=>a.rank-b.rank).map(n=>`<div onclick="document.querySelector('.tab[data-tab=top50]').click();setTimeout(()=>showDetail('${n.ticker}','t50detail'),100);" style="background:var(--bg3);border:1px solid var(--border);padding:6px 8px;border-radius:4px;cursor:pointer;font-size:11px;display:flex;justify-content:space-between;align-items:center;">
+              <div><span style="color:var(--text3);">#${n.rank}</span> <strong style="color:var(--gold);margin-left:4px;">${n.ticker}</strong></div>
+              <span style="color:${n.composite>=0?'var(--green)':'var(--red)'};font-weight:600;">${n.composite>=0?'+':''}${(n.composite||0).toFixed(2)}</span>
+            </div>`).join('')}
+          </div>
+          ${renderThemeEventCards(t.theme)}
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+}
+
+</script>
+<footer style="padding:24px 24px 32px;text-align:center;border-top:1px solid var(--border);margin-top:32px;font-family:'JetBrains Mono',monospace;">
+  <div style="font-family:'Syne',sans-serif;font-size:11px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;font-weight:500;">
+    Artha Vichaar Capital
+  </div>
+  <div style="font-size:9px;color:var(--text3);margin-top:6px;letter-spacing:0.5px;">
+    Personal research notes &middot; not investment advice &middot; do your own due diligence
+  </div>
+</footer>
+
+</body>
+</html>
