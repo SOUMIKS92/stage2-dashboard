@@ -1248,5 +1248,255 @@
         "Bond market vol path"
       ]
     }
+  },
+  "SITM": {
+    "happening": "SiTime is breaking out as its MEMS-based precision timing solutions become standard content on every NVIDIA Blackwell/Rubin AI server, pushing Q1 2026 revenue +88% YoY to $113.6M and prompting a guide of >=80% FY26 growth.",
+    "why": "AI accelerator architectures need ever-tighter clock-source jitter for high-speed networking (800G/1.6T) and inter-die synchronization in rack-scale NVL72 systems. SiTime's MEMS oscillators have replaced quartz at flagship hyperscalers, and dollar content per AI server keeps stepping up with each platform refresh. GM expanded 710bps YoY to 64.5% on richer mix.",
+    "risk": "Customer concentration is still elevated - mgmt admitted strength is partially single-customer driven through 2026. A Blackwell production hiccup or a competitive design swap would bite. Watch the design-win cadence beyond the lead hyperscaler.",
+    "business": "Pure-play MEMS timing-solutions designer (clocks, oscillators) competing against legacy quartz. Anchors on data-center, networking, automotive, defense end markets. Fabless model with TSMC/UMC silicon and Bosch MEMS partner.",
+    "thesis": {
+      "bull": [
+        "AI server $-content per box continues stepping up with each NVIDIA platform",
+        "FY26 growth guide of >=80% with order book visibility extending multi-quarters",
+        "GM expansion to mid-60s% on AI/networking mix",
+        "Adjacent communications and automotive design wins ramp"
+      ],
+      "bear": [
+        "Customer concentration risk - lead hyperscaler still ~50% of growth",
+        "Competitive timing IP from Renesas/SiTime peers",
+        "Quartz incumbents (Epson, Kyocera) cut prices to defend share",
+        "Macro AI capex slowdown removes content tailwind"
+      ],
+      "catalysts": [
+        "Q2 2026 print (guide $1.24 EPS)",
+        "NVIDIA Rubin launch detail (H2 2026)",
+        "Hyperscaler capex commentary"
+      ]
+    }
+  },
+  "UMI.BR": {
+    "happening": "Umicore raised FY26 EBITDA guidance to ~EUR1.0B and lowered leverage outlook to <2x on stronger metal prices and Catalysis outperformance versus the global light-duty vehicle market.",
+    "why": "Recycling and Catalysis segments are both running well above expectations. Auto Catalysts gained share in Europe, China and India plus heavy-duty diesel; recycling benefits from supportive PGM and base-metal prices. Battery Materials remains a strategic-review drag but the deleveraging glide path is improving fast.",
+    "risk": "~EUR100M of the EBITDA uplift is pure metal-price macro - reverses if PGMs/Co normalize. Battery Materials strategic review is the swing factor for re-rating; mgmt declined to commit to a divestiture timeline.",
+    "business": "Belgian materials specialist. Three pillars: Catalysis (autocatalysts/PGM), Recycling (precious + base metals), and Battery Materials (EV cathode). Global plants in Europe, North America, Korea, China.",
+    "thesis": {
+      "bull": [
+        "FY26 EBITDA guide raised to ~EUR1.0B",
+        "Net leverage path to <2x supports buyback optionality",
+        "Recycling running near record on PGM mix",
+        "Catalysis share gains in HD diesel + China"
+      ],
+      "bear": [
+        "Metal-price tailwind reversal",
+        "Battery Materials drag and uncertain strategic outcome",
+        "EV demand softness in Europe weighs on cathode volumes",
+        "FX (EUR/USD) margin pressure"
+      ],
+      "catalysts": [
+        "H1 2026 results (July)",
+        "Battery Materials strategic update",
+        "PGM market moves"
+      ]
+    }
+  },
+  "MELE.BR": {
+    "happening": "Melexis Q1 sales of EUR202.1M came in soft with a 4ppt FX headwind, but mgmt held the FY26 EUR830-880M sales guide implying a stronger H2 ramp as Tier-1 inventories normalize and new EV/HEV design wins kick in.",
+    "why": "Magnetic position sensors and current-sensing chips for EV/HEV powertrains keep gaining content-per-vehicle at Asian OEMs even as European auto build rates stay subdued. China EV exposure offsets weaker European OEMs and Tier-1 restocking should begin in H2.",
+    "risk": "The implied H2 step-up is the key risk - mgmt would not guarantee it. FX (EUR/USD) is now a structural margin headwind into 2027. Chinese local-for-local competition pressures ASP in commodity Hall-effect sensors.",
+    "business": "Belgian fabless designer of mixed-signal/analog ICs for automotive (~90% of revenue). Specializes in magnetic sensors, ambient-light, current-sensing, motor drivers. Strong NCS auto Tier-1 customer base.",
+    "thesis": {
+      "bull": [
+        "EV/HEV content-per-vehicle continues stepping up",
+        "Asian OEM design wins underpin H2 ramp",
+        "Inventory normalization at Tier-1s is genuine",
+        "Magnetic/current-sensor moat remains intact"
+      ],
+      "bear": [
+        "H2 ramp is execution-risk; guide carries hair",
+        "FX headwind structural through 2027",
+        "Chinese semiconductor competition",
+        "European auto build rates remain weak"
+      ],
+      "catalysts": [
+        "H1 print (late July)",
+        "Tier-1 restock data",
+        "China EV monthly volumes"
+      ]
+    }
+  },
+  "NTAP": {
+    "happening": "NetApp closed FY26 with record Q4 revenue of $1.95B (+12% YoY) on all-flash strength and 500 Q4 AI design wins, but FY27 guide of $7.325-7.575B (~8% growth) underwhelmed on memory cost inflation pressure.",
+    "why": "AI workload wins are accelerating - 1,100+ design wins in FY26 with AIPod/NVIDIA reference architectures plus Lenovo OEM. All-flash + Keystone STaaS + first-party hyperscaler services are all inflecting simultaneously. The cautious FY27 guide bakes in DRAM/NAND cost inflation as a margin headwind.",
+    "risk": "Memory-cost-driven GM pressure could persist longer than guided. Pure/VAST competitive intensity in dedicated AI storage is real - NetApp's edge is enterprise breadth not raw performance.",
+    "business": "Hybrid-cloud data services platform. Sells all-flash arrays + ONTAP data plane + first-party services on AWS/Azure/GCP. Storage-as-a-service via Keystone. Enterprise, public sector, hyperscaler attach.",
+    "thesis": {
+      "bull": [
+        "AI design-win cadence accelerating",
+        "Public cloud first-party services growing 30%",
+        "Keystone STaaS bookings +34% TCV",
+        "FY27 guide leaves room for upside if NAND stabilizes"
+      ],
+      "bear": [
+        "Memory cost inflation compresses gross margin",
+        "Pure/VAST competition in AI storage",
+        "FY27 mid-single guide tells you growth is decelerating",
+        "Enterprise IT spending softness"
+      ],
+      "catalysts": [
+        "Q1 FY27 print (Aug)",
+        "NVIDIA SuperPOD attach data",
+        "DRAM/NAND spot pricing"
+      ]
+    }
+  },
+  "TATE.L": {
+    "happening": "Tate & Lyle's first full year with CP Kelco delivered statutory revenue +16% but like-for-like revenue -3% as muted end-market demand offset cost synergy capture.",
+    "why": "CP Kelco integration completed on schedule - combined Food & Beverage Solutions platform now cross-sells pectin, gellan, xanthan alongside legacy sweeteners and fibres. Volume-led growth is the new priority. GLP-1 reformulation (low/no-sugar) provides a structural demand tailwind for Stevia/Sucralose.",
+    "risk": "Soft Asia-Pac F&B demand and Chinese competitor pricing pressure in sweeteners are not abating. Mgmt described only 'green shoots' in North America - H1 FY27 will still be flat-to-down before any second-half inflection.",
+    "business": "UK-listed specialty food ingredients player. Sweeteners (Sucralose, Stevia), fibres, and now full hydrocolloid portfolio (pectin, gellan, xanthan) via CP Kelco. Sells globally to F&B brands and reformulators.",
+    "thesis": {
+      "bull": [
+        "CP Kelco synergies on track",
+        "GLP-1 reformulation tailwind",
+        "Volume-led growth strategy",
+        "Dividend support through deleveraging"
+      ],
+      "bear": [
+        "H1 FY27 still flat-to-down",
+        "Chinese competition in sweeteners",
+        "Buybacks off table until leverage glide path further along",
+        "Asia-Pac F&B demand uncertain"
+      ],
+      "catalysts": [
+        "H1 FY27 trading update (Nov)",
+        "CP Kelco synergy milestones",
+        "Volume inflection data"
+      ]
+    }
+  },
+  "NXPI": {
+    "happening": "NXP delivered Q1 revenue of $3.18B (+12% YoY) above guidance and guided Q2 to $3.45B (+18% YoY, +8% QoQ), with broad-based strength across Automotive and Industrial & IoT and a doubling of data center exposure.",
+    "why": "The automotive cycle has turned - radar, in-vehicle networking, domain controllers and EV processors drove sequential improvement and bookings support the Q2 step-up. Industrial & IoT inflected with channel inventory normalized. Data center power management for AI accelerators is a new growth pillar.",
+    "risk": "60%+ GM target is a 2027 not 2026 story - China auto mix is dilutive. H2 visibility is not yet a formal numeric guide. Inventory restock vs structural demand mix needs to be watched.",
+    "business": "Dutch/HQ-Netherlands automotive-focused semiconductor maker. ~55% Automotive (radar, MCU, battery, networking), ~25% Industrial/IoT, ~20% Mobile/Comms infrastructure. Pure-play fabless model on TSMC/Globalfoundries.",
+    "thesis": {
+      "bull": [
+        "Automotive cycle decisively turned",
+        "Industrial & IoT inflection real",
+        "Data center exposure doubling YoY",
+        "Q2 guide >>consensus"
+      ],
+      "bear": [
+        "China auto mix dilutes margin",
+        "60% GM target slips to 2027",
+        "Trade/tariff overhang",
+        "Inventory restock vs structural demand"
+      ],
+      "catalysts": [
+        "Q2 print (late July)",
+        "Tier-1 backlog disclosures",
+        "Auto build-rate data"
+      ]
+    }
+  },
+  "TXN": {
+    "happening": "Texas Instruments crushed Q1 with revenue of $4.83B (+19% YoY) and EPS of $1.68 (vs $1.36 consensus), guided Q2 to $5.0-5.4B, and announced an agreed acquisition of Silicon Labs to bolster embedded wireless connectivity.",
+    "why": "Analog cyclical recovery is in full swing - Analog revenue +22% YoY in Q1 with all major end markets except auto showing sequential growth. Industrial +30% YoY and data center +90% YoY make TI a credible AI-power-management beneficiary. Silicon Labs deal adds Bluetooth/Wi-Fi/Thread to embedded portfolio.",
+    "risk": "Some of Q1 step-up is inventory restock rebound rather than structural. Silicon Labs accretion not quantified - dilutive deals can take time to prove out. Elevated US fab capex remains a FCF drag.",
+    "business": "Largest US analog/embedded semiconductor maker. Analog (~75% of revenue) + Embedded Processing. Massive product breadth into industrial, auto, personal electronics, comms equipment, enterprise. Vertically integrated 300mm US fabs.",
+    "thesis": {
+      "bull": [
+        "Q2 guide >> consensus ($5.0-5.4B vs $4.6B)",
+        "Industrial +30% YoY signals broad cyclical recovery",
+        "Data center +90% YoY is structural",
+        "Silicon Labs deepens connectivity attach"
+      ],
+      "bear": [
+        "US fab capex weighs on FCF",
+        "Auto mix still mixed",
+        "Inventory restock vs sustained demand",
+        "Silicon Labs integration risk"
+      ],
+      "catalysts": [
+        "Q2 print (July)",
+        "Silicon Labs close",
+        "FCF inflection vs capex trajectory"
+      ]
+    }
+  },
+  "CSCO": {
+    "happening": "Record $15.8B Q3 (+12% YoY) as AI hyperscaler order ramp forces FY26 AI infra order guide up to ~$9B (4.5x FY25). Stock breaking out as Silicon One + Acacia optics moat takes shape.",
+    "why": "Three P200 silicon design wins for hyperscaler scale-across, Acacia orders >$1B in Q3 (+200% YoY) on coherent pluggables, plus enterprise campus refresh (orders +25% YoY) is layering on top. Restructuring is freeing capital for Silicon, Optics, Security and AI. Advance purchase commitments +$6.7B in 90 days secures supply.",
+    "risk": "4-5 of the 9pt acceleration in ex-hyperscaler order growth was pure price (memory-driven) - underlying organic demand is ~10%, not the headline 19%. Splunk shift to cloud subscriptions creates near-term revenue drag.",
+    "business": "Global enterprise networking incumbent (switches, routers, wireless, security) plus Acacia optics, Silicon One ASICs, Webex, and Splunk observability platform. Direct + channel mix to enterprise, service provider, public sector and hyperscaler.",
+    "thesis": {
+      "bull": [
+        "AI infra orders 4.5x FY25 to ~$9B",
+        "Silicon One + Acacia hyperscaler design wins",
+        "Enterprise campus refresh record orders",
+        "Capital reallocation accelerates margin mix"
+      ],
+      "bear": [
+        "Price (not units) drove much of the 19% headline",
+        "Splunk subscription transition creates revenue drag",
+        "Memory tightness binds 2H",
+        "Hyperscaler concentration"
+      ],
+      "catalysts": [
+        "Q4 FY26 print (Aug)",
+        "Splunk subscription progress",
+        "Hyperscaler capex commentary"
+      ]
+    }
+  },
+  "ITRK.L": {
+    "happening": "Intertek launches a strategic review to separate Testing & Assurance from Energy & Infrastructure (sale or demerger by mid-2027) alongside a +5.4% LFL Q1 print, with stock up ~12% on break-up optionality.",
+    "why": "Lacroix framed the review as moving from a 'generalist' to 'specialist' portfolio model with sharper capital allocation. Acquisition-led bolt-ons (Aerial PV, QTEST, TESIS, Envirolab, PTL) reshape the high-growth/high-margin mix. Middle East trading disruption is being absorbed by Americas redirect.",
+    "risk": "Transportation Technologies is being de-prioritised and is a likely divestiture/wind-down candidate. Dis-synergies of separation are 'limited' per mgmt but not quantified - could surprise.",
+    "business": "UK-listed total quality assurance provider (TIC). Testing, inspection, certification across Consumer Products, Corporate Assurance, Health & Safety, Industry & Infrastructure, World of Energy. Global lab/expert network.",
+    "thesis": {
+      "bull": [
+        "Break-up optionality re-rates sum-of-parts",
+        "Acquisition bolt-ons compound margin",
+        "Quarterly disclosure cadence improves transparency",
+        "TIC industry pricing power intact"
+      ],
+      "bear": [
+        "Separation dis-synergies could surprise",
+        "Transportation Technologies remains very tough",
+        "Middle East trading disruption ongoing",
+        "Execution risk on 2027 timeline"
+      ],
+      "catalysts": [
+        "H1 results (July/Aug)",
+        "Strategic review milestones",
+        "Q3 trading update"
+      ]
+    }
+  },
+  "NUE": {
+    "happening": "Q1 2026 EPS of $3.23 smashes guide by ~$0.50 on record 7M-ton steel mill shipments and 4.7M-ton backlog (highest since Q2 2021); FY26 volume guide implicitly raised toward 'closer to double digits' from prior +5%.",
+    "why": "Tariff tailwind is reshaping the import picture - import share fell from >22% to ~15% YoY as Section 232 at 50% closed loopholes. Demand engines are diversified: data centers, border fence, LNG, pipelines, shipbuilding, plus the West Virginia greenfield sheet mill commissioning through 2026.",
+    "risk": "Tariff regime can shift with politics. Consumer cyclicals/office/heavy equipment still soft. Pre-operating costs ($108M in Q1) will trend higher through 2026 as WV mill commissions.",
+    "business": "Largest US scrap-based EAF steelmaker. Sheet, plate, structural, bar, joist, deck, rebar. Vertical integration into DRI and natgas. Diversified into steel products (insulated metal panels, fasteners). Pure US footprint.",
+    "thesis": {
+      "bull": [
+        "Tariff tailwind reshapes import share",
+        "Backlog at multi-decade highs",
+        "WV greenfield sheet mill commissions through 2026",
+        "Energy-adjacent investments (NuScale, Helion) optionality"
+      ],
+      "bear": [
+        "Tariff regime political risk",
+        "Pre-operating costs accelerate",
+        "Consumer cyclicals remain soft",
+        "Steel pricing volatility"
+      ],
+      "catalysts": [
+        "Q2 print (late July)",
+        "WV mill commissioning milestones",
+        "Tariff policy headlines"
+      ]
+    }
   }
 }
