@@ -92,17 +92,18 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',ui-mono
 .empty h2{font-family:'Syne',sans-serif;color:var(--gold);margin-bottom:8px;font-weight:600;}
 .empty p{color:var(--text2);font-size:11px;line-height:1.6;}
 
-/* LOADING DONUT — shown while LATEST.xlsx is downloading + parsing */
+/* LOADING DONUT */
 .load-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 80px;}
 .load-donut{position:relative;width:180px;height:180px;}
 .load-donut svg{width:100%;height:100%;transform:rotate(-90deg);}
 .load-donut .ring-bg{fill:none;stroke:var(--bg4);stroke-width:8;}
-.load-donut .ring-fg{fill:none;stroke:url(#loadGrad);stroke-width:8;stroke-linecap:round;stroke-dasharray:534.07;stroke-dashoffset:534.07;transition:stroke-dashoffset 0.5s cubic-bezier(0.4,0,0.2,1);filter:drop-shadow(0 0 6px rgba(245,166,35,0.4));}
+.load-donut .ring-fg{fill:none;stroke:url(#loadGrad);stroke-width:8;stroke-linecap:round;stroke-dasharray:534.07;stroke-dashoffset:534.07;transition:stroke-dashoffset 0.4s cubic-bezier(0.4,0,0.2,1);filter:drop-shadow(0 0 6px rgba(245,166,35,0.4));}
 .donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .donut-pct{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;color:var(--gold);letter-spacing:-1px;line-height:1;}
 .donut-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;}
 .load-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;color:var(--text);margin-top:28px;letter-spacing:0.5px;}
 .load-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:8px;letter-spacing:1px;text-transform:uppercase;}
+
 
 /* CARDS */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;}
@@ -526,7 +527,7 @@ function renderMacroStrip(){
 // LOADING DONUT — drives the circular progress indicator from real load events
 // ==========================================================================
 const LOAD = { pct: 0, alive: true };
-const RING_C = 2 * Math.PI * 85; // circumference for r=85
+const RING_C = 2 * Math.PI * 85;
 function setLoadPct(target, label){
   if(!LOAD.alive) return;
   LOAD.pct = Math.max(LOAD.pct, Math.min(100, target));
@@ -550,38 +551,32 @@ async function fetchWithProgress(url, onBytes){
   const reader = resp.body.getReader();
   const chunks = []; let received = 0;
   while(true){
-    const {done, value} = await reader.read();
-    if(done) break;
-    chunks.push(value); received += value.length;
-    onBytes && onBytes(received, total);
+    const r = await reader.read();
+    if(r.done) break;
+    chunks.push(r.value); received += r.value.length;
+    if(onBytes) onBytes(received, total);
   }
   const out = new Uint8Array(received); let off = 0;
   for(const c of chunks){ out.set(c, off); off += c.length; }
   return out;
 }
 
-// ==========================================================================
-// LIVE MODE — auto-fetch LATEST.xlsx from the host (Netlify) on page load.
-// Falls back to drag-drop if the file isn't reachable (e.g., opened locally).
-// Fetches small JSONs in parallel; tracks xlsx byte progress on the donut.
+// LIVE MODE — auto-fetch LATEST.xlsx from the host on page load.
 // ==========================================================================
 (async function tryAutoLoadLatest(){
-  // Skip if running from file:// (local file open) — drag-drop handles it
   if(location.protocol === 'file:') { stopLoadStage(); return; }
   setLoadPct(4, 'Connecting');
-  // Fire side fetches in parallel — each adds 5% on arrival
   const sideFetch = (url, key, bump, finalize) => fetch(url,{cache:'no-cache'})
     .then(r => r.ok ? r.json() : null)
-    .then(j => { if(j){ STATE[key] = j; finalize && finalize(j); } setLoadPct(LOAD.pct + bump, 'Loading data'); })
+    .then(j => { if(j){ STATE[key] = j; if(finalize) finalize(j); } setLoadPct(LOAD.pct + bump, 'Loading data'); })
     .catch(()=>{ setLoadPct(LOAD.pct + bump, 'Loading data'); });
   const fNarr  = sideFetch('./narratives.json',         'allNarr',    5);
-  const fMacro = sideFetch('./macro.json',              'macro',      5, ()=>renderMacroStrip());
+  const fMacro = sideFetch('./macro.json',              'macro',      5, function(){ renderMacroStrip(); });
   const fOP    = sideFetch('./business_onepagers.json', 'onepagers',  5);
   const fVal   = sideFetch('./valuations.json',         'valuations', 5);
   try {
     setLoadPct(10, 'Downloading');
-    // xlsx is the heaviest file — track byte progress (10% -> 75%)
-    const bytes = await fetchWithProgress('./Stage2_Top50_Global_LATEST.xlsx', (got, total) => {
+    const bytes = await fetchWithProgress('./Stage2_Top50_Global_LATEST.xlsx', function(got, total){
       const dlPct = 10 + 65 * (got / total);
       setLoadPct(dlPct, 'Downloading ' + Math.round(got/1024) + 'kb');
     });
@@ -591,19 +586,16 @@ async function fetchWithProgress(url, onBytes){
     setLoadPct(90, 'Finalizing');
     await Promise.allSettled([fNarr, fMacro, fOP, fVal]);
     setLoadPct(100, 'Ready');
-    // Brief pause so the user sees 100% before the dashboard appears
     await new Promise(r => setTimeout(r, 250));
     render();
     stopLoadStage();
-    // Repurpose the dropzone label to a refresh hint
     const dzEl = document.getElementById('dz');
-    if(dzEl) dzEl.firstChild.nextSibling && (dzEl.lastChild.textContent = ' 🔄 Replace');
-    // Update "Last Refresh" meta if available
+    if(dzEl && dzEl.firstChild && dzEl.firstChild.nextSibling && dzEl.lastChild) dzEl.lastChild.textContent = ' 🔄 Replace';
     const ts = new Date();
     const fmt = ts.toLocaleDateString('en-IN', {day:'2-digit',month:'short',year:'numeric'}) + ' ' +
                 ts.toLocaleTimeString('en-IN', {hour:'2-digit',minute:'2-digit'});
     const stat = document.getElementById('runStatus');
-    if(stat) stat.textContent = `LIVE · loaded ${fmt}`;
+    if(stat) stat.textContent = 'LIVE · loaded ' + fmt;
     console.log('[live mode] auto-loaded LATEST.xlsx');
   } catch(e) {
     stopLoadStage();
@@ -1985,4 +1977,47 @@ function renderThemes(){
   const totalEvents = Object.values(STATE.themeDev||{}).reduce((a,v)=>a+(v?.length||0),0);
   return `
     <div class="section-title">Themes — Auto-clustered + Last-Week Development Radar</div>
-    <p style="font-size:11px;color:var(--text3);margin-bottom:14px;">Each Top 50 name is tagged with one or more themes based on keyword match. The "This Week" panel under each theme surfaces major developments in the last 7 days — M&A / deals, earnings beats/misses + guidance changes, regulatory triggers, and capacity/capex announcements — sourced from web search + ticker news during the Saturday refresh. <strong>${totalEvents} events</s
+    <p style="font-size:11px;color:var(--text3);margin-bottom:14px;">Each Top 50 name is tagged with one or more themes based on keyword match. The "This Week" panel under each theme surfaces major developments in the last 7 days — M&A / deals, earnings beats/misses + guidance changes, regulatory triggers, and capacity/capex announcements — sourced from web search + ticker news during the Saturday refresh. <strong>${totalEvents} events</strong> captured this week.</p>
+    <div style="display:grid;grid-template-columns:1fr;gap:12px;">
+      ${themes.map(t=>{
+        const widthPct = (t.count/maxCount)*100;
+        const scoreColor = t.avgScore>=0 ? 'var(--green)' : 'var(--red)';
+        const evCount = (STATE.themeDev && STATE.themeDev[t.theme]) ? STATE.themeDev[t.theme].length : 0;
+        return `<div class="card" style="padding:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+              <div style="font-size:18px;">${t.emoji}</div>
+              <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">${t.theme}</div>
+              <div style="font-size:11px;color:var(--text3);">${t.count} names · Avg score ${t.avgScore>=0?'+':''}${t.avgScore.toFixed(2)} ${t.avgQuality!=null?'· Avg Q '+t.avgQuality.toFixed(0):''} ${t.fresh?'· '+t.fresh+' fresh':''}</div>
+              ${(()=>{ const newTks=new Set((STATE.wow||[]).filter(w=>w.status==='NEW').map(w=>w.ticker)); const newN=t.names.filter(n=>newTks.has(n.ticker)).length; return newN>0?`<span style="background:rgba(0,230,122,0.15);color:var(--green);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">+${newN} new this wk</span>`:''; })()}
+              ${evCount?`<span style="background:rgba(245,166,35,0.15);color:var(--gold);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;">📡 ${evCount} this wk</span>`:''}
+            </div>
+            <div style="width:140px;height:8px;background:var(--bg3);border-radius:2px;overflow:hidden;">
+              <div style="height:100%;width:${widthPct}%;background:linear-gradient(90deg,${scoreColor},var(--gold));"></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;">
+            ${t.names.sort((a,b)=>a.rank-b.rank).map(n=>`<div onclick="document.querySelector('.tab[data-tab=top50]').click();setTimeout(()=>showDetail('${n.ticker}','t50detail'),100);" style="background:var(--bg3);border:1px solid var(--border);padding:6px 8px;border-radius:4px;cursor:pointer;font-size:11px;display:flex;justify-content:space-between;align-items:center;">
+              <div><span style="color:var(--text3);">#${n.rank}</span> <strong style="color:var(--gold);margin-left:4px;">${n.ticker}</strong></div>
+              <span style="color:${n.composite>=0?'var(--green)':'var(--red)'};font-weight:600;">${n.composite>=0?'+':''}${(n.composite||0).toFixed(2)}</span>
+            </div>`).join('')}
+          </div>
+          ${renderThemeEventCards(t.theme)}
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+}
+
+</script>
+<footer style="padding:24px 24px 32px;text-align:center;border-top:1px solid var(--border);margin-top:32px;font-family:'JetBrains Mono',monospace;">
+  <div style="font-family:'Syne',sans-serif;font-size:11px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;font-weight:500;">
+    Artha Vichaar Capital
+  </div>
+  <div style="font-size:9px;color:var(--text3);margin-top:6px;letter-spacing:0.5px;">
+    Personal research notes &middot; not investment advice &middot; do your own due diligence
+  </div>
+</footer>
+
+</body>
+</html>
